@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style15.css">
+    <title>Koreana</title>
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        
+    <!-- Link Swiper's JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/jquery3.6.0.js"></script>
+    <script src="assets/js/jquery.inputmask.min.js"></script>
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(96705802, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/96705802" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
+    <meta name="google-site-verification" content="Sm58VX6Duuuqe_YSh9z0bVlqwUfCS5jKkqAYAHagaqo" />
+    
+    <meta name="yandex-verification" content="c37b6dc74d11c15d" />
+<link rel="stylesheet" href="/assets/components/ajaxform/css/default.css" type="text/css" />
+</head>
+
+<body id="main">
+    
+        <header id="header">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="">
+        </div>
+        <div class="menu">
+            <a href="#main">
+                
+                Главная
+                
+            </a>
+            <a href="#about">
+                
+                О нас
+                
+            </a>
+            <a href="#brands">
+                
+                Бренды
+                
+            </a>
+            <a href="#partners">
+                
+                Партнёры
+                
+            </a>
+            <a href="#vacancies">
+                
+                Вакансии
+                
+            </a>
+            <a href="#contacts">
+                
+                Контакты
+                
+            </a>
+        </div>
+        <div class="mobile-languages">
+            <a href="https://koreana.info/"><img src="assets/img/lang/ru.png" alt=""></a>
+            <a href="https://koreana.info/kz/"><img src="assets/img/lang/kz.png" alt=""></a>
+            <a href="https://koreana.info/en/"><img src="assets/img/lang/en.png" alt=""></a>
+        </div>
+        <img onclick="openMobileMenu()" class="header-img-mobile" src="assets/img/mobile-menu.png" alt="header">
+        <div class="languages">
+            <a href="/kz/"><button class="language">KZ</button></a>
+            <a href="/"><button class="language">RU</button></a>
+            <a href="/en"><button class="language">EN</button></a>
+        </div>
+    
+    </header>
+    
+            <div class="navigation" id="mobile-menu">
+                <div class="navigation-top">
+                    <div class="navigation-title">
+                        <span></span>
+                        <img onclick="closeMobileMenu()" class="close" src="assets/img/close.webp" alt="Закрыть">
+                    </div>
+                    <a href="#main">
+                        
+                        Главная
+                        
+                    </a>
+                    <a href="#about">
+                        
+                        О нас
+                        
+                    </a>
+                    <a href="#brands">
+                        
+                        Бренды
+                        
+                    </a>
+                    <a href="#partners">
+                        
+                        Партнёры
+                        
+                    </a>
+                    <a href="#vacancies">
+                        
+                        Вакансии
+                        
+                    </a>
+                    <a href="#contacts">
+                        
+                        Контакты
+                        
+                    </a>
+                </div>
+                <div class="navigation-lang">
+                    <a href="/kz/">KZ</a>
+                    <a href="/">RU</a>
+                    <a href="/en">EN</a>
+                </div>
+            </div>
+            
+
+    
+    <script>
+        var currentURL = window.location.href;
+        
+        const languages = document.querySelectorAll('.language')
+        
+        if (currentURL === 'https://koreana.info/en/') {
+            languages[2].classList.add('active')
+        } else if (currentURL === 'https://koreana.info/kz/') {
+            languages[0].classList.add('active')
+        } else {
+            languages[1].classList.add('active')
+        }
+    </script>
+    
+    <section class="banner" id="banner">
+        <div class="banner-background"></div>
+        <video autoPlay loop muted playsInline preload="auto" class="banner-video">
+            <source src="assets/video/korea.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <div class="banner-text">KOREANA</div>
+    </section>
+
+
+    <section class="about" id="about">
+        <h1 class="about-title">
+            
+            О компании
+            
+        </h1>
+        <div class="about-block">
+            <div class="about-text"><p>Компания ТОО KOREANA - ваш надежный партнер и официальный импортер лучших продуктов из Южной Кореи на территории Республики Казахстана. <span>Работая с 2015 года</span>, мы предоставляем широкий ассортимент высококачественных брендов для ухода за волосами, полостью рта, бытовой химией, женской гигиеной и косметики от ведущих производителей Южной Кореи, таких как AEKYUNG, MUKUNGHWA, JOONGWON, MYUNGIN COSMETICS. С 2025года расширен ассоримент ухода за волосами, а именно линейка бессульфатных шампуней Hаir Clinic, ввдены новинки шампуней мужской линейки PRO ACTIVE MAN,  также с 2025года мы являемся официальным представителем косметической торговой марки ANOTHER FACE. </p>
+<p><br />Наша главная цель - обеспечить качественной и безопасной продукцией наших клиентов и потребителей.</p>
+<p><br />Мы глубоко ценим нашу безупречную деловую репутацию, доверие наших бизнес-партнеров и лояльность наших сотрудников. Каждый день мы работаем над тем, чтобы оправдывать это доверие и поддерживать высокие стандарты обслуживания.</p></div>
+            <img class="about-img" src="assets/img/about.png" alt="about">
+        </div>
+    </section>
+    
+    <section class="aboutus">
+        <h2 class="aboutus-title">
+            
+            КОРОТКО О НАС
+            
+        </h2>
+        <div class="aboutus-info">
+                        <div class="aboutus-block">
+                <div class="aboutus-number"><span class="number-animation">16</span></div>
+                <div class="aboutus-text">Городов присутствия по Казахстану</div>
+            </div>            <div class="aboutus-block">
+                <div class="aboutus-number"><span class="number-animation">450</span></div>
+                <div class="aboutus-text">SKU</div>
+            </div>            <div class="aboutus-block">
+                <div class="aboutus-number">><span class="number-animation">8000</span></div>
+                <div class="aboutus-text">Клиентов по всему Казахстану</div>
+            </div>            <div class="aboutus-block">
+                <div class="aboutus-number">><span class="number-animation">95</span>%</div>
+                <div class="aboutus-text">Ассортимента всегда в наличии</div>
+            </div>            <div class="aboutus-block">
+                <div class="aboutus-number">><span class="number-animation">2500</span>м²</div>
+                <div class="aboutus-text">площадь складских помещений</div>
+            </div>            <div class="aboutus-block">
+                <div class="aboutus-number"><span class="number-animation">24 </span> часа</div>
+                <div class="aboutus-text">От оформления заказа до отгрузки</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="brands" id="brands">
+            <h3>
+                
+                Наши бренды
+                
+            </h3>
+            <div class="brands-slider">
+                <div class="slider-block-brand">
+                    <div class="slider-new-brand">
+                        <div class="slide-one-brand">
+                                                    <div class="slide-new-brand" id="brand1" onclick="openModalBrands('brand1','assets/tovars/kerasys.webp', 'KERASYS')">
+                            <img src="assets/brands/kerasys.webp" alt="KERASYS">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Красота волос зависит от различных факторов, но для получения здоровых, сияющих волос не обязательно идти в салон. Домашний уход может быть таким же эффективным благодаря правильно подобранным средствам, соответствующим типу волос и коже головы.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд KERASYS создан для того, чтобы сделать уход за волосами доступным и удобным для женщин. Мы предлагаем продукты, которые обеспечивают качественный результат, сравнимый с салонным, прямо у вас дома.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Откройте для себя клиническую серию KERASYS HAIR CLINIC, которая интенсивно питает и восстанавливает поврежденные волосы. Состав обогащен 17 видами аминокислот и протеинами, а также натуральными маслами и ингредиентами, подобранными специально для решения различных проблем волос и кожи головы.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Парфюмированная серия KERASYS PERFUME предлагает подобрать аромат в зависимости от вашего образа. Каждый аромат из этой серии раскрывает оригинальные оттенки парфюмерной композиции, создавая единый аромат, который помогает выразить вашу уникальность и подчеркнуть индивидуальность в различных ситуациях. Вы будете элегантной и изысканной, романтичной и нежной, женственной и чувственной.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ампульная серия KERASYS ADVANCED обладает специальной формулой, разработанной для ухода за волосами, нуждающимися в усиленном восстановлении. Высококонцентрированный состав, обогащенный кератинами, церамидами и коллагенами, обеспечивают максимальное питание и увлажнение поврежденных волос от корней до кончиков. Маски, филлеры и сыворотки дополнят действие основных продуктов, усиливая восстанавливающий эффект и помогая восстановить здоровье и красоту волос.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand2" onclick="openModalBrands('brand2','assets/tovars/2080.webp', '2080')">
+                            <img src="assets/brands/2080.webp" alt="2080">
+                            <div class="description" style="display:none"><p>Красивые зубы стали символом красоты и уверенности в себе. Для правильного ухода за зубами и деснами следует использовать только подходящую зубную пасту.</p>
+<p><br />Эксперты компании AEKYUNG на протяжении 25 лет разрабатывают уникальные формулы, направленные на решение различных проблем полости рта. <br />Универсальная серия зубных паст 2080 TOTAL является базовой линейкой для комплексного ухода за полостью рта. Эта двухцветная паста с приятным освежающим вкусом мяты.</p>
+<p><br />Профилактическая серия зубных паст 2080 PRO направлена на чистку эмали путем различной интенсивности воздействия (абразивность). Выбирая пасту, важно обратить внимание на её абразивность. Правильно подобранная паста не только принесёт пользу, но и сделает процесс чистки приятнее.<br />Лечебно-профилактическая серия зубных паст 2080 DR.CLINIC направлена на решение определенных проблем полости рта. Эффективность подтверждена клиническим исследованиями:</p>
+<ul>
+<li>снижает риск образования зубного камня в 4 раза</li>
+<li>снижает чувствительность зубов на 96% в течение 2-х недель</li>
+<li>осветляет на 88% через 8 недель использования</li>
+<li>избавляет от неприятного запаха изо рта на 90% в течение 2-х недель.</li>
+</ul>
+<p><br />Зубная паста для детей — важный элемент мотивации, она должна нравиться малышу. Детская серия зубных паст 2080 KIDS с яркими вкусами яблока и клубники, содержит оптимальное количество фтора и витаминов для защиты детских зубов.</p>
+<p><br />Пусть забота о здоровье зубов станет вашей хорошей привычкой, ведь результат того стоит!</p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand3" onclick="openModalBrands('brand3','assets/tovars/showermate.webp', 'SHOWERMATE')">
+                            <img src="assets/brands/showermate.webp" alt="SHOWERMATE">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Уход за телом - проявление заботы и любви к себе.  Красивая гладкая кожа тела невозможна без должного очищения.  Поэтому, важно использовать гели для душа с добавлением натуральных экстрактов растений, которые запускают процесс естественного обновления и постепенного восстановления кожи. </span></span><span style="color: #666666;"><span style="font-family: Montserrat, serif;"><span> </span></span></span></p>
+<p align="justify"><span style="color: #666666;"><span style="font-family: Montserrat, serif;"><span> </span></span></span></p>
+<p align="justify"><span><span lang="ru-RU">Регулярное использование гелей с натуральными компонентами оказывает омолаживающий эффект, придают коже упругость и жемчужное сияние.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд ShowerMate представляет различные гели для душа, которые нежно очищают кожу тела, увлажняют ее, придают мягкость и чудесный аромат. Природные вещества в составе гелей для душа оказывают мягкое воздействие на кожу, не повреждая кислотно-щелочной и липидный баланс.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Увлажняющие гели для душа ShowerMate NATURAL с натуральными экстрактами и пышной пеной мягко окутывают кожу, наполняют ее влагой и питают.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Натуральные гели для душа ShowerMate BOTANIC с ароматом трав и цветов подарят коже природную красоту и нежность.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Гели для душа с цветочными экстрактами и утонченным ароматом ShowerMate FLOWER PERFUME придает коже роскошную бархатистость.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ежедневная забота о коже поможет надолго сохранить ее молодость и привлекательный вид. Уходовые процедуры положительно влияют не только на красоту, но и на настроение!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand4" onclick="openModalBrands('brand4','assets/tovars/farmstay.webp', 'FARMSTAY')">
+                            <img src="assets/brands/farmstay.webp" alt="FARMSTAY">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Сияющая, чистая кожа - результат поэтапного очищения. Очищая и питая кожу продуктами бренда FarmStay, вы подарите коже свежесть и жемчужный блеск.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Продукция FarmStay создана для тех, кому важна натуральная уходовая и декоративная косметика. Широкий ассортимент позволит подобрать идеальное средство для своего типа кожи. Косметические средства обогащены молоком, медом, улиточным муцином, алоэ. Входящие в состав экстракты фруктов и овощей насыщают кожу витаминами, тонизируют, способствуют выравниванию тона кожи и улучшают цвет лица, а также оказывают антиоксидантное действие.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ассортимент компании ориентирован на женщин, которые ухаживают за собой и практикуют 10-ти ступенчатую программу ухода, согласно методам корейских косметологов. Элементы, входящие в состав средств, оказывают питающее, тонизирующее, успокаивающее действие на кожу.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Недостаток влаги сказывается на внешнем состоянии кожи, и на её способности дольше оставаться молодой и красивой. Без интенсивного увлажнения невозможно поддерживать кожу эластичной. Антивозрастная серия возвращает коже упругость, эластичность, разглаживает мелкие мимические морщины.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">В ассортименте косметики корейского бренда FarmStay пенки для умывания, пилинги и скрабы, маски для лица и патчи для глаз, тонеры, эмульсии, ампулы, кремы для лица и век.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Вся продукция имеет приятный аромат, легкую текстуру, отлично впитывается, не оставляет жирных следов. Вся продукция гипоаллергенна и абсолютно безопасна.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand5" onclick="openModalBrands('brand5','assets/tovars/secretday.webp', 'SECRETDAY')">
+                            <img src="assets/brands/secretday.webp" alt="SECRETDAY">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Каждая женщина мечтает быть красивой и счастливой. Важным источником женской красоты является женское здоровье.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд товаров женской гигиены SECRETDAY, разработанный компанией JOONGWON, учитывает потребности женщин в заботе о своем здоровье и комфорте. Продукция SECRETDAY не вызывает раздражения, обеспечивая поддержку уверенности и комфорта в повседневной жизни.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Женские гигиенические прокладки серии LOVE отличаются своей нежной поверхностью, обеспечивая мягкую и надежную защиту в течение дня.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Серия COTTON имеет верхний слой из 100% хлопковой ткани и внутренний слой из целлюлозы, обеспечивающий отличное впитывание и равномерное распределение жидкости, которая надежно удерживается внутри прокладки.</span></span></p>
+<p align="justify">В последние годы все больше людей переходят на экологически более осознанный образ жизни и предпочитают товары, которые оказывают меньшее воздействие на окружающую среду. В ответ на этот тренд производители также активно уделяют внимание экологической устойчивости своих продуктов. Например, органическая серия FRESH создана из натурального хлопка, с использованием внутреннего слоя из возобновляемого био-сырья. При производстве этих товаров не проводятся тесты на животных, и не используются ингредиенты животного происхождения. Это абсолютно веганская серия, разработанная специально для тех, кто стремится жить в гармонии с природой.</p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand6" onclick="openModalBrands('brand6','assets/tovars/perfect.webp', 'PERFECT')">
+                            <img src="assets/brands/perfect.webp" alt="PERFECT">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Многие ищут качественный продукт по доступной цене, который бы позволил сэкономить на стиральном порошке, не ухудшая качество стирки. В первую очередь, чтобы достичь экономии, важно правильно дозировать стиральный порошок.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Стиральный порошок PERFECT - это концентрированный продукт, который эффективно удаляет все виды загрязнений, что позволяет сократить расход на стирку в три раза. Согласно рекомендации производителя, достаточно всего 50 грамм на одну стирку. Таким образом, даже 1 кг порошка при ежедневной стирке хватит на целый месяц!</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">PERFECT идеально подходит как для стирки вручную, так и для использования в стиральной машине, что делает его оптимальным выбором для различных типов тканей. Благодаря специальной системе контроля пенообразования, он легко растворяется в воде и полностью смывается при ополаскивании.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">В отличие от некоторых других стиральных порошков, которые содержат фосфаты для смягчения воды, PERFECT абсолютно безопасен, так как не содержит фосфатов, которые могут быть вредными для здоровья человека и окружающей среды.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ткань нашей одежды постоянно подвергается воздействию грибков и различных микроорганизмов из разных источников, однако благодаря натуральным ферментам и компоненту Anti-D, стиральный порошок PERFECT устраняет 99,9% этих вредных организмов из волокон ткани.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">PERFECT также гипоаллергенен, что означает отсутствие агрессивных добавок, способных вызвать аллергические реакции. Кроме того, его формула эффективно уничтожает клещей и продукты их жизнедеятельности, которые являются одной из причин возникновения аллергических реакций. Таким образом, PERFECT обеспечивает не только чистоту, но и безопасность для вашей кожи и здоровья вашей семьи.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand7" onclick="openModalBrands('brand7','assets/tovars/wool.webp', 'WOOL SHAMPOO')">
+                            <img src="assets/brands/wool.webp" alt="WOOL SHAMPOO">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO — это инновационное решение для бережной стирки, которое получило официальную сертификацию WoolMark в Корее. WOOL SHAMPOO представляет собой настоящий прорыв в уходе за одеждой из деликатных материалов, таких как шерсть, шелк и хлопок.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одна из ключевых особенностей WOOL SHAMPOO заключается в использовании гипоаллергенных чистящих компонентов. Это означает, что даже самые чувствительные ткани будут бережно отстираны, не подвергаясь агрессивному воздействию химических веществ.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Специально разработанная формула WOOL SHAMPOO обеспечивает тщательное удаление загрязнений, сохраняя при этом структуру и цвет ткани. Благодаря этому ваша одежда будет выглядеть как новая долгое время, не теряя своего первоначального вида.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO рекомендуется для стирки детского белья, поскольку он обеспечивает мягкое и безопасное очищение, не раздражая даже самую нежную детскую кожу.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO не только эффективно отстирывает вашу одежду, но и заботится о ее сохранности и красоте. Доверьте свои ценные вещи инновационному средству WOOL SHAMPOO и наслаждайтесь их безупречным видом и качеством каждый день.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand8" onclick="openModalBrands('brand8','assets/tovars/trio.webp', 'TRIO')">
+                            <img src="assets/brands/trio.webp" alt="TRIO">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">TRIO - универсальное решение, которое обеспечивает идеальную чистоту не только посуды, но и фруктов, овощей. С добавлением натуральных компонентов, продукт незаменимый помощник в быту.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из ключевых преимуществ TRIO является его способность справляться даже с застывшим жиром. Благодаря мощным очищающим свойствам, средства TRIO легко справляются с самыми сложными загрязнениями, оставляя поверхности чистыми и блестящими.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Особое внимание заслуживает безопасность для кожи рук. TRIO бережно воздействует на кожу, не вызывая сухости или раздражения, что делает его идеальным выбором для повседневного использования.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из преимуществ TRIO является его способность удалять неприятные запахи, оставляя свежий аромат после каждого использования. Благодаря легкому смыванию с посуды, вы можете быть уверены, что она останется идеально чистой.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Антибактериальное средство для мытья посуды TRIO — это защита от вредных микроорганизмов. Уничтожая 99,9% бактерий и грибков, оно не только обеспечивает безупречную чистоту, но и препятствует их размножению, обеспечивая вашему дому высокий уровень гигиены.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Доверьте свою посуду, фрукты, овощи универсальному средству TRIO и наслаждайтесь чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand9" onclick="openModalBrands('brand9','assets/tovars/mukungva.webp', 'MUKUNGHWA')">
+                            <img src="assets/brands/mukunghwa.webp" alt="MUKUNGHWA">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Продукция MUKUNGHWA — это истинное воплощение натуральной чистоты и заботы о природе. Основной состав продукции включает компоненты растительного происхождения, масло плодов пальмового дерева, натуральную соду высшей степени отчистки и очищенную воду.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из флагманских продуктов MUKUNGHWA является мягкое отстирывающее средство O’CLEAN. Созданное на основе плодов мыльного дерева, оно обладает отличным пенообразованием и выраженным антибактериальным эффектом. Натуральная сода высочайшей степени очистки, входящая в состав, не только эффективно удаляет загрязнения, но и бережно воздействует на кожу. Энзимный отбеливатель и очищающий состав из растительных компонентов глубоко проникают в ткань, удаляя даже самые сложные загрязнения, сохраняя цвет и структуру ткани. Благодаря высокому уровню биоразлагаемости, это средство не наносит вред окружающей среде.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Другим инновационным продуктом MUKUNGHWA является антибактериальный супер-концентрированный ополаскиватель VIU. С натуральными растительными компонентами для защиты структуры и цвета ткани, этот продукт не только устраняет статическое электричество и разглаживает ткань, но и обеспечивает ее мягкость. Гипоаллергенные и созданные как ЭКО-продукция, средства VIU имеют нежный аромат, который придает вашей одежде свежесть и приятный аромат.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Хозяйственные мыла MUKUNGHWA изготовлены исключительно из жиров растительного происхождения высокой очистки, предлагая разнообразные варианты для стирки кухонного текстиля, уборки поверхности и обеспечения гигиены.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Органические средства для мытья посуды, фруктов и овощей MUKUNGHWA - это идеальное сочетание эффективности и натуральности. Они отлично пенятся и смывают жир за несколько секунд даже в холодной воде, обладают формулой быстрого ополаскивания с посуды и не содержат искусственных красителей, консервантов или парабенов.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Доверяя продукции MUKUNGHWA, вы будете наслаждаться чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand10" onclick="openModalBrands('brand10','', 'ANOTHER FACE')">
+                            <img src="어나더페이스 로고 (1).png" alt="ANOTHER FACE">
+                            <div class="description" style="display:none"></div>
+                        </div>
+                        
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="swiper-container" style="display:block">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                                    <div class="slide-new-brand" id="brand1" onclick="openModalBrands('brand1','assets/tovars/kerasys.webp', 'KERASYS')">
+                            <img src="assets/brands/kerasys.webp" alt="KERASYS">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Красота волос зависит от различных факторов, но для получения здоровых, сияющих волос не обязательно идти в салон. Домашний уход может быть таким же эффективным благодаря правильно подобранным средствам, соответствующим типу волос и коже головы.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд KERASYS создан для того, чтобы сделать уход за волосами доступным и удобным для женщин. Мы предлагаем продукты, которые обеспечивают качественный результат, сравнимый с салонным, прямо у вас дома.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Откройте для себя клиническую серию KERASYS HAIR CLINIC, которая интенсивно питает и восстанавливает поврежденные волосы. Состав обогащен 17 видами аминокислот и протеинами, а также натуральными маслами и ингредиентами, подобранными специально для решения различных проблем волос и кожи головы.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Парфюмированная серия KERASYS PERFUME предлагает подобрать аромат в зависимости от вашего образа. Каждый аромат из этой серии раскрывает оригинальные оттенки парфюмерной композиции, создавая единый аромат, который помогает выразить вашу уникальность и подчеркнуть индивидуальность в различных ситуациях. Вы будете элегантной и изысканной, романтичной и нежной, женственной и чувственной.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ампульная серия KERASYS ADVANCED обладает специальной формулой, разработанной для ухода за волосами, нуждающимися в усиленном восстановлении. Высококонцентрированный состав, обогащенный кератинами, церамидами и коллагенами, обеспечивают максимальное питание и увлажнение поврежденных волос от корней до кончиков. Маски, филлеры и сыворотки дополнят действие основных продуктов, усиливая восстанавливающий эффект и помогая восстановить здоровье и красоту волос.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand2" onclick="openModalBrands('brand2','assets/tovars/2080.webp', '2080')">
+                            <img src="assets/brands/2080.webp" alt="2080">
+                            <div class="description" style="display:none"><p>Красивые зубы стали символом красоты и уверенности в себе. Для правильного ухода за зубами и деснами следует использовать только подходящую зубную пасту.</p>
+<p><br />Эксперты компании AEKYUNG на протяжении 25 лет разрабатывают уникальные формулы, направленные на решение различных проблем полости рта. <br />Универсальная серия зубных паст 2080 TOTAL является базовой линейкой для комплексного ухода за полостью рта. Эта двухцветная паста с приятным освежающим вкусом мяты.</p>
+<p><br />Профилактическая серия зубных паст 2080 PRO направлена на чистку эмали путем различной интенсивности воздействия (абразивность). Выбирая пасту, важно обратить внимание на её абразивность. Правильно подобранная паста не только принесёт пользу, но и сделает процесс чистки приятнее.<br />Лечебно-профилактическая серия зубных паст 2080 DR.CLINIC направлена на решение определенных проблем полости рта. Эффективность подтверждена клиническим исследованиями:</p>
+<ul>
+<li>снижает риск образования зубного камня в 4 раза</li>
+<li>снижает чувствительность зубов на 96% в течение 2-х недель</li>
+<li>осветляет на 88% через 8 недель использования</li>
+<li>избавляет от неприятного запаха изо рта на 90% в течение 2-х недель.</li>
+</ul>
+<p><br />Зубная паста для детей — важный элемент мотивации, она должна нравиться малышу. Детская серия зубных паст 2080 KIDS с яркими вкусами яблока и клубники, содержит оптимальное количество фтора и витаминов для защиты детских зубов.</p>
+<p><br />Пусть забота о здоровье зубов станет вашей хорошей привычкой, ведь результат того стоит!</p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand3" onclick="openModalBrands('brand3','assets/tovars/showermate.webp', 'SHOWERMATE')">
+                            <img src="assets/brands/showermate.webp" alt="SHOWERMATE">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Уход за телом - проявление заботы и любви к себе.  Красивая гладкая кожа тела невозможна без должного очищения.  Поэтому, важно использовать гели для душа с добавлением натуральных экстрактов растений, которые запускают процесс естественного обновления и постепенного восстановления кожи. </span></span><span style="color: #666666;"><span style="font-family: Montserrat, serif;"><span> </span></span></span></p>
+<p align="justify"><span style="color: #666666;"><span style="font-family: Montserrat, serif;"><span> </span></span></span></p>
+<p align="justify"><span><span lang="ru-RU">Регулярное использование гелей с натуральными компонентами оказывает омолаживающий эффект, придают коже упругость и жемчужное сияние.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд ShowerMate представляет различные гели для душа, которые нежно очищают кожу тела, увлажняют ее, придают мягкость и чудесный аромат. Природные вещества в составе гелей для душа оказывают мягкое воздействие на кожу, не повреждая кислотно-щелочной и липидный баланс.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Увлажняющие гели для душа ShowerMate NATURAL с натуральными экстрактами и пышной пеной мягко окутывают кожу, наполняют ее влагой и питают.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Натуральные гели для душа ShowerMate BOTANIC с ароматом трав и цветов подарят коже природную красоту и нежность.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Гели для душа с цветочными экстрактами и утонченным ароматом ShowerMate FLOWER PERFUME придает коже роскошную бархатистость.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ежедневная забота о коже поможет надолго сохранить ее молодость и привлекательный вид. Уходовые процедуры положительно влияют не только на красоту, но и на настроение!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand4" onclick="openModalBrands('brand4','assets/tovars/farmstay.webp', 'FARMSTAY')">
+                            <img src="assets/brands/farmstay.webp" alt="FARMSTAY">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Сияющая, чистая кожа - результат поэтапного очищения. Очищая и питая кожу продуктами бренда FarmStay, вы подарите коже свежесть и жемчужный блеск.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Продукция FarmStay создана для тех, кому важна натуральная уходовая и декоративная косметика. Широкий ассортимент позволит подобрать идеальное средство для своего типа кожи. Косметические средства обогащены молоком, медом, улиточным муцином, алоэ. Входящие в состав экстракты фруктов и овощей насыщают кожу витаминами, тонизируют, способствуют выравниванию тона кожи и улучшают цвет лица, а также оказывают антиоксидантное действие.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ассортимент компании ориентирован на женщин, которые ухаживают за собой и практикуют 10-ти ступенчатую программу ухода, согласно методам корейских косметологов. Элементы, входящие в состав средств, оказывают питающее, тонизирующее, успокаивающее действие на кожу.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Недостаток влаги сказывается на внешнем состоянии кожи, и на её способности дольше оставаться молодой и красивой. Без интенсивного увлажнения невозможно поддерживать кожу эластичной. Антивозрастная серия возвращает коже упругость, эластичность, разглаживает мелкие мимические морщины.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">В ассортименте косметики корейского бренда FarmStay пенки для умывания, пилинги и скрабы, маски для лица и патчи для глаз, тонеры, эмульсии, ампулы, кремы для лица и век.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Вся продукция имеет приятный аромат, легкую текстуру, отлично впитывается, не оставляет жирных следов. Вся продукция гипоаллергенна и абсолютно безопасна.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand5" onclick="openModalBrands('brand5','assets/tovars/secretday.webp', 'SECRETDAY')">
+                            <img src="assets/brands/secretday.webp" alt="SECRETDAY">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Каждая женщина мечтает быть красивой и счастливой. Важным источником женской красоты является женское здоровье.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд товаров женской гигиены SECRETDAY, разработанный компанией JOONGWON, учитывает потребности женщин в заботе о своем здоровье и комфорте. Продукция SECRETDAY не вызывает раздражения, обеспечивая поддержку уверенности и комфорта в повседневной жизни.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Женские гигиенические прокладки серии LOVE отличаются своей нежной поверхностью, обеспечивая мягкую и надежную защиту в течение дня.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Серия COTTON имеет верхний слой из 100% хлопковой ткани и внутренний слой из целлюлозы, обеспечивающий отличное впитывание и равномерное распределение жидкости, которая надежно удерживается внутри прокладки.</span></span></p>
+<p align="justify">В последние годы все больше людей переходят на экологически более осознанный образ жизни и предпочитают товары, которые оказывают меньшее воздействие на окружающую среду. В ответ на этот тренд производители также активно уделяют внимание экологической устойчивости своих продуктов. Например, органическая серия FRESH создана из натурального хлопка, с использованием внутреннего слоя из возобновляемого био-сырья. При производстве этих товаров не проводятся тесты на животных, и не используются ингредиенты животного происхождения. Это абсолютно веганская серия, разработанная специально для тех, кто стремится жить в гармонии с природой.</p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand6" onclick="openModalBrands('brand6','assets/tovars/perfect.webp', 'PERFECT')">
+                            <img src="assets/brands/perfect.webp" alt="PERFECT">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Многие ищут качественный продукт по доступной цене, который бы позволил сэкономить на стиральном порошке, не ухудшая качество стирки. В первую очередь, чтобы достичь экономии, важно правильно дозировать стиральный порошок.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Стиральный порошок PERFECT - это концентрированный продукт, который эффективно удаляет все виды загрязнений, что позволяет сократить расход на стирку в три раза. Согласно рекомендации производителя, достаточно всего 50 грамм на одну стирку. Таким образом, даже 1 кг порошка при ежедневной стирке хватит на целый месяц!</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">PERFECT идеально подходит как для стирки вручную, так и для использования в стиральной машине, что делает его оптимальным выбором для различных типов тканей. Благодаря специальной системе контроля пенообразования, он легко растворяется в воде и полностью смывается при ополаскивании.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">В отличие от некоторых других стиральных порошков, которые содержат фосфаты для смягчения воды, PERFECT абсолютно безопасен, так как не содержит фосфатов, которые могут быть вредными для здоровья человека и окружающей среды.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ткань нашей одежды постоянно подвергается воздействию грибков и различных микроорганизмов из разных источников, однако благодаря натуральным ферментам и компоненту Anti-D, стиральный порошок PERFECT устраняет 99,9% этих вредных организмов из волокон ткани.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">PERFECT также гипоаллергенен, что означает отсутствие агрессивных добавок, способных вызвать аллергические реакции. Кроме того, его формула эффективно уничтожает клещей и продукты их жизнедеятельности, которые являются одной из причин возникновения аллергических реакций. Таким образом, PERFECT обеспечивает не только чистоту, но и безопасность для вашей кожи и здоровья вашей семьи.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand7" onclick="openModalBrands('brand7','assets/tovars/wool.webp', 'WOOL SHAMPOO')">
+                            <img src="assets/brands/wool.webp" alt="WOOL SHAMPOO">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO — это инновационное решение для бережной стирки, которое получило официальную сертификацию WoolMark в Корее. WOOL SHAMPOO представляет собой настоящий прорыв в уходе за одеждой из деликатных материалов, таких как шерсть, шелк и хлопок.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одна из ключевых особенностей WOOL SHAMPOO заключается в использовании гипоаллергенных чистящих компонентов. Это означает, что даже самые чувствительные ткани будут бережно отстираны, не подвергаясь агрессивному воздействию химических веществ.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Специально разработанная формула WOOL SHAMPOO обеспечивает тщательное удаление загрязнений, сохраняя при этом структуру и цвет ткани. Благодаря этому ваша одежда будет выглядеть как новая долгое время, не теряя своего первоначального вида.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO рекомендуется для стирки детского белья, поскольку он обеспечивает мягкое и безопасное очищение, не раздражая даже самую нежную детскую кожу.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO не только эффективно отстирывает вашу одежду, но и заботится о ее сохранности и красоте. Доверьте свои ценные вещи инновационному средству WOOL SHAMPOO и наслаждайтесь их безупречным видом и качеством каждый день.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand8" onclick="openModalBrands('brand8','assets/tovars/trio.webp', 'TRIO')">
+                            <img src="assets/brands/trio.webp" alt="TRIO">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">TRIO - универсальное решение, которое обеспечивает идеальную чистоту не только посуды, но и фруктов, овощей. С добавлением натуральных компонентов, продукт незаменимый помощник в быту.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из ключевых преимуществ TRIO является его способность справляться даже с застывшим жиром. Благодаря мощным очищающим свойствам, средства TRIO легко справляются с самыми сложными загрязнениями, оставляя поверхности чистыми и блестящими.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Особое внимание заслуживает безопасность для кожи рук. TRIO бережно воздействует на кожу, не вызывая сухости или раздражения, что делает его идеальным выбором для повседневного использования.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из преимуществ TRIO является его способность удалять неприятные запахи, оставляя свежий аромат после каждого использования. Благодаря легкому смыванию с посуды, вы можете быть уверены, что она останется идеально чистой.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Антибактериальное средство для мытья посуды TRIO — это защита от вредных микроорганизмов. Уничтожая 99,9% бактерий и грибков, оно не только обеспечивает безупречную чистоту, но и препятствует их размножению, обеспечивая вашему дому высокий уровень гигиены.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Доверьте свою посуду, фрукты, овощи универсальному средству TRIO и наслаждайтесь чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand9" onclick="openModalBrands('brand9','assets/tovars/mukungva.webp', 'MUKUNGHWA')">
+                            <img src="assets/brands/mukunghwa.webp" alt="MUKUNGHWA">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Продукция MUKUNGHWA — это истинное воплощение натуральной чистоты и заботы о природе. Основной состав продукции включает компоненты растительного происхождения, масло плодов пальмового дерева, натуральную соду высшей степени отчистки и очищенную воду.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из флагманских продуктов MUKUNGHWA является мягкое отстирывающее средство O’CLEAN. Созданное на основе плодов мыльного дерева, оно обладает отличным пенообразованием и выраженным антибактериальным эффектом. Натуральная сода высочайшей степени очистки, входящая в состав, не только эффективно удаляет загрязнения, но и бережно воздействует на кожу. Энзимный отбеливатель и очищающий состав из растительных компонентов глубоко проникают в ткань, удаляя даже самые сложные загрязнения, сохраняя цвет и структуру ткани. Благодаря высокому уровню биоразлагаемости, это средство не наносит вред окружающей среде.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Другим инновационным продуктом MUKUNGHWA является антибактериальный супер-концентрированный ополаскиватель VIU. С натуральными растительными компонентами для защиты структуры и цвета ткани, этот продукт не только устраняет статическое электричество и разглаживает ткань, но и обеспечивает ее мягкость. Гипоаллергенные и созданные как ЭКО-продукция, средства VIU имеют нежный аромат, который придает вашей одежде свежесть и приятный аромат.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Хозяйственные мыла MUKUNGHWA изготовлены исключительно из жиров растительного происхождения высокой очистки, предлагая разнообразные варианты для стирки кухонного текстиля, уборки поверхности и обеспечения гигиены.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Органические средства для мытья посуды, фруктов и овощей MUKUNGHWA - это идеальное сочетание эффективности и натуральности. Они отлично пенятся и смывают жир за несколько секунд даже в холодной воде, обладают формулой быстрого ополаскивания с посуды и не содержат искусственных красителей, консервантов или парабенов.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Доверяя продукции MUKUNGHWA, вы будете наслаждаться чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand10" onclick="openModalBrands('brand10','', 'ANOTHER FACE')">
+                            <img src="어나더페이스 로고 (1).png" alt="ANOTHER FACE">
+                            <div class="description" style="display:none"></div>
+                        </div>
+                        
+
+                        </div>
+                        <div class="swiper-slide">
+                                                    <div class="slide-new-brand" id="brand1" onclick="openModalBrands('brand1','assets/tovars/kerasys.webp', 'KERASYS')">
+                            <img src="assets/brands/kerasys.webp" alt="KERASYS">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Красота волос зависит от различных факторов, но для получения здоровых, сияющих волос не обязательно идти в салон. Домашний уход может быть таким же эффективным благодаря правильно подобранным средствам, соответствующим типу волос и коже головы.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд KERASYS создан для того, чтобы сделать уход за волосами доступным и удобным для женщин. Мы предлагаем продукты, которые обеспечивают качественный результат, сравнимый с салонным, прямо у вас дома.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Откройте для себя клиническую серию KERASYS HAIR CLINIC, которая интенсивно питает и восстанавливает поврежденные волосы. Состав обогащен 17 видами аминокислот и протеинами, а также натуральными маслами и ингредиентами, подобранными специально для решения различных проблем волос и кожи головы.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Парфюмированная серия KERASYS PERFUME предлагает подобрать аромат в зависимости от вашего образа. Каждый аромат из этой серии раскрывает оригинальные оттенки парфюмерной композиции, создавая единый аромат, который помогает выразить вашу уникальность и подчеркнуть индивидуальность в различных ситуациях. Вы будете элегантной и изысканной, романтичной и нежной, женственной и чувственной.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ампульная серия KERASYS ADVANCED обладает специальной формулой, разработанной для ухода за волосами, нуждающимися в усиленном восстановлении. Высококонцентрированный состав, обогащенный кератинами, церамидами и коллагенами, обеспечивают максимальное питание и увлажнение поврежденных волос от корней до кончиков. Маски, филлеры и сыворотки дополнят действие основных продуктов, усиливая восстанавливающий эффект и помогая восстановить здоровье и красоту волос.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand2" onclick="openModalBrands('brand2','assets/tovars/2080.webp', '2080')">
+                            <img src="assets/brands/2080.webp" alt="2080">
+                            <div class="description" style="display:none"><p>Красивые зубы стали символом красоты и уверенности в себе. Для правильного ухода за зубами и деснами следует использовать только подходящую зубную пасту.</p>
+<p><br />Эксперты компании AEKYUNG на протяжении 25 лет разрабатывают уникальные формулы, направленные на решение различных проблем полости рта. <br />Универсальная серия зубных паст 2080 TOTAL является базовой линейкой для комплексного ухода за полостью рта. Эта двухцветная паста с приятным освежающим вкусом мяты.</p>
+<p><br />Профилактическая серия зубных паст 2080 PRO направлена на чистку эмали путем различной интенсивности воздействия (абразивность). Выбирая пасту, важно обратить внимание на её абразивность. Правильно подобранная паста не только принесёт пользу, но и сделает процесс чистки приятнее.<br />Лечебно-профилактическая серия зубных паст 2080 DR.CLINIC направлена на решение определенных проблем полости рта. Эффективность подтверждена клиническим исследованиями:</p>
+<ul>
+<li>снижает риск образования зубного камня в 4 раза</li>
+<li>снижает чувствительность зубов на 96% в течение 2-х недель</li>
+<li>осветляет на 88% через 8 недель использования</li>
+<li>избавляет от неприятного запаха изо рта на 90% в течение 2-х недель.</li>
+</ul>
+<p><br />Зубная паста для детей — важный элемент мотивации, она должна нравиться малышу. Детская серия зубных паст 2080 KIDS с яркими вкусами яблока и клубники, содержит оптимальное количество фтора и витаминов для защиты детских зубов.</p>
+<p><br />Пусть забота о здоровье зубов станет вашей хорошей привычкой, ведь результат того стоит!</p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand3" onclick="openModalBrands('brand3','assets/tovars/showermate.webp', 'SHOWERMATE')">
+                            <img src="assets/brands/showermate.webp" alt="SHOWERMATE">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Уход за телом - проявление заботы и любви к себе.  Красивая гладкая кожа тела невозможна без должного очищения.  Поэтому, важно использовать гели для душа с добавлением натуральных экстрактов растений, которые запускают процесс естественного обновления и постепенного восстановления кожи. </span></span><span style="color: #666666;"><span style="font-family: Montserrat, serif;"><span> </span></span></span></p>
+<p align="justify"><span style="color: #666666;"><span style="font-family: Montserrat, serif;"><span> </span></span></span></p>
+<p align="justify"><span><span lang="ru-RU">Регулярное использование гелей с натуральными компонентами оказывает омолаживающий эффект, придают коже упругость и жемчужное сияние.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд ShowerMate представляет различные гели для душа, которые нежно очищают кожу тела, увлажняют ее, придают мягкость и чудесный аромат. Природные вещества в составе гелей для душа оказывают мягкое воздействие на кожу, не повреждая кислотно-щелочной и липидный баланс.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Увлажняющие гели для душа ShowerMate NATURAL с натуральными экстрактами и пышной пеной мягко окутывают кожу, наполняют ее влагой и питают.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Натуральные гели для душа ShowerMate BOTANIC с ароматом трав и цветов подарят коже природную красоту и нежность.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Гели для душа с цветочными экстрактами и утонченным ароматом ShowerMate FLOWER PERFUME придает коже роскошную бархатистость.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ежедневная забота о коже поможет надолго сохранить ее молодость и привлекательный вид. Уходовые процедуры положительно влияют не только на красоту, но и на настроение!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand4" onclick="openModalBrands('brand4','assets/tovars/farmstay.webp', 'FARMSTAY')">
+                            <img src="assets/brands/farmstay.webp" alt="FARMSTAY">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Сияющая, чистая кожа - результат поэтапного очищения. Очищая и питая кожу продуктами бренда FarmStay, вы подарите коже свежесть и жемчужный блеск.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Продукция FarmStay создана для тех, кому важна натуральная уходовая и декоративная косметика. Широкий ассортимент позволит подобрать идеальное средство для своего типа кожи. Косметические средства обогащены молоком, медом, улиточным муцином, алоэ. Входящие в состав экстракты фруктов и овощей насыщают кожу витаминами, тонизируют, способствуют выравниванию тона кожи и улучшают цвет лица, а также оказывают антиоксидантное действие.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ассортимент компании ориентирован на женщин, которые ухаживают за собой и практикуют 10-ти ступенчатую программу ухода, согласно методам корейских косметологов. Элементы, входящие в состав средств, оказывают питающее, тонизирующее, успокаивающее действие на кожу.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Недостаток влаги сказывается на внешнем состоянии кожи, и на её способности дольше оставаться молодой и красивой. Без интенсивного увлажнения невозможно поддерживать кожу эластичной. Антивозрастная серия возвращает коже упругость, эластичность, разглаживает мелкие мимические морщины.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">В ассортименте косметики корейского бренда FarmStay пенки для умывания, пилинги и скрабы, маски для лица и патчи для глаз, тонеры, эмульсии, ампулы, кремы для лица и век.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Вся продукция имеет приятный аромат, легкую текстуру, отлично впитывается, не оставляет жирных следов. Вся продукция гипоаллергенна и абсолютно безопасна.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand5" onclick="openModalBrands('brand5','assets/tovars/secretday.webp', 'SECRETDAY')">
+                            <img src="assets/brands/secretday.webp" alt="SECRETDAY">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Каждая женщина мечтает быть красивой и счастливой. Важным источником женской красоты является женское здоровье.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Бренд товаров женской гигиены SECRETDAY, разработанный компанией JOONGWON, учитывает потребности женщин в заботе о своем здоровье и комфорте. Продукция SECRETDAY не вызывает раздражения, обеспечивая поддержку уверенности и комфорта в повседневной жизни.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Женские гигиенические прокладки серии LOVE отличаются своей нежной поверхностью, обеспечивая мягкую и надежную защиту в течение дня.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Серия COTTON имеет верхний слой из 100% хлопковой ткани и внутренний слой из целлюлозы, обеспечивающий отличное впитывание и равномерное распределение жидкости, которая надежно удерживается внутри прокладки.</span></span></p>
+<p align="justify">В последние годы все больше людей переходят на экологически более осознанный образ жизни и предпочитают товары, которые оказывают меньшее воздействие на окружающую среду. В ответ на этот тренд производители также активно уделяют внимание экологической устойчивости своих продуктов. Например, органическая серия FRESH создана из натурального хлопка, с использованием внутреннего слоя из возобновляемого био-сырья. При производстве этих товаров не проводятся тесты на животных, и не используются ингредиенты животного происхождения. Это абсолютно веганская серия, разработанная специально для тех, кто стремится жить в гармонии с природой.</p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand6" onclick="openModalBrands('brand6','assets/tovars/perfect.webp', 'PERFECT')">
+                            <img src="assets/brands/perfect.webp" alt="PERFECT">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Многие ищут качественный продукт по доступной цене, который бы позволил сэкономить на стиральном порошке, не ухудшая качество стирки. В первую очередь, чтобы достичь экономии, важно правильно дозировать стиральный порошок.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Стиральный порошок PERFECT - это концентрированный продукт, который эффективно удаляет все виды загрязнений, что позволяет сократить расход на стирку в три раза. Согласно рекомендации производителя, достаточно всего 50 грамм на одну стирку. Таким образом, даже 1 кг порошка при ежедневной стирке хватит на целый месяц!</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">PERFECT идеально подходит как для стирки вручную, так и для использования в стиральной машине, что делает его оптимальным выбором для различных типов тканей. Благодаря специальной системе контроля пенообразования, он легко растворяется в воде и полностью смывается при ополаскивании.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">В отличие от некоторых других стиральных порошков, которые содержат фосфаты для смягчения воды, PERFECT абсолютно безопасен, так как не содержит фосфатов, которые могут быть вредными для здоровья человека и окружающей среды.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">Ткань нашей одежды постоянно подвергается воздействию грибков и различных микроорганизмов из разных источников, однако благодаря натуральным ферментам и компоненту Anti-D, стиральный порошок PERFECT устраняет 99,9% этих вредных организмов из волокон ткани.</span></span></p>
+<p align="justify"><span><span lang="ru-RU">PERFECT также гипоаллергенен, что означает отсутствие агрессивных добавок, способных вызвать аллергические реакции. Кроме того, его формула эффективно уничтожает клещей и продукты их жизнедеятельности, которые являются одной из причин возникновения аллергических реакций. Таким образом, PERFECT обеспечивает не только чистоту, но и безопасность для вашей кожи и здоровья вашей семьи.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand7" onclick="openModalBrands('brand7','assets/tovars/wool.webp', 'WOOL SHAMPOO')">
+                            <img src="assets/brands/wool.webp" alt="WOOL SHAMPOO">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO — это инновационное решение для бережной стирки, которое получило официальную сертификацию WoolMark в Корее. WOOL SHAMPOO представляет собой настоящий прорыв в уходе за одеждой из деликатных материалов, таких как шерсть, шелк и хлопок.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одна из ключевых особенностей WOOL SHAMPOO заключается в использовании гипоаллергенных чистящих компонентов. Это означает, что даже самые чувствительные ткани будут бережно отстираны, не подвергаясь агрессивному воздействию химических веществ.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Специально разработанная формула WOOL SHAMPOO обеспечивает тщательное удаление загрязнений, сохраняя при этом структуру и цвет ткани. Благодаря этому ваша одежда будет выглядеть как новая долгое время, не теряя своего первоначального вида.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO рекомендуется для стирки детского белья, поскольку он обеспечивает мягкое и безопасное очищение, не раздражая даже самую нежную детскую кожу.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">WOOL SHAMPOO не только эффективно отстирывает вашу одежду, но и заботится о ее сохранности и красоте. Доверьте свои ценные вещи инновационному средству WOOL SHAMPOO и наслаждайтесь их безупречным видом и качеством каждый день.</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand8" onclick="openModalBrands('brand8','assets/tovars/trio.webp', 'TRIO')">
+                            <img src="assets/brands/trio.webp" alt="TRIO">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">TRIO - универсальное решение, которое обеспечивает идеальную чистоту не только посуды, но и фруктов, овощей. С добавлением натуральных компонентов, продукт незаменимый помощник в быту.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из ключевых преимуществ TRIO является его способность справляться даже с застывшим жиром. Благодаря мощным очищающим свойствам, средства TRIO легко справляются с самыми сложными загрязнениями, оставляя поверхности чистыми и блестящими.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Особое внимание заслуживает безопасность для кожи рук. TRIO бережно воздействует на кожу, не вызывая сухости или раздражения, что делает его идеальным выбором для повседневного использования.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из преимуществ TRIO является его способность удалять неприятные запахи, оставляя свежий аромат после каждого использования. Благодаря легкому смыванию с посуды, вы можете быть уверены, что она останется идеально чистой.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Антибактериальное средство для мытья посуды TRIO — это защита от вредных микроорганизмов. Уничтожая 99,9% бактерий и грибков, оно не только обеспечивает безупречную чистоту, но и препятствует их размножению, обеспечивая вашему дому высокий уровень гигиены.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Доверьте свою посуду, фрукты, овощи универсальному средству TRIO и наслаждайтесь чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand9" onclick="openModalBrands('brand9','assets/tovars/mukungva.webp', 'MUKUNGHWA')">
+                            <img src="assets/brands/mukunghwa.webp" alt="MUKUNGHWA">
+                            <div class="description" style="display:none"><p align="justify"><span><span lang="ru-RU">Продукция MUKUNGHWA — это истинное воплощение натуральной чистоты и заботы о природе. Основной состав продукции включает компоненты растительного происхождения, масло плодов пальмового дерева, натуральную соду высшей степени отчистки и очищенную воду.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Одним из флагманских продуктов MUKUNGHWA является мягкое отстирывающее средство O’CLEAN. Созданное на основе плодов мыльного дерева, оно обладает отличным пенообразованием и выраженным антибактериальным эффектом. Натуральная сода высочайшей степени очистки, входящая в состав, не только эффективно удаляет загрязнения, но и бережно воздействует на кожу. Энзимный отбеливатель и очищающий состав из растительных компонентов глубоко проникают в ткань, удаляя даже самые сложные загрязнения, сохраняя цвет и структуру ткани. Благодаря высокому уровню биоразлагаемости, это средство не наносит вред окружающей среде.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Другим инновационным продуктом MUKUNGHWA является антибактериальный супер-концентрированный ополаскиватель VIU. С натуральными растительными компонентами для защиты структуры и цвета ткани, этот продукт не только устраняет статическое электричество и разглаживает ткань, но и обеспечивает ее мягкость. Гипоаллергенные и созданные как ЭКО-продукция, средства VIU имеют нежный аромат, который придает вашей одежде свежесть и приятный аромат.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Хозяйственные мыла MUKUNGHWA изготовлены исключительно из жиров растительного происхождения высокой очистки, предлагая разнообразные варианты для стирки кухонного текстиля, уборки поверхности и обеспечения гигиены.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Органические средства для мытья посуды, фруктов и овощей MUKUNGHWA - это идеальное сочетание эффективности и натуральности. Они отлично пенятся и смывают жир за несколько секунд даже в холодной воде, обладают формулой быстрого ополаскивания с посуды и не содержат искусственных красителей, консервантов или парабенов.</span></span></p>
+<p align="justify"><span><span lang="ru-RU"> </span></span></p>
+<p align="justify"><span><span lang="ru-RU">Доверяя продукции MUKUNGHWA, вы будете наслаждаться чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
+                        </div>
+                        
+                        <div class="slide-new-brand" id="brand10" onclick="openModalBrands('brand10','', 'ANOTHER FACE')">
+                            <img src="어나더페이스 로고 (1).png" alt="ANOTHER FACE">
+                            <div class="description" style="display:none"></div>
+                        </div>
+                        
+
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="partners" id="partners">
+            <h4>
+                
+                Наши Партнёры
+                
+            </h4>
+            <div class="partners-slider">
+                
+                <div class="slider-block-partner">
+                    <div class="slider-new-partner">
+                        <div class="slide-one-partner">
+                                                    <div class="slide-new-partner">
+                            <img src="assets/partners/carefood.webp" alt="Carefood">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/galmart.webp" alt="Galmart">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Вкусная корзинка-1.webp" alt="Корзинка">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Airba fresh.webp" alt="Airba">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/firkan.webp" alt="Fircan">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Дина.webp" alt="Dina">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/cosmart.webp" alt="Cosmart">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Чоко.webp" alt="Чоко">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/flip.webp" alt="Flip">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/gramad.png" alt="Gramad">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="Logo-4.png" alt="ARBUZ">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="Logo-8.png" alt="SMALL">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/logo-2.png" alt="MGO">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/logo-10.png" alt="zeta">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/magnum 2.png" alt="magnum">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-3.png" alt="анвар">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-5.png" alt="алма стор">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-6.png" alt="золотое яюлоко">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-7.png" alt="Fix Price">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-9.png" alt="CU">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Airba fresh.webp" alt="">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="l3.png" alt="Diona">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="swiper-container2" style="display:block">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                                    <div class="slide-new-partner">
+                            <img src="assets/partners/carefood.webp" alt="Carefood">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/galmart.webp" alt="Galmart">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Вкусная корзинка-1.webp" alt="Корзинка">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Airba fresh.webp" alt="Airba">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/firkan.webp" alt="Fircan">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Дина.webp" alt="Dina">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/cosmart.webp" alt="Cosmart">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Чоко.webp" alt="Чоко">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/flip.webp" alt="Flip">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/gramad.png" alt="Gramad">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="Logo-4.png" alt="ARBUZ">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="Logo-8.png" alt="SMALL">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/logo-2.png" alt="MGO">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/logo-10.png" alt="zeta">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/magnum 2.png" alt="magnum">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-3.png" alt="анвар">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-5.png" alt="алма стор">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-6.png" alt="золотое яюлоко">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-7.png" alt="Fix Price">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-9.png" alt="CU">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Airba fresh.webp" alt="">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="l3.png" alt="Diona">
+                        </div>
+                        </div>
+                        <div class="swiper-slide">
+                                                    <div class="slide-new-partner">
+                            <img src="assets/partners/carefood.webp" alt="Carefood">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/galmart.webp" alt="Galmart">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Вкусная корзинка-1.webp" alt="Корзинка">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Airba fresh.webp" alt="Airba">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/firkan.webp" alt="Fircan">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Дина.webp" alt="Dina">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/cosmart.webp" alt="Cosmart">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Чоко.webp" alt="Чоко">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/flip.webp" alt="Flip">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/gramad.png" alt="Gramad">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="Logo-4.png" alt="ARBUZ">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="Logo-8.png" alt="SMALL">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/logo-2.png" alt="MGO">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/logo-10.png" alt="zeta">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/magnum 2.png" alt="magnum">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-3.png" alt="анвар">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-5.png" alt="алма стор">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-6.png" alt="золотое яюлоко">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-7.png" alt="Fix Price">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Logo-9.png" alt="CU">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="assets/partners/Airba fresh.webp" alt="">
+                        </div>                        <div class="slide-new-partner">
+                            <img src="l3.png" alt="Diona">
+                        </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="vacancies" id="vacancies">
+        <h5>
+            
+            Вакансии
+            
+        </h5>
+        <img class="img-mobile" src="assets/img/img-mobile.webp" alt="фон">
+        <dir class="vacancies-block">
+            <div class="vacancies-text">
+                <div>
+                                        <div class="vacansia" id="vacansia1">
+                        <div class="title">Торговый представитель  В+/ВС</div>
+                        <button onclick="openModalVacansia('vacansia1')" class="vacansia-button">
+                            Подробнее о вакансии
+                        </button>
+                        <div style="display:none" class="duty"><ul>
+<li>
+<p>Знание продукта / ассортимента. Презентация ассортимента, свойств и характеристик товара розничным клиентам</p>
+</li>
+<li>
+<p>Работа с текущей клиентской базой</p>
+</li>
+<li>
+<p>Формирование рекомендованного заказа, Мерчендайзинг</p>
+</li>
+<li>
+<p>Увеличение АКБ, открытие новых торговых точек</p>
+</li>
+<li>
+<p>Расширение ассортимента в каждой товарной категории</p>
+</li>
+<li>
+<p>Увеличение долей на полках</p>
+</li>
+<li>
+<p>Работа с возражениями</p>
+</li>
+<li>
+<p>Заключение договоров и отслеживание дебиторской задолженности</p>
+</li>
+<li>
+<p>Корректная работа с клиентами по торговым условиям</p>
+</li>
+</ul></div>
+                        <div style="display:none" class="requirement"><ul>
+<li>
+<p>Возможность карьерного роста</p>
+</li>
+<li>
+<p>Достойная заработная плата. (Базовый оклад + бонусная часть)</p>
+</li>
+<li>
+<p>Официальное трудоустройство</p>
+</li>
+<li>
+<p>график работы 5/2, время 9:00-18:00</p>
+</li>
+</ul></div>
+                    </div>                    <div class="vacansia" id="vacansia2">
+                        <div class="title">Комплектовщик-грузчик</div>
+                        <button onclick="openModalVacansia('vacansia2')" class="vacansia-button">
+                            Подробнее о вакансии
+                        </button>
+                        <div style="display:none" class="duty"><ul>
+<li>
+<p>сборка заявок по накладным</p>
+</li>
+<li>
+<p>стикерование товара</p>
+</li>
+<li>
+<p>выполнение погрузочно-разгрузочных работ</p>
+</li>
+<li>
+<p>исполнение поручений заведующего склада</p>
+</li>
+</ul></div>
+                        <div style="display:none" class="requirement"><ul>
+<li>
+<p>своевременная оплата труда</p>
+</li>
+<li>
+<p>официальное трудоустройство</p>
+</li>
+<li>
+<p>обеспечиваем бесплатным горячим питанием (обед)</p>
+</li>
+</ul></div>
+                    </div>
+                </div>
+                <a class="vacansia-hh" href="https://hh.kz/employer/2746077?hhtmFrom=vacancy_search_list">
+                    
+                    Искать на сайте hh.kz
+                    
+                </a>
+            </div>
+            <a class="vacansia-hh-mobile" href="https://hh.kz/employer/2746077?hhtmFrom=vacancy_search_list">
+                
+                Искать на сайте hh.kz
+                
+            </a>
+            <form class="vacancies-form ajax_form" action="" method="post" enctype="multipart/form-data">
+                <label class="form-title">
+                    
+                    Отправить резюме
+                    
+                </label>
+                <input type="text" name="city" placeholder="Город">
+                <input type="text" name="position" placeholder="Должность">
+                <input type="text" name="fullname" placeholder="Ф.И.О.">
+                <input type="text" name="phone" id="phone" placeholder="Телефон">
+                <span class="file-btn">
+                    Выберите файл
+                </span>
+                <input type="file" name="upload" id="fileToUpload">
+                <span class="file-name"></span>
+                <button class="vacancy-form-button">Отправить</button>
+            
+	<input type="hidden" name="af_action" value="385d88e52e696cb73080b48570ff3cef" />
+</form>
+  
+        </dir>
+    </section>
+
+    <section class="map">
+        <h6>
+            
+            Города присутствия
+            
+        </h6>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a6c713f7ccbda795235db33665447e80f226f7bcfa83b6f72fd0e3d1a230a3&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </section>
+    
+    <section class="map-mobile">
+        <h6>
+            
+            Города присутствия
+            
+        </h6>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a6c713f7ccbda795235db33665447e80f226f7bcfa83b6f72fd0e3d1a230a3&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+    </section>
+
+        <footer class="contacts" id="contacts">
+        <div class="contacts-info">
+            <a class="contacts-phone" href="tel:"></a>
+            <div class="contacts-adress">г. Алматы, пр. Сейфуллина 498, Офис 413</div>
+            <a class="contacts-email" href="mailto:info@koreanacos.kz">info@koreanacos.kz</a>
+        </div>
+        <div class="contacts-brands">
+                        <img src="assets/socials/kerasys.webp" alt="Kerasys">
+
+
+            <img src="assets/socials/secretday.webp" alt="Secretday">
+
+
+            <img src="assets/socials/2080.webp" alt="2080">
+
+
+
+        </div>
+        <div class="contacts-socsety">
+            <div>
+    <a href="https://www.instagram.com/kerasys.official.kz/" target="_blank"><img src="assets/socials/inst.webp" alt="" ></a>
+    <a href="https://www.facebook.com/kerasys.official.kz" target="_blank"><img src="assets/socials/facebook.webp" alt=""></a>
+    
+</div>
+<div>
+    <a href="https://www.instagram.com/secretday_kz/" target="_blank"><img src="assets/img/inst.webp" alt="" ></a>
+    
+    
+</div>
+<div>
+    <a href="https://www.instagram.com/2080.kz/" target="_blank"><img src="assets/img/inst.webp" alt="" ></a>
+    <a href="https://www.facebook.com/profile.php?id=100075778994622" target="_blank"><img src="assets/img/facebook.webp" alt=""></a>
+    
+</div>
+
+        </div>
+    </footer>
+
+    <div class="overlay" onclick="closeModal()"></div>
+    
+    <div class="modal-brands" id="modal-brands">
+        <img class="modal-close" onclick="closeModal()" src="assets/img/close.svg" alt="выйти">
+        <div class="modal-info">
+            <div class="modal-text">
+                <div class="modal-title" id="modal-brand-title"></div>
+                <div id="modal-brand-text"></div>
+            </div>
+            <div class="modal-img">
+                <img id="modal-brand-img" src="" alt="товар">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-vacansia" id="modal-vacansia">
+        <img class="modal-close" onclick="closeModal()" src="assets/img/close.svg" alt="выйти">
+        <div class="modal-vacansia-main">
+
+            <img class="modal-img-mobile" src="assets/img/img-mobile.webp" alt="фон">
+            <div class="modal-vacancies-title" id="modal-vacancies-title"></div>
+            <br>
+            <dir class="modal-vacancies-block">
+                <div class="modal-vacancies-respons">
+                    
+                    Обязанности:
+                    
+                    <p id="vacancies-respons"></p>
+                </div>
+                <div class="modal-vacancies-requirements">
+                    
+                    Условия:
+                    
+                    <p id="vacancies-requirements"></p>
+                </div>
+            </dir>
+        </div>
+    </div>
+    
+    <script src="assets/js/index1.js"></script>
+    
+    <script src="/assets/components/ajaxform/js/default.js"></script>
+    <script type="text/javascript">AjaxForm.initialize({"assetsUrl":"\/assets\/components\/ajaxform\/","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","formSelector":"form.ajax_form","pageId":1});</script><script src="/assets/components/ajaxform/js/lib/jquery.form.min.js"></script><script src="/assets/components/ajaxform/js/lib/jquery.jgrowl.min.js"></script>
+
+<script src="/assets/components/ajaxform/js/default.js"></script>
+<script type="text/javascript">AjaxForm.initialize({"assetsUrl":"\/assets\/components\/ajaxform\/","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","formSelector":"form.ajax_form","pageId":1});</script>
+</body></html>
