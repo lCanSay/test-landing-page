@@ -322,6 +322,14 @@ function initPartnerForm() {
     const form = document.getElementById('partnerForm');
     if (!form) return;
 
+    // Tab switcher (B2B / Retail)
+    form.querySelectorAll('.form-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            form.querySelectorAll('.form-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        });
+    });
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -329,16 +337,15 @@ function initPartnerForm() {
         const originalText = btn.textContent;
 
         btn.textContent = 'Отправлено!';
-        btn.style.background = '#7fb069';
-        btn.style.borderColor = '#7fb069';
+        btn.dataset.success = 'true';
         btn.disabled = true;
 
         setTimeout(() => {
             btn.textContent = originalText;
-            btn.style.background = '';
-            btn.style.borderColor = '';
+            delete btn.dataset.success;
             btn.disabled = false;
             form.reset();
+            form.querySelectorAll('.form-tab').forEach((t, i) => t.classList.toggle('active', i === 0));
         }, 3000);
     });
 }
