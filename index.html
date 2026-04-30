@@ -258,37 +258,49 @@
             <div class="stats__grid">
                 <div class="stat-card">
                     <i data-lucide="map-pin" class="stat-card__icon"></i>
-                    <span class="stat-card__number" data-count="16">0</span>
+                    <div class="stat-card__value">
+                        <span class="stat-card__number" data-count="16">0</span>
+                    </div>
                     <span class="stat-card__label">городов присутствия</span>
                 </div>
                 <div class="stat-card">
                     <i data-lucide="box" class="stat-card__icon"></i>
-                    <span class="stat-card__number" data-count="450">0</span>
-                    <span class="stat-card__suffix">+</span>
+                    <div class="stat-card__value">
+                        <span class="stat-card__number" data-count="450">0</span>
+                        <span class="stat-card__suffix">+</span>
+                    </div>
                     <span class="stat-card__label">SKU в каталоге</span>
                 </div>
                 <div class="stat-card">
                     <i data-lucide="users" class="stat-card__icon"></i>
-                    <span class="stat-card__number" data-count="8000">0</span>
-                    <span class="stat-card__suffix">+</span>
+                    <div class="stat-card__value">
+                        <span class="stat-card__number" data-count="8000">0</span>
+                        <span class="stat-card__suffix">+</span>
+                    </div>
                     <span class="stat-card__label">клиентов по Казахстану</span>
                 </div>
                 <div class="stat-card">
                     <i data-lucide="percent" class="stat-card__icon"></i>
-                    <span class="stat-card__number" data-count="95">0</span>
-                    <span class="stat-card__suffix">%</span>
+                    <div class="stat-card__value">
+                        <span class="stat-card__number" data-count="95">0</span>
+                        <span class="stat-card__suffix">%</span>
+                    </div>
                     <span class="stat-card__label">ассортимента в наличии</span>
                 </div>
                 <div class="stat-card">
                     <i data-lucide="ruler" class="stat-card__icon"></i>
-                    <span class="stat-card__number" data-count="2500">0</span>
-                    <span class="stat-card__suffix"> м²</span>
+                    <div class="stat-card__value">
+                        <span class="stat-card__number" data-count="2500">0</span>
+                        <span class="stat-card__suffix">м²</span>
+                    </div>
                     <span class="stat-card__label">складских помещений</span>
                 </div>
                 <div class="stat-card">
                     <i data-lucide="clock" class="stat-card__icon"></i>
-                    <span class="stat-card__number" data-count="24">0</span>
-                    <span class="stat-card__suffix"> ч</span>
+                    <div class="stat-card__value">
+                        <span class="stat-card__number" data-count="24">0</span>
+                        <span class="stat-card__suffix">ч</span>
+                    </div>
                     <span class="stat-card__label">от заказа до отгрузки</span>
                 </div>
             </div>
@@ -513,91 +525,71 @@
                 <p class="section-desc">Работаем с ведущими производителями Кореи и крупнейшими ритейлерами Казахстана</p>
             </div>
 
-            <div class="partners-dual">
-
-                <!-- LEFT: Suppliers / Brand owners -->
-                <div class="partners-col">
-                    <div class="partners-col__header">
-                        <i data-lucide="factory"></i>
-                        <div>
-                            <h3>Наши поставщики</h3>
-                            <p>Производители из Южной Кореи</p>
-                        </div>
+            <!-- TOP: Suppliers / Brand owners -->
+            <div class="partners-block">
+                <div class="partners-block__header">
+                    <i data-lucide="factory"></i>
+                    <div>
+                        <h3>Наши поставщики</h3>
+                        <p>Производители из Южной Кореи</p>
                     </div>
-                    <div class="partners-col__grid partners-col__grid--suppliers">
-                        <div class="supplier-card">
-                            <div class="supplier-card__name">AEKYUNG</div>
-                            <div class="supplier-card__tag">Kerasys, 2080, ShowerMate, Perfect, Trio</div>
-                        </div>
-                        <div class="supplier-card">
-                            <div class="supplier-card__name">MUKUNGHWA</div>
-                            <div class="supplier-card__tag">O'Clean, VIU</div>
-                        </div>
-                        <div class="supplier-card">
-                            <div class="supplier-card__name">JOONGWON</div>
-                            <div class="supplier-card__tag">SecretDay</div>
-                        </div>
-                        <div class="supplier-card">
-                            <div class="supplier-card__name">MYUNGIN</div>
-                            <div class="supplier-card__tag">Another Face</div>
-                        </div>
-                        <div class="supplier-card">
-                            <div class="supplier-card__name">FARMSTAY</div>
-                            <div class="supplier-card__tag">Уход и декоративная косметика</div>
-                        </div>
+                </div>
+                <div class="suppliers-grid">
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">AEKYUNG</div>
+                        <div class="supplier-card__tag">Kerasys, 2080, ShowerMate, Perfect, Trio</div>
+                    </div>
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">MUKUNGHWA</div>
+                        <div class="supplier-card__tag">O'Clean, VIU</div>
+                    </div>
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">JOONGWON</div>
+                        <div class="supplier-card__tag">SecretDay</div>
+                    </div>
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">MYUNGIN</div>
+                        <div class="supplier-card__tag">Another Face</div>
+                    </div>
+                    <div class="supplier-card">
+                        <div class="supplier-card__name">FARMSTAY</div>
+                        <div class="supplier-card__tag">Уход и декоративная косметика</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM: Clients / Retail networks -->
+            <div class="partners-block">
+                <div class="partners-block__header">
+                    <i data-lucide="store"></i>
+                    <div>
+                        <h3>Наши клиенты</h3>
+                        <p>Розничные сети и магазины Казахстана</p>
                     </div>
                 </div>
 
-                <!-- RIGHT: Clients / Retail networks -->
-                <div class="partners-col">
-                    <div class="partners-col__header">
-                        <i data-lucide="store"></i>
-                        <div>
-                            <h3>Наши клиенты</h3>
-                            <p>Розничные сети и магазины Казахстана</p>
-                        </div>
-                    </div>
-
-                    <!-- Featured retail partners -->
-                    <div class="partners-col__featured">
-                        <div class="partner-card partner-card--large">
-                            <img src="assets/partners/magnum.png" alt="Magnum">
-                        </div>
-                        <div class="partner-card partner-card--large partner-card--wide">
-                            <img src="assets/partners/zolotoe-yabloko.png" alt="Золотое Яблоко">
-                        </div>
-                        <div class="partner-card partner-card--large">
-                            <img src="assets/partners/small.png" alt="SMALL">
-                        </div>
-                        <div class="partner-card partner-card--large">
-                            <img src="assets/partners/galmart.webp" alt="Galmart">
-                        </div>
-                        <div class="partner-card partner-card--large">
-                            <img src="assets/partners/arbuz.png" alt="Arbuz">
-                        </div>
-                    </div>
-
-                    <!-- Smaller grid -->
-                    <div class="partners-col__grid">
-                        <div class="partner-card"><img src="assets/partners/fix-price.png" alt="Fix Price"></div>
-                        <div class="partner-card"><img src="assets/partners/cu.png" alt="CU"></div>
-                        <div class="partner-card"><img src="assets/partners/carefood.webp" alt="Carefood"></div>
-                        <div class="partner-card"><img src="assets/partners/korzinka.webp" alt="Korzinka"></div>
-                        <div class="partner-card"><img src="assets/partners/airba-fresh.webp" alt="Airba Fresh"></div>
-                        <div class="partner-card"><img src="assets/partners/firkan.webp" alt="Firkan"></div>
-                        <div class="partner-card"><img src="assets/partners/dina.webp" alt="Дина"></div>
-                        <div class="partner-card"><img src="assets/partners/cosmart.webp" alt="Cosmart"></div>
-                        <div class="partner-card"><img src="assets/partners/flip.webp" alt="Flip"></div>
-                        <div class="partner-card"><img src="assets/partners/diona.png" alt="Diona"></div>
-                        <div class="partner-card"><img src="assets/partners/gramad.png" alt="Gramad"></div>
-                        <div class="partner-card"><img src="assets/partners/mgo.png" alt="MGO"></div>
-                        <div class="partner-card"><img src="assets/partners/alma-store.png" alt="Алма Стор"></div>
-                        <div class="partner-card"><img src="assets/partners/anvar.png" alt="Анвар"></div>
-                        <div class="partner-card"><img src="assets/partners/choko.webp" alt="Чоко"></div>
-                        <div class="partner-card"><img src="assets/partners/zeta.png" alt="Zeta"></div>
-                    </div>
+                <div class="clients-grid">
+                    <div class="partner-card"><img src="assets/partners/magnum.png" alt="Magnum"></div>
+                    <div class="partner-card partner-card--wide"><img src="assets/partners/zolotoe-yabloko.png" alt="Золотое Яблоко"></div>
+                    <div class="partner-card"><img src="assets/partners/small.png" alt="SMALL"></div>
+                    <div class="partner-card"><img src="assets/partners/galmart.webp" alt="Galmart"></div>
+                    <div class="partner-card"><img src="assets/partners/arbuz.png" alt="Arbuz"></div>
+                    <div class="partner-card"><img src="assets/partners/fix-price.png" alt="Fix Price"></div>
+                    <div class="partner-card"><img src="assets/partners/cu.png" alt="CU"></div>
+                    <div class="partner-card"><img src="assets/partners/carefood.webp" alt="Carefood"></div>
+                    <div class="partner-card"><img src="assets/partners/korzinka.webp" alt="Korzinka"></div>
+                    <div class="partner-card"><img src="assets/partners/airba-fresh.webp" alt="Airba Fresh"></div>
+                    <div class="partner-card"><img src="assets/partners/firkan.webp" alt="Firkan"></div>
+                    <div class="partner-card"><img src="assets/partners/dina.webp" alt="Дина"></div>
+                    <div class="partner-card"><img src="assets/partners/cosmart.webp" alt="Cosmart"></div>
+                    <div class="partner-card"><img src="assets/partners/flip.webp" alt="Flip"></div>
+                    <div class="partner-card"><img src="assets/partners/diona.png" alt="Diona"></div>
+                    <div class="partner-card"><img src="assets/partners/gramad.png" alt="Gramad"></div>
+                    <div class="partner-card"><img src="assets/partners/mgo.png" alt="MGO"></div>
+                    <div class="partner-card"><img src="assets/partners/alma-store.png" alt="Алма Стор"></div>
+                    <div class="partner-card"><img src="assets/partners/anvar.png" alt="Анвар"></div>
+                    <div class="partner-card"><img src="assets/partners/choko.webp" alt="Чоко"></div>
                 </div>
-
             </div>
         </div>
     </section>
