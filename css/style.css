@@ -1328,12 +1328,11 @@ input, textarea {
     opacity: 1;
 }
 
-/* "Wide" logo override (e.g. Золотое Яблоко) */
-.clients-grid .partner-card--wide img {
-    max-width: 100%;
-    max-height: none;
-    transform: scale(1.4);
+.clients-grid .partner-card--zolotoe img {
+    max-height: 76px;
+    max-width: 95%;
 }
+
 
 .partner-card {
     display: flex;
