@@ -388,122 +388,146 @@ input, textarea {
 /* ===================================================
    HERO
    =================================================== */
-/* ===================================================
-   HERO — v3 Cinematic (video background, left-aligned)
-   =================================================== */
-
-.hero--cinematic {
+.hero {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
-    /* Animated gradient serves as fallback when no video is loaded */
-    background: linear-gradient(135deg, #05080f 0%, #0a0a0a 40%, #110a0a 100%);
-    animation: heroGradient 14s ease infinite alternate;
+    text-align: center;
 }
 
-@keyframes heroGradient {
-    0%   { background: linear-gradient(135deg, #05080f 0%, #0a0a0a 50%, #110a0a 100%); }
-    50%  { background: linear-gradient(135deg, #0a0a0a 0%, #0d0509 50%, #05080f 100%); }
-    100% { background: linear-gradient(135deg, #110a0a 0%, #0a0a0a 50%, #08060f 100%); }
-}
-
-/* Full-bleed video layer */
-.hero__video {
+.hero__bg {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
     z-index: 0;
-    opacity: 0.75;
 }
 
-/* Cinematic gradient overlay: dark edges, especially bottom-left */
-.hero--cinematic .hero__overlay {
+.hero__bg::before {
+    content: '';
     position: absolute;
     inset: 0;
-    z-index: 1;
     background:
-        linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.80) 100%),
-        linear-gradient(to right,  rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.10) 55%, transparent 100%);
+        radial-gradient(circle at 20% 80%, rgba(227, 6, 19, 0.18) 0%, transparent 55%),
+        radial-gradient(circle at 80% 20%, rgba(227, 6, 19, 0.12) 0%, transparent 55%);
 }
 
-/* Content: left-aligned, riding the left gradient shadow */
-.hero--cinematic .hero__content {
-    position: relative;
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="rgba(255,255,255,0.03)"/><circle cx="75" cy="75" r="0.5" fill="rgba(255,255,255,0.03)"/><circle cx="50" cy="10" r="0.3" fill="rgba(255,255,255,0.02)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    z-index: 1;
+}
+
+/* Floating brand logos */
+.hero__floating {
+    position: absolute;
+    inset: 0;
     z-index: 2;
-    padding: 160px 24px 120px;
-    max-width: 840px;
-    margin: 0;
-    text-align: left;
+    pointer-events: none;
 }
 
-.hero__eyebrow {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 3.5px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.45);
-    margin-bottom: 24px;
-    display: block;
-    animation: heroFadeUp 0.9s ease 0.05s both;
-}
-
-.hero__headline {
-    font-family: var(--font-heading);
-    font-size: clamp(64px, 10vw, 136px);
-    font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -4px;
-    color: var(--color-white);
-    margin-bottom: 28px;
-    animation: heroFadeUp 0.9s ease 0.15s both;
-    text-wrap: balance;
-}
-
-.hero__sub {
-    font-size: clamp(15px, 1.8vw, 18px);
-    line-height: 1.65;
-    color: rgba(255, 255, 255, 0.55);
-    max-width: 460px;
-    margin-bottom: 44px;
-    animation: heroFadeUp 0.9s ease 0.28s both;
-}
-
-.hero__actions {
+.floating-item {
+    position: absolute;
+    width: 130px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
     display: flex;
     align-items: center;
-    gap: 36px;
-    flex-wrap: wrap;
-    animation: heroFadeUp 0.9s ease 0.42s both;
+    justify-content: center;
+    padding: 12px 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    animation: float 7s ease-in-out infinite;
 }
 
-.hero__text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+.floating-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.floating-item--1 { top: 12%; left: 8%;   animation-delay: 0s;   }
+.floating-item--2 { top: 18%; right: 10%; animation-delay: 1.2s; }
+.floating-item--3 { top: 38%; left: 4%;   animation-delay: 2.4s; }
+.floating-item--4 { top: 42%; right: 5%;  animation-delay: 0.8s; }
+.floating-item--5 { bottom: 22%; left: 9%;  animation-delay: 3.1s; }
+.floating-item--6 { bottom: 28%; right: 8%; animation-delay: 1.7s; }
+.floating-item--7 { top: 8%;  left: 36%;   animation-delay: 2.0s; width: 100px; height: 70px; }
+.floating-item--8 { bottom: 8%; right: 32%; animation-delay: 0.4s; width: 100px; height: 70px; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-18px) rotate(2deg); }
+}
+
+.hero__content {
+    position: relative;
+    z-index: 3;
+    padding: 140px 24px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero__tag {
+    font-family: var(--font-heading);
     font-size: 14px;
     font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero__tag::before,
+.hero__tag::after {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background: var(--color-accent);
+}
+
+.hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(56px, 11vw, 132px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: var(--color-white);
+    margin-bottom: 16px;
+    text-shadow: 0 2px 30px rgba(227, 6, 19, 0.3);
+}
+
+.hero__subtitle-main {
+    font-family: var(--font-heading);
+    font-size: clamp(18px, 2.4vw, 26px);
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 20px;
     letter-spacing: 0.5px;
-    color: rgba(255, 255, 255, 0.55);
-    text-decoration: none;
-    transition: color var(--transition);
 }
 
-.hero__text-link:hover { color: var(--color-white); }
-
-.hero__text-link svg {
-    width: 16px;
-    height: 16px;
-    transition: transform var(--transition);
+.hero__subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    margin: 0 auto 36px;
 }
 
-.hero__text-link:hover svg { transform: translateX(4px); }
+.hero__buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-/* Scroll indicator — reuse existing bounce keyframe */
 .hero__scroll {
     position: absolute;
     bottom: 32px;
@@ -514,44 +538,20 @@ input, textarea {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    animation: bounce 2.5s ease-in-out infinite;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    letter-spacing: 1px;
+    animation: bounce 2s infinite;
 }
 
 .hero__scroll svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
-    50%       { transform: translateX(-50%) translateY(8px); }
-}
-
-@keyframes heroFadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hero--cinematic { animation: none; }
-    .hero__eyebrow,
-    .hero__headline,
-    .hero__sub,
-    .hero__actions { animation: none; }
-    .hero__scroll { animation: none; }
-}
-
-@media (max-width: 768px) {
-    .hero--cinematic .hero__content {
-        text-align: center;
-        padding: 120px 20px 100px;
-    }
-    .hero__actions { justify-content: center; }
-    .hero__sub { max-width: 100%; }
+    50% { transform: translateX(-50%) translateY(8px); }
 }
 
 /* ===================================================

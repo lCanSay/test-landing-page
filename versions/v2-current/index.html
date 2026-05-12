@@ -49,24 +49,31 @@
         </div>
     </header>
 
-    <!-- ============ HERO — v3 Cinematic ============ -->
-    <section class="hero hero--cinematic" id="hero">
-
-        <!-- SWAP: replace src with your video URL, e.g. from pexels.com/videos or mixkit.co -->
-        <!-- Add poster="assets/img/hero-poster.jpg" for a still-image fallback while video loads -->
-        <video class="hero__video" autoplay muted loop playsinline preload="metadata">
-            <source src="" type="video/mp4">
-        </video>
-
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero__bg"></div>
         <div class="hero__overlay"></div>
 
+        <!-- Floating brand logos around the title -->
+        <div class="hero__floating">
+            <div class="floating-item floating-item--1"><img src="assets/brands/kerasys.webp" alt="KERASYS"></div>
+            <div class="floating-item floating-item--2"><img src="assets/brands/2080.webp" alt="2080"></div>
+            <div class="floating-item floating-item--3"><img src="assets/brands/farmstay.webp" alt="FarmStay"></div>
+            <div class="floating-item floating-item--4"><img src="assets/brands/showermate.webp" alt="ShowerMate"></div>
+            <div class="floating-item floating-item--5"><img src="assets/brands/secretday.webp" alt="SecretDay"></div>
+            <div class="floating-item floating-item--6"><img src="assets/brands/mukunghwa.webp" alt="Mukunghwa"></div>
+            <div class="floating-item floating-item--7"><img src="assets/brands/perfect.webp" alt="Perfect"></div>
+            <div class="floating-item floating-item--8"><img src="assets/brands/trio.webp" alt="Trio"></div>
+        </div>
+
         <div class="container hero__content">
-            <p class="hero__eyebrow">С 2015 · Алматы · Официальный дистрибьютор</p>
-            <h1 class="hero__headline">Корейское<br>качество</h1>
-            <p class="hero__sub">Прямой импорт 450+ позиций. 16 городов Казахстана. Доставка 24 часа.</p>
-            <div class="hero__actions">
+            <p class="hero__tag">Официальный дистрибьютор в Казахстане</p>
+            <h1 class="hero__title">KOREANA</h1>
+            <p class="hero__subtitle-main">Корейское качество для вашего бизнеса</p>
+            <p class="hero__subtitle">Прямой импорт лучших корейских брендов косметики, гигиены и бытовой химии. 450+ позиций всегда в наличии, доставка за 24 часа.</p>
+            <div class="hero__buttons">
                 <a href="#client-form" class="btn btn--primary btn--lg">Стать клиентом</a>
-                <a href="#brands" class="hero__text-link">Смотреть бренды <i data-lucide="arrow-right"></i></a>
+                <a href="#brands" class="btn btn--outline btn--lg">Смотреть каталог</a>
             </div>
         </div>
 

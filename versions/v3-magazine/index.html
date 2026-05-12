@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
@@ -49,28 +49,49 @@
         </div>
     </header>
 
-    <!-- ============ HERO — v3 Cinematic ============ -->
-    <section class="hero hero--cinematic" id="hero">
+    <!-- ============ HERO — v3 Magazine / Split-screen ============ -->
+    <section class="hero hero--magazine" id="hero">
 
-        <!-- SWAP: replace src with your video URL, e.g. from pexels.com/videos or mixkit.co -->
-        <!-- Add poster="assets/img/hero-poster.jpg" for a still-image fallback while video loads -->
-        <video class="hero__video" autoplay muted loop playsinline preload="metadata">
-            <source src="" type="video/mp4">
-        </video>
-
-        <div class="hero__overlay"></div>
-
-        <div class="container hero__content">
-            <p class="hero__eyebrow">С 2015 · Алматы · Официальный дистрибьютор</p>
-            <h1 class="hero__headline">Корейское<br>качество</h1>
-            <p class="hero__sub">Прямой импорт 450+ позиций. 16 городов Казахстана. Доставка 24 часа.</p>
+        <!-- LEFT: editorial text panel -->
+        <div class="hero__panel hero__panel--text">
+            <p class="hero__eyebrow">Официальный дистрибьютор · с 2015</p>
+            <h1 class="hero__headline">Корейское<br>качество<br>для бизнеса</h1>
+            <div class="hero__divider"></div>
+            <p class="hero__sub">Прямой импорт 450+ позиций из Южной Кореи. Поставки в 16 городов Казахстана. Доставка за 24 часа.</p>
             <div class="hero__actions">
                 <a href="#client-form" class="btn btn--primary btn--lg">Стать клиентом</a>
-                <a href="#brands" class="hero__text-link">Смотреть бренды <i data-lucide="arrow-right"></i></a>
+                <a href="#brands" class="btn btn--outline-dark btn--lg">Каталог</a>
+            </div>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <strong>9</strong>
+                    <span>лет<br>на рынке</span>
+                </div>
+                <div class="hero__stat">
+                    <strong>450+</strong>
+                    <span>SKU в<br>наличии</span>
+                </div>
+                <div class="hero__stat">
+                    <strong>16</strong>
+                    <span>городов<br>КЗ</span>
+                </div>
             </div>
         </div>
 
-        <div class="hero__scroll">
+        <!-- RIGHT: media panel (video or animated gradient fallback) -->
+        <div class="hero__panel hero__panel--media">
+            <!-- Seoul colorful cityscape — free stock from Mixkit (ID 20093) -->
+            <video class="hero__media-video" autoplay muted loop playsinline preload="auto">
+                <source src="assets/video/hero-bg.mp4" type="video/mp4">
+            </video>
+            <div class="hero__media-gradient"></div>
+            <!-- Decorative brand pill overlay -->
+            <div class="hero__media-badge">
+                <img src="assets/brands/kerasys.webp" alt="KERASYS">
+            </div>
+        </div>
+
+        <div class="hero__scroll hero__scroll--magazine">
             <span>Листайте вниз</span>
             <i data-lucide="chevron-down"></i>
         </div>

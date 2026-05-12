@@ -49,24 +49,30 @@
         </div>
     </header>
 
-    <!-- ============ HERO — v3 Cinematic ============ -->
-    <section class="hero hero--cinematic" id="hero">
-
-        <!-- SWAP: replace src with your video URL, e.g. from pexels.com/videos or mixkit.co -->
-        <!-- Add poster="assets/img/hero-poster.jpg" for a still-image fallback while video loads -->
-        <video class="hero__video" autoplay muted loop playsinline preload="metadata">
-            <source src="" type="video/mp4">
-        </video>
-
+    <!-- ============ HERO SLIDESHOW ============ -->
+    <section class="hero hero--slider" id="hero">
+        <div class="hero__slides">
+            <div class="hero__slide active" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+            <div class="hero__slide" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+            <div class="hero__slide" style="background-image: url('https://images.unsplash.com/photo-1629198688000-71f23e745b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        </div>
         <div class="hero__overlay"></div>
 
         <div class="container hero__content">
-            <p class="hero__eyebrow">С 2015 · Алматы · Официальный дистрибьютор</p>
-            <h1 class="hero__headline">Корейское<br>качество</h1>
-            <p class="hero__sub">Прямой импорт 450+ позиций. 16 городов Казахстана. Доставка 24 часа.</p>
-            <div class="hero__actions">
+            <p class="hero__tag">Официальный дистрибьютор в Казахстане</p>
+            <h1 class="hero__title">KOREANA</h1>
+            <p class="hero__subtitle-main">Корейское качество для вашего бизнеса</p>
+            <p class="hero__subtitle">Прямой импорт лучших корейских брендов косметики, гигиены и бытовой химии. 450+ позиций всегда в наличии, доставка за 24 часа.</p>
+            <div class="hero__buttons">
                 <a href="#client-form" class="btn btn--primary btn--lg">Стать клиентом</a>
-                <a href="#brands" class="hero__text-link">Смотреть бренды <i data-lucide="arrow-right"></i></a>
+                <a href="#brands" class="btn btn--outline btn--lg">Смотреть каталог</a>
+            </div>
+            
+            <!-- Slide controls -->
+            <div class="hero__controls">
+                <button class="hero__dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="hero__dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="hero__dot" data-index="2" aria-label="Slide 3"></button>
             </div>
         </div>
 
@@ -76,8 +82,31 @@
         </div>
     </section>
 
+    <!-- ============ INFINITE BRAND MARQUEE ============ -->
+    <div class="brand-marquee">
+        <div class="brand-marquee__track">
+            <!-- Group 1 -->
+            <img src="assets/brands/kerasys.webp" alt="Kerasys">
+            <img src="assets/brands/2080.webp" alt="2080">
+            <img src="assets/brands/farmstay.webp" alt="Farmstay">
+            <img src="assets/brands/showermate.webp" alt="ShowerMate">
+            <img src="assets/brands/secretday.webp" alt="SecretDay">
+            <img src="assets/brands/mukunghwa.webp" alt="Mukunghwa">
+            <img src="assets/brands/perfect.webp" alt="Perfect">
+            <!-- Group 2 (duplicate for loop) -->
+            <img src="assets/brands/kerasys.webp" alt="Kerasys">
+            <img src="assets/brands/2080.webp" alt="2080">
+            <img src="assets/brands/farmstay.webp" alt="Farmstay">
+            <img src="assets/brands/showermate.webp" alt="ShowerMate">
+            <img src="assets/brands/secretday.webp" alt="SecretDay">
+            <img src="assets/brands/mukunghwa.webp" alt="Mukunghwa">
+            <img src="assets/brands/perfect.webp" alt="Perfect">
+        </div>
+    </div>
+
     <!-- ============ ABOUT ============ -->
     <section class="about" id="about">
+        <div class="about__bg-text">KOREANA</div>
         <div class="container">
             <div class="section-header">
                 <p class="section-tag">О компании</p>
@@ -91,10 +120,9 @@
                     <p>С 2025 года ассортимент расширен линейкой бессульфатных шампуней Hair Clinic, мужской линейкой PRO ACTIVE MAN, а также косметической торговой маркой ANOTHER FACE.</p>
                 </div>
                 <div class="about__image">
-                    <!-- Заменить на реальное фото склада/офиса/команды -->
-                    <div class="about__image-placeholder">
-                        <i data-lucide="package" class="about__image-icon"></i>
-                        <span>Фото склада / команды</span>
+                    <div class="about__slider">
+                        <div class="about__slide active" style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                        <div class="about__slide" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
                     </div>
                 </div>
             </div>
