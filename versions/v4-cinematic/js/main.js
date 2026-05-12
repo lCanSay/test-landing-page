@@ -97,16 +97,24 @@ function initScrollAnimations() {
     elements.forEach(el => observer.observe(el));
 }
 
-/* ---------- Animated counters ---------- */
 function initCounters() {
     const counters = document.querySelectorAll('[data-count]');
+
+    // Pre-calculate widths to prevent layout shift
+    counters.forEach(counter => {
+        const target = parseInt(counter.dataset.count, 10);
+        counter.textContent = target.toLocaleString('ru-RU');
+        const rect = counter.getBoundingClientRect();
+        counter.style.minWidth = rect.width + 'px';
+        counter.style.textAlign = 'right';
+        counter.textContent = '0';
+    });
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCounter(entry.target);
-            } else {
-                entry.target.textContent = '0';
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
@@ -119,6 +127,10 @@ function animateCounter(el) {
     const duration = 1800;
     const start = performance.now();
 
+    if (el.dataset.animId) {
+        cancelAnimationFrame(parseInt(el.dataset.animId, 10));
+    }
+
     function step(now) {
         const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
@@ -127,11 +139,13 @@ function animateCounter(el) {
         el.textContent = current.toLocaleString('ru-RU');
 
         if (progress < 1) {
-            requestAnimationFrame(step);
+            el.dataset.animId = requestAnimationFrame(step);
+        } else {
+            delete el.dataset.animId;
         }
     }
 
-    requestAnimationFrame(step);
+    el.dataset.animId = requestAnimationFrame(step);
 }
 
 /* ---------- Brand filter ---------- */
