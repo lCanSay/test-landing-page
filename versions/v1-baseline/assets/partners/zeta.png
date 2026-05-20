@@ -189,7 +189,7 @@
             
         </h1>
         <div class="about-block">
-            <div class="about-text"><p>Компания ТОО KOREANA - ваш надежный партнер и официальный импортер лучших продуктов из Южной Кореи на территории Республики Казахстана. <span>Работая с 2015 года</span>, мы предоставляем широкий ассортимент высококачественных брендов для ухода за волосами, полостью рта, бытовой химией, женской гигиеной и косметики от ведущих производителей Южной Кореи, таких как AEKYUNG, MUKUNGHWA, JOONGWON, MYUNGIN COSMETICS. С 2025года расширен ассоримент ухода за волосами, а именно линейка бессульфатных шампуней Hаir Clinic, ввдены новинки шампуней мужской линейки PRO ACTIVE MAN,  также с 2025года мы являемся официальным представителем косметической торговой марки ANOTHER FACE. </p>
+            <div class="about-text"><p>Компания ТОО KOREANA - ваш надежный партнер и официальный импортер лучших продуктов из Южной Кореи на территории Республики Казахстана. <span>Работая с 2015 года</span>.</p>
 <p><br />Наша главная цель - обеспечить качественной и безопасной продукцией наших клиентов и потребителей.</p>
 <p><br />Мы глубоко ценим нашу безупречную деловую репутацию, доверие наших бизнес-партнеров и лояльность наших сотрудников. Каждый день мы работаем над тем, чтобы оправдывать это доверие и поддерживать высокие стандарты обслуживания.</p></div>
             <img class="about-img" src="assets/img/about.png" alt="about">
@@ -362,10 +362,6 @@
 <p align="justify"><span><span lang="ru-RU"> </span></span></p>
 <p align="justify"><span><span lang="ru-RU">Доверяя продукции MUKUNGHWA, вы будете наслаждаться чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
                         </div>
-                        
-                        <div class="slide-new-brand" id="brand10" onclick="openModalBrands('brand10','', 'ANOTHER FACE')">
-                            <img src="어나더페이스 로고 (1).png" alt="ANOTHER FACE">
-                            <div class="description" style="display:none"></div>
                         </div>
                         
 
@@ -501,10 +497,6 @@
 <p align="justify"><span><span lang="ru-RU"> </span></span></p>
 <p align="justify"><span><span lang="ru-RU">Доверяя продукции MUKUNGHWA, вы будете наслаждаться чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
                         </div>
-                        
-                        <div class="slide-new-brand" id="brand10" onclick="openModalBrands('brand10','', 'ANOTHER FACE')">
-                            <img src="어나더페이스 로고 (1).png" alt="ANOTHER FACE">
-                            <div class="description" style="display:none"></div>
                         </div>
                         
 
@@ -636,10 +628,6 @@
 <p align="justify"><span><span lang="ru-RU"> </span></span></p>
 <p align="justify"><span><span lang="ru-RU">Доверяя продукции MUKUNGHWA, вы будете наслаждаться чистотой, свежестью и безопасностью каждый день!</span></span></p></div>
                         </div>
-                        
-                        <div class="slide-new-brand" id="brand10" onclick="openModalBrands('brand10','', 'ANOTHER FACE')">
-                            <img src="어나더페이스 로고 (1).png" alt="ANOTHER FACE">
-                            <div class="description" style="display:none"></div>
                         </div>
                         
 

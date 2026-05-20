@@ -1,5 +1,5 @@
 /* ===================================================
-   KOREANA — Main JavaScript
+   KOREANA - Main JavaScript
    =================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initBrandModals();
     initSmoothScroll();
     initPartnerForm();
+    initParallax();
 });
+
+/* ---------- Parallax effect for Hero ---------- */
+function initParallax() {
+    const heroContent = document.querySelector('.hero__content');
+    if (!heroContent) return;
+
+    window.addEventListener('scroll', () => {
+        const scroll = window.scrollY;
+        if (scroll < window.innerHeight) {
+            heroContent.style.transform = `translateY(${scroll * 0.3}px)`;
+            heroContent.style.opacity = 1 - (scroll / window.innerHeight) * 1.5;
+        }
+    }, { passive: true });
+}
 
 /* ---------- Header scroll effect ---------- */
 function initHeader() {
@@ -52,7 +67,7 @@ function initMobileMenu() {
 /* ---------- Scroll animations (fade-in) ---------- */
 function initScrollAnimations() {
     const elements = document.querySelectorAll(
-        '.feature-card, .stat-card, .why-card, .brand-card, .partner-logo, .vacancy-card, .section-header, .about__grid, .partner-form__wrapper'
+        '.feature-card, .stat-card, .why-card, .brand-card, .partner-logo, .vacancy-card, .section-header, .about__grid, .partner-form__wrapper, .mission-card, .timeline__item, .supplier-card, .partner-card'
     );
 
     elements.forEach(el => el.classList.add('fade-in'));
@@ -72,9 +87,18 @@ function initScrollAnimations() {
     elements.forEach(el => observer.observe(el));
 }
 
-/* ---------- Animated counters ---------- */
 function initCounters() {
     const counters = document.querySelectorAll('[data-count]');
+
+    // Pre-calculate widths to prevent layout shift
+    counters.forEach(counter => {
+        const target = parseInt(counter.dataset.count, 10);
+        counter.textContent = target.toLocaleString('ru-RU');
+        const rect = counter.getBoundingClientRect();
+        counter.style.minWidth = rect.width + 'px';
+        counter.style.textAlign = 'right';
+        counter.textContent = '0';
+    });
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -93,6 +117,10 @@ function animateCounter(el) {
     const duration = 1800;
     const start = performance.now();
 
+    if (el.dataset.animId) {
+        cancelAnimationFrame(parseInt(el.dataset.animId, 10));
+    }
+
     function step(now) {
         const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
@@ -101,11 +129,13 @@ function animateCounter(el) {
         el.textContent = current.toLocaleString('ru-RU');
 
         if (progress < 1) {
-            requestAnimationFrame(step);
+            el.dataset.animId = requestAnimationFrame(step);
+        } else {
+            delete el.dataset.animId;
         }
     }
 
-    requestAnimationFrame(step);
+    el.dataset.animId = requestAnimationFrame(step);
 }
 
 /* ---------- Brand filter ---------- */
@@ -149,10 +179,10 @@ const brandData = {
         category: 'Уход за волосами',
         description: 'Бренд KERASYS создан для того, чтобы сделать профессиональный уход за волосами доступным и удобным. Продукция разработана на основе передовых корейских технологий ухода за волосами.',
         series: [
-            '<strong>HAIR CLINIC</strong> — клиническая серия с 17 видами аминокислот и протеинами для интенсивного восстановления повреждённых волос',
-            '<strong>PERFUME</strong> — парфюмированная серия с уникальными ароматами для каждого образа',
-            '<strong>ADVANCED</strong> — ампульная серия со специальной формулой для комплексного ухода',
-            '<strong>PRO ACTIVE MAN</strong> — мужская линейка шампуней'
+            '<strong>HAIR CLINIC</strong> - клиническая серия с 17 видами аминокислот и протеинами для интенсивного восстановления повреждённых волос',
+            '<strong>PERFUME</strong> - парфюмированная серия с уникальными ароматами для каждого образа',
+            '<strong>ADVANCED</strong> - ампульная серия со специальной формулой для комплексного ухода',
+            '<strong>PRO ACTIVE MAN</strong> - мужская линейка шампуней'
         ]
     },
     '2080': {
@@ -160,9 +190,9 @@ const brandData = {
         category: 'Гигиена полости рта',
         description: 'Эксперты компании AEKYUNG на протяжении 25 лет разрабатывают уникальные формулы зубных паст, направленные на решение различных проблем полости рта.',
         series: [
-            '<strong>TOTAL</strong> — базовая серия для ежедневного ухода',
-            '<strong>PRO</strong> — профилактическая серия',
-            '<strong>DR.CLINIC</strong> — лечебно-профилактическая серия',
+            '<strong>TOTAL</strong> - базовая серия для ежедневного ухода',
+            '<strong>PRO</strong> - профилактическая серия',
+            '<strong>DR.CLINIC</strong> - лечебно-профилактическая серия',
             'Снижает риск образования зубного камня в 4 раза',
             'Снижает чувствительность зубов на 96% за 2 недели',
             'Осветляет эмаль на 88% за 8 недель'
@@ -173,9 +203,9 @@ const brandData = {
         category: 'Уход за телом',
         description: 'Гели для душа SHOWERMATE с натуральными компонентами оказывают мягкий уход за кожей. Каждая серия создана для особых потребностей кожи.',
         series: [
-            '<strong>NATURAL</strong> — серия с натуральными экстрактами для ежедневного ухода',
-            '<strong>BOTANIC</strong> — серия с травами и цветами для чувствительной кожи',
-            '<strong>FLOWER PERFUME</strong> — парфюмированная серия с цветочными экстрактами'
+            '<strong>NATURAL</strong> - серия с натуральными экстрактами для ежедневного ухода',
+            '<strong>BOTANIC</strong> - серия с травами и цветами для чувствительной кожи',
+            '<strong>FLOWER PERFUME</strong> - парфюмированная серия с цветочными экстрактами'
         ]
     },
     farmstay: {
@@ -196,26 +226,26 @@ const brandData = {
         category: 'Женская гигиена',
         description: 'Гигиенические прокладки SECRETDAY разработаны с заботой о здоровье и комфорте женщин. Продукция соответствует высочайшим стандартам безопасности.',
         series: [
-            '<strong>LOVE</strong> — нежная поверхность для максимального комфорта',
-            '<strong>COTTON</strong> — 100% натуральный хлопок',
-            '<strong>FRESH</strong> — органическая веганская линейка'
+            '<strong>LOVE</strong> - нежная поверхность для максимального комфорта',
+            '<strong>COTTON</strong> - 100% натуральный хлопок',
+            '<strong>FRESH</strong> - органическая веганская линейка'
         ]
     },
     perfect: {
         name: 'PERFECT',
         category: 'Бытовая химия',
-        description: 'Концентрированный стиральный порошок PERFECT эффективно удаляет все виды загрязнений. Достаточно всего 50 граммов на стирку — 1 кг хватает на месяц ежедневного использования.',
+        description: 'Концентрированный стиральный порошок PERFECT эффективно удаляет все виды загрязнений. Достаточно всего 50 граммов на стирку - 1 кг хватает на месяц ежедневного использования.',
         series: [
             'Устраняет 99,9% бактерий из волокон ткани',
-            'Не содержит фосфатов — абсолютно безопасен',
+            'Не содержит фосфатов - абсолютно безопасен',
             'Гипоаллергенный состав',
-            'Экономичный расход — 50 г на стирку'
+            'Экономичный расход - 50 г на стирку'
         ]
     },
     wool: {
         name: 'WOOL SHAMPOO',
         category: 'Бытовая химия',
-        description: 'WOOL SHAMPOO — инновационное средство для бережной стирки деликатных тканей с официальной сертификацией WoolMark.',
+        description: 'WOOL SHAMPOO - инновационное средство для бережной стирки деликатных тканей с официальной сертификацией WoolMark.',
         series: [
             'Сертифицировано WoolMark в Корее',
             'Гипоаллергенные чистящие компоненты',
@@ -226,7 +256,7 @@ const brandData = {
     trio: {
         name: 'TRIO',
         category: 'Бытовая химия',
-        description: 'TRIO — универсальное средство для мытья посуды, фруктов и овощей. Справляется даже с застывшим жиром, при этом бережно воздействует на кожу рук.',
+        description: 'TRIO - универсальное средство для мытья посуды, фруктов и овощей. Справляется даже с застывшим жиром, при этом бережно воздействует на кожу рук.',
         series: [
             'Подходит для мытья посуды, фруктов и овощей',
             'Уничтожает 99,9% бактерий и грибков',
@@ -237,22 +267,12 @@ const brandData = {
     mukunghwa: {
         name: 'MUKUNGHWA',
         category: 'Бытовая химия',
-        description: 'Продукция MUKUNGHWA — воплощение натуральной чистоты и заботы о природе. Составы на основе растительных компонентов.',
+        description: 'Продукция MUKUNGHWA - воплощение натуральной чистоты и заботы о природе. Составы на основе растительных компонентов.',
         series: [
-            '<strong>O\'CLEAN</strong> — средства на основе плодов мыльного дерева',
-            '<strong>VIU</strong> — антибактериальный суперконцентрированный ополаскиватель',
+            '<strong>O\'CLEAN</strong> - средства на основе плодов мыльного дерева',
+            '<strong>VIU</strong> - антибактериальный суперконцентрированный ополаскиватель',
             'Натуральное мыло на растительной основе',
             'Экологичные чистящие средства'
-        ]
-    },
-    anotherface: {
-        name: 'ANOTHER FACE',
-        category: 'Косметика',
-        description: 'Декоративная и уходовая косметика нового поколения от MYUNGIN COSMETICS. Современные формулы для красоты и ухода за кожей.',
-        series: [
-            'Декоративная косметика',
-            'Средства по уходу за кожей лица',
-            'Современные корейские формулы'
         ]
     }
 };
@@ -310,6 +330,9 @@ function initSmoothScroll() {
 
             const target = document.querySelector(href);
             if (target) {
+                // Принудительно показываем все элементы в целевой секции
+                target.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+
                 e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth' });
             }
