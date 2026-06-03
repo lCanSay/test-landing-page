@@ -282,6 +282,32 @@ function initBrandModals() {
     const modalBody = document.getElementById('modal-body');
     const backdrop = modal.querySelector('.modal__backdrop');
     const closeBtn = modal.querySelector('.modal__close');
+    let animFrame = null;
+
+    /* Easing helpers */
+    const easeOut = t => 1 - Math.pow(1 - t, 3);
+    const easeIn = t => Math.pow(t, 2);
+
+    function animateBackdrop(fromBlur, toBlur, fromAlpha, toAlpha, duration, onDone) {
+        if (animFrame) cancelAnimationFrame(animFrame);
+        const start = performance.now();
+        function step(now) {
+            const t = Math.min((now - start) / duration, 1);
+            const ease = toBlur > fromBlur ? easeOut(t) : easeIn(t);
+            const blur = fromBlur + (toBlur - fromBlur) * ease;
+            const alpha = fromAlpha + (toAlpha - fromAlpha) * ease;
+            backdrop.style.backdropFilter = `blur(${blur.toFixed(2)}px)`;
+            backdrop.style.webkitBackdropFilter = `blur(${blur.toFixed(2)}px)`;
+            backdrop.style.background = `rgba(0,0,0,${alpha.toFixed(3)})`;
+            if (t < 1) {
+                animFrame = requestAnimationFrame(step);
+            } else {
+                animFrame = null;
+                if (onDone) onDone();
+            }
+        }
+        animFrame = requestAnimationFrame(step);
+    }
 
     document.querySelectorAll('.brand-card').forEach(card => {
         card.addEventListener('click', () => {
@@ -306,12 +332,18 @@ function initBrandModals() {
 
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+            animateBackdrop(0, 8, 0, 0.5, 400);
         });
     });
 
     function closeModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
+        animateBackdrop(8, 0, 0.5, 0, 300, () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            backdrop.style.backdropFilter = '';
+            backdrop.style.webkitBackdropFilter = '';
+            backdrop.style.background = '';
+        });
     }
 
     closeBtn.addEventListener('click', closeModal);
@@ -320,6 +352,7 @@ function initBrandModals() {
         if (e.key === 'Escape') closeModal();
     });
 }
+
 
 /* ---------- Smooth scroll ---------- */
 function initSmoothScroll() {
