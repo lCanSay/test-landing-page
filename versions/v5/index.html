@@ -23,6 +23,9 @@
 
 <body>
 
+    <!-- ============ DYNAMIC BACKGROUND ============ -->
+    <div class="dynamic-bg"></div>
+
     <!-- ============ HEADER ============ -->
     <header class="header" id="header">
         <div class="container header__inner">
@@ -67,7 +70,8 @@
         <div class="container hero__content">
             <p class="hero__eyebrow">С 2015 · Алматы · Официальный дистрибьютор</p>
             <h1 class="hero__headline">KOREANA</h1>
-            <p class="hero__sub">Эксклюзивные бренды из Южной Кореи. Прямой импорт 450+ позиций. 16 городов Казахстана. Доставка 24 часа.</p>
+            <p class="hero__sub">Эксклюзивные бренды из Южной Кореи. Прямой импорт 450+ позиций. 16 городов Казахстана.
+                Доставка 24 часа.</p>
             <div class="hero__actions">
                 <a href="#client-form" class="btn btn--primary btn--lg">Стать клиентом</a>
                 <a href="#brands" class="hero__text-link">Смотреть бренды <i data-lucide="arrow-right"></i></a>
@@ -98,6 +102,12 @@
                         MUKUNGHWA, JOONGWON.</p>
                     <p>С 2025 года ассортимент расширен линейкой бессульфатных шампуней Hair Clinic, мужской линейкой
                         PRO ACTIVE MAN.</p>
+
+                    <p style="margin-top: 24px;">Мы не просто поставляем продукцию - мы развиваем бренды на рынке
+                        Казахстана, обеспечивая партнёров маркетинговой поддержкой, стабильными поставками и коммерчески
+                        эффективной моделью сотрудничества.</p>
+                    <p>Ассортимент компании постоянно расширяется - мы регулярно выводим новинки и адаптируем портфель
+                        под актуальные тренды рынка.</p>
                 </div>
                 <div class="about__image">
                     <!-- Заменить на реальное фото склада/офиса/команды -->
@@ -239,10 +249,25 @@
     <!-- ============ MISSION & VALUES ============ -->
     <section class="mission" id="mission">
         <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Миссия и ценности</p>
-                <h2 class="section-title">На чём мы стоим</h2>
-                <p class="section-desc">Принципы, которые делают нас надёжным партнёром</p>
+            <div class="mission__top">
+                <div class="section-header">
+                    <p class="section-tag">Миссия и ценности</p>
+                    <h2 class="section-title">На чём мы стоим</h2>
+                </div>
+
+                <figure class="mission__quote">
+                    <i data-lucide="quote" class="mission__quote-mark"></i>
+                    <blockquote class="mission__blockquote">
+                        <p>Делать качественные корейские продукты доступными каждому, развивая рынок и создавая ценность
+                            для партнёров и конечных потребителей.</p>
+                    </blockquote>
+                    <figcaption class="mission__quote-author">
+                        <div class="author-info">
+                            <strong>Команда KOREANA</strong>
+                            <span>Генеральный дистрибьютор</span>
+                        </div>
+                    </figcaption>
+                </figure>
             </div>
 
             <div class="mission__grid">
@@ -579,21 +604,21 @@
                         </div>
                     </a>
                     <a href="http://www.mkh.co.kr" target="_blank" rel="noopener" class="supplier-card"
-                        style="background-image: url('assets/suppliers/mukunghwa.jpg')">
+                        style="background-image: url('assets/suppliers/mukunghwa.jpg'); background-position: right center;">
                         <div class="supplier-card__content">
                             <div class="supplier-card__name">MUKUNGHWA</div>
                             <div class="supplier-card__tag">O'Clean, VIU</div>
                         </div>
                     </a>
                     <a href="https://www.jw.co.kr" target="_blank" rel="noopener" class="supplier-card"
-                        style="background-image: url('assets/suppliers/joongwon.jpg')">
+                        style="background-image: url('assets/suppliers/joongwon3.png'); background-position: 75% center;">
                         <div class="supplier-card__content">
                             <div class="supplier-card__name">JOONGWON</div>
                             <div class="supplier-card__tag">SecretDay</div>
                         </div>
                     </a>
                     <a href="https://fscos.com" target="_blank" rel="noopener" class="supplier-card"
-                        style="background-image: url('assets/suppliers/farmstay.jpg'); background-position: 25% center;">
+                        style="background-image: url('assets/suppliers/myungin.jpg'); background-position: center;">
                         <div class="supplier-card__content">
                             <div class="supplier-card__name">MYUNGIN COSMETICS</div>
                             <div class="supplier-card__tag">Farmstay</div>
@@ -649,15 +674,18 @@
             <div class="wtb-block">
                 <h3 class="wtb-block__title"><i data-lucide="shopping-bag"></i> Онлайн-маркетплейсы</h3>
                 <div class="marketplaces">
-                    <a href="#" class="marketplace marketplace--kaspi" target="_blank" rel="noopener">
+                    <a href="https://l.kaspi.kz/shop/D4rX4gx5MYDWq2R" class="marketplace marketplace--kaspi"
+                        target="_blank" rel="noopener">
                         <span class="marketplace__name">Kaspi.kz</span>
                         <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
                     </a>
-                    <a href="#" class="marketplace marketplace--wb" target="_blank" rel="noopener">
+                    <a href="https://www.wildberries.ru/seller/250046194" class="marketplace marketplace--wb"
+                        target="_blank" rel="noopener">
                         <span class="marketplace__name">Wildberries</span>
                         <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
                     </a>
-                    <a href="#" class="marketplace marketplace--ozon" target="_blank" rel="noopener">
+                    <a href="https://www.ozon.ru/seller/from-korea-3550299/" class="marketplace marketplace--ozon"
+                        target="_blank" rel="noopener">
                         <span class="marketplace__name">Ozon</span>
                         <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
                     </a>
@@ -665,6 +693,129 @@
             </div>
 
 
+        </div>
+    </section>
+
+
+
+    <!-- ============ SOCIAL IMPACT & ACHIEVEMENTS ============ -->
+    <section class="social-impact" id="impact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Наши ценности в действии</p>
+                <h2 class="section-title">Социальные проекты и Достижения</h2>
+                <p class="section-desc">То, чем мы гордимся помимо бизнеса</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bento-grid" id="bento-grid">
+
+                <!-- CARD 1 (Large - span 2, span 2) -->
+                <div class="bento-item bento-item--large" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000&auto=format&fit=crop"
+                        alt="Выставка" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Ежегодное участие в Central Asia Beauty Expo</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 2 (Wide - span 2, span 1) -->
+                <div class="bento-item bento-item--wide" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1531545514251-b159e38e5223?q=80&w=1000&auto=format&fit=crop"
+                        alt="Награда" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Звание "Лучший дистрибьютор года" от AEKYUNG</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 3 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
+                        alt="Команда" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Корпоративные ивенты</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 4 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop"
+                        alt="Благотворительность" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Поддержка детских домов</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 5 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1000&auto=format&fit=crop"
+                        alt="Склад" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Открытие хаба</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 6 (Wide - span 2, span 1) - CENTERED IN BOTTOM ROW -->
+                <div class="bento-item bento-item--wide" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1000&auto=format&fit=crop"
+                        alt="Ритейл" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Сотрудничество с сетями: Magnum, Золотое Яблоко</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 7 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop"
+                        alt="Экология" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Эко-инициативы</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -940,6 +1091,144 @@
         <i data-lucide="message-circle"></i>
     </a>
 
+    <!-- ================================================== -->
+    <!-- MODAL POPUP HTML                                   -->
+    <!-- ================================================== -->
+    <div class="detail-modal" id="demo-modal">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery-container">
+                <!-- Horizontal scrolling gallery -->
+                <div class="modal-gallery" id="modal-slider">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop"
+                        alt="Expo 1">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop"
+                        alt="Expo 2">
+                    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200&auto=format&fit=crop"
+                        alt="Expo 3">
+                </div>
+
+                <div class="modal-gallery-overlay"></div>
+
+                <div class="modal-gallery-nav" id="modal-dots">
+                    <div class="modal-gallery-dot active" onclick="onDotClick(0)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClick(1)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClick(2)"></div>
+                </div>
+            </div>
+
+            <!-- Scrollable body for very long text -->
+            <div class="modal-body">
+                <h2>Участие в Central Asia Beauty Expo</h2>
+
+                <p><strong>Мы регулярно выступаем партнерами крупнейшей выставки красоты в Центральной Азии. В 2025 году
+                        наш стенд привлек более 2000 посетителей со всего СНГ.</strong></p>
+
+                <p>В рамках мероприятия мы представили новые линейки бессульфатных шампуней Hair Clinic и эксклюзивные
+                    новинки от бренда MUKUNGHWA. Выставка позволила закрепить статус KOREANA как лидера в импорте
+                    корейской бытовой химии.</p>
+
+                <p>— Пример очень длинного текста для демонстрации скроллинга —</p>
+                <p>Компания постоянно стремится к расширению горизонтов и выходу на новые рынки. Наша логистическая
+                    система настроена так, чтобы доставлять заказы партнерам в кратчайшие сроки.</p>
+                <p>В этом году мы подписали более 50 крупных контрактов прямо на стенде. Наша команда из 15 менеджеров
+                    проводила непрерывные презентации продуктов и демонстрацию эффекта от профессиональной косметики.
+                </p>
+                <p>Отдельное внимание было уделено экологическим инициативам: все материалы нашего стенда были выполнены
+                    из перерабатываемого сырья, а посетители получали в подарок шопперы вместо пластиковых пакетов.</p>
+                <p>Мы уверены, что красота должна быть безопасной как для человека, так и для природы. Именно поэтому в
+                    нашем портфеле все больше брендов с сертификатом Eco-Friendly и Vegan. Благодаря выставке мы смогли
+                    донести эту миссию до тысяч людей.</p>
+                <p>Подводя итоги, выставка стала отправной точкой для мощного роста в B2B сегменте в 2025 году. Спасибо
+                    всем партнерам, кто разделил с нами эти насыщенные дни!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ======= GALLERY SLIDER =======
+        (function () {
+            var slider = document.getElementById('modal-slider');
+            if (!slider) return;
+            var dotsContainer = document.getElementById('modal-dots');
+            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
+            var totalSlides = slider.querySelectorAll('img').length;
+            var currentSlide = 0;
+            var sliderInterval = null;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                sliderInterval = setInterval(nextSlide, 3000);
+            }
+
+            function stopAutoSlide() {
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                    sliderInterval = null;
+                }
+            }
+
+            // Expose functions globally for onclick handlers
+            window.openModal = function () {
+                document.getElementById('demo-modal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                goToSlide(0);
+                startAutoSlide();
+            };
+
+            window.closeModal = function () {
+                document.getElementById('demo-modal').classList.remove('active');
+                document.body.style.overflow = '';
+                stopAutoSlide();
+            };
+
+            window.onDotClick = function (index) {
+                goToSlide(index);
+                startAutoSlide();
+            };
+
+            // Close on ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.closeModal();
+            });
+
+            // Close on backdrop click
+            document.getElementById('demo-modal').addEventListener('click', function (e) {
+                if (e.target === this) window.closeModal();
+            });
+
+            // Pause/resume on hover
+            var galleryContainer = document.querySelector('.modal-gallery-container');
+            if (galleryContainer) {
+                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+                galleryContainer.addEventListener('mouseleave', function () {
+                    if (document.getElementById('demo-modal').classList.contains('active')) {
+                        startAutoSlide();
+                    }
+                });
+            }
+        })();
+    </script>
     <script src="js/main.js"></script>
 </body>
 

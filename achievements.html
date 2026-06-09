@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достижения и Проекты | KOREANA</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Shared Styles for this Demo Page */
+        .demo-header {
+            padding: 140px 0 60px;
+            text-align: center;
+            background: var(--color-bg-warm);
+        }
+        .demo-title {
+            font-family: var(--font-heading);
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+        }
+        .demo-desc {
+            font-size: 18px;
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* =========================================================
+           BENTO GRID
+           ========================================================= */
+        .v1-bento {
+            padding: var(--section-padding);
+            background: var(--color-bg);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 280px;
+            gap: 24px;
+        }
+        .bento-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 32px;
+            color: white;
+            cursor: pointer;
+            transition: transform var(--transition);
+            background-color: var(--color-primary);
+        }
+        .bento-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .bento-item__img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        .bento-item:hover .bento-item__img {
+            transform: scale(1.05);
+        }
+        .bento-item__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+        }
+        .bento-item__content {
+            position: relative;
+            z-index: 2;
+        }
+        .bento-item__title {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        /* Hint text to show it's clickable */
+        .bento-item__click-hint {
+            font-size: 13px;
+            color: var(--color-accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        /* Grid spans */
+        .bento-item--large { grid-column: span 2; grid-row: span 2; }
+        .bento-item--large .bento-item__title { font-size: 32px; }
+        
+        .bento-item--wide { grid-column: span 2; grid-row: span 1; }
+        .bento-item--small { grid-column: span 1; grid-row: span 1; }
+        .bento-item--tall { grid-column: span 1; grid-row: span 2; }
+
+        @media (max-width: 992px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            .bento-item--large { grid-column: span 2; grid-row: span 1; }
+            .bento-item--wide { grid-column: span 2; }
+        }
+        @media (max-width: 576px) {
+            .bento-grid { grid-template-columns: 1fr; grid-auto-rows: 300px; }
+            .bento-item--large, .bento-item--wide, .bento-item--small, .bento-item--tall { grid-column: span 1; }
+        }
+
+        /* =========================================================
+           MODAL POPUP (Classic overlay with carousel)
+           ========================================================= */
+        .detail-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .detail-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .detail-modal__content {
+            background: var(--color-bg);
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh; /* Limits the modal to 90% of screen height */
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+        .detail-modal.active .detail-modal__content {
+            transform: translateY(0);
+        }
+        .detail-modal__close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 10;
+            background: rgba(255,255,255,0.9);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition);
+        }
+        .detail-modal__close:hover {
+            transform: scale(1.1);
+        }
+        .modal-gallery-container {
+            position: relative;
+            height: 400px;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+        .modal-gallery {
+            display: flex;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .modal-gallery img {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .modal-gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            pointer-events: none;
+        }
+        .modal-gallery-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 5;
+        }
+        .modal-gallery-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            transition: background var(--transition);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+        .modal-gallery-dot.active { background: white; }
+        
+        .modal-body {
+            padding: 40px;
+            overflow-y: auto; /* Adds scrollbar inside the text area if content is too long */
+            flex-grow: 1;    /* Takes up remaining space in the modal */
+        }
+        .modal-body h2 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .modal-body p {
+            color: var(--color-text-light);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header scrolled" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="KOREANA" class="logo__img">
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="index.html#hero" class="nav__link">Главная</a>
+                <a href="index.html#about" class="nav__link">О нас</a>
+                <a href="index.html#brands" class="nav__link">Бренды</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="demo-header">
+        <div class="container">
+            <h1 class="demo-title">Портфолио проектов и достижений</h1>
+            <p class="demo-desc">Сетка возвращена к изначальному виду (большой первый блок, а нижний исправлен).<br>Кликните на карточку, чтобы открыть улучшенное модальное окно.</p>
+        </div>
+    </div>
+    
+    <section class="v1-bento">
+        <div class="container">
+            <div class="bento-grid" id="bento-grid">
+                
+                <!-- CARD 1 (Large - span 2, span 2) -->
+                <div class="bento-item bento-item--large" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000&auto=format&fit=crop" alt="Выставка" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
+                        <h3 class="bento-item__title">Ежегодное участие в Central Asia Beauty Expo</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 2 (Wide - span 2, span 1) -->
+                <div class="bento-item bento-item--wide" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1531545514251-b159e38e5223?q=80&w=1000&auto=format&fit=crop" alt="Награда" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
+                        <h3 class="bento-item__title">Звание "Лучший дистрибьютор года" от AEKYUNG</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 3 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Команда" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
+                        <h3 class="bento-item__title">Корпоративные ивенты</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 4 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop" alt="Благотворительность" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
+                        <h3 class="bento-item__title">Поддержка детских домов</h3>
+                    </div>
+                </div>
+                
+                <!-- CARD 5 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1000&auto=format&fit=crop" alt="Склад" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
+                        <h3 class="bento-item__title">Открытие хаба</h3>
+                    </div>
+                </div>
+                
+                <!-- CARD 6 (Wide - span 2, span 1) - CENTERED IN BOTTOM ROW -->
+                <div class="bento-item bento-item--wide" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1000&auto=format&fit=crop" alt="Ритейл" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
+                        <h3 class="bento-item__title">Сотрудничество с сетями: Magnum, Золотое Яблоко</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 7 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModal()">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop" alt="Экология" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
+                        <h3 class="bento-item__title">Эко-инициативы</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- MODAL POPUP HTML                                   -->
+    <!-- ================================================== -->
+    <div class="detail-modal" id="demo-modal">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            
+            <div class="modal-gallery-container">
+                <!-- Horizontal scrolling gallery -->
+                <div class="modal-gallery" id="modal-slider">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop" alt="Expo 1">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop" alt="Expo 2">
+                    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200&auto=format&fit=crop" alt="Expo 3">
+                </div>
+                
+                <div class="modal-gallery-overlay"></div>
+                
+                <div class="modal-gallery-nav" id="modal-dots">
+                    <div class="modal-gallery-dot active" onclick="onDotClick(0)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClick(1)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClick(2)"></div>
+                </div>
+            </div>
+
+            <!-- Scrollable body for very long text -->
+            <div class="modal-body">
+                <h2>Участие в Central Asia Beauty Expo</h2>
+                
+                <p><strong>Мы регулярно выступаем партнерами крупнейшей выставки красоты в Центральной Азии. В 2025 году наш стенд привлек более 2000 посетителей со всего СНГ.</strong></p>
+                
+                <p>В рамках мероприятия мы представили новые линейки бессульфатных шампуней Hair Clinic и эксклюзивные новинки от бренда MUKUNGHWA. Выставка позволила закрепить статус KOREANA как лидера в импорте корейской бытовой химии.</p>
+                
+                <p>— Пример очень длинного текста для демонстрации скроллинга —</p>
+                <p>Компания постоянно стремится к расширению горизонтов и выходу на новые рынки. Наша логистическая система настроена так, чтобы доставлять заказы партнерам в кратчайшие сроки.</p>
+                <p>В этом году мы подписали более 50 крупных контрактов прямо на стенде. Наша команда из 15 менеджеров проводила непрерывные презентации продуктов и демонстрацию эффекта от профессиональной косметики.</p>
+                <p>Отдельное внимание было уделено экологическим инициативам: все материалы нашего стенда были выполнены из перерабатываемого сырья, а посетители получали в подарок шопперы вместо пластиковых пакетов.</p>
+                <p>Мы уверены, что красота должна быть безопасной как для человека, так и для природы. Именно поэтому в нашем портфеле все больше брендов с сертификатом Eco-Friendly и Vegan. Благодаря выставке мы смогли донести эту миссию до тысяч людей.</p>
+                <p>Подводя итоги, выставка стала отправной точкой для мощного роста в B2B сегменте в 2025 году. Спасибо всем партнерам, кто разделил с нами эти насыщенные дни!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Init scripts -->
+    <script>
+        // Lucide icons: non-critical, wrapped so failure doesn't break slider
+        try { lucide.createIcons(); } catch(e) { /* Lucide not loaded yet or failed */ }
+        window.addEventListener('load', function() {
+            try { lucide.createIcons(); } catch(e) {}
+        });
+
+        // ======= GALLERY SLIDER =======
+        (function() {
+            var slider = document.getElementById('modal-slider');
+            var dotsContainer = document.getElementById('modal-dots');
+            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
+            var totalSlides = slider.querySelectorAll('img').length;
+            var currentSlide = 0;
+            var sliderInterval = null;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                sliderInterval = setInterval(nextSlide, 3000);
+            }
+
+            function stopAutoSlide() {
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                    sliderInterval = null;
+                }
+            }
+
+            // Expose functions globally for onclick handlers
+            window.openModal = function() {
+                document.getElementById('demo-modal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                goToSlide(0);
+                startAutoSlide();
+            };
+
+            window.closeModal = function() {
+                document.getElementById('demo-modal').classList.remove('active');
+                document.body.style.overflow = '';
+                stopAutoSlide();
+            };
+
+            window.onDotClick = function(index) {
+                goToSlide(index);
+                startAutoSlide();
+            };
+
+            // Close on ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') window.closeModal();
+            });
+
+            // Close on backdrop click
+            document.getElementById('demo-modal').addEventListener('click', function(e) {
+                if (e.target === this) window.closeModal();
+            });
+
+            // Pause/resume on hover
+            var galleryContainer = document.querySelector('.modal-gallery-container');
+            galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+            galleryContainer.addEventListener('mouseleave', function() {
+                if (document.getElementById('demo-modal').classList.contains('active')) {
+                    startAutoSlide();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
