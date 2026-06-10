@@ -245,7 +245,7 @@ const brandData = {
             '<strong>HAIR CLINIC</strong> - clinical series with 17 types of amino acids and proteins for intensive repair of damaged hair',
             '<strong>PERFUME</strong> - perfumed series with unique fragrances for every style',
             '<strong>ADVANCED</strong> - ampoule series with a special formula for comprehensive care',
-            '<strong>PRO ACTIVE MAN</strong> - men's line of shampoos'
+            '<strong>PRO ACTIVE MAN</strong> - men\'s line of shampoos'
         ],
         images: [
             'assets/products/kerasys1.png',
@@ -309,7 +309,7 @@ const brandData = {
     secretday: {
         name: 'SECRETDAY',
         category: 'Feminine Hygiene',
-        description: 'SECRETDAY sanitary pads are developed with women's health and comfort in mind. The products meet the highest safety standards.',
+        description: 'SECRETDAY sanitary pads are developed with women\'s health and comfort in mind. The products meet the highest safety standards.',
         series: [
             '<strong>LOVE</strong> - soft surface for maximum comfort',
             '<strong>COTTON</strong> - 100% natural cotton',
@@ -374,7 +374,7 @@ const brandData = {
         category: 'Household Chemicals',
         description: 'MUKUNGHWA products embody natural cleanliness and environmental care, with formulas based on plant components.',
         series: [
-            '<strong>O\'CLEAN</strong> - средства на основе плодов мыльного дерева',
+            '<strong>O\'CLEAN</strong> - products based on soapberry fruit',
             '<strong>VIU</strong> - antibacterial super-concentrated fabric softener',
             'Natural plant-based soap',
             'Eco-friendly cleaning products'
