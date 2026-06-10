@@ -239,13 +239,13 @@ document.head.appendChild(style);
 const brandData = {
     kerasys: {
         name: 'KERASYS',
-        category: 'Уход за волосами',
-        description: 'Бренд KERASYS создан для того, чтобы сделать профессиональный уход за волосами доступным и удобным. Продукция разработана на основе передовых корейских технологий ухода за волосами.',
+        category: 'Hair Care',
+        description: 'KERASYS was created to make professional hair care accessible and convenient. The products are formulated using advanced Korean hair care technologies.',
         series: [
-            '<strong>HAIR CLINIC</strong> - клиническая серия с 17 видами аминокислот и протеинами для интенсивного восстановления повреждённых волос',
-            '<strong>PERFUME</strong> - парфюмированная серия с уникальными ароматами для каждого образа',
-            '<strong>ADVANCED</strong> - ампульная серия со специальной формулой для комплексного ухода',
-            '<strong>PRO ACTIVE MAN</strong> - мужская линейка шампуней'
+            '<strong>HAIR CLINIC</strong> - clinical series with 17 types of amino acids and proteins for intensive repair of damaged hair',
+            '<strong>PERFUME</strong> - perfumed series with unique fragrances for every style',
+            '<strong>ADVANCED</strong> - ampoule series with a special formula for comprehensive care',
+            '<strong>PRO ACTIVE MAN</strong> - men's line of shampoos'
         ],
         images: [
             'assets/products/kerasys1.png',
@@ -257,15 +257,15 @@ const brandData = {
     },
     '2080': {
         name: '2080',
-        category: 'Гигиена полости рта',
-        description: 'Эксперты компании AEKYUNG на протяжении 25 лет разрабатывают уникальные формулы зубных паст, направленные на решение различных проблем полости рта.',
+        category: 'Oral Hygiene',
+        description: 'AEKYUNG experts have spent 25 years developing unique toothpaste formulas aimed at solving various oral hygiene issues.',
         series: [
-            '<strong>TOTAL</strong> - базовая серия для ежедневного ухода',
-            '<strong>PRO</strong> - профилактическая серия',
-            '<strong>DR.CLINIC</strong> - лечебно-профилактическая серия',
-            'Снижает риск образования зубного камня в 4 раза',
-            'Снижает чувствительность зубов на 96% за 2 недели',
-            'Осветляет эмаль на 88% за 8 недель'
+            '<strong>TOTAL</strong> - core series for daily care',
+            '<strong>PRO</strong> - preventive series',
+            '<strong>DR.CLINIC</strong> - therapeutic and preventive series',
+            'Reduces the risk of tartar formation by 4 times',
+            'Reduces tooth sensitivity by 96% in 2 weeks',
+            'Whitens enamel by 88% in 8 weeks'
         ],
         images: [
             'assets/products/2080-1.jpg',
@@ -275,12 +275,12 @@ const brandData = {
     },
     showermate: {
         name: 'SHOWERMATE',
-        category: 'Уход за телом',
-        description: 'Гели для душа SHOWERMATE с натуральными компонентами оказывают мягкий уход за кожей. Каждая серия создана для особых потребностей кожи.',
+        category: 'Body Care',
+        description: 'SHOWERMATE shower gels with natural ingredients provide gentle skin care. Each series is designed for specific skin needs.',
         series: [
-            '<strong>NATURAL</strong> - серия с натуральными экстрактами для ежедневного ухода',
-            '<strong>BOTANIC</strong> - серия с травами и цветами для чувствительной кожи',
-            '<strong>FLOWER PERFUME</strong> - парфюмированная серия с цветочными экстрактами'
+            '<strong>NATURAL</strong> - natural extract series for daily care',
+            '<strong>BOTANIC</strong> - herbal and floral series for sensitive skin',
+            '<strong>FLOWER PERFUME</strong> - perfumed series with floral extracts'
         ],
         images: [
             'assets/products/showermate1.jpg',
@@ -290,15 +290,15 @@ const brandData = {
     },
     farmstay: {
         name: 'FARMSTAY',
-        category: 'Косметика',
-        description: 'Продукция FarmStay создана для тех, кому важна натуральная уходовая и декоративная косметика. Поэтапная система ухода за кожей по корейской технологии.',
+        category: 'Cosmetics',
+        description: 'FarmStay products are for those who value natural skincare and makeup. A step-by-step skincare system following Korean methods.',
         series: [
-            'Пенки для умывания и пилинги',
-            'Тканевые и гидрогелевые маски',
-            'Патчи для области вокруг глаз',
-            'Тонеры и эмульсии',
-            'Увлажняющие и питательные кремы',
-            'Сыворотки и ампулы'
+            'Cleansing foams and peelings',
+            'Sheet and hydrogel masks',
+            'Eye patches',
+            'Toners and emulsions',
+            'Moisturizing and nourishing creams',
+            'Serums and ampoules'
         ],
         images: [
             'assets/products/farmstay1.png',
@@ -308,12 +308,12 @@ const brandData = {
     },
     secretday: {
         name: 'SECRETDAY',
-        category: 'Женская гигиена',
-        description: 'Гигиенические прокладки SECRETDAY разработаны с заботой о здоровье и комфорте женщин. Продукция соответствует высочайшим стандартам безопасности.',
+        category: 'Feminine Hygiene',
+        description: 'SECRETDAY sanitary pads are developed with women's health and comfort in mind. The products meet the highest safety standards.',
         series: [
-            '<strong>LOVE</strong> - нежная поверхность для максимального комфорта',
-            '<strong>COTTON</strong> - 100% натуральный хлопок',
-            '<strong>FRESH</strong> - органическая веганская линейка'
+            '<strong>LOVE</strong> - soft surface for maximum comfort',
+            '<strong>COTTON</strong> - 100% natural cotton',
+            '<strong>FRESH</strong> - organic vegan line'
         ],
         images: [
             'assets/products/secretday1.png',
@@ -323,13 +323,13 @@ const brandData = {
     },
     perfect: {
         name: 'PERFECT',
-        category: 'Бытовая химия',
-        description: 'Концентрированный стиральный порошок PERFECT эффективно удаляет все виды загрязнений. Достаточно всего 50 граммов на стирку - 1 кг хватает на месяц ежедневного использования.',
+        category: 'Household Chemicals',
+        description: 'PERFECT concentrated laundry powder effectively removes all types of stains. Only 50 grams per wash is needed – 1 kg lasts for a month of daily use.',
         series: [
-            'Устраняет 99,9% бактерий из волокон ткани',
-            'Не содержит фосфатов - абсолютно безопасен',
-            'Гипоаллергенный состав',
-            'Экономичный расход - 50 г на стирку'
+            'Eliminates 99.9% of bacteria from fabric fibers',
+            'Phosphate-free – completely safe',
+            'Hypoallergenic composition',
+            'Economical use – 50 g per wash'
         ],
         images: [
             'assets/products/perfect1.png',
@@ -339,13 +339,13 @@ const brandData = {
     },
     wool: {
         name: 'WOOL SHAMPOO',
-        category: 'Бытовая химия',
-        description: 'WOOL SHAMPOO - инновационное средство для бережной стирки деликатных тканей с официальной сертификацией WoolMark.',
+        category: 'Household Chemicals',
+        description: 'WOOL SHAMPOO is an innovative product for the gentle washing of delicate fabrics, officially certified by WoolMark.',
         series: [
-            'Сертифицировано WoolMark в Корее',
-            'Гипоаллергенные чистящие компоненты',
-            'Рекомендуется для стирки детского белья',
-            'Бережный уход за шерстью, шёлком и деликатными тканями'
+            'Certified by WoolMark in Korea',
+            'Hypoallergenic cleaning ingredients',
+            'Recommended for washing baby clothes',
+            'Gentle care for wool, silk, and delicate fabrics'
         ],
         images: [
             'assets/products/wool1.webp',
@@ -355,13 +355,13 @@ const brandData = {
     },
     trio: {
         name: 'TRIO',
-        category: 'Бытовая химия',
-        description: 'TRIO - универсальное средство для мытья посуды, фруктов и овощей. Справляется даже с застывшим жиром, при этом бережно воздействует на кожу рук.',
+        category: 'Household Chemicals',
+        description: 'TRIO is a universal detergent for washing dishes, fruits, and vegetables. It tackles even hardened grease while being gentle on the hands.',
         series: [
-            'Подходит для мытья посуды, фруктов и овощей',
-            'Уничтожает 99,9% бактерий и грибков',
-            'Удаляет неприятные запахи',
-            'Не вызывает сухости и раздражения кожи'
+            'Suitable for dishes, fruits, and vegetables',
+            'Kills 99.9% of bacteria and fungi',
+            'Removes unpleasant odors',
+            'Does not cause dryness or skin irritation'
         ],
         images: [
             'assets/products/trio1.webp',
@@ -371,13 +371,13 @@ const brandData = {
     },
     mukunghwa: {
         name: 'MUKUNGHWA',
-        category: 'Бытовая химия',
-        description: 'Продукция MUKUNGHWA - воплощение натуральной чистоты и заботы о природе. Составы на основе растительных компонентов.',
+        category: 'Household Chemicals',
+        description: 'MUKUNGHWA products embody natural cleanliness and environmental care, with formulas based on plant components.',
         series: [
             '<strong>O\'CLEAN</strong> - средства на основе плодов мыльного дерева',
-            '<strong>VIU</strong> - антибактериальный суперконцентрированный ополаскиватель',
-            'Натуральное мыло на растительной основе',
-            'Экологичные чистящие средства'
+            '<strong>VIU</strong> - antibacterial super-concentrated fabric softener',
+            'Natural plant-based soap',
+            'Eco-friendly cleaning products'
         ],
         images: [
             'assets/products/muku-viu1.jpg',
@@ -429,7 +429,7 @@ function initBrandModals() {
             if (data.series && data.series.length) {
                 seriesHtml = `
                     <div class="v2-features">
-                        <p>${typeof currentLang !== 'undefined' && currentLang === 'en' ? 'Key products and series:' : 'Ключевые продукты и серии:'}</p>
+                        <p>Key products and series:</p>
                         <ul class="bm-features">${data.series.map(s => `<li>${s}</li>`).join('')}</ul>
                     </div>
                 `;

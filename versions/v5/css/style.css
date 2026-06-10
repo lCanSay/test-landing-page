@@ -435,7 +435,8 @@ textarea {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.88;
+    opacity: 1;
+    filter: brightness(1.1);
 }
 
 /* Cinematic gradient overlay: dark edges, especially bottom-left */
