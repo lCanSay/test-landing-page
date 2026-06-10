@@ -27,7 +27,7 @@ function initParticles() {
 
     const container = document.createElement('div');
     container.className = 'particles-container';
-    
+
     // Ensure the container spans the entire scrollable height of the page
     container.style.height = document.documentElement.scrollHeight + 'px';
     document.body.appendChild(container);
@@ -39,9 +39,9 @@ function initParticles() {
         wrapper.style.left = Math.random() * 95 + 'vw';
         wrapper.style.top = (Math.random() * 95) + '%';
         wrapper.dataset.speed = 0.1 + Math.random() * 0.3; // Parallax speed
-        
+
         const p = document.createElement('div');
-        
+
         // Random shapes: circle, square, triangle
         const rand = Math.random();
         if (rand < 0.33) {
@@ -51,19 +51,19 @@ function initParticles() {
         } else {
             p.className = 'particle particle--triangle';
         }
-        
+
         const size = 15 + Math.random() * 30;
         p.style.width = size + 'px';
         p.style.height = size + 'px';
-        
+
         // Random tilt and animation duration
         const baseRot = Math.random() * 360;
         p.style.setProperty('--rot-start', baseRot + 'deg');
         p.style.setProperty('--rot-end', (baseRot + (Math.random() > 0.5 ? 90 : -90)) + 'deg');
-        
+
         const duration = 15 + Math.random() * 20; // 15s to 35s
         p.style.animation = `drift ${duration}s infinite alternate ease-in-out`;
-        
+
         wrapper.appendChild(p);
         container.appendChild(wrapper);
     }
@@ -73,10 +73,10 @@ function initParticles() {
 function initParallax() {
     const heroContent = document.querySelector('.hero__content');
     let particles = null;
-    
+
     window.addEventListener('scroll', () => {
         const scroll = window.scrollY;
-        
+
         // Hero Parallax
         if (heroContent && scroll < window.innerHeight) {
             heroContent.style.transform = `translateY(${scroll * 0.3}px)`;
@@ -87,10 +87,10 @@ function initParallax() {
         if (!particles) {
             particles = document.querySelectorAll('.particles-container .particle-wrapper');
         }
-        
+
         if (particles.length > 0) {
             particles.forEach((wrapper) => {
-                const speed = parseFloat(wrapper.dataset.speed || 0.2); 
+                const speed = parseFloat(wrapper.dataset.speed || 0.2);
                 wrapper.style.transform = `translateY(${scroll * -speed}px)`;
             });
         }
@@ -247,6 +247,13 @@ const brandData = {
             '<strong>PERFUME</strong> - парфюмированная серия с уникальными ароматами для каждого образа',
             '<strong>ADVANCED</strong> - ампульная серия со специальной формулой для комплексного ухода',
             '<strong>PRO ACTIVE MAN</strong> - мужская линейка шампуней'
+        ],
+        images: [
+            'assets/products/kerasys1.png',
+            'assets/products/kerasys2.png',
+            'assets/products/kerasys4.jpg',
+            'assets/products/kerasys5.jpeg',
+            'assets/products/kerasys6.png'
         ]
     },
     '2080': {
@@ -260,6 +267,11 @@ const brandData = {
             'Снижает риск образования зубного камня в 4 раза',
             'Снижает чувствительность зубов на 96% за 2 недели',
             'Осветляет эмаль на 88% за 8 недель'
+        ],
+        images: [
+            'assets/products/2080-1.jpg',
+            'assets/products/2080-2.jpg',
+            'assets/products/2080-3.webp'
         ]
     },
     showermate: {
@@ -270,6 +282,11 @@ const brandData = {
             '<strong>NATURAL</strong> - серия с натуральными экстрактами для ежедневного ухода',
             '<strong>BOTANIC</strong> - серия с травами и цветами для чувствительной кожи',
             '<strong>FLOWER PERFUME</strong> - парфюмированная серия с цветочными экстрактами'
+        ],
+        images: [
+            'assets/products/showermate1.jpg',
+            'assets/products/showermate2.webp',
+            'assets/products/showermate3.jpg'
         ]
     },
     farmstay: {
@@ -283,6 +300,11 @@ const brandData = {
             'Тонеры и эмульсии',
             'Увлажняющие и питательные кремы',
             'Сыворотки и ампулы'
+        ],
+        images: [
+            'assets/products/farmstay1.png',
+            'assets/products/farmstay2.webp',
+            'assets/products/farmstay3.jpeg'
         ]
     },
     secretday: {
@@ -293,6 +315,11 @@ const brandData = {
             '<strong>LOVE</strong> - нежная поверхность для максимального комфорта',
             '<strong>COTTON</strong> - 100% натуральный хлопок',
             '<strong>FRESH</strong> - органическая веганская линейка'
+        ],
+        images: [
+            'assets/products/secretday1.png',
+            'assets/products/secretday2.png',
+            'assets/products/secretday3.png'
         ]
     },
     perfect: {
@@ -304,6 +331,11 @@ const brandData = {
             'Не содержит фосфатов - абсолютно безопасен',
             'Гипоаллергенный состав',
             'Экономичный расход - 50 г на стирку'
+        ],
+        images: [
+            'assets/products/perfect1.png',
+            'assets/products/perfect2.png',
+            'assets/products/perfect3.jpg'
         ]
     },
     wool: {
@@ -315,6 +347,11 @@ const brandData = {
             'Гипоаллергенные чистящие компоненты',
             'Рекомендуется для стирки детского белья',
             'Бережный уход за шерстью, шёлком и деликатными тканями'
+        ],
+        images: [
+            'assets/products/wool1.webp',
+            'assets/products/wool2.png',
+            'assets/products/wool3.jpg'
         ]
     },
     trio: {
@@ -326,6 +363,11 @@ const brandData = {
             'Уничтожает 99,9% бактерий и грибков',
             'Удаляет неприятные запахи',
             'Не вызывает сухости и раздражения кожи'
+        ],
+        images: [
+            'assets/products/trio1.webp',
+            'assets/products/trio2.webp',
+            'assets/products/trio3.jpg'
         ]
     },
     mukunghwa: {
@@ -337,6 +379,11 @@ const brandData = {
             '<strong>VIU</strong> - антибактериальный суперконцентрированный ополаскиватель',
             'Натуральное мыло на растительной основе',
             'Экологичные чистящие средства'
+        ],
+        images: [
+            'assets/products/muku-viu1.jpg',
+            'assets/products/muku-viu2.jpg',
+            'assets/products/muku-viu3.jpg'
         ]
     }
 };
@@ -382,19 +429,87 @@ function initBrandModals() {
             let seriesHtml = '';
             if (data.series && data.series.length) {
                 seriesHtml = `
-                    <h4>Ключевые продукты и серии:</h4>
-                    <ul>${data.series.map(s => `<li>${s}</li>`).join('')}</ul>
+                    <div class="v2-features">
+                        <p>Ключевые продукты и серии:</p>
+                        <ul class="bm-features">${data.series.map(s => `<li>${s}</li>`).join('')}</ul>
+                    </div>
+                `;
+            }
+
+            // Fallback default Unsplash images (same as in achievements.html option 2)
+            const defaultImg1 = 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop';
+            const defaultImg2 = 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop';
+            const defaultImg3 = 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop';
+
+            // Get brand images
+            let img1, img2, img3;
+            let useDirectImg = false;
+            if (data.images && data.images.length >= 3) {
+                img1 = data.images[0];
+                img2 = data.images[1];
+                img3 = data.images[2];
+                useDirectImg = true;
+            } else {
+                img1 = `assets/products/${brand}_1.jpg`;
+                img2 = `assets/products/${brand}_2.jpg`;
+                img3 = `assets/products/${brand}_3.jpg`;
+            }
+
+            // Extension chain helper: try jpg -> png -> webp -> fallback
+            const makeImgHtml = (srcJpg, srcPng, srcWebp, fallback, altText, extraClass = '') => {
+                return `
+                    <div class="v2-grid-item ${extraClass}">
+                        <img src="${srcJpg}" alt="${altText}" 
+                             onerror="this.onerror=null; this.src='${srcPng}'; this.onerror=function(){ this.onerror=null; this.src='${srcWebp}'; this.onerror=function(){ this.onerror=null; this.src='${fallback}'; } }" />
+                    </div>
+                `;
+            };
+
+            let gridHtml = '';
+            if (useDirectImg) {
+                if (data.images.length === 5) {
+                    gridHtml = data.images.map((src, i) => `
+                        <div class="v2-grid-item ${i === 0 ? 'wide' : ''}">
+                            <img src="${src}" alt="${data.name} ${i + 1}" onerror="this.src='${defaultImg1}'" />
+                        </div>
+                    `).join('');
+                } else {
+                    gridHtml = `
+                        <div class="v2-grid-item large">
+                            <img src="${img1}" alt="${data.name} 1" onerror="this.src='${defaultImg1}'" />
+                        </div>
+                        <div class="v2-grid-item">
+                            <img src="${img2}" alt="${data.name} 2" onerror="this.src='${defaultImg2}'" />
+                        </div>
+                        <div class="v2-grid-item">
+                            <img src="${img3}" alt="${data.name} 3" onerror="this.src='${defaultImg3}'" />
+                        </div>
+                    `;
+                }
+            } else {
+                gridHtml = `
+                    ${makeImgHtml(img1, `assets/products/${brand}_1.png`, `assets/products/${brand}_1.webp`, defaultImg1, `${data.name} 1`, 'large')}
+                    ${makeImgHtml(img2, `assets/products/${brand}_2.png`, `assets/products/${brand}_2.webp`, defaultImg2, `${data.name} 2`)}
+                    ${makeImgHtml(img3, `assets/products/${brand}_3.png`, `assets/products/${brand}_3.webp`, defaultImg3, `${data.name} 3`)}
                 `;
             }
 
             modalBody.innerHTML = `
-                <h3>${data.name}</h3>
-                <span class="modal__category">${data.category}</span>
-                <p>${data.description}</p>
-                ${seriesHtml}
+                <div class="v2-header">
+                    <span class="bm-tag">${data.category}</span>
+                    <h2 class="bm-title">${data.name}</h2>
+                    <p class="bm-desc">${data.description}</p>
+                    ${seriesHtml}
+                </div>
+
+                <div class="v2-grid">
+                    ${gridHtml}
+                </div>
             `;
 
             modal.classList.add('active');
+            modal.querySelector('.modal__content').scrollTop = 0;
+            if (modalBody) modalBody.scrollTop = 0;
             document.body.style.overflow = 'hidden';
             animateBackdrop(0, 8, 0, 0.5, 400);
         });

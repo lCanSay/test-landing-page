@@ -3095,6 +3095,34 @@ body {
 }
 .modal-gallery-dot.active { background: white; }
 
+.modal-gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all var(--transition);
+}
+.modal-gallery-arrow:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+.modal-gallery-arrow.prev {
+    left: 16px;
+}
+.modal-gallery-arrow.next {
+    right: 16px;
+}
+
 .modal-body {
     padding: 40px;
     overflow-y: auto;
@@ -3111,4 +3139,122 @@ body {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 16px;
+}
+
+/* =========================================================
+   VARIATION 2: MODERN GRID BRAND MODAL
+   ========================================================= */
+#brand-modal .modal__content {
+    max-width: 900px;
+    padding: 0;
+}
+.v2-header {
+    padding: 48px 48px 32px;
+    text-align: left;
+}
+.v2-header .bm-tag {
+    display: inline-block;
+    background: rgba(227, 6, 19, 0.08);
+    color: var(--color-accent);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+.v2-header .bm-title {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+.v2-header .bm-desc {
+    font-size: 16px;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+.v2-features {
+    max-width: none;
+    margin: 32px 0 0;
+    text-align: left;
+}
+.v2-features p {
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-primary);
+    font-size: 18px;
+}
+.bm-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.bm-features li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: var(--color-text-light);
+    font-size: 15px;
+    line-height: 1.5;
+}
+.bm-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+}
+.bm-features strong {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+.v2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px 250px;
+    gap: 16px;
+    padding: 0 48px 48px;
+}
+.v2-grid-item {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+.v2-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.v2-grid-item:hover img {
+    transform: scale(1.05);
+}
+.v2-grid-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.v2-grid-item.wide {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+@media (max-width: 768px) {
+    .v2-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 200px 200px;
+        padding: 0 24px 32px;
+    }
+    .v2-header {
+        padding: 32px 24px 24px;
+    }
+    .v2-header .bm-title {
+        font-size: 28px;
+    }
 }

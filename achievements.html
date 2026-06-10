@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Достижения и Проекты | KOREANA</title>
+    <title>Варианты дизайна модального окна бренда | KOREANA</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,461 +12,666 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
-
     <link rel="stylesheet" href="css/style.css">
-    
+
     <style>
-        /* Shared Styles for this Demo Page */
+        /* =========================================================
+           BASE STYLES FOR DEMO PAGE
+           ========================================================= */
+        body {
+            background: #F8F9FA;
+            color: #1A1D20;
+            font-family: 'Inter', sans-serif;
+        }
         .demo-header {
-            padding: 140px 0 60px;
+            padding: 100px 0 60px;
             text-align: center;
-            background: var(--color-bg-warm);
         }
         .demo-title {
-            font-family: var(--font-heading);
-            font-size: 42px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 48px;
             font-weight: 800;
-            color: var(--color-primary);
+            color: #111;
             margin-bottom: 16px;
         }
         .demo-desc {
             font-size: 18px;
-            color: var(--color-text-light);
-            max-width: 600px;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            padding: 0 40px 100px;
+            max-width: 1400px;
             margin: 0 auto;
         }
-        
-        /* =========================================================
-           BENTO GRID
-           ========================================================= */
-        .v1-bento {
-            padding: var(--section-padding);
-            background: var(--color-bg);
-        }
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: 280px;
-            gap: 24px;
-        }
-        .bento-item {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
+
+        .demo-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 1px solid rgba(0,0,0,0.05);
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            padding: 32px;
-            color: white;
-            cursor: pointer;
-            transition: transform var(--transition);
-            background-color: var(--color-primary);
+            align-items: center;
         }
-        .bento-item:hover {
+        .demo-card:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: #E63946;
         }
-        .bento-item__img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s ease;
+        .demo-card__icon {
+            width: 64px;
+            height: 64px;
+            background: #FEF2F2;
+            color: #E63946;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
         }
-        .bento-item:hover .bento-item__img {
-            transform: scale(1.05);
-        }
-        .bento-item__overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
-        }
-        .bento-item__content {
-            position: relative;
-            z-index: 2;
-        }
-        .bento-item__title {
-            font-family: var(--font-heading);
+        .demo-card h3 {
+            font-family: 'Manrope', sans-serif;
             font-size: 24px;
             font-weight: 700;
-            margin-bottom: 8px;
-            line-height: 1.2;
+            margin-bottom: 12px;
+            color: #111;
         }
-        /* Hint text to show it's clickable */
-        .bento-item__click-hint {
-            font-size: 13px;
-            color: var(--color-accent);
+        .demo-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+        .demo-btn {
+            background: #111;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 8px;
+            font-size: 15px;
+            transition: background 0.3s ease;
+            width: 100%;
+            border: none;
+            cursor: pointer;
         }
-
-        /* Grid spans */
-        .bento-item--large { grid-column: span 2; grid-row: span 2; }
-        .bento-item--large .bento-item__title { font-size: 32px; }
-        
-        .bento-item--wide { grid-column: span 2; grid-row: span 1; }
-        .bento-item--small { grid-column: span 1; grid-row: span 1; }
-        .bento-item--tall { grid-column: span 1; grid-row: span 2; }
-
-        @media (max-width: 992px) {
-            .bento-grid { grid-template-columns: repeat(2, 1fr); }
-            .bento-item--large { grid-column: span 2; grid-row: span 1; }
-            .bento-item--wide { grid-column: span 2; }
-        }
-        @media (max-width: 576px) {
-            .bento-grid { grid-template-columns: 1fr; grid-auto-rows: 300px; }
-            .bento-item--large, .bento-item--wide, .bento-item--small, .bento-item--tall { grid-column: span 1; }
+        .demo-card:hover .demo-btn {
+            background: #E63946;
         }
 
         /* =========================================================
-           MODAL POPUP (Classic overlay with carousel)
+           GLOBAL MODAL STYLES (PREMIUM)
            ========================================================= */
-        .detail-modal {
+        .brand-modal {
             position: fixed;
             inset: 0;
-            z-index: 2000;
-            background: rgba(0,0,0,0.8);
-            backdrop-filter: blur(8px);
+            z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 24px;
+            padding: 20px;
             opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
         }
-        .detail-modal.active {
+        .brand-modal.active {
             opacity: 1;
-            pointer-events: auto;
+            visibility: visible;
         }
-        .detail-modal__content {
-            background: var(--color-bg);
-            width: 100%;
-            max-width: 900px;
-            max-height: 90vh; /* Limits the modal to 90% of screen height */
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            transform: translateY(20px);
-            transition: transform 0.4s ease;
-        }
-        .detail-modal.active .detail-modal__content {
-            transform: translateY(0);
-        }
-        .detail-modal__close {
+        .brand-modal__backdrop {
             position: absolute;
-            top: 16px;
-            right: 16px;
-            z-index: 10;
-            background: rgba(255,255,255,0.9);
-            width: 40px;
-            height: 40px;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .brand-modal__content {
+            position: relative;
+            background: #ffffff;
+            border-radius: 24px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(30px) scale(0.95);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 2;
+        }
+        .brand-modal.active .brand-modal__content {
+            transform: translateY(0) scale(1);
+        }
+        
+        /* Custom scrollbar for modal */
+        .brand-modal__content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .brand-modal__content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .brand-modal__content::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 10px;
+        }
+        .brand-modal__content::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+
+        .brand-modal__close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(0,0,0,0.05);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--color-primary);
-            box-shadow: var(--shadow-sm);
-            transition: transform var(--transition);
+            color: #111;
+            cursor: pointer;
+            z-index: 50;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
         }
-        .detail-modal__close:hover {
-            transform: scale(1.1);
+        .brand-modal__close:hover {
+            background: #111;
+            color: #fff;
+            transform: rotate(90deg);
         }
-        .modal-gallery-container {
+
+        /* Common Text Elements inside Modals */
+        .bm-tag {
+            display: inline-block;
+            background: #FEF2F2;
+            color: #E63946;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        .bm-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+        .bm-desc {
+            font-size: 16px;
+            color: #4B5563;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .bm-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .bm-features li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: #1F2937;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .bm-features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #E63946;
+        }
+        .bm-features strong {
+            font-weight: 700;
+            color: #111;
+        }
+
+        /* =========================================================
+           VARIATION 1: CLASSIC CAROUSEL
+           ========================================================= */
+        #modal-var1 .brand-modal__content {
+            max-width: 800px;
+        }
+        .v1-gallery {
             position: relative;
             height: 400px;
-            flex-shrink: 0;
+            background: #f1f1f1;
             overflow: hidden;
         }
-        .modal-gallery {
+        .v1-slider {
             display: flex;
             height: 100%;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         }
-        .modal-gallery img {
+        .v1-slider img {
             flex: 0 0 100%;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .modal-gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-            pointer-events: none;
-        }
-        .modal-gallery-nav {
+        .v1-nav {
             position: absolute;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 10px;
-            z-index: 5;
+            gap: 8px;
+            z-index: 10;
         }
-        .modal-gallery-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
+        .v1-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
             background: rgba(255,255,255,0.4);
-            transition: background var(--transition);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
             cursor: pointer;
+            transition: all 0.3s ease;
         }
-        .modal-gallery-dot.active { background: white; }
-        
-        .modal-body {
+        .v1-dot.active {
+            width: 24px;
+            background: #fff;
+        }
+        .v1-body {
             padding: 40px;
-            overflow-y: auto; /* Adds scrollbar inside the text area if content is too long */
-            flex-grow: 1;    /* Takes up remaining space in the modal */
         }
-        .modal-body h2 {
-            font-family: var(--font-heading);
-            font-size: 28px;
-            font-weight: 800;
+
+        /* =========================================================
+           VARIATION 2: MODERN GRID
+           ========================================================= */
+        #modal-var2 .brand-modal__content {
+            max-width: 900px;
+        }
+        .v2-header {
+            padding: 48px 48px 32px;
+            text-align: left;
+        }
+        .v2-header .bm-title {
+            font-size: 42px;
             margin-bottom: 16px;
         }
-        .modal-body p {
-            color: var(--color-text-light);
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 16px;
+        .v2-header .bm-desc {
+            max-width: none;
+            margin: 0;
+        }
+        .v2-features {
+            max-width: none;
+            margin: 32px 0 0;
+            text-align: left;
+        }
+        .v2-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 250px 250px;
+            gap: 16px;
+            padding: 0 48px 48px;
+        }
+        .v2-grid-item {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .v2-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .v2-grid-item:hover img {
+            transform: scale(1.05);
+        }
+        .v2-grid-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* =========================================================
+           VARIATION 3: SPLIT SCREEN
+           ========================================================= */
+        #modal-var3 .brand-modal__content {
+            max-width: 1100px;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden; /* Hide main scroll, handle inside */
+        }
+        #modal-var3 .brand-modal__close {
+            background: #fff;
+            color: #111;
+            border: 1px solid #eaeaea;
+        }
+        
+        .v3-left {
+            width: 50%;
+            position: relative;
+            background: #f8f8f8;
+            height: 80vh; /* Fixed height for modal */
+            display: flex;
+            flex-direction: column;
+        }
+        .v3-main-img {
+            flex-grow: 1;
+            width: 100%;
+            object-fit: cover;
+        }
+        .v3-thumbnails {
+            display: flex;
+            gap: 12px;
+            padding: 20px;
+            background: #fff;
+            border-top: 1px solid #f1f1f1;
+            height: 120px;
+            overflow-x: auto;
+        }
+        .v3-thumbnails::-webkit-scrollbar { display: none; }
+        .v3-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            border: 2px solid transparent;
+        }
+        .v3-thumb.active {
+            opacity: 1;
+            border-color: #E63946;
+        }
+        .v3-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .v3-right {
+            width: 50%;
+            padding: 56px;
+            overflow-y: auto;
+            height: 80vh;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .demo-grid { grid-template-columns: repeat(2, 1fr); }
+            #modal-var3 .brand-modal__content { flex-direction: column; }
+            .v3-left, .v3-right { width: 100%; height: auto; }
+            .v3-left { height: 400px; }
+            .v3-right { padding: 32px; max-height: 50vh; }
+        }
+        @media (max-width: 768px) {
+            .demo-grid { grid-template-columns: 1fr; }
+            .v2-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: 200px 200px; padding: 0 24px 32px;}
+            .v2-header { padding: 32px 24px 24px; }
+            .v1-body { padding: 24px; }
+            .bm-title { font-size: 28px; }
+            .v3-left { height: 300px; }
+            .v3-thumbnails { height: 100px; padding: 12px; }
+            .v3-thumb { width: 70px; height: 70px; }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ============ HEADER ============ -->
-    <header class="header scrolled" id="header">
+    <header class="header" id="header" style="background: white; border-bottom: 1px solid #f1f1f1;">
         <div class="container header__inner">
             <a href="index.html" class="logo">
                 <img src="assets/img/logo.png" alt="KOREANA" class="logo__img">
             </a>
-
             <nav class="nav" id="nav">
-                <a href="index.html#hero" class="nav__link">Главная</a>
-                <a href="index.html#about" class="nav__link">О нас</a>
-                <a href="index.html#brands" class="nav__link">Бренды</a>
+                <a href="index.html" class="nav__link">← Вернуться на главную</a>
             </nav>
         </div>
     </header>
 
     <div class="demo-header">
-        <div class="container">
-            <h1 class="demo-title">Портфолио проектов и достижений</h1>
-            <p class="demo-desc">Сетка возвращена к изначальному виду (большой первый блок, а нижний исправлен).<br>Кликните на карточку, чтобы открыть улучшенное модальное окно.</p>
+        <h1 class="demo-title">Модальное окно бренда</h1>
+        <p class="demo-desc">Здесь представлены три различных варианта того, как может выглядеть карточка бренда при клике. Описание + галерея.</p>
+    </div>
+
+    <div class="demo-grid">
+        <!-- Card 1 -->
+        <div class="demo-card" onclick="openModal('modal-var1')">
+            <div class="demo-card__icon"><i data-lucide="gallery-horizontal"></i></div>
+            <h3>Вариант 1: Карусель</h3>
+            <p>Классический подход. Большой слайдер фотографий сверху, текстовое описание с продуктами снизу. Привычно и удобно.</p>
+            <button class="demo-btn">Посмотреть вариант 1</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="demo-card" onclick="openModal('modal-var2')">
+            <div class="demo-card__icon"><i data-lucide="layout-dashboard"></i></div>
+            <h3>Вариант 2: Плитка (Grid)</h3>
+            <p>Современный журнальный стиль. Описание бренда центрировано сверху, а под ним — стильная асимметричная мозаика из фотографий.</p>
+            <button class="demo-btn">Посмотреть вариант 2</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="demo-card" onclick="openModal('modal-var3')">
+            <div class="demo-card__icon"><i data-lucide="split-square-vertical"></i></div>
+            <h3>Вариант 3: Split Screen</h3>
+            <p>Премиальный e-commerce стиль. Левая часть окна отдана под галерею с миниатюрами, правая — под скроллящийся текст.</p>
+            <button class="demo-btn">Посмотреть вариант 3</button>
         </div>
     </div>
-    
-    <section class="v1-bento">
-        <div class="container">
-            <div class="bento-grid" id="bento-grid">
-                
-                <!-- CARD 1 (Large - span 2, span 2) -->
-                <div class="bento-item bento-item--large" onclick="openModal()">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Марафон" class="bento-item__img">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
-                        <h3 class="bento-item__title">Поддержка Almaty Marathon, Astana Marathon и других событий</h3>
-                    </div>
-                </div>
 
-                <!-- CARD 2 (Wide - span 2, span 1) -->
-                <div class="bento-item bento-item--wide" onclick="openModal()">
-                    <img src="https://images.unsplash.com/photo-1531545514251-b159e38e5223?q=80&w=1000&auto=format&fit=crop" alt="Награда" class="bento-item__img">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
-                        <h3 class="bento-item__title">Звание "Лучший дистрибьютор года" от AEKYUNG</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 3 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" onclick="openModal()">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Команда" class="bento-item__img">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
-                        <h3 class="bento-item__title">Корпоративные ивенты</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 4 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" onclick="openModal()">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop" alt="Благотворительность" class="bento-item__img">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
-                        <h3 class="bento-item__title">Поддержка детских домов</h3>
-                    </div>
-                </div>
-                
-                <!-- CARD 5 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" onclick="openModal()">
-                    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1000&auto=format&fit=crop" alt="Склад" class="bento-item__img">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
-                        <h3 class="bento-item__title">Открытие хаба</h3>
-                    </div>
-                </div>
-                
-                <!-- CARD 6 (Wide - span 2, span 1) - CENTERED IN BOTTOM ROW -->
-                <div class="bento-item bento-item--wide" onclick="openModal()">
-                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1000&auto=format&fit=crop" alt="Ритейл" class="bento-item__img">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
-                        <h3 class="bento-item__title">Сотрудничество с сетями: Magnum, Золотое Яблоко</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 7 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" onclick="openModal()">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop" alt="Экология" class="bento-item__img">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Подробнее</span>
-                        <h3 class="bento-item__title">Эко-инициативы</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================================================== -->
-    <!-- MODAL POPUP HTML                                   -->
-    <!-- ================================================== -->
-    <div class="detail-modal" id="demo-modal">
-        <div class="detail-modal__content">
-            <button class="detail-modal__close" onclick="closeModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <!-- ==========================================
+         MODAL 1: CLASSIC CAROUSEL
+         ========================================== -->
+    <div class="brand-modal" id="modal-var1">
+        <div class="brand-modal__backdrop" onclick="closeModal('modal-var1')"></div>
+        <div class="brand-modal__content">
+            <button class="brand-modal__close" onclick="closeModal('modal-var1')">
+                <i data-lucide="x"></i>
             </button>
             
-            <div class="modal-gallery-container">
-                <!-- Horizontal scrolling gallery -->
-                <div class="modal-gallery" id="modal-slider">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop" alt="Expo 1">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop" alt="Expo 2">
-                    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200&auto=format&fit=crop" alt="Expo 3">
+            <div class="v1-gallery">
+                <div class="v1-slider" id="v1-slider">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop" alt="KERASYS 1">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop" alt="KERASYS 2">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop" alt="KERASYS 3">
                 </div>
-                
-                <div class="modal-gallery-overlay"></div>
-                
-                <div class="modal-gallery-nav" id="modal-dots">
-                    <div class="modal-gallery-dot active" onclick="onDotClick(0)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClick(1)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClick(2)"></div>
+                <div class="v1-nav" id="v1-nav">
+                    <div class="v1-dot active" onclick="v1GoTo(0)"></div>
+                    <div class="v1-dot" onclick="v1GoTo(1)"></div>
+                    <div class="v1-dot" onclick="v1GoTo(2)"></div>
                 </div>
             </div>
 
-            <!-- Scrollable body for very long text -->
-            <div class="modal-body">
-                <h2>Поддержка Almaty Marathon, Astana Marathon и многих других</h2>
+            <div class="v1-body">
+                <span class="bm-tag">Уход за волосами</span>
+                <h2 class="bm-title">KERASYS</h2>
+                <p class="bm-desc">Бренд KERASYS создан для того, чтобы сделать профессиональный уход за волосами доступным и удобным. Продукция разработана на основе передовых корейских технологий ухода за волосами.</p>
                 
-                <p><strong>Мы являемся постоянным спонсором и партнером крупнейших беговых событий страны — Almaty Marathon, Astana Marathon, Tau Jarys Marathon, Summer Relay Marathon и многих других.</strong></p>
-                
-                <p>Поддерживая данные инициативы, мы вносим свой вклад в развитие массового спорта и продвижение здорового образа жизни среди казахстанцев. Ежегодно тысячи участников выходят на старт, и мы гордимся тем, что можем быть частью этого масштабного движения.</p>
-                
-                <p>Наши бренды помогают спортсменам и любителям поддерживать чистоту и свежесть, а также заботятся об их комфорте после финиша. Наша команда KOREANA также ежегодно участвует в забегах, доказывая свою приверженность активному образу жизни на собственном примере.</p>
-                <p>Спасибо всем участникам и организаторам за невероятную энергию и стремление к победе!</p>
+                <p class="bm-desc" style="font-weight: 600; margin-bottom: 12px; color: #111;">Ключевые продукты и серии:</p>
+                <ul class="bm-features">
+                    <li><strong>HAIR CLINIC</strong> - клиническая серия с 17 видами аминокислот и протеинами для интенсивного восстановления повреждённых волос</li>
+                    <li><strong>PERFUME</strong> - парфюмированная серия с уникальными ароматами для каждого образа</li>
+                    <li><strong>ADVANCED</strong> - ампульная серия со специальной формулой для комплексного ухода</li>
+                    <li><strong>PRO ACTIVE MAN</strong> - мужская линейка шампуней</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <!-- Init scripts -->
+    <!-- ==========================================
+         MODAL 2: MODERN GRID
+         ========================================== -->
+    <div class="brand-modal" id="modal-var2">
+        <div class="brand-modal__backdrop" onclick="closeModal('modal-var2')"></div>
+        <div class="brand-modal__content">
+            <button class="brand-modal__close" onclick="closeModal('modal-var2')">
+                <i data-lucide="x"></i>
+            </button>
+            
+            <div class="v2-header">
+                <span class="bm-tag">Уход за волосами</span>
+                <h2 class="bm-title">KERASYS</h2>
+                <p class="bm-desc">Бренд KERASYS создан для того, чтобы сделать профессиональный уход за волосами доступным и удобным. Продукция разработана на основе передовых корейских технологий ухода за волосами.</p>
+                
+                <div class="v2-features">
+                    <p style="font-weight: 600; margin-bottom: 16px; color: #111; font-size: 18px;">Ключевые продукты и серии:</p>
+                    <ul class="bm-features">
+                        <li><strong>HAIR CLINIC</strong> - клиническая серия с 17 видами аминокислот</li>
+                        <li><strong>PERFUME</strong> - парфюмированная серия с уникальными ароматами</li>
+                        <li><strong>ADVANCED</strong> - ампульная серия со специальной формулой</li>
+                        <li><strong>PRO ACTIVE MAN</strong> - мужская линейка шампуней</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="v2-grid">
+                <div class="v2-grid-item large">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop" alt="Hero">
+                </div>
+                <div class="v2-grid-item">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop" alt="Prod 1">
+                </div>
+                <div class="v2-grid-item">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop" alt="Model">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MODAL 3: SPLIT SCREEN
+         ========================================== -->
+    <div class="brand-modal" id="modal-var3">
+        <div class="brand-modal__backdrop" onclick="closeModal('modal-var3')"></div>
+        <div class="brand-modal__content">
+            <button class="brand-modal__close" onclick="closeModal('modal-var3')">
+                <i data-lucide="x"></i>
+            </button>
+            
+            <div class="v3-left">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop" alt="Main" class="v3-main-img" id="v3-main-img">
+                <div class="v3-thumbnails">
+                    <div class="v3-thumb active" onclick="v3SetImage(this, 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop')">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=200&auto=format&fit=crop" alt="Thumb 1">
+                    </div>
+                    <div class="v3-thumb" onclick="v3SetImage(this, 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop')">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=200&auto=format&fit=crop" alt="Thumb 2">
+                    </div>
+                    <div class="v3-thumb" onclick="v3SetImage(this, 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop')">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=200&auto=format&fit=crop" alt="Thumb 3">
+                    </div>
+                    <div class="v3-thumb" onclick="v3SetImage(this, 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1000&auto=format&fit=crop')">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=200&auto=format&fit=crop" alt="Thumb 4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="v3-right">
+                <span class="bm-tag">Уход за волосами</span>
+                <h2 class="bm-title">KERASYS</h2>
+                <p class="bm-desc">Бренд KERASYS создан для того, чтобы сделать профессиональный уход за волосами доступным и удобным. Продукция разработана на основе передовых корейских технологий ухода за волосами.</p>
+                <p class="bm-desc">Наша философия базируется на научных исследованиях и использовании натуральных компонентов для достижения салонного эффекта в домашних условиях.</p>
+                
+                <p class="bm-desc" style="font-weight: 600; margin-bottom: 16px; color: #111; margin-top: 32px;">Ключевые продукты и серии:</p>
+                <ul class="bm-features">
+                    <li><strong>HAIR CLINIC</strong> - клиническая серия с 17 видами аминокислот и протеинами для интенсивного восстановления повреждённых волос</li>
+                    <li><strong>PERFUME</strong> - парфюмированная серия с уникальными ароматами для каждого образа</li>
+                    <li><strong>ADVANCED</strong> - ампульная серия со специальной формулой для комплексного ухода</li>
+                    <li><strong>PRO ACTIVE MAN</strong> - мужская линейка шампуней</li>
+                    <li><strong>NATURAL RECIPE</strong> - органическая линейка для чувствительной кожи головы</li>
+                </ul>
+                
+                <div style="margin-top: 40px; padding: 24px; background: #FEF2F2; border-radius: 16px;">
+                    <h4 style="font-family: 'Manrope', sans-serif; font-size: 18px; margin-bottom: 8px; color: #E63946;">Узнайте больше</h4>
+                    <p style="font-size: 14px; color: #4B5563; margin-bottom: 16px;">Свяжитесь с нашим менеджером, чтобы получить полный каталог продукции KERASYS и оптовые цены.</p>
+                    <a href="index.html#client-form" class="demo-btn" style="display: inline-block; width: auto; text-decoration: none; padding: 10px 20px;">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script>
-        // Lucide icons: non-critical, wrapped so failure doesn't break slider
-        try { lucide.createIcons(); } catch(e) { /* Lucide not loaded yet or failed */ }
-        window.addEventListener('load', function() {
+        // Lucide Icons init
+        document.addEventListener('DOMContentLoaded', () => {
             try { lucide.createIcons(); } catch(e) {}
         });
 
-        // ======= GALLERY SLIDER =======
-        (function() {
-            var slider = document.getElementById('modal-slider');
-            var dotsContainer = document.getElementById('modal-dots');
-            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
-            var totalSlides = slider.querySelectorAll('img').length;
-            var currentSlide = 0;
-            var sliderInterval = null;
+        // Global Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
 
-            function goToSlide(index) {
-                currentSlide = index;
-                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].classList.remove('active');
-                }
-                dots[currentSlide].classList.add('active');
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const activeModal = document.querySelector('.brand-modal.active');
+                if (activeModal) closeModal(activeModal.id);
             }
+        });
 
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % totalSlides);
+        // ==========================================
+        // V1 Slider Logic
+        // ==========================================
+        let v1Current = 0;
+        const v1Slider = document.getElementById('v1-slider');
+        const v1Dots = document.querySelectorAll('.v1-dot');
+        const v1Total = v1Dots.length;
+
+        function v1GoTo(index) {
+            v1Current = index;
+            v1Slider.style.transform = `translateX(-${index * 100}%)`;
+            v1Dots.forEach(d => d.classList.remove('active'));
+            v1Dots[index].classList.add('active');
+        }
+
+        // Auto-play for V1 (Optional, but adds premium feel)
+        setInterval(() => {
+            if (document.getElementById('modal-var1').classList.contains('active')) {
+                let next = (v1Current + 1) % v1Total;
+                v1GoTo(next);
             }
+        }, 4000);
 
-            function startAutoSlide() {
-                stopAutoSlide();
-                sliderInterval = setInterval(nextSlide, 3000);
-            }
+        // ==========================================
+        // V3 Image Switch Logic
+        // ==========================================
+        function v3SetImage(thumbElement, imgUrl) {
+            // Update main image with fade effect
+            const mainImg = document.getElementById('v3-main-img');
+            mainImg.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImg.src = imgUrl;
+                mainImg.style.opacity = '1';
+            }, 200);
 
-            function stopAutoSlide() {
-                if (sliderInterval) {
-                    clearInterval(sliderInterval);
-                    sliderInterval = null;
-                }
-            }
-
-            // Expose functions globally for onclick handlers
-            window.openModal = function() {
-                document.getElementById('demo-modal').classList.add('active');
-                document.body.style.overflow = 'hidden';
-                goToSlide(0);
-                startAutoSlide();
-            };
-
-            window.closeModal = function() {
-                document.getElementById('demo-modal').classList.remove('active');
-                document.body.style.overflow = '';
-                stopAutoSlide();
-            };
-
-            window.onDotClick = function(index) {
-                goToSlide(index);
-                startAutoSlide();
-            };
-
-            // Close on ESC
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') window.closeModal();
-            });
-
-            // Close on backdrop click
-            document.getElementById('demo-modal').addEventListener('click', function(e) {
-                if (e.target === this) window.closeModal();
-            });
-
-            // Pause/resume on hover
-            var galleryContainer = document.querySelector('.modal-gallery-container');
-            galleryContainer.addEventListener('mouseenter', stopAutoSlide);
-            galleryContainer.addEventListener('mouseleave', function() {
-                if (document.getElementById('demo-modal').classList.contains('active')) {
-                    startAutoSlide();
-                }
-            });
-        })();
+            // Update active state on thumbnails
+            document.querySelectorAll('.v3-thumb').forEach(t => t.classList.remove('active'));
+            thumbElement.classList.add('active');
+        }
     </script>
 </body>
 </html>
