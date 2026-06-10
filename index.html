@@ -23,6 +23,9 @@
 
 <body>
 
+    <!-- ============ DYNAMIC BACKGROUND ============ -->
+    <div class="dynamic-bg"></div>
+
     <!-- ============ HEADER ============ -->
     <header class="header" id="header">
         <div class="container header__inner">
@@ -41,9 +44,9 @@
 
             <div class="header__actions">
                 <div class="lang-switch">
-                    <button class="lang-switch__btn active" data-lang="ru">RU</button>
-                    <button class="lang-switch__btn" data-lang="kz">KZ</button>
-                    <button class="lang-switch__btn" data-lang="en">EN</button>
+                    <a href="index.html" class="lang-switch__btn active" style="text-decoration: none;">RU</a>
+                    <button class="lang-switch__btn" data-lang="kz" style="cursor: not-allowed; opacity: 0.5;" title="В разработке / Under development">KZ</button>
+                    <a href="index-en.html" class="lang-switch__btn" style="text-decoration: none;">EN</a>
                 </div>
                 <a href="#client-form" class="btn btn--primary btn--sm header__cta">Стать клиентом</a>
             </div>
@@ -67,7 +70,8 @@
         <div class="container hero__content">
             <p class="hero__eyebrow">С 2015 · Алматы · Официальный дистрибьютор</p>
             <h1 class="hero__headline">KOREANA</h1>
-            <p class="hero__sub">Эксклюзивные бренды из Южной Кореи. Прямой импорт 450+ позиций. 16 городов Казахстана. Доставка 24 часа.</p>
+            <p class="hero__sub">Эксклюзивные бренды из Южной Кореи. Прямой импорт 450+ позиций. 16 городов Казахстана.
+                Доставка 24 часа.</p>
             <div class="hero__actions">
                 <a href="#client-form" class="btn btn--primary btn--lg">Стать клиентом</a>
                 <a href="#brands" class="hero__text-link">Смотреть бренды <i data-lucide="arrow-right"></i></a>
@@ -98,13 +102,15 @@
                         MUKUNGHWA, JOONGWON.</p>
                     <p>С 2025 года ассортимент расширен линейкой бессульфатных шампуней Hair Clinic, мужской линейкой
                         PRO ACTIVE MAN.</p>
+
+                    <p style="margin-top: 24px;">Мы не просто поставляем продукцию - мы развиваем бренды на рынке
+                        Казахстана, обеспечивая партнёров маркетинговой поддержкой, стабильными поставками и коммерчески
+                        эффективной моделью сотрудничества.</p>
+                    <p>Ассортимент компании постоянно расширяется - мы регулярно выводим новинки и адаптируем портфель
+                        под актуальные тренды рынка.</p>
                 </div>
                 <div class="about__image">
-                    <!-- Заменить на реальное фото склада/офиса/команды -->
-                    <div class="about__image-placeholder">
-                        <i data-lucide="package" class="about__image-icon"></i>
-                        <span>Фото склада / команды</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop" alt="Склад KOREANA" style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
                 </div>
             </div>
 
@@ -239,10 +245,25 @@
     <!-- ============ MISSION & VALUES ============ -->
     <section class="mission" id="mission">
         <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Миссия и ценности</p>
-                <h2 class="section-title">На чём мы стоим</h2>
-                <p class="section-desc">Принципы, которые делают нас надёжным партнёром</p>
+            <div class="mission__top">
+                <div class="section-header">
+                    <p class="section-tag">Миссия и ценности</p>
+                    <h2 class="section-title">На чём мы стоим</h2>
+                </div>
+
+                <figure class="mission__quote">
+                    <i data-lucide="quote" class="mission__quote-mark"></i>
+                    <blockquote class="mission__blockquote">
+                        <p>Делать качественные корейские продукты доступными каждому, развивая рынок и создавая ценность
+                            для партнёров и конечных потребителей.</p>
+                    </blockquote>
+                    <figcaption class="mission__quote-author">
+                        <div class="author-info">
+                            <strong>Команда KOREANA</strong>
+                            <span>Генеральный дистрибьютор</span>
+                        </div>
+                    </figcaption>
+                </figure>
             </div>
 
             <div class="mission__grid">
@@ -480,7 +501,7 @@
                 <!-- PERFECT -->
                 <div class="brand-card" data-category="household" data-brand="perfect">
                     <div class="brand-card__media">
-                        <img src="assets/brands/perfect.webp" alt="PERFECT">
+                        <img src="assets/brands/perfect.png" alt="PERFECT">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Бытовая химия</span>
@@ -493,8 +514,8 @@
 
                 <!-- WOOL SHAMPOO -->
                 <div class="brand-card" data-category="household" data-brand="wool">
-                    <div class="brand-card__media">
-                        <img src="assets/brands/wool.webp" alt="WOOL SHAMPOO">
+                    <div class="brand-card__media" style="padding: 0;">
+                        <img src="assets/brands/wool-logo.png" alt="WOOL SHAMPOO" style="transform: scale(1.4);">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Бытовая химия</span>
@@ -550,7 +571,7 @@
         </div>
     </div>
 
-    <!-- ============ PARTNERS — DUAL ============ -->
+    <!-- ============ PARTNERS - DUAL ============ -->
     <section class="partners" id="partners">
 
         <div class="container">
@@ -579,21 +600,21 @@
                         </div>
                     </a>
                     <a href="http://www.mkh.co.kr" target="_blank" rel="noopener" class="supplier-card"
-                        style="background-image: url('assets/suppliers/mukunghwa.jpg')">
+                        style="background-image: url('assets/suppliers/mukunghwa.jpg'); background-position: right center;">
                         <div class="supplier-card__content">
                             <div class="supplier-card__name">MUKUNGHWA</div>
                             <div class="supplier-card__tag">O'Clean, VIU</div>
                         </div>
                     </a>
                     <a href="https://www.jw.co.kr" target="_blank" rel="noopener" class="supplier-card"
-                        style="background-image: url('assets/suppliers/joongwon.jpg')">
+                        style="background-image: url('assets/suppliers/joongwon3.png'); background-position: 75% center;">
                         <div class="supplier-card__content">
                             <div class="supplier-card__name">JOONGWON</div>
                             <div class="supplier-card__tag">SecretDay</div>
                         </div>
                     </a>
                     <a href="https://fscos.com" target="_blank" rel="noopener" class="supplier-card"
-                        style="background-image: url('assets/suppliers/farmstay.jpg'); background-position: 25% center;">
+                        style="background-image: url('assets/suppliers/myungin.jpg'); background-position: center;">
                         <div class="supplier-card__content">
                             <div class="supplier-card__name">MYUNGIN COSMETICS</div>
                             <div class="supplier-card__tag">Farmstay</div>
@@ -650,15 +671,18 @@
             <div class="wtb-block">
                 <h3 class="wtb-block__title"><i data-lucide="shopping-bag"></i> Онлайн-маркетплейсы</h3>
                 <div class="marketplaces">
-                    <a href="#" class="marketplace marketplace--kaspi" target="_blank" rel="noopener">
+                    <a href="https://l.kaspi.kz/shop/D4rX4gx5MYDWq2R" class="marketplace marketplace--kaspi"
+                        target="_blank" rel="noopener">
                         <span class="marketplace__name">Kaspi.kz</span>
                         <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
                     </a>
-                    <a href="#" class="marketplace marketplace--wb" target="_blank" rel="noopener">
+                    <a href="https://www.wildberries.ru/seller/250046194" class="marketplace marketplace--wb"
+                        target="_blank" rel="noopener">
                         <span class="marketplace__name">Wildberries</span>
                         <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
                     </a>
-                    <a href="#" class="marketplace marketplace--ozon" target="_blank" rel="noopener">
+                    <a href="https://www.ozon.ru/seller/from-korea-3550299/" class="marketplace marketplace--ozon"
+                        target="_blank" rel="noopener">
                         <span class="marketplace__name">Ozon</span>
                         <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
                     </a>
@@ -669,15 +693,134 @@
         </div>
     </section>
 
+
+
+    <!-- ============ SOCIAL IMPACT & ACHIEVEMENTS ============ -->
+    <section class="social-impact" id="impact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Наши ценности в действии</p>
+                <h2 class="section-title">Социальные проекты и достижения</h2>
+                <p class="section-desc">То, чем мы гордимся помимо бизнеса</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bento-grid" id="bento-grid">
+
+                <!-- CARD 1 (Large - span 2, span 2) -->
+                <div class="bento-item bento-item--large" onclick="openModal()">
+                    <img src="assets/img/social-projects/marathon.jpg" alt="Марафон" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Постоянный партнер Almaty Marathon и Astana Marathon</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 2 (Wide - span 2, span 1) -->
+                <div class="bento-item bento-item--wide" onclick="openModalAekyung()">
+                    <img src="assets/img/social-projects/best-partner1.jpg" alt="Награда" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Лучший дистрибьютор года от AEKYUNG Co.</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 3 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModalAkk()" style="background-color: #fff;">
+                    <img src="assets/img/social-projects/kor1.jpeg" alt="Ассоциация корейцев Казахстана"
+                        class="bento-item__img" style="object-fit: contain; padding: 15%;">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Ассоциация корейцев Казахстана и благотворительность</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 4 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModalKpop()">
+                    <img src="assets/img/social-projects/kpop1.jpg" alt="kpop-stars.kz" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Поддержка фестиваля kpop-stars.kz</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 5 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModalIndustry()" style="background-color: #fff;">
+                    <img src="assets/img/social-projects/industry1.jpg" alt="Достояние отрасли" class="bento-item__img"
+                        style="object-fit: contain; padding: 10%;">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Награда "Достояние отрасли"</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 6 (Wide - span 2, span 1) - CENTERED IN BOTTOM ROW -->
+                <div class="bento-item bento-item--wide" onclick="openModalStud()">
+                    <img src="assets/img/social-projects/stud3.jpg" alt="Студенческая активность"
+                        class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Поддержка молодежи и студенческой активности</h3>
+                    </div>
+                </div>
+
+                <!-- CARD 7 (Small - span 1, span 1) -->
+                <div class="bento-item bento-item--small" onclick="openModalCertif()">
+                    <img src="assets/img/social-projects/certif.png" alt="Сертификация" class="bento-item__img">
+                    <div class="bento-item__overlay"></div>
+                    <div class="bento-item__content">
+                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg> Подробнее</span>
+                        <h3 class="bento-item__title">Сертификация и стандарты качества</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ============ PARTNER FORM ============ -->
     <section class="partner-form-section" id="client-form">
         <div class="container">
             <div class="partner-form__wrapper">
                 <div class="partner-form__info">
                     <p class="section-tag">Связаться с нами</p>
-                    <h2 class="section-title section-title--light">Станьте клиентом KOREANA</h2>
-                    <p class="partner-form__desc">Оставьте заявку - менеджер свяжется с вами в течение часа в удобном
-                        для вас канале.</p>
+                    <h2 class="section-title section-title--light">Сотрудничество с KOREANA</h2>
+                    <p class="partner-form__desc">Если вы дистрибьютор или поставщик и хотите сотрудничать с нами -
+                        свяжитесь удобным для вас способом, и мы ответим в течение дня.</p>
                     <ul class="partner-form__benefits">
                         <li><i data-lucide="check"></i> Конкурентные закупочные цены</li>
                         <li><i data-lucide="check"></i> Маркетинговая поддержка и POS-материалы</li>
@@ -686,57 +829,22 @@
                         <li><i data-lucide="check"></i> Персональный менеджер</li>
                     </ul>
                 </div>
-                <form class="partner-form" id="partnerForm">
-                    <div class="form-tabs">
-                        <button type="button" class="form-tab active" data-tab="distributor">Я дистрибьютор</button>
-                        <button type="button" class="form-tab" data-tab="supplier">Я поставщик</button>
+                <div class="partner-form">
+                    <h3
+                        style="font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--color-primary); margin-bottom: 24px; text-align: center;">
+                        Выберите удобный способ связи:</h3>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <a href="https://wa.me/77772210008?text=Здравствуйте,%20хочу%20обсудить%20сотрудничество%20с%20KOREANA"
+                            target="_blank" rel="noopener" class="btn btn--lg btn--full"
+                            style="background: #25D366; color: #fff; border: 2px solid #25D366;">
+                            <i data-lucide="message-circle"></i> Написать в WhatsApp
+                        </a>
+                        <a href="tel:+77772210008" class="btn btn--lg btn--full"
+                            style="background: var(--color-bg-gray); color: var(--color-primary); border: 2px solid var(--color-border);">
+                            <i data-lucide="phone"></i> Позвонить: +7 777 221 00 08
+                        </a>
                     </div>
-
-                    <div class="form-group">
-                        <input type="text" placeholder="Название компании / Имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Контактное лицо" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Телефон" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Город">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-group__label">Удобный способ связи:</label>
-                        <div class="channel-choice">
-                            <label class="channel-pill">
-                                <input type="checkbox" name="channel" value="phone" checked>
-                                <span><i data-lucide="phone"></i> Телефон</span>
-                            </label>
-                            <label class="channel-pill">
-                                <input type="checkbox" name="channel" value="whatsapp">
-                                <span><i data-lucide="message-circle"></i> WhatsApp</span>
-                            </label>
-                            <label class="channel-pill">
-                                <input type="checkbox" name="channel" value="telegram">
-                                <span><i data-lucide="send"></i> Telegram</span>
-                            </label>
-                            <label class="channel-pill">
-                                <input type="checkbox" name="channel" value="email">
-                                <span><i data-lucide="mail"></i> Email</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <textarea placeholder="Комментарий (необязательно)" rows="3"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn--primary btn--lg btn--full">Отправить заявку</button>
-                    <p class="form-disclaimer">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -864,7 +972,7 @@
                     cities.forEach(function (city) {
                         var placemark = new ymaps.Placemark(city.coords, {
                             hintContent: city.name,
-                            balloonContent: 'Кореана — ' + city.name
+                            balloonContent: 'Кореана - ' + city.name
                         }, {
                             preset: 'islands#redDotIcon'
                         });
@@ -941,6 +1049,811 @@
         <i data-lucide="message-circle"></i>
     </a>
 
+    <!-- ================================================== -->
+    <!-- MODAL POPUP HTML                                   -->
+    <!-- ================================================== -->
+    <div class="detail-modal" id="demo-modal">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery-container">
+                <!-- Horizontal scrolling gallery -->
+                <div class="modal-gallery" id="modal-slider">
+                    <img src="assets/img/social-projects/marathon.jpg" alt="Marathon 1">
+                    <img src="assets/img/social-projects/marathon1.jpeg" alt="Marathon 2">
+                    <img src="assets/img/social-projects/marathon2.jpg" alt="Marathon 3">
+                    <img src="assets/img/social-projects/marathon3.jpg" alt="Marathon 4">
+                    <img src="assets/img/social-projects/marathon4.jpg" alt="Marathon 5">
+                </div>
+
+                <div class="modal-gallery-overlay"></div>
+
+                <div class="modal-gallery-nav" id="modal-dots">
+                    <div class="modal-gallery-dot active" onclick="onDotClick(0)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClick(1)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClick(2)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClick(3)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClick(4)"></div>
+                </div>
+            </div>
+
+            <!-- Scrollable body for very long text -->
+            <div class="modal-body">
+                <h2>Поддержка Almaty Marathon, Astana Marathon и многих других</h2>
+
+                <p><strong>Мы являемся постоянным спонсором и партнером крупнейших беговых событий страны - Almaty
+                        Marathon, Astana Marathon, Tau Jarys Marathon, Summer Relay Marathon и многих других.</strong>
+                </p>
+
+                <p>Поддерживая данные инициативы, мы вносим свой вклад в развитие массового спорта и продвижение
+                    здорового образа жизни среди казахстанцев. Ежегодно тысячи участников выходят на старт, и мы
+                    гордимся тем, что можем быть частью этого масштабного движения.</p>
+
+                <p>Наши бренды помогают спортсменам и любителям поддерживать чистоту и свежесть, а также заботятся об их
+                    комфорте после финиша. Наша команда KOREANA также ежегодно участвует в забегах, доказывая свою
+                    приверженность активному образу жизни на собственном примере.</p>
+                <p>Спасибо всем участникам и организаторам за невероятную энергию и стремление к победе!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL AEKYUNG -->
+    <div class="detail-modal" id="modal-aekyung">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModalAekyung()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery-container">
+                <div class="modal-gallery" id="modal-slider-aekyung">
+                    <img src="assets/img/social-projects/best-partner1.jpg" alt="Partner 1">
+                    <img src="assets/img/social-projects/best-partner2.jpg" alt="Partner 2">
+                    <img src="assets/img/social-projects/best-partner3.jpg" alt="Partner 3">
+                </div>
+                <div class="modal-gallery-overlay"></div>
+                <div class="modal-gallery-nav" id="modal-dots-aekyung">
+                    <div class="modal-gallery-dot active" onclick="onDotClickAekyung(0)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickAekyung(1)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickAekyung(2)"></div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h2>Лучший партнер компании AEKYUNG</h2>
+                <p><strong>ТОО "KOREANA" по результатам 2023 года признана лучшим партнером компании AEKYUNG
+                        Co.</strong></p>
+                <p>Мы гордимся тем, что многолетнее сотрудничество с крупнейшим южнокорейским производителем бытовой
+                    химии и косметики принесло столь высокую награду. Наша команда обеспечивает стабильные поставки,
+                    широкую представленность на рынке и высокий уровень доверия среди потребителей.</p>
+                <p>Эта награда - результат слаженной работы всей нашей команды и доказательство того, что мы выбираем
+                    только лучшее для наших клиентов!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL AKK -->
+    <div class="detail-modal" id="modal-akk">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModalAkk()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery-container">
+                <div class="modal-gallery" id="modal-slider-akk">
+                    <img src="assets/img/social-projects/kor1.jpeg" alt="AKK 1"
+                        style="object-fit: contain; padding: 5%; background-color: #fff;">
+                    <img src="assets/img/social-projects/kor2.jpeg" alt="AKK 2">
+                    <img src="assets/img/social-projects/kor3.png" alt="AKK 3">
+                </div>
+                <div class="modal-gallery-overlay"></div>
+                <div class="modal-gallery-nav" id="modal-dots-akk">
+                    <div class="modal-gallery-dot active" onclick="onDotClickAkk(0)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickAkk(1)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickAkk(2)"></div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h2>Ассоциация корейцев Казахстана и благотворительность</h2>
+                <p><strong>ТОО "KOREANA" является постоянным участником социальных и благотворительных проектов,
+                        поддерживая все инициативы Ассоциации корейцев Казахстана.</strong></p>
+                <p>Наша компания глубоко ценит исторические корни и активно участвует в жизни корейской диаспоры в
+                    Казахстане. Мы спонсируем культурные мероприятия, национальные праздники и образовательные
+                    инициативы, направленные на сохранение традиций и языка.</p>
+                <p>Помимо культурных проектов, KOREANA регулярно оказывает благотворительную помощь нуждающимся, детским
+                    домам и медицинским учреждениям. Мы убеждены, что бизнес должен быть социально ответственным и
+                    приносить пользу обществу, в котором он развивается.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL KPOP -->
+    <div class="detail-modal" id="modal-kpop">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModalKpop()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery-container">
+                <div class="modal-gallery" id="modal-slider-kpop">
+                    <img src="assets/img/social-projects/kpop1.jpg" alt="KPOP 1">
+                    <img src="assets/img/social-projects/kpop2.jpg" alt="KPOP 2">
+                    <img src="assets/img/social-projects/kpop3.jpg" alt="KPOP 3">
+                </div>
+                <div class="modal-gallery-overlay"></div>
+                <div class="modal-gallery-nav" id="modal-dots-kpop">
+                    <div class="modal-gallery-dot active" onclick="onDotClickKpop(0)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickKpop(1)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickKpop(2)"></div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h2>Поддержка фестиваля kpop-stars.kz</h2>
+                <p><strong>Наша компания KOREANA и бренд Kerasys выступают официальными партнерами одного из самых
+                        масштабных K-POP мероприятий - фестиваля kpop-stars.kz.</strong></p>
+                <p>Ежегодно мы поддерживаем это яркое событие. За два дня фестиваль собирает огромное количество гостей,
+                    участников и поклонников корейской культуры. Атмосфера, организация и вовлеченность аудитории всегда
+                    остаются на высочайшем уровне.</p>
+                <p>Для нас это не просто участие в мероприятии - это работа над узнаваемостью брендов, усиление
+                    эмоциональной связи с молодой аудиторией и развитие имиджа корейских брендов в Казахстане.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL INDUSTRY -->
+    <div class="detail-modal" id="modal-industry">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModalIndustry()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery-container">
+                <div class="modal-gallery" id="modal-slider-industry">
+                    <img src="assets/img/social-projects/industry1.jpg" alt="Industry 1"
+                        style="object-fit: contain; padding: 1%; background-color: #fff;">
+                    <img src="assets/img/social-projects/industry2.jpg" alt="Industry 2"
+                        style="object-fit: contain; padding: 1%; background-color: #fff;">
+                </div>
+                <div class="modal-gallery-overlay"></div>
+                <div class="modal-gallery-nav" id="modal-dots-industry">
+                    <div class="modal-gallery-dot active" onclick="onDotClickIndustry(0)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickIndustry(1)"></div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h2>Награда «Достояние отрасли»</h2>
+                <p><strong>ТОО "KOREANA" по результатам 2022 / 2023 / 2025 гг (ОКЭД 46.90.9) получила национальную
+                        награду «Достояние отрасли».</strong></p>
+                <p>Этот статус присуждается компаниям, которые вносят значительный вклад в развитие экономики
+                    Казахстана, демонстрируют высокую надежность и устойчивый рост. Признание на национальном уровне
+                    подтверждает наши лидирующие позиции в отрасли неспециализированной оптовой торговли.</p>
+                <p>Мы гордимся этой наградой, так как она отражает качество нашей работы, профессионализм команды и
+                    доверие наших партнеров. Это достижение мотивирует нас продолжать развиваться, расширять ассортимент
+                    и предоставлять лучший сервис на рынке Республики Казахстан.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL STUD -->
+    <div class="detail-modal" id="modal-stud">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModalStud()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery-container">
+                <div class="modal-gallery" id="modal-slider-stud">
+                    <img src="assets/img/social-projects/stud1.png" alt="Студенты 1">
+                    <img src="assets/img/social-projects/stud2.png" alt="Студенты 2">
+                    <img src="assets/img/social-projects/stud3.jpg" alt="Студенты 3">
+                    <img src="assets/img/social-projects/stud4.png" alt="Студенты 4">
+                </div>
+                <div class="modal-gallery-overlay"></div>
+                <div class="modal-gallery-nav" id="modal-dots-stud">
+                    <div class="modal-gallery-dot active" onclick="onDotClickStud(0)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickStud(1)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickStud(2)"></div>
+                    <div class="modal-gallery-dot" onclick="onDotClickStud(3)"></div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h2>Поддержка студенческой активности и молодежи</h2>
+                <p><strong>ТОО "KOREANA" активно инвестирует в будущее, выступая регулярным партнером молодежных и
+                        студенческих мероприятий.</strong></p>
+                <p>Мы поддерживаем дни открытых дверей в ведущих университетах, спонсируем студенческие инициативы и
+                    фестивали. Для нас важно быть рядом с молодым поколением, помогать им реализовывать свой потенциал и
+                    создавать возможности для развития и нетворкинга.</p>
+                <p>Наша компания видит в студентах и молодежи будущих лидеров, профессионалов и новаторов. Спонсируя
+                    подобные мероприятия, мы не только повышаем узнаваемость наших брендов среди молодой аудитории, но и
+                    делаем свой вклад в развитие образовательной и культурной среды Казахстана.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CERTIF -->
+    <div class="detail-modal" id="modal-certif">
+        <div class="detail-modal__content">
+            <button class="detail-modal__close" onclick="closeModalCertif()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery-container"
+                style="display: flex; align-items: center; justify-content: center; background-color: #fff;">
+                <img src="assets/img/social-projects/certif.png" alt="Сертификат"
+                    style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 20px;">
+                <div class="modal-gallery-overlay"></div>
+            </div>
+
+            <div class="modal-body">
+                <h2>Сертификация и стандарты качества</h2>
+                <p><strong>Вся продукция, представленная компанией KOREANA, официально зарегистрирована и
+                        сертифицирована на территории Республики Казахстан.</strong></p>
+                <p>Мы работаем исключительно с производителями, соответствующими международным стандартам качества, что
+                    гарантирует безопасность, эффективность и стабильность продукции.</p>
+                <p>KOREANA является официальным и эксклюзивным представителем ряда корейских брендов в Казахстане, что
+                    подтверждает подлинность продукции и прямые поставки от производителя. Мы строго следим за
+                    соблюдением всех норм и требований на каждом этапе поставок.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ======= GALLERY SLIDER =======
+        (function () {
+            var slider = document.getElementById('modal-slider');
+            if (!slider) return;
+            var dotsContainer = document.getElementById('modal-dots');
+            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
+            var totalSlides = slider.querySelectorAll('img').length;
+            var currentSlide = 0;
+            var sliderInterval = null;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                sliderInterval = setInterval(nextSlide, 3000);
+            }
+
+            function stopAutoSlide() {
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                    sliderInterval = null;
+                }
+            }
+
+            // Expose functions globally for onclick handlers
+            window.openModal = function () {
+                document.getElementById('demo-modal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                goToSlide(0);
+                startAutoSlide();
+            };
+
+            window.closeModal = function () {
+                document.getElementById('demo-modal').classList.remove('active');
+                document.body.style.overflow = '';
+                stopAutoSlide();
+            };
+
+            window.onDotClick = function (index) {
+                goToSlide(index);
+                startAutoSlide();
+            };
+
+            // Close on ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.closeModal();
+            });
+
+            // Close on backdrop click
+            document.getElementById('demo-modal').addEventListener('click', function (e) {
+                if (e.target === this) window.closeModal();
+            });
+
+            // Pause/resume on hover
+            var galleryContainer = document.querySelector('.modal-gallery-container');
+            if (galleryContainer) {
+                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+                galleryContainer.addEventListener('mouseleave', function () {
+                    if (document.getElementById('demo-modal').classList.contains('active')) {
+                        startAutoSlide();
+                    }
+                });
+            }
+        })();
+
+        // ======= AEKYUNG GALLERY SLIDER =======
+        (function () {
+            var slider = document.getElementById('modal-slider-aekyung');
+            if (!slider) return;
+            var dotsContainer = document.getElementById('modal-dots-aekyung');
+            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
+            var totalSlides = slider.querySelectorAll('img').length;
+            var currentSlide = 0;
+            var sliderInterval = null;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                sliderInterval = setInterval(nextSlide, 3000);
+            }
+
+            function stopAutoSlide() {
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                    sliderInterval = null;
+                }
+            }
+
+            window.openModalAekyung = function () {
+                document.getElementById('modal-aekyung').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                goToSlide(0);
+                startAutoSlide();
+            };
+
+            window.closeModalAekyung = function () {
+                document.getElementById('modal-aekyung').classList.remove('active');
+                document.body.style.overflow = '';
+                stopAutoSlide();
+            };
+
+            window.onDotClickAekyung = function (index) {
+                goToSlide(index);
+                startAutoSlide();
+            };
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.closeModalAekyung();
+            });
+
+            document.getElementById('modal-aekyung').addEventListener('click', function (e) {
+                if (e.target === this) window.closeModalAekyung();
+            });
+
+            var galleryContainer = document.getElementById('modal-aekyung').querySelector('.modal-gallery-container');
+            if (galleryContainer) {
+                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+                galleryContainer.addEventListener('mouseleave', function () {
+                    if (document.getElementById('modal-aekyung').classList.contains('active')) {
+                        startAutoSlide();
+                    }
+                });
+            }
+        })();
+
+        // ======= AKK GALLERY SLIDER =======
+        (function () {
+            var slider = document.getElementById('modal-slider-akk');
+            if (!slider) return;
+            var dotsContainer = document.getElementById('modal-dots-akk');
+            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
+            var totalSlides = slider.querySelectorAll('img').length;
+            var currentSlide = 0;
+            var sliderInterval = null;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                sliderInterval = setInterval(nextSlide, 3000);
+            }
+
+            function stopAutoSlide() {
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                    sliderInterval = null;
+                }
+            }
+
+            window.openModalAkk = function () {
+                document.getElementById('modal-akk').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                goToSlide(0);
+                startAutoSlide();
+            };
+
+            window.closeModalAkk = function () {
+                document.getElementById('modal-akk').classList.remove('active');
+                document.body.style.overflow = '';
+                stopAutoSlide();
+            };
+
+            window.onDotClickAkk = function (index) {
+                goToSlide(index);
+                startAutoSlide();
+            };
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.closeModalAkk();
+            });
+
+            document.getElementById('modal-akk').addEventListener('click', function (e) {
+                if (e.target === this) window.closeModalAkk();
+            });
+
+            var galleryContainer = document.getElementById('modal-akk').querySelector('.modal-gallery-container');
+            if (galleryContainer) {
+                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+                galleryContainer.addEventListener('mouseleave', function () {
+                    if (document.getElementById('modal-akk').classList.contains('active')) {
+                        startAutoSlide();
+                    }
+                });
+            }
+        })();
+
+        // ======= KPOP GALLERY SLIDER =======
+        (function () {
+            var slider = document.getElementById('modal-slider-kpop');
+            if (!slider) return;
+            var dotsContainer = document.getElementById('modal-dots-kpop');
+            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
+            var totalSlides = slider.querySelectorAll('img').length;
+            var currentSlide = 0;
+            var sliderInterval = null;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                sliderInterval = setInterval(nextSlide, 3000);
+            }
+
+            function stopAutoSlide() {
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                    sliderInterval = null;
+                }
+            }
+
+            window.openModalKpop = function () {
+                document.getElementById('modal-kpop').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                goToSlide(0);
+                startAutoSlide();
+            };
+
+            window.closeModalKpop = function () {
+                document.getElementById('modal-kpop').classList.remove('active');
+                document.body.style.overflow = '';
+                stopAutoSlide();
+            };
+
+            window.onDotClickKpop = function (index) {
+                goToSlide(index);
+                startAutoSlide();
+            };
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.closeModalKpop();
+            });
+
+            document.getElementById('modal-kpop').addEventListener('click', function (e) {
+                if (e.target === this) window.closeModalKpop();
+            });
+
+            var galleryContainer = document.getElementById('modal-kpop').querySelector('.modal-gallery-container');
+            if (galleryContainer) {
+                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+                galleryContainer.addEventListener('mouseleave', function () {
+                    if (document.getElementById('modal-kpop').classList.contains('active')) {
+                        startAutoSlide();
+                    }
+                });
+            }
+        })();
+
+        // ======= INDUSTRY GALLERY SLIDER =======
+        (function () {
+            var slider = document.getElementById('modal-slider-industry');
+            if (!slider) return;
+            var dotsContainer = document.getElementById('modal-dots-industry');
+            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
+            var totalSlides = slider.querySelectorAll('img').length;
+            var currentSlide = 0;
+            var sliderInterval = null;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                sliderInterval = setInterval(nextSlide, 3000);
+            }
+
+            function stopAutoSlide() {
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                    sliderInterval = null;
+                }
+            }
+
+            window.openModalIndustry = function () {
+                document.getElementById('modal-industry').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                goToSlide(0);
+                startAutoSlide();
+            };
+
+            window.closeModalIndustry = function () {
+                document.getElementById('modal-industry').classList.remove('active');
+                document.body.style.overflow = '';
+                stopAutoSlide();
+            };
+
+            window.onDotClickIndustry = function (index) {
+                goToSlide(index);
+                startAutoSlide();
+            };
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.closeModalIndustry();
+            });
+
+            document.getElementById('modal-industry').addEventListener('click', function (e) {
+                if (e.target === this) window.closeModalIndustry();
+            });
+
+            var galleryContainer = document.getElementById('modal-industry').querySelector('.modal-gallery-container');
+            if (galleryContainer) {
+                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+                galleryContainer.addEventListener('mouseleave', function () {
+                    if (document.getElementById('modal-industry').classList.contains('active')) {
+                        startAutoSlide();
+                    }
+                });
+            }
+        })();
+
+        // ======= STUD GALLERY SLIDER =======
+        (function () {
+            var slider = document.getElementById('modal-slider-stud');
+            if (!slider) return;
+            var dotsContainer = document.getElementById('modal-dots-stud');
+            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
+            var totalSlides = slider.querySelectorAll('img').length;
+            var currentSlide = 0;
+            var sliderInterval = null;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove('active');
+                }
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                sliderInterval = setInterval(nextSlide, 3000);
+            }
+
+            function stopAutoSlide() {
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                    sliderInterval = null;
+                }
+            }
+
+            window.openModalStud = function () {
+                document.getElementById('modal-stud').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                goToSlide(0);
+                startAutoSlide();
+            };
+
+            window.closeModalStud = function () {
+                document.getElementById('modal-stud').classList.remove('active');
+                document.body.style.overflow = '';
+                stopAutoSlide();
+            };
+
+            window.onDotClickStud = function (index) {
+                goToSlide(index);
+                startAutoSlide();
+            };
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.closeModalStud();
+            });
+
+            document.getElementById('modal-stud').addEventListener('click', function (e) {
+                if (e.target === this) window.closeModalStud();
+            });
+
+            var galleryContainer = document.getElementById('modal-stud').querySelector('.modal-gallery-container');
+            if (galleryContainer) {
+                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+                galleryContainer.addEventListener('mouseleave', function () {
+                    if (document.getElementById('modal-stud').classList.contains('active')) {
+                        startAutoSlide();
+                    }
+                });
+            }
+        })();
+
+        // ======= CERTIF MODAL LOGIC =======
+        (function () {
+            window.openModalCertif = function () {
+                document.getElementById('modal-certif').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+
+            window.closeModalCertif = function () {
+                document.getElementById('modal-certif').classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.closeModalCertif();
+            });
+
+            document.getElementById('modal-certif').addEventListener('click', function (e) {
+                if (e.target === this) window.closeModalCertif();
+            });
+        })();
+        // ======= GLOBAL GALLERY SWIPE & ARROWS =======
+        (function () {
+            const containers = document.querySelectorAll('.modal-gallery-container');
+            containers.forEach(container => {
+                const slider = container.querySelector('.modal-gallery');
+                const dotsContainer = container.querySelector('.modal-gallery-nav');
+                if (!slider || !dotsContainer) return;
+
+                // Create arrows
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'modal-gallery-arrow prev';
+                prevBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'modal-gallery-arrow next';
+                nextBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+
+                container.appendChild(prevBtn);
+                container.appendChild(nextBtn);
+
+                function getActiveIndex() {
+                    const dots = Array.from(dotsContainer.querySelectorAll('.modal-gallery-dot'));
+                    return dots.findIndex(d => d.classList.contains('active'));
+                }
+
+                function goDir(dir) {
+                    const dots = Array.from(dotsContainer.querySelectorAll('.modal-gallery-dot'));
+                    let idx = getActiveIndex();
+                    if (idx === -1) idx = 0;
+                    let nextIdx = (idx + dir + dots.length) % dots.length;
+                    dots[nextIdx].click();
+                }
+
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    goDir(-1);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    goDir(1);
+                });
+
+                // Swipe Logic
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                slider.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                slider.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }, { passive: true });
+
+                function handleSwipe() {
+                    const diff = touchStartX - touchEndX;
+                    if (Math.abs(diff) > 40) { // minimum swipe distance
+                        if (diff > 0) goDir(1); // Swipe left -> next
+                        else goDir(-1); // Swipe right -> prev
+                    }
+                }
+            });
+        })();
+    </script>
+    
     <script src="js/main.js"></script>
 </body>
 
