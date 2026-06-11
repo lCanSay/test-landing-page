@@ -16,7 +16,7 @@
         rel="stylesheet">
 
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    <script src="js/lucide.min.js" defer></script>
 
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
@@ -31,7 +31,7 @@
     <header class="header" id="header">
         <div class="container header__inner">
             <a href="#" class="logo">
-                <img src="assets/img/logo.png" alt="KOREANA" class="logo__img">
+                <img src="assets/img/logo.png" alt="KOREANA" class="logo__img" width="208" height="129">
             </a>
 
             <nav class="nav" id="nav">
@@ -40,19 +40,19 @@
                 <a href="#brands" class="nav__link">Brands</a>
                 <a href="#partners" class="nav__link">Partners</a>
                 <a href="#vacancies" class="nav__link">Careers</a>
-                <a href="#contacts" class="nav__link">Contacts</a>
+                <a href="#client-form" class="nav__link">Contacts</a>
             </nav>
 
             <div class="header__actions">
                 <div class="lang-switch">
                     <a href="index.html" class="lang-switch__btn" style="text-decoration: none;">RU</a>
-                    <button class="lang-switch__btn" data-lang="kz" style="cursor: not-allowed; opacity: 0.5;" title="Under development">KZ</button>
+                    <span class="lang-switch__btn" style="cursor: not-allowed; opacity: 0.5;" title="Under development">KZ</span>
                     <a href="index-en.html" class="lang-switch__btn active" style="text-decoration: none;">EN</a>
                 </div>
                 <a href="#client-form" class="btn btn--primary btn--sm header__cta">Become a Client</a>
             </div>
 
-            <button class="burger" id="burger" aria-label="Open menu">
+            <button class="burger" id="burger" aria-expanded="false" aria-label="Open menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -62,7 +62,7 @@
     <section class="hero hero--cinematic" id="hero">
 
         <!-- Seoul city time-lapse at night - free stock from Mixkit (ID 30126) -->
-        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=1200&auto=format&fit=crop">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.webp">
             <source src="assets/video/hero-bg.mp4" type="video/mp4">
         </video>
 
@@ -98,9 +98,7 @@
                 <div class="about__text">
                     <p class="about__lead">Since 2015, KOREANA has been the official importer and distributor of
                         the finest Korean products in the Republic of Kazakhstan.</p>
-                    <p>We present a wide range of high-quality brands for hair care, oral
-                        hygiene, household chemicals, feminine hygiene, and cosmetics from leading South Korean manufacturers: AEKYUNG,
-                        MUKUNGHWA, JOONGWON.</p>
+                    <p>We present a wide range of high-quality brands for hair care, oral care, household chemicals, feminine hygiene and cosmetics from leading South Korean manufacturers: AEKYUNG, MUKUNGHWA, JOONGWON, MYUNGIN COSMETICS.</p>
                     <p>Since 2025, our range has expanded with the Hair Clinic sulfate-free shampoo line and the
                         PRO ACTIVE MAN men's line.</p>
 
@@ -167,7 +165,7 @@
                     <div class="timeline__dot"></div>
                     <div class="timeline__photo">
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop"
-                            alt="Company foundation">
+                            alt="Company foundation" width="1000" height="562">
                     </div>
                     <div class="timeline__content">
                         <h3>Company Founded</h3>
@@ -180,7 +178,7 @@
                     <div class="timeline__dot"></div>
                     <div class="timeline__photo">
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c663c0?q=80&w=1000&auto=format&fit=crop"
-                            alt="Warehouse expansion">
+                            alt="Warehouse expansion" width="1000" height="562">
                     </div>
                     <div class="timeline__content">
                         <h3>Warehouse Expansion</h3>
@@ -193,7 +191,7 @@
                     <div class="timeline__dot"></div>
                     <div class="timeline__photo">
                         <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1000&auto=format&fit=crop"
-                            alt="Coverage of 16 cities">
+                            alt="Coverage of 16 cities" width="1000" height="562">
                     </div>
                     <div class="timeline__content">
                         <h3>16 Cities Coverage</h3>
@@ -206,7 +204,7 @@
                     <div class="timeline__dot"></div>
                     <div class="timeline__photo">
                         <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1000&auto=format&fit=crop"
-                            alt="8 000+ clients">
+                            alt="8 000+ clients" width="1000" height="562">
                     </div>
                     <div class="timeline__content">
                         <h3>8,000+ Clients</h3>
@@ -219,7 +217,7 @@
                     <div class="timeline__dot"></div>
                     <div class="timeline__photo">
                         <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop"
-                            alt="New brands">
+                            alt="New brands" width="1000" height="562">
                     </div>
                     <div class="timeline__content">
                         <h3>New Brands</h3>
@@ -232,7 +230,7 @@
                     <div class="timeline__dot"></div>
                     <div class="timeline__photo">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
-                            alt="Today">
+                            alt="Today" width="1000" height="562">
                     </div>
                     <div class="timeline__content">
                         <h3>Today</h3>
@@ -432,7 +430,7 @@
                 <!-- KERASYS -->
                 <div class="brand-card" data-category="hair" data-brand="kerasys">
                     <div class="brand-card__media">
-                        <img src="assets/brands/kerasys.webp" alt="KERASYS">
+                        <img src="assets/brands/kerasys.webp" alt="KERASYS" width="321" height="130">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Hair Care</span>
@@ -446,7 +444,7 @@
                 <!-- 2080 -->
                 <div class="brand-card" data-category="oral" data-brand="2080">
                     <div class="brand-card__media">
-                        <img src="assets/brands/2080.webp" alt="2080">
+                        <img src="assets/brands/2080.webp" alt="2080" width="325" height="150">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Oral Hygiene</span>
@@ -460,7 +458,7 @@
                 <!-- SHOWERMATE -->
                 <div class="brand-card" data-category="body" data-brand="showermate">
                     <div class="brand-card__media">
-                        <img src="assets/brands/showermate.webp" alt="SHOWERMATE">
+                        <img src="assets/brands/showermate.webp" alt="SHOWERMATE" width="200" height="180">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Body Care</span>
@@ -474,7 +472,7 @@
                 <!-- FARMSTAY -->
                 <div class="brand-card" data-category="cosmetics" data-brand="farmstay">
                     <div class="brand-card__media">
-                        <img src="assets/brands/farmstay.webp" alt="FARMSTAY">
+                        <img src="assets/brands/farmstay.webp" alt="FARMSTAY" width="325" height="150">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Cosmetics</span>
@@ -488,7 +486,7 @@
                 <!-- SECRETDAY -->
                 <div class="brand-card" data-category="hygiene" data-brand="secretday">
                     <div class="brand-card__media">
-                        <img src="assets/brands/secretday.webp" alt="SECRETDAY">
+                        <img src="assets/brands/secretday.webp" alt="SECRETDAY" width="321" height="120">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Feminine Hygiene</span>
@@ -502,7 +500,7 @@
                 <!-- PERFECT -->
                 <div class="brand-card" data-category="household" data-brand="perfect">
                     <div class="brand-card__media">
-                        <img src="assets/brands/perfect.png" alt="PERFECT">
+                        <img src="assets/brands/perfect.png" alt="PERFECT" width="1200" height="669">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Household Chemicals</span>
@@ -516,7 +514,7 @@
                 <!-- WOOL SHAMPOO -->
                 <div class="brand-card" data-category="household" data-brand="wool">
                     <div class="brand-card__media" style="padding: 0;">
-                        <img src="assets/brands/wool-logo.png" alt="WOOL SHAMPOO" style="transform: scale(1.4);">
+                        <img src="assets/brands/wool-logo.png" alt="WOOL SHAMPOO" style="transform: scale(1.4);" width="3509" height="2481">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Household Chemicals</span>
@@ -530,7 +528,7 @@
                 <!-- TRIO -->
                 <div class="brand-card" data-category="household" data-brand="trio">
                     <div class="brand-card__media" style="padding: 10px;">
-                        <img src="assets/brands/trio-logo.png" alt="TRIO">
+                        <img src="assets/brands/trio-logo.png" alt="TRIO" width="1080" height="1079">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Household Chemicals</span>
@@ -544,7 +542,7 @@
                 <!-- MUKUNGHWA -->
                 <div class="brand-card" data-category="household" data-brand="mukunghwa">
                     <div class="brand-card__media">
-                        <img src="assets/brands/mukunghwa.webp" alt="MUKUNGHWA">
+                        <img src="assets/brands/mukunghwa.webp" alt="MUKUNGHWA" width="250" height="150">
                     </div>
                     <div class="brand-card__body">
                         <span class="brand-card__category">Household Chemicals</span>
@@ -565,7 +563,7 @@
     <div class="modal" id="brand-modal">
         <div class="modal__backdrop"></div>
         <div class="modal__content">
-            <button class="modal__close"><i data-lucide="x"></i></button>
+            <button class="modal__close" aria-label="Close"><i data-lucide="x"></i></button>
             <div class="modal__body" id="modal-body">
                 <!-- Filled dynamically -->
             </div>
@@ -635,26 +633,26 @@
                 </div>
 
                 <div class="clients-grid">
-                    <div class="partner-card"><img src="assets/partners/magnum.png" alt="Magnum"></div>
+                    <div class="partner-card"><img src="assets/partners/magnum.png" alt="Magnum" width="220" height="101"></div>
                     <div class="partner-card partner-card--zolotoe"><img src="assets/partners/zolotoe-yabloko.png"
-                            alt="Zolotoye Yabloko"></div>
-                    <div class="partner-card"><img src="assets/partners/small.png" alt="SMALL"></div>
-                    <div class="partner-card"><img src="assets/partners/galmart.webp" alt="Galmart"></div>
-                    <div class="partner-card"><img src="assets/partners/arbuz.png" alt="Arbuz"></div>
-                    <div class="partner-card"><img src="assets/partners/fix-price.png" alt="Fix Price"></div>
-                    <div class="partner-card"><img src="assets/partners/cu.png" alt="CU"></div>
-                    <div class="partner-card"><img src="assets/partners/carefood.webp" alt="Carefood"></div>
-                    <div class="partner-card"><img src="assets/partners/korzinka.webp" alt="Korzinka"></div>
-                    <div class="partner-card"><img src="assets/partners/firkan.webp" alt="Firkan"></div>
-                    <div class="partner-card"><img src="assets/partners/dina.webp" alt="Dina"></div>
-                    <div class="partner-card"><img src="assets/partners/flip.webp" alt="Flip"></div>
-                    <div class="partner-card"><img src="assets/partners/diona.png" alt="Diona"></div>
-                    <div class="partner-card"><img src="assets/partners/gramad.png" alt="Gramad"></div>
-                    <div class="partner-card"><img src="assets/partners/mgo.png" alt="MGO"></div>
-                    <div class="partner-card"><img src="assets/partners/alma-store.png" alt="Alma Store"></div>
-                    <div class="partner-card"><img src="assets/partners/anvar.png" alt="Anvar"></div>
-                    <div class="partner-card"><img src="assets/partners/choko.webp" alt="Choco"></div>
-                    <div class="partner-card"><img src="assets/partners/airba-fresh.webp" alt="Airba Fresh"></div>
+                            alt="Zolotoye Yabloko" width="212" height="96"></div>
+                    <div class="partner-card"><img src="assets/partners/small.png" alt="SMALL" width="212" height="96"></div>
+                    <div class="partner-card"><img src="assets/partners/galmart.webp" alt="Galmart" width="338" height="130"></div>
+                    <div class="partner-card"><img src="assets/partners/arbuz.png" alt="Arbuz" width="212" height="96"></div>
+                    <div class="partner-card"><img src="assets/partners/fix-price.png" alt="Fix Price" width="212" height="96"></div>
+                    <div class="partner-card"><img src="assets/partners/cu.png" alt="CU" width="212" height="96"></div>
+                    <div class="partner-card"><img src="assets/partners/carefood.webp" alt="Carefood" width="300" height="130"></div>
+                    <div class="partner-card"><img src="assets/partners/korzinka.webp" alt="Korzinka" width="500" height="250"></div>
+                    <div class="partner-card"><img src="assets/partners/firkan.webp" alt="Firkan" width="900" height="300"></div>
+                    <div class="partner-card"><img src="assets/partners/dina.webp" alt="Dina" width="180" height="80"></div>
+                    <div class="partner-card"><img src="assets/partners/flip.webp" alt="Flip" width="900" height="500"></div>
+                    <div class="partner-card"><img src="assets/partners/diona.png" alt="Diona" width="1201" height="628"></div>
+                    <div class="partner-card"><img src="assets/partners/gramad.png" alt="Gramad" width="1667" height="1007"></div>
+                    <div class="partner-card"><img src="assets/partners/mgo.png" alt="MGO" width="212" height="96"></div>
+                    <div class="partner-card"><img src="assets/partners/alma-store.png" alt="Alma Store" width="212" height="96"></div>
+                    <div class="partner-card"><img src="assets/partners/anvar.png" alt="Anvar" width="212" height="96"></div>
+                    <div class="partner-card"><img src="assets/partners/choko.webp" alt="Choco" width="550" height="250"></div>
+                    <div class="partner-card"><img src="assets/partners/airba-fresh.webp" alt="Airba Fresh" width="750" height="350"></div>
                 </div>
             </div>
         </div>
@@ -702,7 +700,6 @@
             <div class="section-header">
                 <p class="section-tag">Our Values in Action</p>
                 <h2 class="section-title">Social Projects and Achievements</h2>
-                <p class="section-desc">What we are proud of beyond business</p>
             </div>
         </div>
 
@@ -710,8 +707,8 @@
             <div class="bento-grid" id="bento-grid">
 
                 <!-- CARD 1 (Large - span 2, span 2) -->
-                <div class="bento-item bento-item--large" onclick="openModal()">
-                    <img src="assets/img/social-projects/marathon.jpg" alt="Marathon" class="bento-item__img">
+                <div class="bento-item bento-item--large" data-modal="demo-modal">
+                    <img src="assets/img/social-projects/marathon.jpg" alt="Marathon" class="bento-item__img" width="1384" height="923">
                     <div class="bento-item__overlay"></div>
                     <div class="bento-item__content">
                         <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -724,8 +721,8 @@
                 </div>
 
                 <!-- CARD 2 (Wide - span 2, span 1) -->
-                <div class="bento-item bento-item--wide" onclick="openModalAekyung()">
-                    <img src="assets/img/social-projects/best-partner1.jpg" alt="Award" class="bento-item__img">
+                <div class="bento-item bento-item--wide" data-modal="modal-aekyung">
+                    <img src="assets/img/social-projects/best-partner1.jpg" alt="Award" class="bento-item__img" width="1195" height="657">
                     <div class="bento-item__overlay"></div>
                     <div class="bento-item__content">
                         <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -738,9 +735,9 @@
                 </div>
 
                 <!-- CARD 3 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" onclick="openModalAkk()" style="background-color: #fff;">
+                <div class="bento-item bento-item--small" data-modal="modal-akk" style="background-color: #fff;">
                     <img src="assets/img/social-projects/kor1.jpeg" alt="Association of Koreans in Kazakhstan"
-                        class="bento-item__img" style="object-fit: contain; padding: 15%;">
+                        class="bento-item__img" style="object-fit: contain; padding: 15%;" width="880" height="916">
                     <div class="bento-item__overlay"></div>
                     <div class="bento-item__content">
                         <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -753,8 +750,8 @@
                 </div>
 
                 <!-- CARD 4 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" onclick="openModalKpop()">
-                    <img src="assets/img/social-projects/kpop1.jpg" alt="kpop-stars.kz" class="bento-item__img">
+                <div class="bento-item bento-item--small" data-modal="modal-kpop">
+                    <img src="assets/img/social-projects/kpop1.jpg" alt="kpop-stars.kz" class="bento-item__img" width="1821" height="1216">
                     <div class="bento-item__overlay"></div>
                     <div class="bento-item__content">
                         <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -767,9 +764,9 @@
                 </div>
 
                 <!-- CARD 5 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" onclick="openModalIndustry()" style="background-color: #fff;">
+                <div class="bento-item bento-item--small" data-modal="modal-industry" style="background-color: #fff;">
                     <img src="assets/img/social-projects/industry1.jpg" alt="Industry Heritage" class="bento-item__img"
-                        style="object-fit: contain; padding: 10%;">
+                        style="object-fit: contain; padding: 10%;" width="255" height="198">
                     <div class="bento-item__overlay"></div>
                     <div class="bento-item__content">
                         <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -782,9 +779,9 @@
                 </div>
 
                 <!-- CARD 6 (Wide - span 2, span 1) - CENTERED IN BOTTOM ROW -->
-                <div class="bento-item bento-item--wide" onclick="openModalStud()">
+                <div class="bento-item bento-item--wide" data-modal="modal-stud">
                     <img src="assets/img/social-projects/stud3.jpg" alt="Student activity"
-                        class="bento-item__img">
+                        class="bento-item__img" width="1600" height="1200">
                     <div class="bento-item__overlay"></div>
                     <div class="bento-item__content">
                         <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -797,8 +794,8 @@
                 </div>
 
                 <!-- CARD 7 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" onclick="openModalCertif()">
-                    <img src="assets/img/social-projects/certif.png" alt="Certification" class="bento-item__img">
+                <div class="bento-item bento-item--small" data-modal="modal-certif">
+                    <img src="assets/img/social-projects/certif.png" alt="Certification" class="bento-item__img" width="1197" height="859">
                     <div class="bento-item__overlay"></div>
                     <div class="bento-item__content">
                         <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -939,7 +936,7 @@
         </div>
         <div class="map-section__map">
             <div id="koreana-map" style="width: 100%; height: 500px; border-radius: 16px; overflow: hidden;"></div>
-            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+            <script src="https://api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script>
             <script type="text/javascript">
                 ymaps.ready(init);
                 function init() {
@@ -990,7 +987,7 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <a href="#" class="logo logo--light">
-                        <img src="assets/img/logo.png" alt="KOREANA" class="logo__img logo__img--light">
+                        <img src="assets/img/logo.png" alt="KOREANA" class="logo__img logo__img--light" width="208" height="129">
                     </a>
                     <p class="footer__about">Official distributor of Korean cosmetics, hygiene, and household chemicals in
                         Kazakhstan since 2015 year.</p>
@@ -1020,19 +1017,11 @@
 
                 <div class="footer__contact">
                     <h4 class="footer__heading">Contacts</h4>
-                    <a href="tel:+77001234567" class="footer__contact-item">
-                        <i data-lucide="phone"></i>
-                        <span>+7 (700) 123-45-67</span>
-                    </a>
-                    <a href="https://wa.me/77001234567" class="footer__contact-item" target="_blank">
-                        <i data-lucide="message-circle"></i>
-                        <span>WhatsApp</span>
-                    </a>
                     <a href="mailto:info@koreanacos.kz" class="footer__contact-item">
                         <i data-lucide="mail"></i>
                         <span>info@koreanacos.kz</span>
                     </a>
-                    <a href="#contacts" class="footer__contact-item">
+                    <a href="https://yandex.com/maps/?text=Kazakhstan,+Almaty,+Seifullin+Avenue,+498" target="_blank" rel="noopener" class="footer__contact-item">
                         <i data-lucide="map-pin"></i>
                         <span>Almaty, Seifullina Ave. 498, office 413</span>
                     </a>
@@ -1045,17 +1034,14 @@
         </div>
     </footer>
 
-    <!-- ============ FLOATING WHATSAPP ============ -->
-    <a href="https://wa.me/77001234567" class="whatsapp-float" target="_blank" aria-label="Write on WhatsApp">
-        <i data-lucide="message-circle"></i>
-    </a>
+    <!-- WhatsApp Floating Button Removed -->
 
     <!-- ================================================== -->
     <!-- MODAL POPUP HTML                                   -->
     <!-- ================================================== -->
     <div class="detail-modal" id="demo-modal">
         <div class="detail-modal__content">
-            <button class="detail-modal__close" onclick="closeModal()">
+            <button class="detail-modal__close" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1066,21 +1052,21 @@
             <div class="modal-gallery-container">
                 <!-- Horizontal scrolling gallery -->
                 <div class="modal-gallery" id="modal-slider">
-                    <img src="assets/img/social-projects/marathon.jpg" alt="Marathon 1">
-                    <img src="assets/img/social-projects/marathon1.jpeg" alt="Marathon 2">
-                    <img src="assets/img/social-projects/marathon2.jpg" alt="Marathon 3">
-                    <img src="assets/img/social-projects/marathon3.jpg" alt="Marathon 4">
-                    <img src="assets/img/social-projects/marathon4.jpg" alt="Marathon 5">
+                    <img src="assets/img/social-projects/marathon.jpg" alt="Marathon 1" width="1384" height="923">
+                    <img src="assets/img/social-projects/marathon1.jpeg" alt="Marathon 2" width="1200" height="1600">
+                    <img src="assets/img/social-projects/marathon2.jpg" alt="Marathon 3" width="1319" height="879">
+                    <img src="assets/img/social-projects/marathon3.jpg" alt="Marathon 4" width="982" height="654">
+                    <img src="assets/img/social-projects/marathon4.jpg" alt="Marathon 5" width="807" height="538">
                 </div>
 
                 <div class="modal-gallery-overlay"></div>
 
                 <div class="modal-gallery-nav" id="modal-dots">
-                    <div class="modal-gallery-dot active" onclick="onDotClick(0)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClick(1)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClick(2)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClick(3)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClick(4)"></div>
+                    <div class="modal-gallery-dot active"></div>
+                    <div class="modal-gallery-dot"></div>
+                    <div class="modal-gallery-dot"></div>
+                    <div class="modal-gallery-dot"></div>
+                    <div class="modal-gallery-dot"></div>
                 </div>
             </div>
 
@@ -1107,7 +1093,7 @@
     <!-- MODAL AEKYUNG -->
     <div class="detail-modal" id="modal-aekyung">
         <div class="detail-modal__content">
-            <button class="detail-modal__close" onclick="closeModalAekyung()">
+            <button class="detail-modal__close" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1117,15 +1103,15 @@
 
             <div class="modal-gallery-container">
                 <div class="modal-gallery" id="modal-slider-aekyung">
-                    <img src="assets/img/social-projects/best-partner1.jpg" alt="Partner 1">
-                    <img src="assets/img/social-projects/best-partner2.jpg" alt="Partner 2">
-                    <img src="assets/img/social-projects/best-partner3.jpg" alt="Partner 3">
+                    <img src="assets/img/social-projects/best-partner1.jpg" alt="Partner 1" width="1195" height="657">
+                    <img src="assets/img/social-projects/best-partner2.jpg" alt="Partner 2" width="1024" height="768">
+                    <img src="assets/img/social-projects/best-partner3.jpg" alt="Partner 3" width="666" height="890">
                 </div>
                 <div class="modal-gallery-overlay"></div>
                 <div class="modal-gallery-nav" id="modal-dots-aekyung">
-                    <div class="modal-gallery-dot active" onclick="onDotClickAekyung(0)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickAekyung(1)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickAekyung(2)"></div>
+                    <div class="modal-gallery-dot active"></div>
+                    <div class="modal-gallery-dot"></div>
+                    <div class="modal-gallery-dot"></div>
                 </div>
             </div>
 
@@ -1145,7 +1131,7 @@
     <!-- MODAL AKK -->
     <div class="detail-modal" id="modal-akk">
         <div class="detail-modal__content">
-            <button class="detail-modal__close" onclick="closeModalAkk()">
+            <button class="detail-modal__close" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1156,15 +1142,15 @@
             <div class="modal-gallery-container">
                 <div class="modal-gallery" id="modal-slider-akk">
                     <img src="assets/img/social-projects/kor1.jpeg" alt="AKK 1"
-                        style="object-fit: contain; padding: 5%; background-color: #fff;">
-                    <img src="assets/img/social-projects/kor2.jpeg" alt="AKK 2">
-                    <img src="assets/img/social-projects/kor3.png" alt="AKK 3">
+                        style="object-fit: contain; padding: 5%; background-color: #fff;" width="880" height="916">
+                    <img src="assets/img/social-projects/kor2.jpeg" alt="AKK 2" width="984" height="624">
+                    <img src="assets/img/social-projects/kor3.png" alt="AKK 3" width="736" height="680">
                 </div>
                 <div class="modal-gallery-overlay"></div>
                 <div class="modal-gallery-nav" id="modal-dots-akk">
-                    <div class="modal-gallery-dot active" onclick="onDotClickAkk(0)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickAkk(1)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickAkk(2)"></div>
+                    <div class="modal-gallery-dot active"></div>
+                    <div class="modal-gallery-dot"></div>
+                    <div class="modal-gallery-dot"></div>
                 </div>
             </div>
 
@@ -1185,7 +1171,7 @@
     <!-- MODAL KPOP -->
     <div class="detail-modal" id="modal-kpop">
         <div class="detail-modal__content">
-            <button class="detail-modal__close" onclick="closeModalKpop()">
+            <button class="detail-modal__close" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1195,15 +1181,15 @@
 
             <div class="modal-gallery-container">
                 <div class="modal-gallery" id="modal-slider-kpop">
-                    <img src="assets/img/social-projects/kpop1.jpg" alt="KPOP 1">
-                    <img src="assets/img/social-projects/kpop2.jpg" alt="KPOP 2">
-                    <img src="assets/img/social-projects/kpop3.jpg" alt="KPOP 3">
+                    <img src="assets/img/social-projects/kpop1.jpg" alt="KPOP 1" width="1821" height="1216">
+                    <img src="assets/img/social-projects/kpop2.jpg" alt="KPOP 2" width="812" height="1216">
+                    <img src="assets/img/social-projects/kpop3.jpg" alt="KPOP 3" width="1821" height="1216">
                 </div>
                 <div class="modal-gallery-overlay"></div>
                 <div class="modal-gallery-nav" id="modal-dots-kpop">
-                    <div class="modal-gallery-dot active" onclick="onDotClickKpop(0)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickKpop(1)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickKpop(2)"></div>
+                    <div class="modal-gallery-dot active"></div>
+                    <div class="modal-gallery-dot"></div>
+                    <div class="modal-gallery-dot"></div>
                 </div>
             </div>
 
@@ -1223,7 +1209,7 @@
     <!-- MODAL INDUSTRY -->
     <div class="detail-modal" id="modal-industry">
         <div class="detail-modal__content">
-            <button class="detail-modal__close" onclick="closeModalIndustry()">
+            <button class="detail-modal__close" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1234,14 +1220,14 @@
             <div class="modal-gallery-container">
                 <div class="modal-gallery" id="modal-slider-industry">
                     <img src="assets/img/social-projects/industry1.jpg" alt="Industry 1"
-                        style="object-fit: contain; padding: 1%; background-color: #fff;">
+                        style="object-fit: contain; padding: 1%; background-color: #fff;" width="255" height="198">
                     <img src="assets/img/social-projects/industry2.jpg" alt="Industry 2"
-                        style="object-fit: contain; padding: 1%; background-color: #fff;">
+                        style="object-fit: contain; padding: 1%; background-color: #fff;" width="497" height="694">
                 </div>
                 <div class="modal-gallery-overlay"></div>
                 <div class="modal-gallery-nav" id="modal-dots-industry">
-                    <div class="modal-gallery-dot active" onclick="onDotClickIndustry(0)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickIndustry(1)"></div>
+                    <div class="modal-gallery-dot active"></div>
+                    <div class="modal-gallery-dot"></div>
                 </div>
             </div>
 
@@ -1262,7 +1248,7 @@
     <!-- MODAL STUD -->
     <div class="detail-modal" id="modal-stud">
         <div class="detail-modal__content">
-            <button class="detail-modal__close" onclick="closeModalStud()">
+            <button class="detail-modal__close" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1272,17 +1258,17 @@
 
             <div class="modal-gallery-container">
                 <div class="modal-gallery" id="modal-slider-stud">
-                    <img src="assets/img/social-projects/stud1.png" alt="Students 1">
-                    <img src="assets/img/social-projects/stud2.png" alt="Students 2">
-                    <img src="assets/img/social-projects/stud3.jpg" alt="Students 3">
-                    <img src="assets/img/social-projects/stud4.png" alt="Students 4">
+                    <img src="assets/img/social-projects/stud1.png" alt="Students 1" width="862" height="580">
+                    <img src="assets/img/social-projects/stud2.png" alt="Students 2" width="532" height="940">
+                    <img src="assets/img/social-projects/stud3.jpg" alt="Students 3" width="1600" height="1200">
+                    <img src="assets/img/social-projects/stud4.png" alt="Students 4" width="1322" height="830">
                 </div>
                 <div class="modal-gallery-overlay"></div>
                 <div class="modal-gallery-nav" id="modal-dots-stud">
-                    <div class="modal-gallery-dot active" onclick="onDotClickStud(0)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickStud(1)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickStud(2)"></div>
-                    <div class="modal-gallery-dot" onclick="onDotClickStud(3)"></div>
+                    <div class="modal-gallery-dot active"></div>
+                    <div class="modal-gallery-dot"></div>
+                    <div class="modal-gallery-dot"></div>
+                    <div class="modal-gallery-dot"></div>
                 </div>
             </div>
 
@@ -1303,7 +1289,7 @@
     <!-- MODAL CERTIF -->
     <div class="detail-modal" id="modal-certif">
         <div class="detail-modal__content">
-            <button class="detail-modal__close" onclick="closeModalCertif()">
+            <button class="detail-modal__close" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1314,7 +1300,7 @@
             <div class="modal-gallery-container"
                 style="display: flex; align-items: center; justify-content: center; background-color: #fff;">
                 <img src="assets/img/social-projects/certif.png" alt="Certificate"
-                    style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 20px;">
+                    style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 20px;" width="1197" height="859">
                 <div class="modal-gallery-overlay"></div>
             </div>
 
@@ -1331,531 +1317,9 @@
         </div>
     </div>
 
-    <script>
-        // ======= GALLERY SLIDER =======
-        (function () {
-            var slider = document.getElementById('modal-slider');
-            if (!slider) return;
-            var dotsContainer = document.getElementById('modal-dots');
-            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
-            var totalSlides = slider.querySelectorAll('img').length;
-            var currentSlide = 0;
-            var sliderInterval = null;
 
-            function goToSlide(index) {
-                currentSlide = index;
-                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].classList.remove('active');
-                }
-                dots[currentSlide].classList.add('active');
-            }
-
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % totalSlides);
-            }
-
-            function startAutoSlide() {
-                stopAutoSlide();
-                sliderInterval = setInterval(nextSlide, 3000);
-            }
-
-            function stopAutoSlide() {
-                if (sliderInterval) {
-                    clearInterval(sliderInterval);
-                    sliderInterval = null;
-                }
-            }
-
-            // Expose functions globally for onclick handlers
-            window.openModal = function () {
-                document.getElementById('demo-modal').classList.add('active');
-                document.body.style.overflow = 'hidden';
-                goToSlide(0);
-                startAutoSlide();
-            };
-
-            window.closeModal = function () {
-                document.getElementById('demo-modal').classList.remove('active');
-                document.body.style.overflow = '';
-                stopAutoSlide();
-            };
-
-            window.onDotClick = function (index) {
-                goToSlide(index);
-                startAutoSlide();
-            };
-
-            // Close on ESC
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') window.closeModal();
-            });
-
-            // Close on backdrop click
-            document.getElementById('demo-modal').addEventListener('click', function (e) {
-                if (e.target === this) window.closeModal();
-            });
-
-            // Pause/resume on hover
-            var galleryContainer = document.querySelector('.modal-gallery-container');
-            if (galleryContainer) {
-                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
-                galleryContainer.addEventListener('mouseleave', function () {
-                    if (document.getElementById('demo-modal').classList.contains('active')) {
-                        startAutoSlide();
-                    }
-                });
-            }
-        })();
-
-        // ======= AEKYUNG GALLERY SLIDER =======
-        (function () {
-            var slider = document.getElementById('modal-slider-aekyung');
-            if (!slider) return;
-            var dotsContainer = document.getElementById('modal-dots-aekyung');
-            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
-            var totalSlides = slider.querySelectorAll('img').length;
-            var currentSlide = 0;
-            var sliderInterval = null;
-
-            function goToSlide(index) {
-                currentSlide = index;
-                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].classList.remove('active');
-                }
-                dots[currentSlide].classList.add('active');
-            }
-
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % totalSlides);
-            }
-
-            function startAutoSlide() {
-                stopAutoSlide();
-                sliderInterval = setInterval(nextSlide, 3000);
-            }
-
-            function stopAutoSlide() {
-                if (sliderInterval) {
-                    clearInterval(sliderInterval);
-                    sliderInterval = null;
-                }
-            }
-
-            window.openModalAekyung = function () {
-                document.getElementById('modal-aekyung').classList.add('active');
-                document.body.style.overflow = 'hidden';
-                goToSlide(0);
-                startAutoSlide();
-            };
-
-            window.closeModalAekyung = function () {
-                document.getElementById('modal-aekyung').classList.remove('active');
-                document.body.style.overflow = '';
-                stopAutoSlide();
-            };
-
-            window.onDotClickAekyung = function (index) {
-                goToSlide(index);
-                startAutoSlide();
-            };
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') window.closeModalAekyung();
-            });
-
-            document.getElementById('modal-aekyung').addEventListener('click', function (e) {
-                if (e.target === this) window.closeModalAekyung();
-            });
-
-            var galleryContainer = document.getElementById('modal-aekyung').querySelector('.modal-gallery-container');
-            if (galleryContainer) {
-                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
-                galleryContainer.addEventListener('mouseleave', function () {
-                    if (document.getElementById('modal-aekyung').classList.contains('active')) {
-                        startAutoSlide();
-                    }
-                });
-            }
-        })();
-
-        // ======= AKK GALLERY SLIDER =======
-        (function () {
-            var slider = document.getElementById('modal-slider-akk');
-            if (!slider) return;
-            var dotsContainer = document.getElementById('modal-dots-akk');
-            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
-            var totalSlides = slider.querySelectorAll('img').length;
-            var currentSlide = 0;
-            var sliderInterval = null;
-
-            function goToSlide(index) {
-                currentSlide = index;
-                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].classList.remove('active');
-                }
-                dots[currentSlide].classList.add('active');
-            }
-
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % totalSlides);
-            }
-
-            function startAutoSlide() {
-                stopAutoSlide();
-                sliderInterval = setInterval(nextSlide, 3000);
-            }
-
-            function stopAutoSlide() {
-                if (sliderInterval) {
-                    clearInterval(sliderInterval);
-                    sliderInterval = null;
-                }
-            }
-
-            window.openModalAkk = function () {
-                document.getElementById('modal-akk').classList.add('active');
-                document.body.style.overflow = 'hidden';
-                goToSlide(0);
-                startAutoSlide();
-            };
-
-            window.closeModalAkk = function () {
-                document.getElementById('modal-akk').classList.remove('active');
-                document.body.style.overflow = '';
-                stopAutoSlide();
-            };
-
-            window.onDotClickAkk = function (index) {
-                goToSlide(index);
-                startAutoSlide();
-            };
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') window.closeModalAkk();
-            });
-
-            document.getElementById('modal-akk').addEventListener('click', function (e) {
-                if (e.target === this) window.closeModalAkk();
-            });
-
-            var galleryContainer = document.getElementById('modal-akk').querySelector('.modal-gallery-container');
-            if (galleryContainer) {
-                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
-                galleryContainer.addEventListener('mouseleave', function () {
-                    if (document.getElementById('modal-akk').classList.contains('active')) {
-                        startAutoSlide();
-                    }
-                });
-            }
-        })();
-
-        // ======= KPOP GALLERY SLIDER =======
-        (function () {
-            var slider = document.getElementById('modal-slider-kpop');
-            if (!slider) return;
-            var dotsContainer = document.getElementById('modal-dots-kpop');
-            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
-            var totalSlides = slider.querySelectorAll('img').length;
-            var currentSlide = 0;
-            var sliderInterval = null;
-
-            function goToSlide(index) {
-                currentSlide = index;
-                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].classList.remove('active');
-                }
-                dots[currentSlide].classList.add('active');
-            }
-
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % totalSlides);
-            }
-
-            function startAutoSlide() {
-                stopAutoSlide();
-                sliderInterval = setInterval(nextSlide, 3000);
-            }
-
-            function stopAutoSlide() {
-                if (sliderInterval) {
-                    clearInterval(sliderInterval);
-                    sliderInterval = null;
-                }
-            }
-
-            window.openModalKpop = function () {
-                document.getElementById('modal-kpop').classList.add('active');
-                document.body.style.overflow = 'hidden';
-                goToSlide(0);
-                startAutoSlide();
-            };
-
-            window.closeModalKpop = function () {
-                document.getElementById('modal-kpop').classList.remove('active');
-                document.body.style.overflow = '';
-                stopAutoSlide();
-            };
-
-            window.onDotClickKpop = function (index) {
-                goToSlide(index);
-                startAutoSlide();
-            };
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') window.closeModalKpop();
-            });
-
-            document.getElementById('modal-kpop').addEventListener('click', function (e) {
-                if (e.target === this) window.closeModalKpop();
-            });
-
-            var galleryContainer = document.getElementById('modal-kpop').querySelector('.modal-gallery-container');
-            if (galleryContainer) {
-                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
-                galleryContainer.addEventListener('mouseleave', function () {
-                    if (document.getElementById('modal-kpop').classList.contains('active')) {
-                        startAutoSlide();
-                    }
-                });
-            }
-        })();
-
-        // ======= INDUSTRY GALLERY SLIDER =======
-        (function () {
-            var slider = document.getElementById('modal-slider-industry');
-            if (!slider) return;
-            var dotsContainer = document.getElementById('modal-dots-industry');
-            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
-            var totalSlides = slider.querySelectorAll('img').length;
-            var currentSlide = 0;
-            var sliderInterval = null;
-
-            function goToSlide(index) {
-                currentSlide = index;
-                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].classList.remove('active');
-                }
-                dots[currentSlide].classList.add('active');
-            }
-
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % totalSlides);
-            }
-
-            function startAutoSlide() {
-                stopAutoSlide();
-                sliderInterval = setInterval(nextSlide, 3000);
-            }
-
-            function stopAutoSlide() {
-                if (sliderInterval) {
-                    clearInterval(sliderInterval);
-                    sliderInterval = null;
-                }
-            }
-
-            window.openModalIndustry = function () {
-                document.getElementById('modal-industry').classList.add('active');
-                document.body.style.overflow = 'hidden';
-                goToSlide(0);
-                startAutoSlide();
-            };
-
-            window.closeModalIndustry = function () {
-                document.getElementById('modal-industry').classList.remove('active');
-                document.body.style.overflow = '';
-                stopAutoSlide();
-            };
-
-            window.onDotClickIndustry = function (index) {
-                goToSlide(index);
-                startAutoSlide();
-            };
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') window.closeModalIndustry();
-            });
-
-            document.getElementById('modal-industry').addEventListener('click', function (e) {
-                if (e.target === this) window.closeModalIndustry();
-            });
-
-            var galleryContainer = document.getElementById('modal-industry').querySelector('.modal-gallery-container');
-            if (galleryContainer) {
-                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
-                galleryContainer.addEventListener('mouseleave', function () {
-                    if (document.getElementById('modal-industry').classList.contains('active')) {
-                        startAutoSlide();
-                    }
-                });
-            }
-        })();
-
-        // ======= STUD GALLERY SLIDER =======
-        (function () {
-            var slider = document.getElementById('modal-slider-stud');
-            if (!slider) return;
-            var dotsContainer = document.getElementById('modal-dots-stud');
-            var dots = dotsContainer.querySelectorAll('.modal-gallery-dot');
-            var totalSlides = slider.querySelectorAll('img').length;
-            var currentSlide = 0;
-            var sliderInterval = null;
-
-            function goToSlide(index) {
-                currentSlide = index;
-                slider.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].classList.remove('active');
-                }
-                dots[currentSlide].classList.add('active');
-            }
-
-            function nextSlide() {
-                goToSlide((currentSlide + 1) % totalSlides);
-            }
-
-            function startAutoSlide() {
-                stopAutoSlide();
-                sliderInterval = setInterval(nextSlide, 3000);
-            }
-
-            function stopAutoSlide() {
-                if (sliderInterval) {
-                    clearInterval(sliderInterval);
-                    sliderInterval = null;
-                }
-            }
-
-            window.openModalStud = function () {
-                document.getElementById('modal-stud').classList.add('active');
-                document.body.style.overflow = 'hidden';
-                goToSlide(0);
-                startAutoSlide();
-            };
-
-            window.closeModalStud = function () {
-                document.getElementById('modal-stud').classList.remove('active');
-                document.body.style.overflow = '';
-                stopAutoSlide();
-            };
-
-            window.onDotClickStud = function (index) {
-                goToSlide(index);
-                startAutoSlide();
-            };
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') window.closeModalStud();
-            });
-
-            document.getElementById('modal-stud').addEventListener('click', function (e) {
-                if (e.target === this) window.closeModalStud();
-            });
-
-            var galleryContainer = document.getElementById('modal-stud').querySelector('.modal-gallery-container');
-            if (galleryContainer) {
-                galleryContainer.addEventListener('mouseenter', stopAutoSlide);
-                galleryContainer.addEventListener('mouseleave', function () {
-                    if (document.getElementById('modal-stud').classList.contains('active')) {
-                        startAutoSlide();
-                    }
-                });
-            }
-        })();
-
-        // ======= CERTIF MODAL LOGIC =======
-        (function () {
-            window.openModalCertif = function () {
-                document.getElementById('modal-certif').classList.add('active');
-                document.body.style.overflow = 'hidden';
-            };
-
-            window.closeModalCertif = function () {
-                document.getElementById('modal-certif').classList.remove('active');
-                document.body.style.overflow = '';
-            };
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') window.closeModalCertif();
-            });
-
-            document.getElementById('modal-certif').addEventListener('click', function (e) {
-                if (e.target === this) window.closeModalCertif();
-            });
-        })();
-        // ======= GLOBAL GALLERY SWIPE & ARROWS =======
-        (function () {
-            const containers = document.querySelectorAll('.modal-gallery-container');
-            containers.forEach(container => {
-                const slider = container.querySelector('.modal-gallery');
-                const dotsContainer = container.querySelector('.modal-gallery-nav');
-                if (!slider || !dotsContainer) return;
-
-                // Create arrows
-                const prevBtn = document.createElement('button');
-                prevBtn.className = 'modal-gallery-arrow prev';
-                prevBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
-
-                const nextBtn = document.createElement('button');
-                nextBtn.className = 'modal-gallery-arrow next';
-                nextBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
-
-                container.appendChild(prevBtn);
-                container.appendChild(nextBtn);
-
-                function getActiveIndex() {
-                    const dots = Array.from(dotsContainer.querySelectorAll('.modal-gallery-dot'));
-                    return dots.findIndex(d => d.classList.contains('active'));
-                }
-
-                function goDir(dir) {
-                    const dots = Array.from(dotsContainer.querySelectorAll('.modal-gallery-dot'));
-                    let idx = getActiveIndex();
-                    if (idx === -1) idx = 0;
-                    let nextIdx = (idx + dir + dots.length) % dots.length;
-                    dots[nextIdx].click();
-                }
-
-                prevBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    goDir(-1);
-                });
-
-                nextBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    goDir(1);
-                });
-
-                // Swipe Logic
-                let touchStartX = 0;
-                let touchEndX = 0;
-
-                slider.addEventListener('touchstart', e => {
-                    touchStartX = e.changedTouches[0].screenX;
-                }, { passive: true });
-
-                slider.addEventListener('touchend', e => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleSwipe();
-                }, { passive: true });
-
-                function handleSwipe() {
-                    const diff = touchStartX - touchEndX;
-                    if (Math.abs(diff) > 40) { // minimum swipe distance
-                        if (diff > 0) goDir(1); // Swipe left -> next
-                        else goDir(-1); // Swipe right -> prev
-                    }
-                }
-            });
-        })();
-    </script>
     
-    <script src="js/main-en.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
