@@ -413,7 +413,7 @@ textarea {
     align-items: center;
     overflow: hidden;
     /* Static gradient serves as fallback when no video is loaded */
-    background: linear-gradient(135deg, #05080f 0%, #0a0a0a 40%, #110a0a 100%);
+    background: url('../assets/img/hero-poster.webp') center/cover no-repeat, linear-gradient(135deg, #05080f 0%, #0a0a0a 40%, #110a0a 100%);
 }
 
 /* Full-bleed video layer */
@@ -3539,4 +3539,39 @@ body {
     #koreana-map {
         height: 350px;
     }
+}
+
+/* ===================================================
+   PRELOADER
+   =================================================== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0a0a0a;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader__spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: #E30613;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }

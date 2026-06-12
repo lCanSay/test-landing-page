@@ -45,7 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initParticles();
     initParallax();
+    initVideoAutoplay();
 });
+
+/* ---------- Handle Low Power Mode video autoplay ---------- */
+function initVideoAutoplay() {
+    const video = document.querySelector('.hero__video');
+    if (video) {
+        const promise = video.play();
+        if (promise !== undefined) {
+            promise.catch(() => {
+                // Autoplay prevented (e.g., Low Power Mode on iOS)
+                // Remove the video to prevent the unclickable play button from showing
+                video.remove();
+            });
+        }
+    }
+}
 
 /* ---------- Generate Background Particles ---------- */
 function initParticles() {
@@ -926,3 +942,15 @@ function initBentoModals() {
         }
     });
 }
+
+/* ---------- Preloader ---------- */
+function removePreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader && !preloader.classList.contains('hidden')) {
+        preloader.classList.add('hidden');
+    }
+}
+
+window.addEventListener('load', removePreloader);
+// Fallback in case load takes too long (e.g. 3.5s max)
+setTimeout(removePreloader, 3500);
