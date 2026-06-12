@@ -412,8 +412,23 @@ textarea {
     display: flex;
     align-items: center;
     overflow: hidden;
-    /* Static gradient serves as fallback when no video is loaded */
+    /* Animated gradient serves as fallback when no video is loaded */
     background: linear-gradient(135deg, #05080f 0%, #0a0a0a 40%, #110a0a 100%);
+    animation: heroGradient 14s ease infinite alternate;
+}
+
+@keyframes heroGradient {
+    0% {
+        background: linear-gradient(135deg, #05080f 0%, #0a0a0a 50%, #110a0a 100%);
+    }
+
+    50% {
+        background: linear-gradient(135deg, #0a0a0a 0%, #0d0509 50%, #05080f 100%);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #110a0a 0%, #0a0a0a 50%, #08060f 100%);
+    }
 }
 
 /* Full-bleed video layer */
@@ -627,7 +642,6 @@ textarea {
     pointer-events: none;
     font-family: var(--font-heading);
     animation: scrollBgText 30s linear infinite alternate;
-    will-change: transform;
 }
 
 @keyframes scrollBgText {
@@ -655,7 +669,6 @@ textarea {
     font-family: var(--font-heading);
     color: rgba(0, 0, 0, 0.025);
     letter-spacing: -4px;
-    will-change: transform;
 }
 
 .section-bg-text--right {
@@ -3036,10 +3049,18 @@ body {
     height: 100vh;
     height: 100dvh;
     z-index: -10;
-    /* Static soft background */
+    /* Soft shifting gradient background */
     background: linear-gradient(-45deg, #ffffff, #fdfdfd, #fceded, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
     pointer-events: none;
     overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Particles Container (Spans full height of document) */

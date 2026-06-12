@@ -162,25 +162,12 @@ function initParallax() {
 /* ---------- Header scroll effect ---------- */
 function initHeader() {
     const header = document.getElementById('header');
-    let ticking = false;
-
-    const updateHeader = () => {
-        if (document.body.style.position === 'fixed') {
-            ticking = false;
-            return;
-        }
+    const onScroll = () => {
+        if (document.body.style.position === 'fixed') return;
         header.classList.toggle('scrolled', window.scrollY > 60);
-        ticking = false;
     };
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(updateHeader);
-            ticking = true;
-        }
-    }, { passive: true });
-    
-    updateHeader();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 }
 
 /* ---------- Mobile menu ---------- */
