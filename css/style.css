@@ -2812,7 +2812,7 @@ textarea {
 
     .timeline__photo,
     .timeline__text-wrapper {
-        width: 100% !important;
+        width: calc(100% - 32px) !important;
         margin-left: 32px !important;
         text-align: left !important;
         align-items: flex-start !important;
