@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
+    initLazyLoading();
     initHeader();
     initMobileMenu();
     initScrollAnimations();
@@ -48,18 +49,141 @@ document.addEventListener('DOMContentLoaded', () => {
     initVideoAutoplay();
 });
 
+/* ---------- Lazy Loading (IntersectionObserver) ---------- */
+function initLazyLoading() {
+    // Larger margin on mobile to preload images earlier (mobile networks are slower)
+    const isMobile = window.innerWidth <= 768;
+    const rootMarginValue = isMobile ? '300px 0px' : '400px 0px';
+
+    // --- 1. Lazy load <img data-src> ---
+    const imgObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                const realSrc = img.dataset.src;
+                if (realSrc) {
+                    img.src = realSrc;
+                    img.onload = () => {
+                        img.classList.add('lazy-loaded');
+                        img.removeAttribute('data-src');
+                        // Remove shimmer from parent if applicable
+                        const shimmerParent = img.closest('.lazy-shimmer');
+                        if (shimmerParent) {
+                            shimmerParent.classList.add('shimmer-done');
+                        }
+                    };
+                    img.onerror = () => {
+                        // Still show something on error
+                        img.classList.add('lazy-loaded');
+                        img.removeAttribute('data-src');
+                    };
+                }
+                imgObserver.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: rootMarginValue,
+        threshold: 0
+    });
+
+    // Observe all images with data-src (excluding those inside hidden modals)
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        // Skip images inside detail-modal (they'll be loaded when modal opens)
+        const inModal = img.closest('.detail-modal');
+        if (inModal) return;
+
+        // Add shimmer to parent containers
+        const mediaParent = img.closest('.brand-card__media, .timeline__photo, .bento-item');
+        if (mediaParent) {
+            mediaParent.classList.add('lazy-shimmer');
+        }
+
+        imgObserver.observe(img);
+    });
+
+    // --- 2. Lazy load background images (data-bg) ---
+    const bgObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const bgUrl = el.dataset.bg;
+                if (bgUrl) {
+                    // Preload the image before setting as background
+                    const preloadImg = new Image();
+                    preloadImg.onload = () => {
+                        el.style.backgroundImage = `url('${bgUrl}')`;
+                        el.removeAttribute('data-bg');
+                    };
+                    preloadImg.src = bgUrl;
+                }
+                bgObserver.unobserve(el);
+            }
+        });
+    }, {
+        rootMargin: rootMarginValue,
+        threshold: 0
+    });
+
+    document.querySelectorAll('[data-bg]').forEach(el => {
+        bgObserver.observe(el);
+    });
+
+    // --- 3. Lazy load modal images when modal opens ---
+    // Store observer reference globally so modals can trigger it
+    window._lazyImgObserver = imgObserver;
+}
+
+/**
+ * Load all lazy images inside a given container (used when modals open).
+ */
+function loadLazyImagesIn(container) {
+    if (!container) return;
+    container.querySelectorAll('img[data-src]').forEach(img => {
+        const realSrc = img.dataset.src;
+        if (realSrc) {
+            img.src = realSrc;
+            img.onload = () => {
+                img.classList.add('lazy-loaded');
+                img.removeAttribute('data-src');
+            };
+            img.onerror = () => {
+                img.classList.add('lazy-loaded');
+                img.removeAttribute('data-src');
+            };
+        }
+    });
+}
+
 /* ---------- Handle Low Power Mode video autoplay ---------- */
 function initVideoAutoplay() {
     const video = document.querySelector('.hero__video');
-    if (video) {
-        const promise = video.play();
-        if (promise !== undefined) {
-            promise.catch(() => {
-                // Autoplay prevented (e.g., Low Power Mode on iOS)
-                // Remove the video to prevent the unclickable play button from showing
-                video.remove();
-            });
+    if (!video) return;
+
+    // On mobile: remove video entirely and keep poster image for performance
+    // The 2.4MB video is too heavy for mobile networks
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        // Use Connection API to check if we're on a slow connection
+        const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        const isSlowConnection = conn && (conn.saveData || conn.effectiveType === '2g' || conn.effectiveType === 'slow-2g' || conn.effectiveType === '3g');
+
+        if (isSlowConnection) {
+            video.removeAttribute('autoplay');
+            video.preload = 'none';
+            // Remove the source to prevent downloading
+            const source = video.querySelector('source');
+            if (source) source.remove();
+            return;
         }
+    }
+
+    const promise = video.play();
+    if (promise !== undefined) {
+        promise.catch(() => {
+            // Autoplay prevented (e.g., Low Power Mode on iOS)
+            // Remove the video to prevent the unclickable play button from showing
+            video.remove();
+        });
     }
 }
 
@@ -803,6 +927,7 @@ function initBentoModals() {
 
         function open() {
             modal.classList.add('active');
+            loadLazyImagesIn(modal);
             lockScroll();
             if (slider && dots.length > 0) {
                 goToSlide(0);

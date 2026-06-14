@@ -3575,3 +3575,134 @@ body {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
+/* ===================================================
+   LAZY LOADING & IMAGE OPTIMIZATION
+   =================================================== */
+
+/* Shimmer placeholder animation */
+@keyframes shimmer {
+    0% { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+}
+
+/* Images that haven't loaded yet */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Images that have loaded — smooth fade in */
+img.lazy-loaded {
+    opacity: 1 !important;
+}
+
+/* Shimmer skeleton placeholder for image containers */
+.lazy-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.lazy-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        var(--color-bg-gray) 0%,
+        var(--color-bg-warm) 40%,
+        var(--color-bg-gray) 80%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.5s infinite linear;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-shimmer.shimmer-done::after {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Supplier cards: shimmer before bg loads */
+.supplier-card[data-bg] {
+    background-color: var(--color-bg-gray);
+}
+
+.supplier-card[data-bg]::after {
+    background: linear-gradient(
+        90deg,
+        rgba(200, 200, 200, 0.15) 0%,
+        rgba(200, 200, 200, 0.3) 40%,
+        rgba(200, 200, 200, 0.15) 80%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
+/* Bento items shimmer */
+.bento-item .bento-item__img[data-src] {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.bento-item .bento-item__img.lazy-loaded {
+    opacity: 1 !important;
+}
+
+/* Timeline image shimmer */
+.timeline__photo {
+    overflow: hidden;
+    background: var(--color-white);
+}
+
+.timeline__photo img[data-src] {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.timeline__photo img.lazy-loaded {
+    opacity: 1 !important;
+}
+
+/* Partner card image shimmer */
+.partner-card {
+    position: relative;
+}
+
+.partner-card img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.partner-card img.lazy-loaded {
+    opacity: 1 !important;
+}
+
+/* Brand card image shimmer */
+.brand-card__media {
+    position: relative;
+}
+
+.brand-card__media img[data-src] {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.brand-card__media img.lazy-loaded {
+    opacity: 1 !important;
+}
+
+/* Modal gallery lazy load */
+.modal-gallery img[data-src],
+.modal-gallery-container img[data-src] {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modal-gallery img.lazy-loaded,
+.modal-gallery-container img.lazy-loaded {
+    opacity: 1 !important;
+}
