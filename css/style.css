@@ -232,6 +232,11 @@ textarea {
     transition: all var(--transition);
 }
 
+.header .container {
+    max-width: 100%;
+    padding: 0 100px;
+}
+
 .header.scrolled {
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(12px);
@@ -452,9 +457,9 @@ textarea {
 .hero--cinematic .hero__content {
     position: relative;
     z-index: 2;
-    padding: 160px 24px 120px;
-    max-width: 840px;
-    margin: 0;
+    padding: 160px 100px 120px;
+    width: 100%;
+    max-width: 100%;
     text-align: left;
 }
 
@@ -2609,6 +2614,9 @@ textarea {
     /* Mobile header/nav */
     .header {
         padding: 12px 0;
+    }
+    .header .container {
+        padding: 0 16px;
     }
     .header__inner {
         padding-top: 0;
