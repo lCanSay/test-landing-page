@@ -32,6 +32,7 @@ Thumbs.db
 *.njsproj
 *.sln
 *.swp
+*.json
 
 # Log files
 *.log
