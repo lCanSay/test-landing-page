@@ -798,14 +798,14 @@ textarea {
 
 .feature-card__title {
     font-family: var(--font-heading);
-    font-size: 16px;
+    font-size: clamp(16px, 1.3vw, 20px);
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 8px;
 }
 
 .feature-card__text {
-    font-size: 14px;
+    font-size: clamp(14px, 1.15vw, 17px);
     color: var(--color-text-light);
     line-height: 1.6;
 }
@@ -856,7 +856,7 @@ textarea {
 
 .timeline__year {
     font-family: var(--font-heading);
-    font-size: 36px;
+    font-size: clamp(34px, 2.8vw, 42px);
     font-weight: 800;
     color: var(--color-accent);
     margin-bottom: 8px;
@@ -935,14 +935,14 @@ textarea {
 
 .timeline__content h3 {
     font-family: var(--font-heading);
-    font-size: 18px;
+    font-size: clamp(18px, 1.5vw, 22px);
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 6px;
 }
 
 .timeline__content p {
-    font-size: 14px;
+    font-size: clamp(14px, 1.15vw, 17px);
     color: var(--color-text-light);
     line-height: 1.6;
 }
@@ -1109,14 +1109,14 @@ textarea {
 
 .mission-card h3 {
     font-family: var(--font-heading);
-    font-size: 18px;
+    font-size: clamp(18px, 1.5vw, 22px);
     font-weight: 700;
     color: var(--color-white);
     margin-bottom: 10px;
 }
 
 .mission-card p {
-    font-size: 14px;
+    font-size: clamp(14px, 1.15vw, 17px);
     color: rgba(255, 255, 255, 0.65);
     line-height: 1.65;
 }
@@ -1170,7 +1170,7 @@ textarea {
 
 .stat-card__number {
     font-family: var(--font-heading);
-    font-size: 42px;
+    font-size: clamp(28px, 2.5vw, 40px);
     font-weight: 800;
     color: var(--color-accent);
     line-height: 1;
@@ -1181,7 +1181,7 @@ textarea {
 
 .stat-card__suffix {
     font-family: var(--font-heading);
-    font-size: 24px;
+    font-size: clamp(17px, 1.4vw, 24px);
     font-weight: 700;
     color: var(--color-accent);
     line-height: 1;
@@ -1189,7 +1189,7 @@ textarea {
 
 .stat-card__label {
     display: block;
-    font-size: 13px;
+    font-size: clamp(13px, 1.0vw, 16px);
     color: var(--color-text-light);
     margin-top: 8px;
 }
@@ -1227,7 +1227,7 @@ textarea {
 
 .why-card__number {
     font-family: var(--font-heading);
-    font-size: 48px;
+    font-size: clamp(42px, 3.5vw, 56px);
     font-weight: 800;
     color: var(--color-accent);
     margin-bottom: 16px;
@@ -1236,14 +1236,14 @@ textarea {
 
 .why-card__title {
     font-family: var(--font-heading);
-    font-size: 18px;
+    font-size: clamp(18px, 1.5vw, 22px);
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 .why-card__text {
-    font-size: 14px;
+    font-size: clamp(14px, 1.15vw, 17px);
     color: var(--color-text-light);
     line-height: 1.65;
 }
@@ -1370,7 +1370,7 @@ textarea {
 
 .brand-card__title {
     font-family: var(--font-heading);
-    font-size: 22px;
+    font-size: clamp(20px, 1.8vw, 26px);
     font-weight: 800;
     color: var(--color-primary);
     letter-spacing: 0.5px;
@@ -1378,7 +1378,7 @@ textarea {
 }
 
 .brand-card__short {
-    font-size: 14px;
+    font-size: clamp(14px, 1.15vw, 17px);
     color: var(--color-text-light);
     line-height: 1.6;
     margin-bottom: 16px;
@@ -1916,7 +1916,7 @@ textarea {
 }
 
 .partner-form__desc {
-    font-size: 17px;
+    font-size: clamp(17px, 1.4vw, 20px);
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 32px;
     line-height: 1.7;
@@ -1933,7 +1933,7 @@ textarea {
     align-items: center;
     gap: 12px;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 15px;
+    font-size: clamp(15px, 1.2vw, 18px);
 }
 
 .partner-form__benefits li svg {
@@ -2139,7 +2139,7 @@ textarea {
 
 .vacancy-card__title {
     font-family: var(--font-heading);
-    font-size: 18px;
+    font-size: clamp(18px, 1.5vw, 22px);
     font-weight: 700;
     color: var(--color-primary);
 }
@@ -2173,7 +2173,7 @@ textarea {
 
 .vacancy-card__section h4 {
     font-family: var(--font-heading);
-    font-size: 14px;
+    font-size: clamp(14px, 1.15vw, 17px);
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 10px;
@@ -2183,7 +2183,7 @@ textarea {
     position: relative;
     padding-left: 18px;
     margin-bottom: 6px;
-    font-size: 14px;
+    font-size: clamp(14px, 1.15vw, 17px);
     color: var(--color-text-light);
 }
 
