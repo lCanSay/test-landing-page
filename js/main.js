@@ -187,13 +187,13 @@ function initVideoAutoplay() {
     }
 }
 
-/* ---------- Generate Background Particles ---------- */
+/* ---------- Generate Background Geo-Shapes (12 fixed, optimised) ---------- */
 function initParticles() {
-    // Generate particles only once
-    if (document.querySelector('.particles-container')) return;
+    // Generate shapes only once
+    if (document.querySelector('.geo-container')) return;
 
     const container = document.createElement('div');
-    container.className = 'particles-container';
+    container.className = 'geo-container';
 
     // Ensure the container spans the entire scrollable height of the page
     const updateHeight = () => {
@@ -213,55 +213,75 @@ function initParticles() {
 
     document.body.appendChild(container);
 
-    const numParticles = 40; // Balanced count for visual excellence and mobile performance
-    for (let i = 0; i < numParticles; i++) {
+    // 22 fixed shapes — solid triangles & squares only.
+    // Two-element structure is intentional:
+    //   wrapper → JS sets translateY for scroll parallax
+    //   inner   → CSS animation drives its own transform (drift/rotate)
+    // Shapes 13+ reuse anim 1–12 with different durations to avoid visual synchronisation.
+    const shapes = [
+        // ── Block 1: Avoid Hero (0-12%), start at 14% ────────────────────────
+        { type: 'square',   size: 160, top: '14%', left: '12%', speed: 0.08, anim:  1, dur: 32 },
+        { type: 'triangle', size: 190, top: '16%', left: '28%', speed: 0.15, anim:  2, dur: 28 },
+        { type: 'square',   size: 140, top: '18%', left: '85%', speed: 0.11, anim:  5, dur: 41 },
+        { type: 'triangle', size: 180, top: '21%', left: '72%', speed: 0.19, anim:  3, dur: 37 },
+        { type: 'square',   size: 200, top: '24%', left: '22%', speed: 0.20, anim:  4, dur: 35 },
+        // ── Block 2: Avoid Mission (25-33%), start at 34% ─────────────────────
+        { type: 'triangle', size: 150, top: '35%', left: '88%', speed: 0.10, anim:  6, dur: 45 },
+        { type: 'triangle', size: 170, top: '38%', left: '68%', speed: 0.23, anim:  8, dur: 31 },
+        { type: 'square',   size: 190, top: '40%', left: '15%', speed: 0.16, anim:  7, dur: 44 },
+        { type: 'square',   size: 210, top: '44%', left: '32%', speed: 0.13, anim:  9, dur: 29 },
+        { type: 'triangle', size: 200, top: '46%', left:  '8%', speed: 0.25, anim: 11, dur: 38 },
+        { type: 'triangle', size: 150, top: '49%', left: '75%', speed: 0.09, anim:  2, dur: 48 },
+        { type: 'square',   size: 180, top: '53%', left: '92%', speed: 0.08, anim: 10, dur: 42 },
+        { type: 'triangle', size: 170, top: '56%', left: '25%', speed: 0.17, anim:  1, dur: 36 },
+        { type: 'square',   size: 190, top: '58%', left: '18%', speed: 0.21, anim:  4, dur: 27 },
+        { type: 'triangle', size: 180, top: '62%', left: '82%', speed: 0.12, anim:  6, dur: 43 },
+        { type: 'square',   size: 150, top: '65%', left: '65%', speed: 0.14, anim:  3, dur: 33 },
+        { type: 'triangle', size: 160, top: '68%', left: '10%', speed: 0.18, anim:  9, dur: 39 },
+        { type: 'square',   size: 210, top: '72%', left: '80%', speed: 0.10, anim:  7, dur: 46 },
+        { type: 'triangle', size: 180, top: '75%', left: '90%', speed: 0.15, anim: 12, dur: 30 },
+        { type: 'square',   size: 170, top: '78%', left: '28%', speed: 0.22, anim:  5, dur: 40 },
+        // ── Block 3: Avoid Partners Form (80-89%), start at 91% ──────────────
+        { type: 'triangle', size: 150, top: '92%', left: '18%', speed: 0.08, anim: 11, dur: 35 },
+        { type: 'square',   size: 180, top: '97%', left: '78%', speed: 0.20, anim:  8, dur: 28 },
+    ];
+
+    shapes.forEach((s, i) => {
+        // Wrapper: positioned absolutely, receives JS parallax translateY
         const wrapper = document.createElement('div');
-        wrapper.className = 'particle-wrapper';
-        wrapper.style.left = Math.random() * 95 + 'vw';
-        wrapper.style.top = (Math.random() * 95) + '%';
-        wrapper.dataset.speed = 0.08 + Math.random() * 0.22; // Slightly reduced speed for smoother parallax
+        wrapper.className = 'geo-wrapper';
+        wrapper.dataset.speed = s.speed;
+        wrapper.dataset.index = i;   // used by CSS mobile media query
+        wrapper.style.top  = s.top;
+        wrapper.style.left = s.left;
 
-        const p = document.createElement('div');
+        // Inner: the visible shape, driven by CSS keyframe animation only
+        const inner = document.createElement('div');
+        inner.className = `geo-shape geo-shape--${s.type}`;
+        inner.style.width  = s.size + 'px';
+        inner.style.height = s.size + 'px';
+        inner.style.animation = `geo-drift-${s.anim} ${s.dur}s infinite alternate ease-in-out`;
 
-        // Random shapes: circle, square, triangle
-        const rand = Math.random();
-        if (rand < 0.33) {
-            p.className = 'particle particle--circle';
-        } else if (rand < 0.66) {
-            p.className = 'particle particle--square';
-        } else {
-            p.className = 'particle particle--triangle';
-        }
-
-        const size = 15 + Math.random() * 25;
-        p.style.width = size + 'px';
-        p.style.height = size + 'px';
-
-        // Random tilt and animation duration
-        const baseRot = Math.random() * 360;
-        p.style.setProperty('--rot-start', baseRot + 'deg');
-        p.style.setProperty('--rot-end', (baseRot + (Math.random() > 0.5 ? 90 : -90)) + 'deg');
-
-        const duration = 20 + Math.random() * 20; // 20s to 40s (slower drifts are more battery-friendly)
-        p.style.animation = `drift ${duration}s infinite alternate ease-in-out`;
-
-        wrapper.appendChild(p);
+        wrapper.appendChild(inner);
         container.appendChild(wrapper);
-    }
+    });
 }
 
-/* ---------- Parallax effect for Hero & Background Particles ---------- */
+/* ---------- Parallax effect for Hero & Background Geo-Shapes ---------- */
 function initParallax() {
     const heroContent = document.querySelector('.hero__content');
-    let particleWrappers = [];
+    let geoWrappers = [];
     let isTicking = false;
 
-    // Cache elements and data attributes once to prevent layout thrashing on scroll
+    // Cache wrapper elements once to avoid repeated DOM queries on scroll
     const initCache = () => {
-        const elements = document.querySelectorAll('.particles-container .particle-wrapper');
-        particleWrappers = Array.from(elements).map(el => ({
+        const elements = document.querySelectorAll('.geo-container .geo-wrapper');
+        geoWrappers = Array.from(elements).map(el => ({
             el: el,
-            speed: parseFloat(el.dataset.speed || 0.15)
+            speed: parseFloat(el.dataset.speed || 0.15),
+            // baseY is the absolute position of the shape relative to the top of the document.
+            // By capturing this, we can calculate parallax relative to when the shape is actually on screen.
+            baseY: el.offsetTop 
         }));
     };
 
@@ -275,13 +295,21 @@ function initParallax() {
             heroContent.style.opacity = 1 - (scroll / window.innerHeight) * 1.5;
         }
 
-        // Particles Parallax
-        if (particleWrappers.length === 0) {
+        // Geo-Shapes Parallax — JS only sets translateY on the wrapper.
+        // The inner .geo-shape element handles its own CSS animation independently.
+        if (geoWrappers.length === 0) {
             initCache();
         }
 
-        particleWrappers.forEach(p => {
-            p.el.style.transform = `translateY(${scroll * -p.speed}px) translateZ(0)`;
+        const centerOffset = window.innerHeight / 2;
+
+        geoWrappers.forEach(w => {
+            // Recalculate based on how far the scroll is from the shape's base position.
+            // When the shape is in the middle of the screen (scroll + centerOffset == w.baseY),
+            // relativeScroll is 0, so the shape is exactly at its authored CSS position.
+            // This prevents shapes from "drifting" completely out of their sections on long pages.
+            const relativeScroll = scroll + centerOffset - w.baseY;
+            w.el.style.transform = `translateY(${relativeScroll * -w.speed}px) translateZ(0)`;
         });
 
         isTicking = false;
@@ -294,10 +322,11 @@ function initParallax() {
         }
     }, { passive: true });
 
-    // Run once on load to position particles correctly
+    // Run once on load to position shapes correctly
     initCache();
     update();
 }
+
 
 /* ---------- Header scroll effect ---------- */
 function initHeader() {
