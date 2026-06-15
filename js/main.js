@@ -187,13 +187,13 @@ function initVideoAutoplay() {
     }
 }
 
-/* ---------- Generate Background Particles ---------- */
+/* ---------- Generate Background Geo-Shapes (12 fixed, optimised) ---------- */
 function initParticles() {
-    // Generate particles only once
-    if (document.querySelector('.particles-container')) return;
+    // Generate shapes only once
+    if (document.querySelector('.geo-container')) return;
 
     const container = document.createElement('div');
-    container.className = 'particles-container';
+    container.className = 'geo-container';
 
     // Ensure the container spans the entire scrollable height of the page
     const updateHeight = () => {
@@ -213,53 +213,95 @@ function initParticles() {
 
     document.body.appendChild(container);
 
-    const numParticles = 40; // Balanced count for visual excellence and mobile performance
-    for (let i = 0; i < numParticles; i++) {
+    // 22 fixed shapes — triangles & squares only (solid + outlined).
+    // Two-element structure is intentional:
+    //   wrapper → JS sets translateY for scroll parallax
+    //   inner   → CSS animation drives its own transform (drift/rotate)
+    // Outlined triangles use inline SVG (the only reliable way to stroke a triangle in pure CSS).
+    // Shapes 13+ reuse anim 1–12 with different durations to avoid visual synchronisation.
+    const shapes = [
+        // ── top zone (0–20%) ──────────────────────────────────────────────────
+        { type: 'square',           size: 240, top:  '1%', left:  '5%', speed: 0.08, anim:  1, dur: 32 },
+        { type: 'triangle-outline', size: 280, top:  '4%', left: '73%', speed: 0.15, anim:  2, dur: 28 },
+        { type: 'square-outline',   size: 200, top:  '8%', left: '38%', speed: 0.11, anim:  5, dur: 41 },
+        { type: 'triangle',         size: 260, top: '13%', left: '88%', speed: 0.19, anim:  3, dur: 37 },
+        { type: 'square-outline',   size: 290, top: '18%', left: '13%', speed: 0.20, anim:  4, dur: 35 },
+        // ── upper-mid zone (20–40%) ───────────────────────────────────────────
+        { type: 'triangle',         size: 220, top: '24%', left: '60%', speed: 0.10, anim:  6, dur: 45 },
+        { type: 'triangle-outline', size: 250, top: '30%', left:  '2%', speed: 0.23, anim:  8, dur: 31 },
+        { type: 'square',           size: 270, top: '36%', left: '45%', speed: 0.16, anim:  7, dur: 44 },
+        // ── mid zone (40–60%) ─────────────────────────────────────────────────
+        { type: 'square-outline',   size: 310, top: '42%', left: '79%', speed: 0.13, anim:  9, dur: 29 },
+        { type: 'triangle-outline', size: 300, top: '46%', left:  '3%', speed: 0.25, anim: 11, dur: 38 },
+        { type: 'triangle',         size: 230, top: '52%', left: '56%', speed: 0.09, anim:  2, dur: 48 },
+        { type: 'square-outline',   size: 270, top: '57%', left: '25%', speed: 0.08, anim: 10, dur: 42 },
+        // ── lower-mid zone (60–80%) ───────────────────────────────────────────
+        { type: 'triangle',         size: 250, top: '62%', left: '84%', speed: 0.17, anim:  1, dur: 36 },
+        { type: 'square',           size: 280, top: '67%', left: '40%', speed: 0.21, anim:  4, dur: 27 },
+        { type: 'triangle-outline', size: 260, top: '72%', left:  '8%', speed: 0.12, anim:  6, dur: 43 },
+        { type: 'square-outline',   size: 220, top: '77%', left: '65%', speed: 0.14, anim:  3, dur: 33 },
+        // ── bottom zone (80–100%) ─────────────────────────────────────────────
+        { type: 'triangle',         size: 240, top: '82%', left: '20%', speed: 0.18, anim:  9, dur: 39 },
+        { type: 'square',           size: 300, top: '85%', left: '70%', speed: 0.10, anim:  7, dur: 46 },
+        { type: 'triangle-outline', size: 270, top: '89%', left: '48%', speed: 0.15, anim: 12, dur: 30 },
+        { type: 'square-outline',   size: 250, top: '92%', left:  '2%', speed: 0.22, anim:  5, dur: 40 },
+        { type: 'triangle',         size: 220, top: '95%', left: '87%', speed: 0.08, anim: 11, dur: 35 },
+        { type: 'square',           size: 260, top: '98%', left: '33%', speed: 0.20, anim:  8, dur: 28 },
+    ];
+
+    const svgNS = 'http://www.w3.org/2000/svg';
+
+    shapes.forEach((s, i) => {
+        // Wrapper: positioned absolutely, receives JS parallax translateY
         const wrapper = document.createElement('div');
-        wrapper.className = 'particle-wrapper';
-        wrapper.style.left = Math.random() * 95 + 'vw';
-        wrapper.style.top = (Math.random() * 95) + '%';
-        wrapper.dataset.speed = 0.08 + Math.random() * 0.22; // Slightly reduced speed for smoother parallax
+        wrapper.className = 'geo-wrapper';
+        wrapper.dataset.speed = s.speed;
+        wrapper.dataset.index = i;   // used by CSS mobile media query
+        wrapper.style.top  = s.top;
+        wrapper.style.left = s.left;
 
-        const p = document.createElement('div');
+        let inner;
 
-        // Random shapes: circle, square, triangle
-        const rand = Math.random();
-        if (rand < 0.33) {
-            p.className = 'particle particle--circle';
-        } else if (rand < 0.66) {
-            p.className = 'particle particle--square';
+        if (s.type === 'triangle-outline') {
+            // SVG is the only reliable way to draw a stroked (hollow) triangle
+            inner = document.createElementNS(svgNS, 'svg');
+            inner.setAttribute('viewBox', '0 0 100 87');
+            inner.setAttribute('width',  s.size + 'px');
+            inner.setAttribute('height', Math.round(s.size * 0.87) + 'px');
+            inner.style.display = 'block';
+            inner.style.overflow = 'visible';
+            const poly = document.createElementNS(svgNS, 'polygon');
+            poly.setAttribute('points', '50,4 96,83 4,83');
+            poly.setAttribute('fill', 'none');
+            poly.setAttribute('stroke', 'rgba(227,6,19,0.13)');
+            poly.setAttribute('stroke-width', '3');
+            poly.setAttribute('stroke-linejoin', 'round');
+            inner.appendChild(poly);
         } else {
-            p.className = 'particle particle--triangle';
+            // Regular div shape (solid or outlined square / solid triangle)
+            inner = document.createElement('div');
+            inner.className = `geo-shape geo-shape--${s.type}`;
+            inner.style.width  = s.size + 'px';
+            inner.style.height = s.size + 'px';
         }
 
-        const size = 15 + Math.random() * 25;
-        p.style.width = size + 'px';
-        p.style.height = size + 'px';
+        inner.style.animation = `geo-drift-${s.anim} ${s.dur}s infinite alternate ease-in-out`;
 
-        // Random tilt and animation duration
-        const baseRot = Math.random() * 360;
-        p.style.setProperty('--rot-start', baseRot + 'deg');
-        p.style.setProperty('--rot-end', (baseRot + (Math.random() > 0.5 ? 90 : -90)) + 'deg');
-
-        const duration = 20 + Math.random() * 20; // 20s to 40s (slower drifts are more battery-friendly)
-        p.style.animation = `drift ${duration}s infinite alternate ease-in-out`;
-
-        wrapper.appendChild(p);
+        wrapper.appendChild(inner);
         container.appendChild(wrapper);
-    }
+    });
 }
 
-/* ---------- Parallax effect for Hero & Background Particles ---------- */
+/* ---------- Parallax effect for Hero & Background Geo-Shapes ---------- */
 function initParallax() {
     const heroContent = document.querySelector('.hero__content');
-    let particleWrappers = [];
+    let geoWrappers = [];
     let isTicking = false;
 
-    // Cache elements and data attributes once to prevent layout thrashing on scroll
+    // Cache wrapper elements once to avoid repeated DOM queries on scroll
     const initCache = () => {
-        const elements = document.querySelectorAll('.particles-container .particle-wrapper');
-        particleWrappers = Array.from(elements).map(el => ({
+        const elements = document.querySelectorAll('.geo-container .geo-wrapper');
+        geoWrappers = Array.from(elements).map(el => ({
             el: el,
             speed: parseFloat(el.dataset.speed || 0.15)
         }));
@@ -275,13 +317,14 @@ function initParallax() {
             heroContent.style.opacity = 1 - (scroll / window.innerHeight) * 1.5;
         }
 
-        // Particles Parallax
-        if (particleWrappers.length === 0) {
+        // Geo-Shapes Parallax — JS only sets translateY on the wrapper.
+        // The inner .geo-shape element handles its own CSS animation independently.
+        if (geoWrappers.length === 0) {
             initCache();
         }
 
-        particleWrappers.forEach(p => {
-            p.el.style.transform = `translateY(${scroll * -p.speed}px) translateZ(0)`;
+        geoWrappers.forEach(w => {
+            w.el.style.transform = `translateY(${scroll * -w.speed}px) translateZ(0)`;
         });
 
         isTicking = false;
@@ -294,10 +337,11 @@ function initParallax() {
         }
     }, { passive: true });
 
-    // Run once on load to position particles correctly
+    // Run once on load to position shapes correctly
     initCache();
     update();
 }
+
 
 /* ---------- Header scroll effect ---------- */
 function initHeader() {
