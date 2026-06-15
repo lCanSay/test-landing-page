@@ -213,43 +213,38 @@ function initParticles() {
 
     document.body.appendChild(container);
 
-    // 22 fixed shapes — triangles & squares only (solid + outlined).
+    // 22 fixed shapes — solid triangles & squares only.
     // Two-element structure is intentional:
     //   wrapper → JS sets translateY for scroll parallax
     //   inner   → CSS animation drives its own transform (drift/rotate)
-    // Outlined triangles use inline SVG (the only reliable way to stroke a triangle in pure CSS).
     // Shapes 13+ reuse anim 1–12 with different durations to avoid visual synchronisation.
     const shapes = [
-        // ── top zone (0–20%) ──────────────────────────────────────────────────
-        { type: 'square',           size: 240, top:  '1%', left:  '5%', speed: 0.08, anim:  1, dur: 32 },
-        { type: 'triangle-outline', size: 280, top:  '4%', left: '73%', speed: 0.15, anim:  2, dur: 28 },
-        { type: 'square-outline',   size: 200, top:  '8%', left: '38%', speed: 0.11, anim:  5, dur: 41 },
-        { type: 'triangle',         size: 260, top: '13%', left: '88%', speed: 0.19, anim:  3, dur: 37 },
-        { type: 'square-outline',   size: 290, top: '18%', left: '13%', speed: 0.20, anim:  4, dur: 35 },
-        // ── upper-mid zone (20–40%) ───────────────────────────────────────────
-        { type: 'triangle',         size: 220, top: '24%', left: '60%', speed: 0.10, anim:  6, dur: 45 },
-        { type: 'triangle-outline', size: 250, top: '30%', left:  '2%', speed: 0.23, anim:  8, dur: 31 },
-        { type: 'square',           size: 270, top: '36%', left: '45%', speed: 0.16, anim:  7, dur: 44 },
-        // ── mid zone (40–60%) ─────────────────────────────────────────────────
-        { type: 'square-outline',   size: 310, top: '42%', left: '79%', speed: 0.13, anim:  9, dur: 29 },
-        { type: 'triangle-outline', size: 300, top: '46%', left:  '3%', speed: 0.25, anim: 11, dur: 38 },
-        { type: 'triangle',         size: 230, top: '52%', left: '56%', speed: 0.09, anim:  2, dur: 48 },
-        { type: 'square-outline',   size: 270, top: '57%', left: '25%', speed: 0.08, anim: 10, dur: 42 },
-        // ── lower-mid zone (60–80%) ───────────────────────────────────────────
-        { type: 'triangle',         size: 250, top: '62%', left: '84%', speed: 0.17, anim:  1, dur: 36 },
-        { type: 'square',           size: 280, top: '67%', left: '40%', speed: 0.21, anim:  4, dur: 27 },
-        { type: 'triangle-outline', size: 260, top: '72%', left:  '8%', speed: 0.12, anim:  6, dur: 43 },
-        { type: 'square-outline',   size: 220, top: '77%', left: '65%', speed: 0.14, anim:  3, dur: 33 },
-        // ── bottom zone (80–100%) ─────────────────────────────────────────────
-        { type: 'triangle',         size: 240, top: '82%', left: '20%', speed: 0.18, anim:  9, dur: 39 },
-        { type: 'square',           size: 300, top: '85%', left: '70%', speed: 0.10, anim:  7, dur: 46 },
-        { type: 'triangle-outline', size: 270, top: '89%', left: '48%', speed: 0.15, anim: 12, dur: 30 },
-        { type: 'square-outline',   size: 250, top: '92%', left:  '2%', speed: 0.22, anim:  5, dur: 40 },
-        { type: 'triangle',         size: 220, top: '95%', left: '87%', speed: 0.08, anim: 11, dur: 35 },
-        { type: 'square',           size: 260, top: '98%', left: '33%', speed: 0.20, anim:  8, dur: 28 },
+        // ── Block 1: Avoid Hero (0-12%), start at 14% ────────────────────────
+        { type: 'square',   size: 160, top: '14%', left: '12%', speed: 0.08, anim:  1, dur: 32 },
+        { type: 'triangle', size: 190, top: '16%', left: '28%', speed: 0.15, anim:  2, dur: 28 },
+        { type: 'square',   size: 140, top: '18%', left: '85%', speed: 0.11, anim:  5, dur: 41 },
+        { type: 'triangle', size: 180, top: '21%', left: '72%', speed: 0.19, anim:  3, dur: 37 },
+        { type: 'square',   size: 200, top: '24%', left: '22%', speed: 0.20, anim:  4, dur: 35 },
+        // ── Block 2: Avoid Mission (25-33%), start at 34% ─────────────────────
+        { type: 'triangle', size: 150, top: '35%', left: '88%', speed: 0.10, anim:  6, dur: 45 },
+        { type: 'triangle', size: 170, top: '38%', left: '68%', speed: 0.23, anim:  8, dur: 31 },
+        { type: 'square',   size: 190, top: '40%', left: '15%', speed: 0.16, anim:  7, dur: 44 },
+        { type: 'square',   size: 210, top: '44%', left: '32%', speed: 0.13, anim:  9, dur: 29 },
+        { type: 'triangle', size: 200, top: '46%', left:  '8%', speed: 0.25, anim: 11, dur: 38 },
+        { type: 'triangle', size: 150, top: '49%', left: '75%', speed: 0.09, anim:  2, dur: 48 },
+        { type: 'square',   size: 180, top: '53%', left: '92%', speed: 0.08, anim: 10, dur: 42 },
+        { type: 'triangle', size: 170, top: '56%', left: '25%', speed: 0.17, anim:  1, dur: 36 },
+        { type: 'square',   size: 190, top: '58%', left: '18%', speed: 0.21, anim:  4, dur: 27 },
+        { type: 'triangle', size: 180, top: '62%', left: '82%', speed: 0.12, anim:  6, dur: 43 },
+        { type: 'square',   size: 150, top: '65%', left: '65%', speed: 0.14, anim:  3, dur: 33 },
+        { type: 'triangle', size: 160, top: '68%', left: '10%', speed: 0.18, anim:  9, dur: 39 },
+        { type: 'square',   size: 210, top: '72%', left: '80%', speed: 0.10, anim:  7, dur: 46 },
+        { type: 'triangle', size: 180, top: '75%', left: '90%', speed: 0.15, anim: 12, dur: 30 },
+        { type: 'square',   size: 170, top: '78%', left: '28%', speed: 0.22, anim:  5, dur: 40 },
+        // ── Block 3: Avoid Partners Form (80-89%), start at 91% ──────────────
+        { type: 'triangle', size: 150, top: '92%', left: '18%', speed: 0.08, anim: 11, dur: 35 },
+        { type: 'square',   size: 180, top: '97%', left: '78%', speed: 0.20, anim:  8, dur: 28 },
     ];
-
-    const svgNS = 'http://www.w3.org/2000/svg';
 
     shapes.forEach((s, i) => {
         // Wrapper: positioned absolutely, receives JS parallax translateY
@@ -260,31 +255,11 @@ function initParticles() {
         wrapper.style.top  = s.top;
         wrapper.style.left = s.left;
 
-        let inner;
-
-        if (s.type === 'triangle-outline') {
-            // SVG is the only reliable way to draw a stroked (hollow) triangle
-            inner = document.createElementNS(svgNS, 'svg');
-            inner.setAttribute('viewBox', '0 0 100 87');
-            inner.setAttribute('width',  s.size + 'px');
-            inner.setAttribute('height', Math.round(s.size * 0.87) + 'px');
-            inner.style.display = 'block';
-            inner.style.overflow = 'visible';
-            const poly = document.createElementNS(svgNS, 'polygon');
-            poly.setAttribute('points', '50,4 96,83 4,83');
-            poly.setAttribute('fill', 'none');
-            poly.setAttribute('stroke', 'rgba(227,6,19,0.13)');
-            poly.setAttribute('stroke-width', '3');
-            poly.setAttribute('stroke-linejoin', 'round');
-            inner.appendChild(poly);
-        } else {
-            // Regular div shape (solid or outlined square / solid triangle)
-            inner = document.createElement('div');
-            inner.className = `geo-shape geo-shape--${s.type}`;
-            inner.style.width  = s.size + 'px';
-            inner.style.height = s.size + 'px';
-        }
-
+        // Inner: the visible shape, driven by CSS keyframe animation only
+        const inner = document.createElement('div');
+        inner.className = `geo-shape geo-shape--${s.type}`;
+        inner.style.width  = s.size + 'px';
+        inner.style.height = s.size + 'px';
         inner.style.animation = `geo-drift-${s.anim} ${s.dur}s infinite alternate ease-in-out`;
 
         wrapper.appendChild(inner);
@@ -303,7 +278,10 @@ function initParallax() {
         const elements = document.querySelectorAll('.geo-container .geo-wrapper');
         geoWrappers = Array.from(elements).map(el => ({
             el: el,
-            speed: parseFloat(el.dataset.speed || 0.15)
+            speed: parseFloat(el.dataset.speed || 0.15),
+            // baseY is the absolute position of the shape relative to the top of the document.
+            // By capturing this, we can calculate parallax relative to when the shape is actually on screen.
+            baseY: el.offsetTop 
         }));
     };
 
@@ -323,8 +301,15 @@ function initParallax() {
             initCache();
         }
 
+        const centerOffset = window.innerHeight / 2;
+
         geoWrappers.forEach(w => {
-            w.el.style.transform = `translateY(${scroll * -w.speed}px) translateZ(0)`;
+            // Recalculate based on how far the scroll is from the shape's base position.
+            // When the shape is in the middle of the screen (scroll + centerOffset == w.baseY),
+            // relativeScroll is 0, so the shape is exactly at its authored CSS position.
+            // This prevents shapes from "drifting" completely out of their sections on long pages.
+            const relativeScroll = scroll + centerOffset - w.baseY;
+            w.el.style.transform = `translateY(${relativeScroll * -w.speed}px) translateZ(0)`;
         });
 
         isTicking = false;

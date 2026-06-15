@@ -3093,106 +3093,98 @@ body {
     pointer-events: none;
 }
 
-/* ---- Shape variants: triangles & squares only ---- */
+/* ---- Shape variants: solid triangles & squares only ---- */
 
 /* Solid square */
 .geo-shape--square {
     border-radius: 8px;
-    background: rgba(0, 0, 0, 0.05);
-}
-/* Outlined square (hollow, border only) */
-.geo-shape--square-outline {
-    border-radius: 8px;
-    background: transparent;
-    border: 5px solid rgba(0, 0, 0, 0.08);
-    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.035);
 }
 /* Solid triangle */
 .geo-shape--triangle {
-    background: rgba(227, 6, 19, 0.07);
+    background: rgba(227, 6, 19, 0.045);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-/* triangle-outline is rendered as inline SVG in JS — no CSS class needed */
 
 /* ---- 12 unique trajectories ---- */
 
 /* 1. Slow horizontal drift + slight rotation */
 @keyframes geo-drift-1 {
-    0%   { transform: translate(0px,   0px)  rotate(0deg);   }
-    50%  { transform: translate(30px, -15px) rotate(12deg);  }
-    100% { transform: translate(-10px, 20px) rotate(-8deg);  }
+    0%   { transform: translate(0px,   0px)  rotate(15deg);  }
+    50%  { transform: translate(30px, -15px) rotate(27deg);  }
+    100% { transform: translate(-10px, 20px) rotate(7deg);   }
 }
 /* 2. Vertical wave */
 @keyframes geo-drift-2 {
-    0%   { transform: translate(0px,   0px)  rotate(0deg);   }
-    33%  { transform: translate(20px, -30px) rotate(15deg);  }
-    66%  { transform: translate(-15px,-20px) rotate(-10deg); }
-    100% { transform: translate(10px,  30px) rotate(5deg);   }
+    0%   { transform: translate(0px,   0px)  rotate(-25deg); }
+    33%  { transform: translate(20px, -30px) rotate(-10deg); }
+    66%  { transform: translate(-15px,-20px) rotate(-35deg); }
+    100% { transform: translate(10px,  30px) rotate(-20deg); }
 }
 /* 3. Diagonal figure-8 */
 @keyframes geo-drift-3 {
-    0%   { transform: translate(0px,  0px)  rotate(0deg);   }
-    25%  { transform: translate(25px,-25px) rotate(20deg);  }
-    50%  { transform: translate(0px, -50px) rotate(0deg);   }
-    75%  { transform: translate(-25px,-25px)rotate(-20deg); }
-    100% { transform: translate(0px,  0px)  rotate(0deg);   }
+    0%   { transform: translate(0px,  0px)  rotate(30deg);  }
+    25%  { transform: translate(25px,-25px) rotate(50deg);  }
+    50%  { transform: translate(0px, -50px) rotate(30deg);  }
+    75%  { transform: translate(-25px,-25px)rotate(10deg);  }
+    100% { transform: translate(0px,  0px)  rotate(30deg);  }
 }
 /* 4. Gentle pulse drift */
 @keyframes geo-drift-4 {
-    0%   { transform: translate(0px,  0px)  rotate(0deg);   }
-    50%  { transform: translate(-20px,-35px)rotate(-15deg); }
-    100% { transform: translate(15px,  20px)rotate(10deg);  }
+    0%   { transform: translate(0px,  0px)  rotate(-40deg); }
+    50%  { transform: translate(-20px,-35px)rotate(-55deg); }
+    100% { transform: translate(15px,  20px)rotate(-30deg); }
 }
 /* 5. Wide slow arc */
 @keyframes geo-drift-5 {
-    0%   { transform: translate(0px,  0px)  rotate(0deg);   }
-    50%  { transform: translate(35px, -20px)rotate(25deg);  }
-    100% { transform: translate(-5px,  30px)rotate(-5deg);  }
+    0%   { transform: translate(0px,  0px)  rotate(45deg);  }
+    50%  { transform: translate(35px, -20px)rotate(70deg);  }
+    100% { transform: translate(-5px,  30px)rotate(40deg);  }
 }
 /* 6. Counter-rotate drift */
 @keyframes geo-drift-6 {
-    0%   { transform: translate(0px,  0px)  rotate(0deg);   }
-    50%  { transform: translate(-30px,-20px)rotate(-30deg); }
-    100% { transform: translate(20px,  10px)rotate(-60deg); }
+    0%   { transform: translate(0px,  0px)  rotate(20deg);  }
+    50%  { transform: translate(-30px,-20px)rotate(-10deg); }
+    100% { transform: translate(20px,  10px)rotate(-40deg); }
 }
 /* 7. Calm lateral oscillation */
 @keyframes geo-drift-7 {
-    0%   { transform: translate(0px,  0px)  rotate(0deg);   }
-    50%  { transform: translate(40px,  0px) rotate(10deg);  }
-    100% { transform: translate(-10px,-15px)rotate(-5deg);  }
+    0%   { transform: translate(0px,  0px)  rotate(-15deg); }
+    50%  { transform: translate(40px,  0px) rotate(-5deg);  }
+    100% { transform: translate(-10px,-15px)rotate(-20deg); }
 }
 /* 8. Small tight loops */
 @keyframes geo-drift-8 {
-    0%   { transform: translate(0px,  0px) rotate(0deg);    }
-    25%  { transform: translate(15px,-15px)rotate(18deg);   }
-    50%  { transform: translate(0px, -30px)rotate(0deg);    }
-    75%  { transform: translate(-15px,-15px)rotate(-18deg); }
-    100% { transform: translate(0px,  0px) rotate(0deg);    }
+    0%   { transform: translate(0px,  0px) rotate(35deg);   }
+    25%  { transform: translate(15px,-15px)rotate(53deg);   }
+    50%  { transform: translate(0px, -30px)rotate(35deg);   }
+    75%  { transform: translate(-15px,-15px)rotate(17deg);  }
+    100% { transform: translate(0px,  0px) rotate(35deg);   }
 }
 /* 9. Slow diagonal float */
 @keyframes geo-drift-9 {
-    0%   { transform: translate(0px,  0px)  rotate(0deg);   }
-    50%  { transform: translate(-25px,-40px)rotate(-20deg); }
-    100% { transform: translate(10px,  25px)rotate(8deg);   }
+    0%   { transform: translate(0px,  0px)  rotate(-30deg); }
+    50%  { transform: translate(-25px,-40px)rotate(-50deg); }
+    100% { transform: translate(10px,  25px)rotate(-22deg); }
 }
 /* 10. Pendulum swing */
 @keyframes geo-drift-10 {
-    0%   { transform: translate(0px,  0px)  rotate(-15deg); }
-    50%  { transform: translate(30px, -10px)rotate(15deg);  }
-    100% { transform: translate(-5px,  15px)rotate(-15deg); }
+    0%   { transform: translate(0px,  0px)  rotate(25deg);  }
+    50%  { transform: translate(30px, -10px)rotate(55deg);  }
+    100% { transform: translate(-5px,  15px)rotate(25deg);  }
 }
 /* 11. Subtle breathe */
 @keyframes geo-drift-11 {
-    0%   { transform: translate(0px,  0px) rotate(0deg);    }
-    50%  { transform: translate(20px,-20px) rotate(30deg);  }
-    100% { transform: translate(-10px, 10px)rotate(0deg);   }
+    0%   { transform: translate(0px,  0px) rotate(-45deg);  }
+    50%  { transform: translate(20px,-20px) rotate(-15deg); }
+    100% { transform: translate(-10px, 10px)rotate(-45deg); }
 }
 /* 12. Slow spiral drift */
 @keyframes geo-drift-12 {
-    0%   { transform: translate(0px,  0px)  rotate(0deg);   }
-    33%  { transform: translate(20px, -15px)rotate(12deg);  }
-    66%  { transform: translate(-15px,-30px)rotate(-8deg);  }
-    100% { transform: translate(5px,   15px)rotate(4deg);   }
+    0%   { transform: translate(0px,  0px)  rotate(60deg);  }
+    33%  { transform: translate(20px, -15px)rotate(72deg);  }
+    66%  { transform: translate(-15px,-30px)rotate(52deg);  }
+    100% { transform: translate(5px,   15px)rotate(64deg);  }
 }
 
 /* ---- Mobile: hide every other wrapper (11 of 22) ---- */
