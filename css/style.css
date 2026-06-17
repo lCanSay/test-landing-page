@@ -3835,3 +3835,206 @@ img.lazy-loaded {
 .modal-gallery-container img.lazy-loaded {
     opacity: 1 !important;
 }
+
+/* ===================================================
+   CEO MESSAGE
+   =================================================== */
+.ceo-message {
+    padding: var(--section-padding);
+    background-color: var(--color-bg-warm);
+    position: relative;
+    overflow: hidden;
+}
+
+.ceo-message__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: 60px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    .ceo-message__inner {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        gap: 40px;
+    }
+}
+
+.ceo-message__content {
+    position: relative;
+}
+
+.ceo-message__quote-icon {
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    opacity: 0.1;
+    color: var(--color-accent);
+}
+
+.ceo-message__quote-icon svg {
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 768px) {
+    .ceo-message__quote-icon {
+        top: -20px;
+        left: -10px;
+    }
+    .ceo-message__quote-icon svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.ceo-message__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.ceo-message__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.ceo-message__lead {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.6;
+}
+
+.ceo-message__highlight {
+    padding: 24px;
+    background-color: var(--color-accent-light);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-style: italic;
+    margin: 8px 0;
+}
+
+.ceo-message__thanks {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 16px;
+}
+
+.ceo-message__signature {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+    display: inline-block;
+}
+
+.ceo-message__name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ceo-message__company {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.ceo-message__media {
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+}
+
+@media (max-width: 992px) {
+    .ceo-message__media {
+        min-height: 400px;
+        order: -1;
+    }
+}
+
+.ceo-message__photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+}
+
+.ceo-message__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ceo-message__badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .ceo-message__badge {
+        bottom: -15px;
+        right: 15px;
+        padding: 16px;
+    }
+}
+
+.ceo-message__badge-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ceo-message__badge-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.ceo-message__badge span {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.4;
+}
