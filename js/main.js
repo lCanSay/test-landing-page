@@ -1108,3 +1108,26 @@ function removePreloader() {
 window.addEventListener('load', removePreloader);
 // Fallback in case load takes too long (e.g. 3.5s max)
 setTimeout(removePreloader, 3500);
+
+/* ---------- CEO Message Toggle ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('ceoMessageToggle');
+    const moreText = document.getElementById('ceoMessageMore');
+    
+    if (toggleBtn && moreText) {
+        toggleBtn.addEventListener('click', () => {
+            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+            if (isExpanded) {
+                moreText.classList.remove('active');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                toggleBtn.querySelector('.ceo-message__toggle-text').textContent = 'Читать далее';
+                toggleBtn.querySelector('i').style.transform = 'rotate(0deg)';
+            } else {
+                moreText.classList.add('active');
+                toggleBtn.setAttribute('aria-expanded', 'true');
+                toggleBtn.querySelector('.ceo-message__toggle-text').textContent = 'Свернуть';
+                toggleBtn.querySelector('i').style.transform = 'rotate(180deg)';
+            }
+        });
+    }
+});

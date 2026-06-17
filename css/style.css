@@ -3847,10 +3847,7 @@ img.lazy-loaded {
 }
 
 .ceo-message__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    display: block;
     background: var(--color-white);
     border-radius: var(--radius-xl);
     padding: 60px;
@@ -3860,9 +3857,13 @@ img.lazy-loaded {
 
 @media (max-width: 992px) {
     .ceo-message__inner {
-        grid-template-columns: 1fr;
         padding: 40px 30px;
-        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ceo-message__inner {
+        padding: 30px 20px;
     }
 }
 
@@ -3905,14 +3906,16 @@ img.lazy-loaded {
 }
 
 .ceo-message__text {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--color-text-light);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--color-text);
+    display: block;
     position: relative;
     z-index: 1;
+}
+
+.ceo-message__text p {
+    margin-bottom: 20px;
 }
 
 .ceo-message__lead {
@@ -3930,7 +3933,7 @@ img.lazy-loaded {
     font-weight: 600;
     color: var(--color-primary);
     font-style: italic;
-    margin: 8px 0;
+    margin: 8px 0 20px 0;
 }
 
 .ceo-message__thanks {
@@ -3963,35 +3966,52 @@ img.lazy-loaded {
 }
 
 .ceo-message__media {
-    position: relative;
-    height: 100%;
-    min-height: 500px;
+    float: right;
+    width: 45%;
+    margin-left: 60px;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 992px) {
     .ceo-message__media {
-        min-height: 400px;
-        order: -1;
+        float: none;
+        max-width: 280px;
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .ceo-message__media {
+        max-width: 220px;
+        margin-bottom: 24px;
+    }
+    .ceo-message__title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .ceo-message__lead {
+        font-size: 1rem;
+    }
+    .ceo-message__text {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 }
 
 .ceo-message__photo-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
     border-radius: var(--radius-lg);
 }
 
 .ceo-message__photo {
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
     object-position: center top;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .ceo-message__badge {
