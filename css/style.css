@@ -1010,11 +1010,14 @@ textarea {
 }
 
 .mission__blockquote p {
-    font-size: 26px;
-    line-height: 1.4;
-    font-weight: 500;
+    font-size: clamp(16px, 1.5vw + 0.5rem, 20px);
+    line-height: 1.5;
+    font-weight: 400;
     color: var(--color-white);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+}
+.mission__blockquote p:last-child {
+    margin-bottom: 0;
 }
 
 .mission__quote-author {
@@ -1023,6 +1026,7 @@ textarea {
     gap: 16px;
     position: relative;
     z-index: 1;
+    margin-top: 32px;
 }
 
 .mission__quote-author::before {
@@ -1054,7 +1058,7 @@ textarea {
 
 @media (max-width: 768px) {
     .mission__blockquote p {
-        font-size: 20px;
+        font-size: 16px;
     }
     
     .mission__quote {
