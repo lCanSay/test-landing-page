@@ -974,6 +974,15 @@ textarea {
     color: var(--color-white);
 }
 
+.mission .section-tag {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
 .mission__top {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -1010,11 +1019,14 @@ textarea {
 }
 
 .mission__blockquote p {
-    font-size: 26px;
-    line-height: 1.4;
-    font-weight: 500;
+    font-size: clamp(16px, 1.5vw + 0.5rem, 20px);
+    line-height: 1.5;
+    font-weight: 400;
     color: var(--color-white);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+}
+.mission__blockquote p:last-child {
+    margin-bottom: 0;
 }
 
 .mission__quote-author {
@@ -1023,6 +1035,7 @@ textarea {
     gap: 16px;
     position: relative;
     z-index: 1;
+    margin-top: 32px;
 }
 
 .mission__quote-author::before {
@@ -1054,7 +1067,7 @@ textarea {
 
 @media (max-width: 768px) {
     .mission__blockquote p {
-        font-size: 20px;
+        font-size: 16px;
     }
     
     .mission__quote {
@@ -3830,4 +3843,228 @@ img.lazy-loaded {
 .modal-gallery img.lazy-loaded,
 .modal-gallery-container img.lazy-loaded {
     opacity: 1 !important;
+}
+
+/* ===================================================
+   CEO MESSAGE
+   =================================================== */
+.ceo-message {
+    padding: var(--section-padding);
+    background-color: var(--color-bg-warm);
+    position: relative;
+    overflow: hidden;
+}
+
+.ceo-message__inner {
+    display: block;
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: 60px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    .ceo-message__inner {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ceo-message__inner {
+        padding: 30px 20px;
+    }
+}
+
+.ceo-message__content {
+    position: relative;
+}
+
+.ceo-message__quote-icon {
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    opacity: 0.1;
+    color: var(--color-accent);
+}
+
+.ceo-message__quote-icon svg {
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 768px) {
+    .ceo-message__quote-icon {
+        top: -20px;
+        left: -10px;
+    }
+    .ceo-message__quote-icon svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.ceo-message__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.ceo-message__text {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--color-text);
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.ceo-message__text p {
+    margin-bottom: 20px;
+}
+
+.ceo-message__lead {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.6;
+}
+
+.ceo-message__highlight {
+    padding: 24px;
+    background-color: var(--color-accent-light);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-style: italic;
+    margin: 8px 0 20px 0;
+}
+
+.ceo-message__thanks {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 16px;
+}
+
+.ceo-message__signature {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+    display: inline-block;
+}
+
+.ceo-message__name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ceo-message__company {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.ceo-message__media {
+    float: right;
+    width: 45%;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .ceo-message__media {
+        float: none;
+        max-width: 280px;
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .ceo-message__media {
+        max-width: 220px;
+        margin-bottom: 24px;
+    }
+    .ceo-message__title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .ceo-message__lead {
+        font-size: 1rem;
+    }
+    .ceo-message__text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+.ceo-message__photo-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-lg);
+}
+
+.ceo-message__photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.ceo-message__badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .ceo-message__badge {
+        bottom: -15px;
+        right: 15px;
+        padding: 16px;
+    }
+}
+
+.ceo-message__badge-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ceo-message__badge-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.ceo-message__badge span {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.4;
 }
