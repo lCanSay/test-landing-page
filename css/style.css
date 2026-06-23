@@ -974,6 +974,15 @@ textarea {
     color: var(--color-white);
 }
 
+.mission .section-tag {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
 .mission__top {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
