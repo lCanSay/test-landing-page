@@ -15,14 +15,14 @@ function lockScroll() {
 function unlockScroll() {
     const originalScrollBehavior = document.documentElement.style.scrollBehavior;
     document.documentElement.style.scrollBehavior = 'auto';
-    
+
     document.body.style.removeProperty('overflow');
     document.body.style.removeProperty('position');
     document.body.style.removeProperty('top');
     document.body.style.removeProperty('width');
-    
+
     window.scrollTo(0, scrollPosition);
-    
+
     // Wait for the next tick to re-enable smooth scrolling
     setTimeout(() => {
         document.documentElement.style.scrollBehavior = originalScrollBehavior;
@@ -213,37 +213,37 @@ function initParticles() {
 
     document.body.appendChild(container);
 
-    // 22 fixed shapes — solid triangles & squares only.
+    // 22 fixed shapes - solid triangles & squares only.
     // Two-element structure is intentional:
     //   wrapper → JS sets translateY for scroll parallax
     //   inner   → CSS animation drives its own transform (drift/rotate)
     // Shapes 13+ reuse anim 1–12 with different durations to avoid visual synchronisation.
     const shapes = [
         // ── Block 1: Avoid Hero (0-12%), start at 14% ────────────────────────
-        { type: 'square',   size: 160, top: '14%', left: '12%', speed: 0.08, anim:  1, dur: 32 },
-        { type: 'triangle', size: 190, top: '16%', left: '28%', speed: 0.15, anim:  2, dur: 28 },
-        { type: 'square',   size: 140, top: '18%', left: '85%', speed: 0.11, anim:  5, dur: 41 },
-        { type: 'triangle', size: 180, top: '21%', left: '72%', speed: 0.19, anim:  3, dur: 37 },
-        { type: 'square',   size: 200, top: '24%', left: '22%', speed: 0.20, anim:  4, dur: 35 },
+        { type: 'square', size: 160, top: '14%', left: '12%', speed: 0.08, anim: 1, dur: 32 },
+        { type: 'triangle', size: 190, top: '16%', left: '28%', speed: 0.15, anim: 2, dur: 28 },
+        { type: 'square', size: 140, top: '18%', left: '85%', speed: 0.11, anim: 5, dur: 41 },
+        { type: 'triangle', size: 180, top: '21%', left: '72%', speed: 0.19, anim: 3, dur: 37 },
+        { type: 'square', size: 200, top: '24%', left: '22%', speed: 0.20, anim: 4, dur: 35 },
         // ── Block 2: Avoid Mission (25-33%), start at 34% ─────────────────────
-        { type: 'triangle', size: 150, top: '35%', left: '88%', speed: 0.10, anim:  6, dur: 45 },
-        { type: 'triangle', size: 170, top: '38%', left: '68%', speed: 0.23, anim:  8, dur: 31 },
-        { type: 'square',   size: 190, top: '40%', left: '15%', speed: 0.16, anim:  7, dur: 44 },
-        { type: 'square',   size: 210, top: '44%', left: '32%', speed: 0.13, anim:  9, dur: 29 },
-        { type: 'triangle', size: 200, top: '46%', left:  '8%', speed: 0.25, anim: 11, dur: 38 },
-        { type: 'triangle', size: 150, top: '49%', left: '75%', speed: 0.09, anim:  2, dur: 48 },
-        { type: 'square',   size: 180, top: '53%', left: '92%', speed: 0.08, anim: 10, dur: 42 },
-        { type: 'triangle', size: 170, top: '56%', left: '25%', speed: 0.17, anim:  1, dur: 36 },
-        { type: 'square',   size: 190, top: '58%', left: '18%', speed: 0.21, anim:  4, dur: 27 },
-        { type: 'triangle', size: 180, top: '62%', left: '82%', speed: 0.12, anim:  6, dur: 43 },
-        { type: 'square',   size: 150, top: '65%', left: '65%', speed: 0.14, anim:  3, dur: 33 },
-        { type: 'triangle', size: 160, top: '68%', left: '10%', speed: 0.18, anim:  9, dur: 39 },
-        { type: 'square',   size: 210, top: '72%', left: '80%', speed: 0.10, anim:  7, dur: 46 },
+        { type: 'triangle', size: 150, top: '35%', left: '88%', speed: 0.10, anim: 6, dur: 45 },
+        { type: 'triangle', size: 170, top: '38%', left: '68%', speed: 0.23, anim: 8, dur: 31 },
+        { type: 'square', size: 190, top: '40%', left: '15%', speed: 0.16, anim: 7, dur: 44 },
+        { type: 'square', size: 210, top: '44%', left: '32%', speed: 0.13, anim: 9, dur: 29 },
+        { type: 'triangle', size: 200, top: '46%', left: '8%', speed: 0.25, anim: 11, dur: 38 },
+        { type: 'triangle', size: 150, top: '49%', left: '75%', speed: 0.09, anim: 2, dur: 48 },
+        { type: 'square', size: 180, top: '53%', left: '92%', speed: 0.08, anim: 10, dur: 42 },
+        { type: 'triangle', size: 170, top: '56%', left: '25%', speed: 0.17, anim: 1, dur: 36 },
+        { type: 'square', size: 190, top: '58%', left: '18%', speed: 0.21, anim: 4, dur: 27 },
+        { type: 'triangle', size: 180, top: '62%', left: '82%', speed: 0.12, anim: 6, dur: 43 },
+        { type: 'square', size: 150, top: '65%', left: '65%', speed: 0.14, anim: 3, dur: 33 },
+        { type: 'triangle', size: 160, top: '68%', left: '10%', speed: 0.18, anim: 9, dur: 39 },
+        { type: 'square', size: 210, top: '72%', left: '80%', speed: 0.10, anim: 7, dur: 46 },
         { type: 'triangle', size: 180, top: '75%', left: '90%', speed: 0.15, anim: 12, dur: 30 },
-        { type: 'square',   size: 170, top: '78%', left: '28%', speed: 0.22, anim:  5, dur: 40 },
+        { type: 'square', size: 170, top: '78%', left: '28%', speed: 0.22, anim: 5, dur: 40 },
         // ── Block 3: Avoid Partners Form (80-89%), start at 91% ──────────────
         { type: 'triangle', size: 150, top: '92%', left: '18%', speed: 0.08, anim: 11, dur: 35 },
-        { type: 'square',   size: 180, top: '97%', left: '78%', speed: 0.20, anim:  8, dur: 28 },
+        { type: 'square', size: 180, top: '97%', left: '78%', speed: 0.20, anim: 8, dur: 28 },
     ];
 
     shapes.forEach((s, i) => {
@@ -252,13 +252,13 @@ function initParticles() {
         wrapper.className = 'geo-wrapper';
         wrapper.dataset.speed = s.speed;
         wrapper.dataset.index = i;   // used by CSS mobile media query
-        wrapper.style.top  = s.top;
+        wrapper.style.top = s.top;
         wrapper.style.left = s.left;
 
         // Inner: the visible shape, driven by CSS keyframe animation only
         const inner = document.createElement('div');
         inner.className = `geo-shape geo-shape--${s.type}`;
-        inner.style.width  = s.size + 'px';
+        inner.style.width = s.size + 'px';
         inner.style.height = s.size + 'px';
         inner.style.animation = `geo-drift-${s.anim} ${s.dur}s infinite alternate ease-in-out`;
 
@@ -281,7 +281,7 @@ function initParallax() {
             speed: parseFloat(el.dataset.speed || 0.15),
             // baseY is the absolute position of the shape relative to the top of the document.
             // By capturing this, we can calculate parallax relative to when the shape is actually on screen.
-            baseY: el.offsetTop 
+            baseY: el.offsetTop
         }));
     };
 
@@ -295,7 +295,7 @@ function initParallax() {
             heroContent.style.opacity = 1 - (scroll / window.innerHeight) * 1.5;
         }
 
-        // Geo-Shapes Parallax — JS only sets translateY on the wrapper.
+        // Geo-Shapes Parallax - JS only sets translateY on the wrapper.
         // The inner .geo-shape element handles its own CSS animation independently.
         if (geoWrappers.length === 0) {
             initCache();
@@ -348,7 +348,7 @@ function initHeader() {
             ticking = true;
         }
     }, { passive: true });
-    
+
     updateHeader();
 }
 
@@ -535,24 +535,22 @@ const brandData = {
         name: '2080',
         category: currentLang === 'en' ? 'Oral Hygiene' : 'Гигиена полости рта',
         description: currentLang === 'en'
-            ? 'AEKYUNG experts have spent 25 years developing unique toothpaste formulas aimed at solving various oral care problems.'
-            : 'Эксперты компании AEKYUNG на протяжении 25 лет разрабатывают уникальные формулы зубных паст, направленные на решение различных проблем полости рта.',
+            ? 'Leading Korean oral care brand. AEKYUNG experts have spent 25 years developing unique toothpaste formulas aimed at solving various oral care problems.'
+            : 'Ведущий корейский бренд по уходу за полостью рта. Эксперты компании AEKYUNG на протяжении 25 лет разрабатывают уникальные формулы зубных паст, направленные на решение различных проблем полости рта.',
         series: currentLang === 'en'
             ? [
-                '<strong>TOTAL</strong> - core series for daily care',
-                '<strong>PRO</strong> - preventive series',
-                '<strong>DR.CLINIC</strong> - therapeutic and preventive series',
-                'Reduces the risk of tartar formation by 4 times',
-                'Reduces tooth sensitivity by 96% in 2 weeks',
-                'Whitens enamel by 88% in 8 weeks'
+                '<strong>TOTAL</strong> - core series for comprehensive daily care of teeth and gums',
+                '<strong>PRO</strong> - professional series for intensive prevention of caries and tartar',
+                '<strong>Efficiency:</strong> reduces the risk of tartar formation by 4 times',
+                '<strong>Protection:</strong> reduces tooth sensitivity by 96% in just 2 weeks',
+                '<strong>Whitening:</strong> safely whitens enamel by 88% in 8 weeks of regular use'
             ]
             : [
-                '<strong>TOTAL</strong> - базовая серия для ежедневного ухода',
-                '<strong>PRO</strong> - профилактическая серия',
-                '<strong>DR.CLINIC</strong> - лечебно-профилактическая серия',
-                'Снижает риск образования зубного камня в 4 раза',
-                'Снижает чувствительность зубов на 96% за 2 недели',
-                'Осветляет эмаль на 88% за 8 недель'
+                '<strong>TOTAL</strong> - базовая серия для ежедневного комплексного ухода за зубами и деснами',
+                '<strong>PRO</strong> - профессиональная серия для интенсивной профилактики кариеса и зубного камня',
+                '<strong>Эффективность:</strong> снижает риск образования зубного камня в 4 раза',
+                '<strong>Защита:</strong> снижает чувствительность зубов на 96% всего за 2 недели',
+                '<strong>Отбеливание:</strong> безопасно осветляет эмаль на 88% за 8 недель регулярного использования'
             ],
         images: [
             'assets/products/2080-1.webp',
@@ -564,18 +562,18 @@ const brandData = {
         name: 'SHOWERMATE',
         category: currentLang === 'en' ? 'Body Care' : 'Уход за телом',
         description: currentLang === 'en'
-            ? 'SHOWERMATE shower gels with natural ingredients provide gentle skin care. Each series is designed for specific skin needs.'
-            : 'Гели для душа SHOWERMATE с натуральными компонентами оказывают мягкий уход за кожей. Каждая серия создана для особых потребностей кожи.',
+            ? 'Premium SHOWERMATE shower gels are based on natural plant extracts. The core NATURAL series not only gently cleanses the skin but also provides deep hydration.'
+            : 'Премиальные гели для душа SHOWERMATE созданы на основе растительных экстрактов. Базовая линейка NATURAL не только бережно очищает кожу, но и обеспечивает ежедневное увлажнение и питание.',
         series: currentLang === 'en'
             ? [
-                '<strong>NATURAL</strong> - natural extract series for daily care',
-                '<strong>BOTANIC</strong> - herbal and floral series for sensitive skin',
-                '<strong>FLOWER PERFUME</strong> - perfumed series with floral extracts'
+                '<strong>Natural Extracts:</strong> olive and green tea for intense nourishment',
+                '<strong>Gentle Care:</strong> perfect for daily skin hydration',
+                '<strong>Aromatherapy:</strong> leaves a delicate and long-lasting scent on the body'
             ]
             : [
-                '<strong>NATURAL</strong> - серия с натуральными экстрактами для ежедневного ухода',
-                '<strong>BOTANIC</strong> - серия с травами и цветами для чувствительной кожи',
-                '<strong>FLOWER PERFUME</strong> - парфюмированная серия с цветочными экстрактами'
+                '<strong>Натуральные компоненты:</strong> экстракты оливы и зеленого чая для интенсивного питания',
+                '<strong>Бережный уход:</strong> идеальный выбор для ежедневного очищения',
+                '<strong>Ароматерапия:</strong> оставляет на коже легкий и приятный ароматный шлейф'
             ],
         images: [
             'assets/products/showermate1.webp',
@@ -587,24 +585,20 @@ const brandData = {
         name: 'FARMSTAY',
         category: currentLang === 'en' ? 'Cosmetics' : 'Косметика',
         description: currentLang === 'en'
-            ? 'FarmStay products are for those who value natural skincare and makeup. A step-by-step skincare system following Korean methods.'
-            : 'Продукция FarmStay создана для тех, кому важна натуральная уходовая и декоративная косметика. Поэтапная система ухода за кожей по корейской технологии.',
+            ? 'A popular Korean cosmetics brand focusing on natural ingredients: snail mucin, collagen, hyaluronic acid, and aloe. It offers a complete step-by-step skincare system.'
+            : 'Популярный бренд корейской косметики, делающий ставку на природные компоненты: муцин улитки, коллаген, гиалуроновую кислоту и алоэ. Предлагает полноценную поэтапную систему ухода за кожей.',
         series: currentLang === 'en'
             ? [
-                'Cleansing foams and peelings',
-                'Sheet and hydrogel masks',
-                'Eye patches',
-                'Toners and emulsions',
-                'Moisturizing and nourishing creams',
-                'Serums and ampoules'
+                '<strong>Cleansing:</strong> gentle washing foams and effective peelings',
+                '<strong>Special care:</strong> hydrogel eye patches and restoring serums',
+                '<strong>Masks:</strong> a wide range of sheet and hydrogel masks for express care',
+                '<strong>Basic care:</strong> moisturizing toners, nourishing emulsions, and creams for all skin types'
             ]
             : [
-                'Пенки для умывания и пилинги',
-                'Тканевые и гидрогелевые маски',
-                'Патчи для области вокруг глаз',
-                'Тонеры и эмульсии',
-                'Увлажняющие и питательные кремы',
-                'Сыворотки и ампулы'
+                '<strong>Очищение:</strong> нежные пенки для умывания и эффективные пилинги',
+                '<strong>Спецуход:</strong> гидрогелевые патчи для глаз и восстанавливающие сыворотки',
+                '<strong>Маски:</strong> широкий ассортимент тканевых и гидрогелевых масок для экспресс-ухода',
+                '<strong>Базовый уход:</strong> увлажняющие тонеры, питательные эмульсии и кремы для всех типов кожи'
             ],
         images: [
             'assets/products/farmstay1.webp',
@@ -616,18 +610,22 @@ const brandData = {
         name: 'SECRETDAY',
         category: currentLang === 'en' ? 'Feminine Hygiene' : 'Женская гигиена',
         description: currentLang === 'en'
-            ? 'SECRETDAY sanitary pads are developed with women\'s health and comfort in mind. The products meet the highest safety standards.'
-            : 'Гигиенические прокладки SECRETDAY разработаны с заботой о здоровье и комфорте женщин. Продукция соответствует высочайшим стандартам безопасности.',
+            ? 'SECRETDAY is the #1 brand for feminine hygiene products in Korea. All products undergo strict dermatological control (Dermatest certified) and guarantee absolute safety and comfort.'
+            : 'SECRETDAY - бренд №1 по производству средств женской гигиены в Корее. Вся продукция проходит строгий дерматологический контроль (сертификация Dermatest) и гарантирует абсолютную безопасность и комфорт.',
         series: currentLang === 'en'
             ? [
-                '<strong>LOVE</strong> - soft surface for maximum comfort',
-                '<strong>COTTON</strong> - 100% natural cotton',
-                '<strong>FRESH</strong> - organic vegan line'
+                '<strong>LOVE Line</strong> - classic series with an incredibly soft surface',
+                '<strong>COTTON Line</strong> - hypoallergenic pads made from 100% natural cotton',
+                '<strong>Reliability:</strong> innovative absorbent layer for maximum confidence throughout the day',
+                '<strong>Safety:</strong> strict dermatological control (Dermatest), free of fragrances and dyes',
+                '<strong>Comfort:</strong> anatomical fit and breathable materials that prevent skin irritation'
             ]
             : [
-                '<strong>LOVE</strong> - нежная поверхность для максимального комфорта',
-                '<strong>COTTON</strong> - 100% натуральный хлопок',
-                '<strong>FRESH</strong> - органическая веганская линейка'
+                '<strong>Линейка LOVE</strong> - классическая серия с невероятно мягкой поверхностью',
+                '<strong>Линейка COTTON</strong> - гипоаллергенные прокладки из 100% натурального хлопка',
+                '<strong>Надежность:</strong> инновационный впитывающий слой для максимальной уверенности в течение дня',
+                '<strong>Безопасность:</strong> строгий дерматологический контроль (Dermatest), без отдушек и красителей',
+                '<strong>Комфорт:</strong> анатомическая форма и дышащие материалы, не вызывающие раздражения'
             ],
         images: [
             'assets/products/secretday1.webp',
@@ -639,20 +637,20 @@ const brandData = {
         name: 'PERFECT',
         category: currentLang === 'en' ? 'Household Chemicals' : 'Бытовая химия',
         description: currentLang === 'en'
-            ? 'PERFECT concentrated laundry powder effectively removes all types of stains. Only 50 grams per wash is needed – 1 kg lasts for a month of daily use.'
-            : 'Концентрированный стиральный порошок PERFECT эффективно удаляет все виды загрязнений. Достаточно всего 50 граммов на стирку - 1 кг хватает на месяц ежедневного использования.',
+            ? 'Highly effective and safe household chemicals for flawless cleanliness. PERFECT powders feature economical consumption and no harmful phosphates, caring for your family\'s health and the environment.'
+            : 'Высокоэффективная и безопасная бытовая химия для безупречной чистоты. Порошки PERFECT отличаются экономичным расходом и отсутствием вредных фосфатов, заботясь о здоровье семьи и окружающей среде.',
         series: currentLang === 'en'
             ? [
-                'Eliminates 99.9% of bacteria from fabric fibers',
-                'Phosphate-free – completely safe',
-                'Hypoallergenic composition',
-                'Economical use – 50 g per wash'
+                '<strong>Super concentrate:</strong> only 50 grams needed per wash - 1 kg replaces up to 3 kg of regular powder',
+                '<strong>Antibacterial effect:</strong> eliminates 99.9% of bacteria and dust mites from fabric fibers',
+                '<strong>Safety:</strong> hypoallergenic, completely phosphate-free formula, suitable for frequent washes',
+                '<strong>Color protection:</strong> preserves fabric brightness and prevents deformation'
             ]
             : [
-                'Устраняет 99,9% бактерий из волокон ткани',
-                'Не содержит фосфатов - абсолютно безопасен',
-                'Гипоаллергенный состав',
-                'Экономичный расход - 50 г на стирку'
+                '<strong>Суперконцентрат:</strong> для стирки требуется всего 50 граммов средства - 1 кг заменяет до 3 кг обычного порошка',
+                '<strong>Антибактериальный эффект:</strong> устраняет 99,9% бактерий и пылевых клещей из волокон ткани',
+                '<strong>Безопасность:</strong> гипоаллергенный состав полностью без фосфатов, подходит для частых стирок',
+                '<strong>Защита цвета:</strong> сохраняет яркость тканей и предотвращает их деформацию'
             ],
         images: [
             'assets/products/perfect1.webp',
@@ -660,49 +658,24 @@ const brandData = {
             'assets/products/perfect3.webp'
         ]
     },
-    wool: {
-        name: 'WOOL SHAMPOO',
-        category: currentLang === 'en' ? 'Household Chemicals' : 'Бытовая химия',
-        description: currentLang === 'en'
-            ? 'WOOL SHAMPOO is an innovative product for the gentle washing of delicate fabrics, officially certified by WoolMark.'
-            : 'WOOL SHAMPOO - инновационное средство для бережной стирки деликатных тканей с официальной сертификацией WoolMark.',
-        series: currentLang === 'en'
-            ? [
-                'Certified by WoolMark in Korea',
-                'Hypoallergenic cleaning ingredients',
-                'Recommended for washing baby clothes',
-                'Gentle care for wool, silk, and delicate fabrics'
-            ]
-            : [
-                'Сертифицировано WoolMark в Корее',
-                'Гипоаллергенные чистящие компоненты',
-                'Рекомендуется для стирки детского белья',
-                'Бережный уход за шерстью, шёлком и деликатными тканями'
-            ],
-        images: [
-            'assets/products/wool1.webp',
-            'assets/products/wool2.webp',
-            'assets/products/wool3.webp'
-        ]
-    },
     trio: {
         name: 'TRIO',
         category: currentLang === 'en' ? 'Household Chemicals' : 'Бытовая химия',
         description: currentLang === 'en'
-            ? 'TRIO is a universal detergent for washing dishes, fruits, and vegetables. It tackles even hardened grease while being gentle on the hands.'
-            : 'TRIO - универсальное средство для мытья посуды, фруктов и овощей. Справляется даже с застывшим жиром, при этом бережно воздействует на кожу рук.',
+            ? 'Eco-friendly and safe detergents for washing dishes, vegetables, and fruits. The TRIO formula easily handles hardened grease even in cold water while remaining absolutely safe for your hands.'
+            : 'Экологичные и безопасные средства для мытья посуды, овощей и фруктов. Формула TRIO легко справляется даже с застывшим жиром в холодной воде, оставаясь абсолютно безопасной для кожи рук.',
         series: currentLang === 'en'
             ? [
-                'Suitable for dishes, fruits, and vegetables',
-                'Kills 99.9% of bacteria and fungi',
-                'Removes unpleasant odors',
-                'Does not cause dryness or skin irritation'
+                '<strong>Versatility:</strong> perfect for washing dishes, fruits, vegetables, and baby accessories',
+                '<strong>Disinfection:</strong> destroys 99.9% of harmful bacteria and fungi, eliminating any unpleasant odors',
+                '<strong>Hand care:</strong> contains moisturizing ingredients, does not cause dryness or skin irritation',
+                '<strong>Eco-friendly:</strong> easily and completely rinses off with water, leaving no chemical film'
             ]
             : [
-                'Подходит для мытья посуды, фруктов и овощей',
-                'Уничтожает 99,9% бактерий и грибков',
-                'Удаляет неприятные запахи',
-                'Не вызывает сухости и раздражения кожи'
+                '<strong>Универсальность:</strong> идеально подходит для мытья посуды, фруктов, овощей и детских принадлежностей',
+                '<strong>Дезинфекция:</strong> уничтожает 99,9% вредных бактерий и грибков, устраняя любые неприятные запахи',
+                '<strong>Забота о руках:</strong> содержит увлажняющие компоненты, не вызывает сухости и раздражения кожи',
+                '<strong>Экологичность:</strong> легко и полностью смывается водой, не оставляя химической пленки'
             ],
         images: [
             'assets/products/trio1.webp',
@@ -714,20 +687,20 @@ const brandData = {
         name: 'MUKUNGHWA',
         category: currentLang === 'en' ? 'Household Chemicals' : 'Бытовая химия',
         description: currentLang === 'en'
-            ? 'MUKUNGHWA products embody natural cleanliness and environmental care, with formulas based on plant components.'
-            : 'Продукция MUKUNGHWA - воплощение натуральной чистоты и заботы о природе. Составы на основе растительных компонентов.',
+            ? 'MUKUNGHWA represents the traditions of Korean quality since 1947. The brand specializes in producing eco-friendly household chemicals and cosmetics created exclusively from natural plant extracts.'
+            : 'MUKUNGHWA - это традиции корейского качества с 1947 года. Бренд специализируется на производстве экологически чистой бытовой химии и косметики, созданной исключительно на базе натуральных растительных экстрактов.',
         series: currentLang === 'en'
             ? [
-                '<strong>O\'CLEAN</strong> - products based on soapberry fruit',
-                '<strong>VIU</strong> - antibacterial super-concentrated fabric softener',
-                'Natural plant-based soap',
-                'Eco-friendly cleaning products'
+                '<strong>O\'CLEAN</strong> - line of safe cleaning products based on natural soapberry fruits',
+                '<strong>VIU</strong> - antibacterial super-concentrated fabric softeners with exquisite fragrances',
+                '<strong>Soap:</strong> a wide range of natural plant-based laundry and toilet soaps',
+                '<strong>Eco-friendly:</strong> all products are environmentally friendly and biodegradable'
             ]
             : [
-                '<strong>O\'CLEAN</strong> - средства на основе плодов мыльного дерева',
-                '<strong>VIU</strong> - антибактериальный суперконцентрированный ополаскиватель',
-                'Натуральное мыло на растительной основе',
-                'Экологичные чистящие средства'
+                '<strong>O\'CLEAN</strong> - линейка безопасных чистящих средств на основе натуральных плодов мыльного дерева',
+                '<strong>VIU</strong> - антибактериальные суперконцентрированные ополаскиватели для белья с изысканными ароматами',
+                '<strong>Мыло:</strong> широкий ассортимент натурального хозяйственного и туалетного мыла на растительной основе',
+                '<strong>Экологичность:</strong> вся продукция безопасна для окружающей среды и биоразлагаема'
             ],
         images: [
             'assets/products/muku-viu1.webp',
@@ -1113,7 +1086,7 @@ setTimeout(removePreloader, 3500);
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('ceoMessageToggle');
     const moreText = document.getElementById('ceoMessageMore');
-    
+
     if (toggleBtn && moreText) {
         toggleBtn.addEventListener('click', () => {
             const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
