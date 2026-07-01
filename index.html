@@ -1,1094 +1,897 @@
 <!DOCTYPE html>
+
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOREANA - Официальный дистрибьютор корейской косметики и бытовой химии в Казахстане</title>
-    <meta name="description"
-        content="KOREANA - прямой импортёр и дистрибьютор корейской уходовой косметики, гигиены и бытовой химии. 450+ SKU, 16 городов, доставка за 24 часа.">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Lucide Icons -->
-    <script src="js/lucide.min.js" defer></script>
-
-    <link rel="icon" type="image/png" href="assets/img/favicon.webp">
-    <link rel="preload" as="image" href="assets/img/hero-poster.webp" fetchpriority="high">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Vercel Analytics -->
-    <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KOREANA - Официальный дистрибьютор корейской косметики и бытовой химии в Казахстане</title>
+<meta content="KOREANA - прямой импортёр и дистрибьютор корейской уходовой косметики, гигиены и бытовой химии. 450+ SKU, 16 городов, доставка за 24 часа." name="description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons -->
+<script defer="" src="js/lucide.min.js"></script>
+<link href="assets/img/favicon.webp" rel="icon" type="image/png"/>
+<link as="image" fetchpriority="high" href="assets/img/hero-poster.webp" rel="preload"/>
+<link href="css/style.css" rel="stylesheet"/>
+<!-- Vercel Analytics -->
+<script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <!-- Vercel Speed Insights -->
-    <script defer src="/_vercel/speed-insights/script.js"></script>
+<script defer="" src="/_vercel/insights/script.js"></script>
+<!-- Vercel Speed Insights -->
+<script defer="" src="/_vercel/speed-insights/script.js"></script>
 </head>
-
 <body>
-
-    <!-- ============ PRELOADER ============ -->
-    <div id="preloader" class="preloader">
-        <div class="preloader__spinner"></div>
-    </div>
-
-
-    <!-- ============ DYNAMIC BACKGROUND ============ -->
-    <div class="dynamic-bg"></div>
-
-    <!-- ============ HEADER ============ -->
-    <header class="header" id="header">
-        <div class="container header__inner">
-            <a href="#" class="logo">
-                <img src="assets/img/logo.webp" alt="KOREANA" class="logo__img" width="208" height="129">
-            </a>
-
-            <nav class="nav" id="nav">
-                <a href="#hero" class="nav__link">Главная</a>
-                <a href="#about" class="nav__link">О нас</a>
-                <a href="#brands" class="nav__link">Бренды</a>
-                <a href="#partners" class="nav__link">Партнёры</a>
-                <a href="#vacancies" class="nav__link">Вакансии</a>
-                <a href="#client-form" class="nav__link">Контакты</a>
-            </nav>
-
-            <div class="header__actions">
-                <div class="lang-switch">
-                    <a href="index.html" class="lang-switch__btn active" style="text-decoration: none;">RU</a>
-                    <span class="lang-switch__btn" style="cursor: not-allowed; opacity: 0.5;"
-                        title="В разработке / Under development">KZ</span>
-                    <a href="index-en.html" class="lang-switch__btn" style="text-decoration: none;">EN</a>
-                </div>
-                <a href="#client-form" class="btn btn--primary btn--sm header__cta">Стать клиентом</a>
-            </div>
-
-            <button class="burger" id="burger" aria-expanded="false" aria-label="Открыть меню">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- ============ HERO - v3 Cinematic ============ -->
-    <section class="hero hero--cinematic" id="hero">
-
-        <!-- Seoul city time-lapse at night - free stock from Mixkit (ID 30126) -->
-        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.webp">
-            <source src="assets/video/hero-bg.mp4" type="video/mp4">
-        </video>
-
-        <div class="hero__overlay"></div>
-
-        <div class="container hero__content">
-            <p class="hero__eyebrow">С 2015 · Алматы · Официальный дистрибьютор</p>
-            <h1 class="hero__headline">KOREANA</h1>
-            <p class="hero__sub">Эксклюзивные бренды из Южной Кореи. Прямой импорт 450+ позиций. 16 городов Казахстана.
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+<div class="preloader__spinner"></div>
+</div>
+<!-- ============ DYNAMIC BACKGROUND ============ -->
+<div class="dynamic-bg"></div>
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+<div class="container header__inner">
+<a class="logo" href="#">
+<img alt="KOREANA" class="logo__img" height="129" src="assets/img/logo.webp" width="208"/>
+</a>
+<nav class="nav" id="nav">
+<a class="nav__link" href="#hero">Главная</a>
+<a class="nav__link" href="#about">О нас</a>
+<a class="nav__link" href="#brands">Бренды</a>
+<a class="nav__link" href="#partners">Партнёры</a>
+<a class="nav__link" href="#vacancies">Вакансии</a>
+<a class="nav__link" href="#client-form">Контакты</a>
+<div class="lang-switch lang-switch--mobile"><a class="lang-switch__btn active" href="index.html" style="text-decoration: none;">RU</a><a class="lang-switch__btn" href="index-kz.html" style="text-decoration: none;">KZ</a><a class="lang-switch__btn" href="index-en.html" style="text-decoration: none;">EN</a></div>
+</nav>
+<div class="header__actions">
+<div class="lang-switch"><a class="lang-switch__btn active" href="index.html" style="text-decoration: none;">RU</a><a class="lang-switch__btn" href="index-kz.html" style="text-decoration: none;">KZ</a><a class="lang-switch__btn" href="index-en.html" style="text-decoration: none;">EN</a></div>
+<a class="btn btn--primary btn--sm header__cta" href="#client-form">Стать клиентом</a>
+</div>
+<button aria-expanded="false" aria-label="Открыть меню" class="burger" id="burger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+<!-- ============ HERO - v3 Cinematic ============ -->
+<section class="hero hero--cinematic" id="hero">
+<!-- Seoul city time-lapse at night - free stock from Mixkit (ID 30126) -->
+<video autoplay="" class="hero__video" loop="" muted="" playsinline="" poster="assets/img/hero-poster.webp" preload="auto">
+<source src="assets/video/hero-bg.mp4" type="video/mp4"/>
+</video>
+<div class="hero__overlay"></div>
+<div class="container hero__content">
+<p class="hero__eyebrow">С 2015 · Алматы · Официальный дистрибьютор</p>
+<h1 class="hero__headline">KOREANA</h1>
+<p class="hero__sub">Эксклюзивные бренды из Южной Кореи. Прямой импорт 450+ позиций. 16 городов Казахстана.
                 Доставка 24 часа.</p>
-            <div class="hero__actions">
-                <a href="#client-form" class="btn btn--primary btn--lg">Стать клиентом</a>
-                <a href="#brands" class="hero__text-link">Смотреть бренды <i data-lucide="arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="hero__scroll">
-            <span>Листайте вниз</span>
-            <i data-lucide="chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- ============ ABOUT ============ -->
-    <section class="about" id="about">
-        <div class="about__bg-text">KOREANA</div>
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">О компании</p>
-                <h2 class="section-title">Надёжный мост между<br>Кореей и Казахстаном</h2>
-            </div>
-
-            <div class="about__grid">
-                <div class="about__text">
-                    <p class="about__lead">С 2015 года компания KOREANA является официальным импортёром и дистрибьютором
+<div class="hero__actions">
+<a class="btn btn--primary btn--lg" href="#client-form">Стать клиентом</a>
+<a class="hero__text-link" href="#brands">Смотреть бренды <i data-lucide="arrow-right"></i></a>
+</div>
+</div>
+<div class="hero__scroll">
+<span>Листайте вниз</span>
+<i data-lucide="chevron-down"></i>
+</div>
+</section>
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+<div class="about__bg-text">KOREANA</div>
+<div class="container">
+<div class="section-header">
+<p class="section-tag">О компании</p>
+<h2 class="section-title">Надёжный мост между<br/>Кореей и Казахстаном</h2>
+</div>
+<div class="about__grid">
+<div class="about__text">
+<p class="about__lead">С 2015 года компания KOREANA является официальным импортёром и дистрибьютором
                         лучших корейских продуктов на территории Республики Казахстан.</p>
-                    <p>Мы представляем широкий ассортимент высококачественных брендов для ухода за волосами, полостью
+<p>Мы представляем широкий ассортимент высококачественных брендов для ухода за волосами, полостью
                         рта, бытовой химии, женской гигиены и косметики от ведущих производителей Южной Кореи: AEKYUNG,
                         MUKUNGHWA, JOONGWON, MYUNGIN COSMETICS.</p>
-                    <p class="hide-on-mobile">С 2025 года ассортимент расширен линейкой бессульфатных шампуней Hair
+<p class="hide-on-mobile">С 2025 года ассортимент расширен линейкой бессульфатных шампуней Hair
                         Clinic, мужской линейкой
                         PRO ACTIVE MAN.</p>
-
-                    <p style="margin-top: 24px;">Мы не просто поставляем продукцию - мы развиваем бренды на рынке
+<p style="margin-top: 24px;">Мы не просто поставляем продукцию - мы развиваем бренды на рынке
                         Казахстана, обеспечивая партнёров маркетинговой поддержкой, стабильными поставками и коммерчески
                         эффективной моделью сотрудничества.</p>
-                    <p>Ассортимент компании постоянно расширяется - мы регулярно выводим новинки и адаптируем портфель
+<p>Ассортимент компании постоянно расширяется - мы регулярно выводим новинки и адаптируем портфель
                         под актуальные тренды рынка.</p>
-                </div>
-                <div class="about__image">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop"
-                        alt="Склад KOREANA"
-                        style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);"
-                        width="1200" height="400">
-                </div>
-            </div>
-
-            <div class="about__features">
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i data-lucide="globe"></i>
-                    </div>
-                    <h3 class="feature-card__title">Прямой импорт</h3>
-                    <p class="feature-card__text">Работаем напрямую с производителями - лучшие цены без посредников</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i data-lucide="warehouse"></i>
-                    </div>
-                    <h3 class="feature-card__title">Собственный склад</h3>
-                    <p class="feature-card__text">Более 3 000 м² складских помещений в Алматы, 95%+ ассортимента всегда
+</div>
+<div class="about__image">
+<img alt="Склад KOREANA" data-src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" height="400" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);" width="1200"/>
+</div>
+</div>
+<div class="about__features">
+<div class="feature-card">
+<div class="feature-card__icon">
+<i data-lucide="globe"></i>
+</div>
+<h3 class="feature-card__title">Прямой импорт</h3>
+<p class="feature-card__text">Работаем напрямую с производителями - лучшие цены без посредников</p>
+</div>
+<div class="feature-card">
+<div class="feature-card__icon">
+<i data-lucide="warehouse"></i>
+</div>
+<h3 class="feature-card__title">Собственный склад</h3>
+<p class="feature-card__text">Более 3 000 м² складских помещений в Алматы, 95%+ ассортимента всегда
                         в наличии</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i data-lucide="truck"></i>
-                    </div>
-                    <h3 class="feature-card__title">Быстрая отгрузка</h3>
-                    <p class="feature-card__text">От оформления заказа до отгрузки - всего 24 часа</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i data-lucide="shield-check"></i>
-                    </div>
-                    <h3 class="feature-card__title">Сертификация</h3>
-                    <p class="feature-card__text">Вся продукция сертифицирована и зарегистрирована на территории РК</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ CEO MESSAGE ============ -->
-    <section class="ceo-message">
-        <div class="container">
-            <div class="ceo-message__inner">
-                <div class="ceo-message__media">
-                    <div class="ceo-message__photo-wrapper">
-                        <img src="assets/img/ceo.webp" alt="Генеральный Директор" class="ceo-message__photo">
-                    </div>
-                </div>
-
-                <div class="ceo-message__content">
-                    <div class="ceo-message__quote-icon">
-                        <i data-lucide="quote"></i>
-                    </div>
-                    <h2 class="ceo-message__title">Обращение Генерального Директора</h2>
-
-                    <div class="ceo-message__text">
-                        <p class="ceo-message__lead">Когда мы создавали KOREANA, нашей целью было не просто построить
+</div>
+<div class="feature-card">
+<div class="feature-card__icon">
+<i data-lucide="truck"></i>
+</div>
+<h3 class="feature-card__title">Быстрая отгрузка</h3>
+<p class="feature-card__text">От оформления заказа до отгрузки - всего 24 часа</p>
+</div>
+<div class="feature-card">
+<div class="feature-card__icon">
+<i data-lucide="shield-check"></i>
+</div>
+<h3 class="feature-card__title">Сертификация</h3>
+<p class="feature-card__text">Вся продукция сертифицирована и зарегистрирована на территории РК</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ CEO MESSAGE ============ -->
+<section class="ceo-message">
+<div class="container">
+<div class="ceo-message__inner">
+<div class="ceo-message__media">
+<div class="ceo-message__photo-wrapper">
+<img alt="Генеральный Директор" class="ceo-message__photo" src="assets/img/ceo.webp"/>
+</div>
+</div>
+<div class="ceo-message__content">
+<div class="ceo-message__quote-icon">
+<i data-lucide="quote"></i>
+</div>
+<h2 class="ceo-message__title">Обращение Генерального Директора</h2>
+<div class="ceo-message__text">
+<p class="ceo-message__lead">Когда мы создавали KOREANA, нашей целью было не просто построить
                             торговую дистрибьюторскую компанию.</p>
-
-                        <p>Мы хотели создать организацию, которая будет знакомить потребителей Казахстана и Центральной
+<p>Мы хотели создать организацию, которая будет знакомить потребителей Казахстана и Центральной
                             Азии с качественными международными брендами, формировать новые стандарты в категориях
                             красоты, ухода за собой, гигиены и бытовой химии, а также быть надежным партнером для
                             производителей, клиентов и сотрудников.</p>
-
-                        <p>Наш путь начался с веры в то, что долгосрочный успех строится на доверии, репутации и
+<p>Наш путь начался с веры в то, что долгосрочный успех строится на доверии, репутации и
                             ежедневной работе над качеством. За годы работы мы выстроили партнерские отношения с
                             ведущими производственными компаниями из Южной Кореи, сформировали профессиональную команду
                             и создали устойчивую платформу для дальнейшего роста бизнеса.</p>
-
-                        <div class="ceo-message__highlight">
+<div class="ceo-message__highlight">
                             Но главным нашим достижением мы считаем не количество брендов или объемы продаж, а доверие
                             людей, которые работают с нами, покупают нашу продукцию и выбирают нас в качестве партнера.
                         </div>
-
-                        <p>Мы убеждены, что бизнес должен создавать ценность для общества. Поэтому каждый день наша
+<p>Мы убеждены, что бизнес должен создавать ценность для общества. Поэтому каждый день наша
                             команда работает над тем, чтобы качественные товары становились доступнее для потребителей,
                             современные международные бренды развивались на локальных рынках, а сотрудники компании
                             получали возможности для профессионального и личного роста.</p>
-
-                        <p>Мы продолжаем развивать компанию, инвестировать в людей, процессы и технологии, чтобы
+<p>Мы продолжаем развивать компанию, инвестировать в людей, процессы и технологии, чтобы
                             создавать устойчивый бизнес, которым будут гордиться наши сотрудники, партнеры и клиенты.
                         </p>
-
-                        <p class="ceo-message__thanks">Спасибо каждому, кто является частью этого пути.</p>
-                    </div>
-
-                    <div class="ceo-message__signature">
-                        <p class="ceo-message__name">Мавандиев Рустам Рахийевич</p>
-                        <p class="ceo-message__company">Генеральный директор<br>ТОО «KOREANA»</p>
-                    </div>
-                </div>
-
-                <div style="clear: both;"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ TIMELINE / HISTORY ============ -->
-    <section class="timeline-section" id="history">
-
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">История</p>
-                <h2 class="section-title">Наш путь с 2015 года</h2>
-                <p class="section-desc">10 лет роста и расширения на казахстанском рынке</p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline__line"></div>
-
-                <div class="timeline__item">
-                    <div class="timeline__dot"></div>
-                    <div class="timeline__photo timeline__photo--logo">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/timeline/2015.webp" alt="Основание компании" width="1000" height="562">
-                    </div>
-                    <div class="timeline__text-wrapper">
-                        <div class="timeline__year">2015</div>
-                        <div class="timeline__content">
-                            <h3>Основание компании</h3>
-                            <p>KOREANA выходит на рынок Казахстана как официальный импортёр AEKYUNG</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline__item">
-                    <div class="timeline__dot"></div>
-                    <div class="timeline__photo timeline__photo--logo">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/timeline/2018.webp" alt="Эксклюзивное партнёрство" width="1000"
-                            height="562">
-                    </div>
-                    <div class="timeline__text-wrapper">
-                        <div class="timeline__year">2018</div>
-                        <div class="timeline__content">
-                            <h3>Эксклюзивное партнёрство</h3>
-                            <p>Подписание эксклюзивного контракта с Mukunghwa Corporation.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline__item">
-                    <div class="timeline__dot"></div>
-                    <div class="timeline__photo">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/timeline/2020.webp" alt="Выход в крупнейший ритейл" width="1000"
-                            height="562">
-                    </div>
-                    <div class="timeline__text-wrapper">
-                        <div class="timeline__year">2020</div>
-                        <div class="timeline__content">
-                            <h3>Выход в крупнейший ритейл</h3>
-                            <p>Начало сотрудничества с Magnum - крупнейшей торговой сетью Казахстана.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline__item">
-                    <div class="timeline__dot"></div>
-                    <div class="timeline__photo">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/timeline/taldykorgan.webp" alt="Региональная экспансия" width="1000"
-                            height="562">
-                    </div>
-                    <div class="timeline__text-wrapper">
-                        <div class="timeline__year">2021</div>
-                        <div class="timeline__content">
-                            <h3>Региональная экспансия</h3>
-                            <p>Открытие первого регионального филиала в Талдыкоргане для оптимизации логистики.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="timeline__item">
-                    <div class="timeline__dot"></div>
-                    <div class="timeline__photo">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/timeline/2022.webp" alt="Новые бренды в портфеле" width="1000" height="562"
-                            style="object-fit: cover;">
-                    </div>
-                    <div class="timeline__text-wrapper">
-                        <div class="timeline__year">2022</div>
-                        <div class="timeline__content">
-                            <h3>Новые бренды в портфеле</h3>
-                            <p>Эксклюзивный контракт с Secretday и расширение ассортиментного портфеля.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline__item timeline__item--current">
-                    <div class="timeline__dot"></div>
-                    <div class="timeline__photo">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/timeline/astana.webp" alt="Выход на столичный уровень" width="1000"
-                            height="562">
-                    </div>
-                    <div class="timeline__text-wrapper">
-                        <div class="timeline__year">2024</div>
-                        <div class="timeline__content">
-                            <h3>Выход на столичный уровень</h3>
-                            <p>Открытие филиала в Астане и выход на общереспубликанский уровень.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ MISSION & VALUES ============ -->
-    <section class="mission" id="mission">
-        <div class="container">
-            <div class="mission__top">
-                <div class="section-header">
-                    <p class="section-tag">Наша миссия</p>
-                    <h2 class="section-title">Принципы нашей работы</h2>
-                </div>
-
-                <figure class="mission__quote">
-                    <i data-lucide="quote" class="mission__quote-mark"></i>
-                    <blockquote class="mission__blockquote">
-                        <p>Мы создаем ценность для людей, развивая на рынках Казахстана и Центральной Азии качественные
+<p class="ceo-message__thanks">Спасибо каждому, кто является частью этого пути.</p>
+</div>
+<div class="ceo-message__signature">
+<p class="ceo-message__name">Мавандиев Рустам Рахийевич</p>
+<p class="ceo-message__company">Генеральный директор<br/>ТОО «KOREANA»</p>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</section>
+<!-- ============ TIMELINE / HISTORY ============ -->
+<section class="timeline-section" id="history">
+<div class="container">
+<div class="section-header">
+<p class="section-tag">История</p>
+<h2 class="section-title">Наш путь с 2015 года</h2>
+<p class="section-desc">10 лет роста и расширения на казахстанском рынке</p>
+</div>
+<div class="timeline">
+<div class="timeline__line"></div>
+<div class="timeline__item">
+<div class="timeline__dot"></div>
+<div class="timeline__photo timeline__photo--logo">
+<img alt="Основание компании" data-src="assets/timeline/2015.webp" height="562" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1000"/>
+</div>
+<div class="timeline__text-wrapper">
+<div class="timeline__year">2015</div>
+<div class="timeline__content">
+<h3>Основание компании</h3>
+<p>KOREANA выходит на рынок Казахстана как официальный импортёр AEKYUNG</p>
+</div>
+</div>
+</div>
+<div class="timeline__item">
+<div class="timeline__dot"></div>
+<div class="timeline__photo timeline__photo--logo">
+<img alt="Эксклюзивное партнёрство" data-src="assets/timeline/2018.webp" height="562" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1000"/>
+</div>
+<div class="timeline__text-wrapper">
+<div class="timeline__year">2018</div>
+<div class="timeline__content">
+<h3>Эксклюзивное партнёрство</h3>
+<p>Подписание эксклюзивного контракта с Mukunghwa Corporation.</p>
+</div>
+</div>
+</div>
+<div class="timeline__item">
+<div class="timeline__dot"></div>
+<div class="timeline__photo">
+<img alt="Выход в крупнейший ритейл" data-src="assets/timeline/2020.webp" height="562" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1000"/>
+</div>
+<div class="timeline__text-wrapper">
+<div class="timeline__year">2020</div>
+<div class="timeline__content">
+<h3>Выход в крупнейший ритейл</h3>
+<p>Начало сотрудничества с Magnum - крупнейшей торговой сетью Казахстана.</p>
+</div>
+</div>
+</div>
+<div class="timeline__item">
+<div class="timeline__dot"></div>
+<div class="timeline__photo">
+<img alt="Региональная экспансия" data-src="assets/timeline/taldykorgan.webp" height="562" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1000"/>
+</div>
+<div class="timeline__text-wrapper">
+<div class="timeline__year">2021</div>
+<div class="timeline__content">
+<h3>Региональная экспансия</h3>
+<p>Открытие первого регионального филиала в Талдыкоргане для оптимизации логистики.</p>
+</div>
+</div>
+</div>
+<div class="timeline__item">
+<div class="timeline__dot"></div>
+<div class="timeline__photo">
+<img alt="Новые бренды в портфеле" data-src="assets/timeline/2022.webp" height="562" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" style="object-fit: cover;" width="1000"/>
+</div>
+<div class="timeline__text-wrapper">
+<div class="timeline__year">2022</div>
+<div class="timeline__content">
+<h3>Новые бренды в портфеле</h3>
+<p>Эксклюзивный контракт с Secretday и расширение ассортиментного портфеля.</p>
+</div>
+</div>
+</div>
+<div class="timeline__item timeline__item--current">
+<div class="timeline__dot"></div>
+<div class="timeline__photo">
+<img alt="Выход на столичный уровень" data-src="assets/timeline/astana.webp" height="562" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1000"/>
+</div>
+<div class="timeline__text-wrapper">
+<div class="timeline__year">2024</div>
+<div class="timeline__content">
+<h3>Выход на столичный уровень</h3>
+<p>Открытие филиала в Астане и выход на общереспубликанский уровень.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ MISSION & VALUES ============ -->
+<section class="mission" id="mission">
+<div class="container">
+<div class="mission__top">
+<div class="section-header">
+<p class="section-tag">Наша миссия</p>
+<h2 class="section-title">Принципы нашей работы</h2>
+</div>
+<figure class="mission__quote">
+<i class="mission__quote-mark" data-lucide="quote"></i>
+<blockquote class="mission__blockquote">
+<p>Мы создаем ценность для людей, развивая на рынках Казахстана и Центральной Азии качественные
                             международные бренды, которые делают повседневную жизнь потребителей комфортнее, безопаснее
                             и лучше.</p>
-                        <p>Мы объединяем производителей, клиентов и потребителей, создавая долгосрочные партнерства,
+<p>Мы объединяем производителей, клиентов и потребителей, создавая долгосрочные партнерства,
                             основанные на доверии, профессионализме и взаимной выгоде.</p>
-                    </blockquote>
-                    <figcaption class="mission__quote-author">
-                        <div class="author-info">
-                            <strong>Команда KOREANA</strong>
-                            <span>Генеральный дистрибьютор</span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </div>
-
-            <div class="mission__grid">
-                <div class="mission-card">
-                    <div class="mission-card__icon"><i data-lucide="shield-check"></i></div>
-                    <h3>Ответственность</h3>
-                    <p>Мы берем ответственность за свои решения, обязательства и результат перед клиентами, партнерами и
+</blockquote>
+<figcaption class="mission__quote-author">
+<div class="author-info">
+<strong>Команда KOREANA</strong>
+<span>Генеральный дистрибьютор</span>
+</div>
+</figcaption>
+</figure>
+</div>
+<div class="mission__grid">
+<div class="mission-card">
+<div class="mission-card__icon"><i data-lucide="shield-check"></i></div>
+<h3>Ответственность</h3>
+<p>Мы берем ответственность за свои решения, обязательства и результат перед клиентами, партнерами и
                         коллегами.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-card__icon"><i data-lucide="handshake"></i></div>
-                    <h3>Партнерство</h3>
-                    <p>Мы строим долгосрочные отношения, основанные на доверии, открытости и взаимном уважении.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-card__icon"><i data-lucide="trending-up"></i></div>
-                    <h3>Развитие</h3>
-                    <p>Мы постоянно ищем возможности стать лучше, эффективнее и сильнее, чем были вчера.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-card__icon"><i data-lucide="target"></i></div>
-                    <h3>Результат</h3>
-                    <p>Мы ценим не процесс ради процесса, а конкретный результат, который приносит пользу компании,
+</div>
+<div class="mission-card">
+<div class="mission-card__icon"><i data-lucide="handshake"></i></div>
+<h3>Партнерство</h3>
+<p>Мы строим долгосрочные отношения, основанные на доверии, открытости и взаимном уважении.</p>
+</div>
+<div class="mission-card">
+<div class="mission-card__icon"><i data-lucide="trending-up"></i></div>
+<h3>Развитие</h3>
+<p>Мы постоянно ищем возможности стать лучше, эффективнее и сильнее, чем были вчера.</p>
+</div>
+<div class="mission-card">
+<div class="mission-card__icon"><i data-lucide="target"></i></div>
+<h3>Результат</h3>
+<p>Мы ценим не процесс ради процесса, а конкретный результат, который приносит пользу компании,
                         клиентам и партнерам.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-card__icon"><i data-lucide="lightbulb"></i></div>
-                    <h3>Инициатива</h3>
-                    <p>Мы поддерживаем людей, которые предлагают решения, берут на себя лидерство и помогают компании
+</div>
+<div class="mission-card">
+<div class="mission-card__icon"><i data-lucide="lightbulb"></i></div>
+<h3>Инициатива</h3>
+<p>Мы поддерживаем людей, которые предлагают решения, берут на себя лидерство и помогают компании
                         двигаться вперед.</p>
-                </div>
-                <div class="mission-card">
-                    <div class="mission-card__icon"><i data-lucide="users"></i></div>
-                    <h3>Командная работа</h3>
-                    <p>Мы убеждены, что сильная команда всегда достигает большего, чем отдельные талантливые люди.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ STATS ============ -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats__grid">
-                <div class="stat-card">
-                    <i data-lucide="map-pin" class="stat-card__icon"></i>
-                    <div class="stat-card__value">
-                        <span class="stat-card__number" data-count="16">0</span>
-                    </div>
-                    <span class="stat-card__label">городов присутствия</span>
-                </div>
-                <div class="stat-card">
-                    <i data-lucide="box" class="stat-card__icon"></i>
-                    <div class="stat-card__value">
-                        <span class="stat-card__number" data-count="450">0</span>
-                        <span class="stat-card__suffix">+</span>
-                    </div>
-                    <span class="stat-card__label">SKU в каталоге</span>
-                </div>
-                <div class="stat-card">
-                    <i data-lucide="users" class="stat-card__icon"></i>
-                    <div class="stat-card__value">
-                        <span class="stat-card__number" data-count="8000">0</span>
-                        <span class="stat-card__suffix">+</span>
-                    </div>
-                    <span class="stat-card__label">клиентов по Казахстану</span>
-                </div>
-                <div class="stat-card">
-                    <i data-lucide="percent" class="stat-card__icon"></i>
-                    <div class="stat-card__value">
-                        <span class="stat-card__number" data-count="95">0</span>
-                        <span class="stat-card__suffix">%</span>
-                    </div>
-                    <span class="stat-card__label">ассортимента в наличии</span>
-                </div>
-                <div class="stat-card">
-                    <i data-lucide="ruler" class="stat-card__icon"></i>
-                    <div class="stat-card__value">
-                        <span class="stat-card__number" data-count="3000">0</span>
-                        <span class="stat-card__suffix">м²</span>
-                    </div>
-                    <span class="stat-card__label">складских помещений</span>
-                </div>
-                <div class="stat-card">
-                    <i data-lucide="clock" class="stat-card__icon"></i>
-                    <div class="stat-card__value">
-                        <span class="stat-card__number" data-count="24">0</span>
-                        <span class="stat-card__suffix">ч</span>
-                    </div>
-                    <span class="stat-card__label">от заказа до отгрузки</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ WHY US ============ -->
-    <section class="why-us" id="why-us">
-
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Преимущества</p>
-                <h2 class="section-title">Почему выбирают KOREANA</h2>
-            </div>
-
-            <div class="why-us__grid">
-                <div class="why-card">
-                    <div class="why-card__number">01</div>
-                    <h3 class="why-card__title">Прямые контракты</h3>
-                    <p class="why-card__text">Эксклюзивные договоры с корейскими производителями обеспечивают лучшие
+</div>
+<div class="mission-card">
+<div class="mission-card__icon"><i data-lucide="users"></i></div>
+<h3>Командная работа</h3>
+<p>Мы убеждены, что сильная команда всегда достигает большего, чем отдельные талантливые люди.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ STATS ============ -->
+<section class="stats">
+<div class="container">
+<div class="stats__grid">
+<div class="stat-card">
+<i class="stat-card__icon" data-lucide="map-pin"></i>
+<div class="stat-card__value">
+<span class="stat-card__number" data-count="16">0</span>
+</div>
+<span class="stat-card__label">городов присутствия</span>
+</div>
+<div class="stat-card">
+<i class="stat-card__icon" data-lucide="box"></i>
+<div class="stat-card__value">
+<span class="stat-card__number" data-count="450">0</span>
+<span class="stat-card__suffix">+</span>
+</div>
+<span class="stat-card__label">SKU в каталоге</span>
+</div>
+<div class="stat-card">
+<i class="stat-card__icon" data-lucide="users"></i>
+<div class="stat-card__value">
+<span class="stat-card__number" data-count="8000">0</span>
+<span class="stat-card__suffix">+</span>
+</div>
+<span class="stat-card__label">клиентов по Казахстану</span>
+</div>
+<div class="stat-card">
+<i class="stat-card__icon" data-lucide="percent"></i>
+<div class="stat-card__value">
+<span class="stat-card__number" data-count="95">0</span>
+<span class="stat-card__suffix">%</span>
+</div>
+<span class="stat-card__label">ассортимента в наличии</span>
+</div>
+<div class="stat-card">
+<i class="stat-card__icon" data-lucide="ruler"></i>
+<div class="stat-card__value">
+<span class="stat-card__number" data-count="3000">0</span>
+<span class="stat-card__suffix">м²</span>
+</div>
+<span class="stat-card__label">складских помещений</span>
+</div>
+<div class="stat-card">
+<i class="stat-card__icon" data-lucide="clock"></i>
+<div class="stat-card__value">
+<span class="stat-card__number" data-count="24">0</span>
+<span class="stat-card__suffix">ч</span>
+</div>
+<span class="stat-card__label">от заказа до отгрузки</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ WHY US ============ -->
+<section class="why-us" id="why-us">
+<div class="container">
+<div class="section-header">
+<p class="section-tag">Преимущества</p>
+<h2 class="section-title">Почему выбирают KOREANA</h2>
+</div>
+<div class="why-us__grid">
+<div class="why-card">
+<div class="why-card__number">01</div>
+<h3 class="why-card__title">Прямые контракты</h3>
+<p class="why-card__text">Эксклюзивные договоры с корейскими производителями обеспечивают лучшие
                         закупочные цены на рынке</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-card__number">02</div>
-                    <h3 class="why-card__title">Маркетинговая поддержка</h3>
-                    <p class="why-card__text">Предоставляем POS-материалы, обучение персонала и помощь в мерчендайзинге
+</div>
+<div class="why-card">
+<div class="why-card__number">02</div>
+<h3 class="why-card__title">Маркетинговая поддержка</h3>
+<p class="why-card__text">Предоставляем POS-материалы, обучение персонала и помощь в мерчендайзинге
                         для наших партнёров</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-card__number">03</div>
-                    <h3 class="why-card__title">Гибкие условия</h3>
-                    <p class="why-card__text">Индивидуальный подход к каждому партнёру: гибкая система скидок, отсрочки
+</div>
+<div class="why-card">
+<div class="why-card__number">03</div>
+<h3 class="why-card__title">Гибкие условия</h3>
+<p class="why-card__text">Индивидуальный подход к каждому партнёру: гибкая система скидок, отсрочки
                         платежа, минимальные партии</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-card__number">04</div>
-                    <h3 class="why-card__title">Логистика по всему РК</h3>
-                    <p class="why-card__text">Налаженная доставка в 16 городов Казахстана, собственный автопарк и
+</div>
+<div class="why-card">
+<div class="why-card__number">04</div>
+<h3 class="why-card__title">Логистика по всему РК</h3>
+<p class="why-card__text">Налаженная доставка в 16 городов Казахстана, собственный автопарк и
                         партнёрские транспортные компании</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-card__number">05</div>
-                    <h3 class="why-card__title">Стабильные поставки</h3>
-                    <p class="why-card__text">Регулярные поставки из Кореи, более 95% ассортимента всегда есть на складе
+</div>
+<div class="why-card">
+<div class="why-card__number">05</div>
+<h3 class="why-card__title">Стабильные поставки</h3>
+<p class="why-card__text">Регулярные поставки из Кореи, более 95% ассортимента всегда есть на складе
                         в Алматы</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-card__number">06</div>
-                    <h3 class="why-card__title">Растущий спрос</h3>
-                    <p class="why-card__text">Корейская косметика - один из самых быстрорастущих сегментов beauty-рынка
+</div>
+<div class="why-card">
+<div class="why-card__number">06</div>
+<h3 class="why-card__title">Растущий спрос</h3>
+<p class="why-card__text">Корейская косметика - один из самых быстрорастущих сегментов beauty-рынка
                         в Казахстане</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ BRANDS ============ -->
-    <section class="brands" id="brands">
-
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Портфолио</p>
-                <h2 class="section-title">Наши бренды</h2>
-                <p class="section-desc">Нажмите на карточку бренда, чтобы узнать подробнее</p>
-            </div>
-
-            <div class="brands__filter">
-                <button class="filter-btn active" data-filter="all">Все</button>
-                <button class="filter-btn" data-filter="hair">Уход за волосами</button>
-                <button class="filter-btn" data-filter="oral">Гигиена полости рта</button>
-                <button class="filter-btn" data-filter="body">Уход за телом</button>
-                <button class="filter-btn" data-filter="cosmetics">Косметика</button>
-                <button class="filter-btn" data-filter="household">Бытовая химия</button>
-                <button class="filter-btn" data-filter="hygiene">Женская гигиена</button>
-            </div>
-
-            <div class="brands__grid">
-
-                <!-- KERASYS -->
-                <div class="brand-card" data-category="hair" data-brand="kerasys">
-                    <div class="brand-card__media">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/brands/kerasys.webp" alt="KERASYS" width="321" height="130">
-                    </div>
-                    <div class="brand-card__body">
-                        <span class="brand-card__category">Уход за волосами</span>
-                        <h3 class="brand-card__title">KERASYS</h3>
-                        <p class="brand-card__short">Профессиональный уход: шампуни, кондиционеры, маски с
+</div>
+</div>
+</div>
+</section>
+<!-- ============ BRANDS ============ -->
+<section class="brands" id="brands">
+<div class="container">
+<div class="section-header">
+<p class="section-tag">Портфолио</p>
+<h2 class="section-title">Наши бренды</h2>
+<p class="section-desc">Нажмите на карточку бренда, чтобы узнать подробнее</p>
+</div>
+<div class="brands__filter">
+<button class="filter-btn active" data-filter="all">Все</button>
+<button class="filter-btn" data-filter="hair">Уход за волосами</button>
+<button class="filter-btn" data-filter="oral">Гигиена полости рта</button>
+<button class="filter-btn" data-filter="body">Уход за телом</button>
+<button class="filter-btn" data-filter="cosmetics">Косметика</button>
+<button class="filter-btn" data-filter="household">Бытовая химия</button>
+<button class="filter-btn" data-filter="hygiene">Женская гигиена</button>
+</div>
+<div class="brands__grid">
+<!-- KERASYS -->
+<div class="brand-card" data-brand="kerasys" data-category="hair">
+<div class="brand-card__media">
+<img alt="KERASYS" data-src="assets/brands/kerasys.webp" height="130" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="321"/>
+</div>
+<div class="brand-card__body">
+<span class="brand-card__category">Уход за волосами</span>
+<h3 class="brand-card__title">KERASYS</h3>
+<p class="brand-card__short">Профессиональный уход: шампуни, кондиционеры, маски с
                             аминокислотами и протеинами</p>
-                        <span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <!-- 2080 -->
-                <div class="brand-card" data-category="oral" data-brand="2080">
-                    <div class="brand-card__media">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/brands/2080.webp" alt="2080" width="325" height="150">
-                    </div>
-                    <div class="brand-card__body">
-                        <span class="brand-card__category">Гигиена полости рта</span>
-                        <h3 class="brand-card__title">2080</h3>
-                        <p class="brand-card__short">Зубные пасты и щётки с 25-летней историей разработок от экспертов
+<span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<!-- 2080 -->
+<div class="brand-card" data-brand="2080" data-category="oral">
+<div class="brand-card__media">
+<img alt="2080" data-src="assets/brands/2080.webp" height="150" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="325"/>
+</div>
+<div class="brand-card__body">
+<span class="brand-card__category">Гигиена полости рта</span>
+<h3 class="brand-card__title">2080</h3>
+<p class="brand-card__short">Зубные пасты и щётки с 25-летней историей разработок от экспертов
                             AEKYUNG</p>
-                        <span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <!-- SHOWERMATE -->
-                <div class="brand-card" data-category="body" data-brand="showermate">
-                    <div class="brand-card__media">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/brands/showermate.webp" alt="SHOWERMATE" width="200" height="180">
-                    </div>
-                    <div class="brand-card__body">
-                        <span class="brand-card__category">Уход за телом</span>
-                        <h3 class="brand-card__title">SHOWERMATE</h3>
-                        <p class="brand-card__short">Гели для душа с натуральными экстрактами: цветочные, травяные и
+<span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<!-- SHOWERMATE -->
+<div class="brand-card" data-brand="showermate" data-category="body">
+<div class="brand-card__media">
+<img alt="SHOWERMATE" data-src="assets/brands/showermate.webp" height="180" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="200"/>
+</div>
+<div class="brand-card__body">
+<span class="brand-card__category">Уход за телом</span>
+<h3 class="brand-card__title">SHOWERMATE</h3>
+<p class="brand-card__short">Гели для душа с натуральными экстрактами: цветочные, травяные и
                             парфюмированные серии</p>
-                        <span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <!-- FARMSTAY -->
-                <div class="brand-card" data-category="cosmetics" data-brand="farmstay">
-                    <div class="brand-card__media">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/brands/farmstay.webp" alt="FARMSTAY" width="325" height="150">
-                    </div>
-                    <div class="brand-card__body">
-                        <span class="brand-card__category">Косметика</span>
-                        <h3 class="brand-card__title">FARMSTAY</h3>
-                        <p class="brand-card__short">Натуральная уходовая и декоративная косметика: пенки, маски, патчи,
+<span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<!-- FARMSTAY -->
+<div class="brand-card" data-brand="farmstay" data-category="cosmetics">
+<div class="brand-card__media">
+<img alt="FARMSTAY" data-src="assets/brands/farmstay.webp" height="150" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="325"/>
+</div>
+<div class="brand-card__body">
+<span class="brand-card__category">Косметика</span>
+<h3 class="brand-card__title">FARMSTAY</h3>
+<p class="brand-card__short">Натуральная уходовая и декоративная косметика: пенки, маски, патчи,
                             кремы, тонеры</p>
-                        <span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <!-- SECRETDAY -->
-                <div class="brand-card" data-category="hygiene" data-brand="secretday">
-                    <div class="brand-card__media">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/brands/secretday.webp" alt="SECRETDAY" width="321" height="120">
-                    </div>
-                    <div class="brand-card__body">
-                        <span class="brand-card__category">Женская гигиена</span>
-                        <h3 class="brand-card__title">SECRETDAY</h3>
-                        <p class="brand-card__short">Гигиенические прокладки с хлопковым покрытием, органическая
-                            веганская линейка</p>
-                        <span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <!-- PERFECT -->
-                <div class="brand-card" data-category="household" data-brand="perfect">
-                    <div class="brand-card__media">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/brands/perfect.webp" alt="PERFECT" width="1200" height="669">
-                    </div>
-                    <div class="brand-card__body">
-                        <span class="brand-card__category">Бытовая химия</span>
-                        <h3 class="brand-card__title">PERFECT</h3>
-                        <p class="brand-card__short">Концентрированный стиральный порошок без фосфатов. 50 г на стирку -
+<span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<!-- SECRETDAY -->
+<div class="brand-card" data-brand="secretday" data-category="hygiene">
+<div class="brand-card__media">
+<img alt="SECRETDAY" data-src="assets/brands/secretday.webp" height="120" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="321"/>
+</div>
+<div class="brand-card__body">
+<span class="brand-card__category">Женская гигиена</span>
+<h3 class="brand-card__title">SECRETDAY</h3>
+<p class="brand-card__short">Гигиенические прокладки с гипоаллергенным хлопковым покрытием и надежной защитой</p>
+<span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<!-- PERFECT -->
+<div class="brand-card" data-brand="perfect" data-category="household">
+<div class="brand-card__media">
+<img alt="PERFECT" data-src="assets/brands/perfect.webp" height="669" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1200"/>
+</div>
+<div class="brand-card__body">
+<span class="brand-card__category">Бытовая химия</span>
+<h3 class="brand-card__title">PERFECT</h3>
+<p class="brand-card__short">Концентрированный стиральный порошок без фосфатов. 50 г на стирку -
                             1 кг хватает на месяц</p>
-                        <span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <!-- TRIO -->
-                <div class="brand-card" data-category="household" data-brand="trio">
-                    <div class="brand-card__media" style="padding: 10px;">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/brands/trio-logo.webp" alt="TRIO" width="1080" height="1079">
-                    </div>
-                    <div class="brand-card__body">
-                        <span class="brand-card__category">Бытовая химия</span>
-                        <h3 class="brand-card__title">TRIO</h3>
-                        <p class="brand-card__short">Средство для мытья посуды, фруктов и овощей. Убивает 99,9%
+<span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<!-- TRIO -->
+<div class="brand-card" data-brand="trio" data-category="household">
+<div class="brand-card__media" style="padding: 10px;">
+<img alt="TRIO" data-src="assets/brands/trio-logo.webp" height="1079" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1080"/>
+</div>
+<div class="brand-card__body">
+<span class="brand-card__category">Бытовая химия</span>
+<h3 class="brand-card__title">TRIO</h3>
+<p class="brand-card__short">Средство для мытья посуды, фруктов и овощей. Убивает 99,9%
                             бактерий, бережно к коже рук</p>
-                        <span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <!-- MUKUNGHWA -->
-                <div class="brand-card" data-category="household" data-brand="mukunghwa">
-                    <div class="brand-card__media">
-                        <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/brands/mukunghwa.webp" alt="MUKUNGHWA" width="250" height="150">
-                    </div>
-                    <div class="brand-card__body">
-                        <span class="brand-card__category">Бытовая химия</span>
-                        <h3 class="brand-card__title">MUKUNGHWA</h3>
-                        <p class="brand-card__short">Натуральные средства на основе растительных компонентов: мыло,
+<span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<!-- MUKUNGHWA -->
+<div class="brand-card" data-brand="mukunghwa" data-category="household">
+<div class="brand-card__media">
+<img alt="MUKUNGHWA" data-src="assets/brands/mukunghwa.webp" height="150" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="250"/>
+</div>
+<div class="brand-card__body">
+<span class="brand-card__category">Бытовая химия</span>
+<h3 class="brand-card__title">MUKUNGHWA</h3>
+<p class="brand-card__short">Натуральные средства на основе растительных компонентов: мыло,
                             ополаскиватели, чистящие средства</p>
-                        <span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ BRAND MODAL ============ -->
-    <div class="modal" id="brand-modal">
-        <div class="modal__backdrop"></div>
-        <div class="modal__content">
-            <button class="modal__close" aria-label="Закрыть"><i data-lucide="x"></i></button>
-            <div class="modal__body" id="modal-body">
-                <!-- Filled dynamically -->
-            </div>
-        </div>
-    </div>
-
-    <!-- ============ PARTNERS - DUAL ============ -->
-    <section class="partners" id="partners">
-
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Партнёрская сеть</p>
-                <h2 class="section-title">Нам доверяют</h2>
-                <p class="section-desc">Работаем с ведущими производителями Кореи и крупнейшими ритейлерами Казахстана
+<span class="brand-card__more">Подробнее <i data-lucide="arrow-right"></i></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ BRAND MODAL ============ -->
+<div class="modal" id="brand-modal">
+<div class="modal__backdrop"></div>
+<div class="modal__content">
+<button aria-label="Закрыть" class="modal__close"><i data-lucide="x"></i></button>
+<div class="modal__body" id="modal-body">
+<!-- Filled dynamically -->
+</div>
+</div>
+</div>
+<!-- ============ PARTNERS - DUAL ============ -->
+<section class="partners" id="partners">
+<div class="container">
+<div class="section-header">
+<p class="section-tag">Партнёрская сеть</p>
+<h2 class="section-title">Нам доверяют</h2>
+<p class="section-desc">Работаем с ведущими производителями Кореи и крупнейшими ритейлерами Казахстана
                 </p>
-            </div>
-
-            <!-- TOP: Suppliers / Brand owners -->
-            <div class="partners-block">
-                <div class="partners-block__header">
-                    <i data-lucide="factory"></i>
-                    <div>
-                        <h3>Наши поставщики</h3>
-                        <p>Производители из Южной Кореи</p>
-                    </div>
-                </div>
-                <div class="suppliers-grid">
-                    <a href="https://www.aekyung.co.kr" target="_blank" rel="noopener" class="supplier-card"
-                        data-bg="assets/suppliers/aekyung_new.webp">
-                        <div class="supplier-card__content">
-                            <div class="supplier-card__name">AEKYUNG</div>
-                            <div class="supplier-card__tag">Kerasys, 2080, ShowerMate, Perfect, Trio</div>
-                        </div>
-                    </a>
-                    <a href="http://www.mkh.co.kr" target="_blank" rel="noopener" class="supplier-card"
-                        data-bg="assets/suppliers/mukunghwa.webp" style="background-position: right center;">
-                        <div class="supplier-card__content">
-                            <div class="supplier-card__name">MUKUNGHWA</div>
-                            <div class="supplier-card__tag">O'Clean, VIU</div>
-                        </div>
-                    </a>
-                    <a href="https://www.jw.co.kr" target="_blank" rel="noopener" class="supplier-card"
-                        data-bg="assets/suppliers/joongwon3.webp" style="background-position: 75% center;">
-                        <div class="supplier-card__content">
-                            <div class="supplier-card__name">JOONGWON</div>
-                            <div class="supplier-card__tag">SecretDay</div>
-                        </div>
-                    </a>
-                    <a href="https://myungincos.com/" target="_blank" rel="noopener" class="supplier-card"
-                        data-bg="assets/suppliers/myungin.webp" style="background-position: center;">
-                        <div class="supplier-card__content">
-                            <div class="supplier-card__name">MYUNGIN COSMETICS</div>
-                            <div class="supplier-card__tag">Farmstay</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- BOTTOM: Clients / Retail networks -->
-            <div class="partners-block">
-                <div class="partners-block__header">
-                    <i data-lucide="store"></i>
-                    <div>
-                        <h3>Наши клиенты</h3>
-                        <p>Розничные сети и магазины Казахстана</p>
-                    </div>
-                </div>
-
-                <div class="clients-grid">
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/magnum.webp" alt="Magnum" width="220" height="101"></div>
-                    <div class="partner-card partner-card--zolotoe"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/zolotoe-yabloko.webp" alt="Золотое Яблоко" width="212"
-                            height="96"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/small.webp" alt="SMALL" width="212" height="96"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/galmart.webp" alt="Galmart" width="338" height="130"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/arbuz.webp" alt="Arbuz" width="212" height="96"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/fix-price.webp" alt="Fix Price" width="212" height="96"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/cu.webp" alt="CU" width="212" height="96"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/carefood.webp" alt="Carefood" width="300" height="130"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/korzinka.webp" alt="Korzinka" width="500" height="250"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/firkan.webp" alt="Firkan" width="900" height="300"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/dina.webp" alt="Дина" width="180" height="80"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/flip.webp" alt="Flip" width="900" height="500"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/diona.webp" alt="Diona" width="1201" height="628"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/gramad.webp" alt="Gramad" width="1667" height="1007"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/mgo.webp" alt="MGO" width="212" height="96"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/alma-store.webp" alt="Алма Стор" width="212" height="96"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/anvar.webp" alt="Анвар" width="212" height="96"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/choko.webp" alt="Чоко" width="550" height="250"></div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/airba-fresh.webp" alt="Airba Fresh" width="750" height="350">
-                    </div>
-                    <div class="partner-card"><img
-                            src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                            data-src="assets/partners/kiwano.webp" alt="Kiwano" width="200" height="100"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ WHERE TO BUY ============ -->
-    <section class="where-to-buy" id="where-to-buy">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Каналы продаж</p>
-                <h2 class="section-title">Где купить нашу продукцию</h2>
-                <p class="section-desc">Найдите продукты KOREANA в любимых маркетплейсах и магазинах</p>
-            </div>
-
-            <div class="wtb-block">
-                <h3 class="wtb-block__title"><i data-lucide="shopping-bag"></i> Онлайн-маркетплейсы</h3>
-                <div class="marketplaces">
-                    <a href="https://l.kaspi.kz/shop/D4rX4gx5MYDWq2R" class="marketplace marketplace--kaspi"
-                        target="_blank" rel="noopener">
-                        <span class="marketplace__name">Kaspi.kz</span>
-                        <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
-                    </a>
-                    <a href="https://www.wildberries.ru/seller/250046194" class="marketplace marketplace--wb"
-                        target="_blank" rel="noopener">
-                        <span class="marketplace__name">Wildberries</span>
-                        <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
-                    </a>
-                    <a href="https://www.ozon.ru/seller/from-korea-3550299/" class="marketplace marketplace--ozon"
-                        target="_blank" rel="noopener">
-                        <span class="marketplace__name">Ozon</span>
-                        <span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
-                    </a>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-
-
-    <!-- ============ SOCIAL IMPACT & ACHIEVEMENTS ============ -->
-    <section class="social-impact" id="impact">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Наши ценности в действии</p>
-                <h2 class="section-title">Социальные проекты и достижения</h2>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="bento-grid" id="bento-grid">
-
-                <!-- CARD 1 (Large - span 2, span 2) -->
-                <div class="bento-item bento-item--large" data-modal="demo-modal">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/marathon.webp" alt="Марафон" class="bento-item__img"
-                        width="1384" height="923">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg> Подробнее</span>
-                        <h3 class="bento-item__title">Постоянный партнер Almaty Marathon и Astana Marathon</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 2 (Wide - span 2, span 1) -->
-                <div class="bento-item bento-item--wide" data-modal="modal-aekyung">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/best-partner1.webp" alt="Награда" class="bento-item__img"
-                        width="1195" height="657">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg> Подробнее</span>
-                        <h3 class="bento-item__title">Лучший дистрибьютор года от AEKYUNG Co.</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 3 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" data-modal="modal-akk" style="background-color: #fff;">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/kor1.webp" alt="Ассоциация корейцев Казахстана"
-                        class="bento-item__img" style="object-fit: contain; padding: 15%;" width="880" height="916">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg> Подробнее</span>
-                        <h3 class="bento-item__title">Ассоциация корейцев Казахстана и благотворительность</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 4 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" data-modal="modal-kpop">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/kpop1.webp" alt="kpop-stars.kz" class="bento-item__img"
-                        width="1821" height="1216">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg> Подробнее</span>
-                        <h3 class="bento-item__title">Поддержка фестиваля kpop-stars.kz</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 5 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" data-modal="modal-industry" style="background-color: #fff;">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/industry1.webp" alt="Достояние отрасли"
-                        class="bento-item__img" style="object-fit: contain; padding: 10%;" width="255" height="198">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg> Подробнее</span>
-                        <h3 class="bento-item__title">Награда "Достояние отрасли"</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 6 (Wide - span 2, span 1) - CENTERED IN BOTTOM ROW -->
-                <div class="bento-item bento-item--wide" data-modal="modal-stud">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/stud3.webp" alt="Студенческая активность"
-                        class="bento-item__img" width="1600" height="1200">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg> Подробнее</span>
-                        <h3 class="bento-item__title">Поддержка молодежи и студенческой активности</h3>
-                    </div>
-                </div>
-
-                <!-- CARD 7 (Small - span 1, span 1) -->
-                <div class="bento-item bento-item--small" data-modal="modal-certif">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/certif.webp" alt="Сертификация" class="bento-item__img"
-                        width="1197" height="859">
-                    <div class="bento-item__overlay"></div>
-                    <div class="bento-item__content">
-                        <span class="bento-item__click-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg> Подробнее</span>
-                        <h3 class="bento-item__title">Сертификация и стандарты качества</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ PARTNER FORM ============ -->
-    <section class="partner-form-section" id="client-form">
-        <div class="container">
-            <div class="partner-form__wrapper">
-                <div class="partner-form__info">
-                    <p class="section-tag">Связаться с нами</p>
-                    <h2 class="section-title section-title--light">Сотрудничество с KOREANA</h2>
-                    <p class="partner-form__desc">Если вы дистрибьютор или поставщик и хотите сотрудничать с нами -
+</div>
+<!-- TOP: Suppliers / Brand owners -->
+<div class="partners-block">
+<div class="partners-block__header">
+<i data-lucide="factory"></i>
+<div>
+<h3>Наши поставщики</h3>
+<p>Производители из Южной Кореи</p>
+</div>
+</div>
+<div class="suppliers-grid">
+<a class="supplier-card" data-bg="assets/suppliers/aekyung_new.webp" href="https://www.aekyung.co.kr" rel="noopener" target="_blank">
+<div class="supplier-card__content">
+<div class="supplier-card__name">AEKYUNG</div>
+<div class="supplier-card__tag">Kerasys, 2080, ShowerMate, Perfect, Trio</div>
+</div>
+</a>
+<a class="supplier-card" data-bg="assets/suppliers/mukunghwa.webp" href="http://www.mkh.co.kr" rel="noopener" style="background-position: right center;" target="_blank">
+<div class="supplier-card__content">
+<div class="supplier-card__name">MUKUNGHWA</div>
+<div class="supplier-card__tag">O'Clean, VIU</div>
+</div>
+</a>
+<a class="supplier-card" data-bg="assets/suppliers/joongwon3.webp" href="https://www.jw.co.kr" rel="noopener" style="background-position: 75% center;" target="_blank">
+<div class="supplier-card__content">
+<div class="supplier-card__name">JOONGWON</div>
+<div class="supplier-card__tag">SecretDay</div>
+</div>
+</a>
+<a class="supplier-card" data-bg="assets/suppliers/myungin.webp" href="https://myungincos.com/" rel="noopener" style="background-position: center;" target="_blank">
+<div class="supplier-card__content">
+<div class="supplier-card__name">MYUNGIN COSMETICS</div>
+<div class="supplier-card__tag">Farmstay</div>
+</div>
+</a>
+</div>
+</div>
+<!-- BOTTOM: Clients / Retail networks -->
+<div class="partners-block">
+<div class="partners-block__header">
+<i data-lucide="store"></i>
+<div>
+<h3>Наши клиенты</h3>
+<p>Розничные сети и магазины Казахстана</p>
+</div>
+</div>
+<div class="clients-grid">
+<div class="partner-card"><img alt="Magnum" data-src="assets/partners/magnum.webp" height="101" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="220"/></div>
+<div class="partner-card partner-card--zolotoe"><img alt="Золотое Яблоко" data-src="assets/partners/zolotoe-yabloko.webp" height="96" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="212"/></div>
+<div class="partner-card"><img alt="SMALL" data-src="assets/partners/small.webp" height="96" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="212"/></div>
+<div class="partner-card"><img alt="Galmart" data-src="assets/partners/galmart.webp" height="130" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="338"/></div>
+<div class="partner-card"><img alt="Arbuz" data-src="assets/partners/arbuz.webp" height="96" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="212"/></div>
+<div class="partner-card"><img alt="Fix Price" data-src="assets/partners/fix-price.webp" height="96" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="212"/></div>
+<div class="partner-card"><img alt="CU" data-src="assets/partners/cu.webp" height="96" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="212"/></div>
+<div class="partner-card"><img alt="Carefood" data-src="assets/partners/carefood.webp" height="130" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="300"/></div>
+<div class="partner-card"><img alt="Korzinka" data-src="assets/partners/korzinka.webp" height="250" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="500"/></div>
+<div class="partner-card"><img alt="Firkan" data-src="assets/partners/firkan.webp" height="300" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="900"/></div>
+<div class="partner-card"><img alt="Дина" data-src="assets/partners/dina.webp" height="80" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="180"/></div>
+<div class="partner-card"><img alt="Flip" data-src="assets/partners/flip.webp" height="500" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="900"/></div>
+<div class="partner-card"><img alt="Diona" data-src="assets/partners/diona.webp" height="628" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1201"/></div>
+<div class="partner-card"><img alt="Gramad" data-src="assets/partners/gramad.webp" height="1007" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1667"/></div>
+<div class="partner-card"><img alt="MGO" data-src="assets/partners/mgo.webp" height="96" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="212"/></div>
+<div class="partner-card"><img alt="Алма Стор" data-src="assets/partners/alma-store.webp" height="96" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="212"/></div>
+<div class="partner-card"><img alt="Анвар" data-src="assets/partners/anvar.webp" height="96" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="212"/></div>
+<div class="partner-card"><img alt="Чоко" data-src="assets/partners/choko.webp" height="250" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="550"/></div>
+<div class="partner-card"><img alt="Airba Fresh" data-src="assets/partners/airba-fresh.webp" height="350" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="750"/>
+</div>
+<div class="partner-card"><img alt="Kiwano" data-src="assets/partners/kiwano.webp" height="100" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="200"/></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ WHERE TO BUY ============ -->
+<section class="where-to-buy" id="where-to-buy">
+<div class="container">
+<div class="section-header">
+<p class="section-tag">Каналы продаж</p>
+<h2 class="section-title">Где купить нашу продукцию</h2>
+<p class="section-desc">Найдите продукты KOREANA в любимых маркетплейсах и магазинах</p>
+</div>
+<div class="wtb-block">
+<h3 class="wtb-block__title"><i data-lucide="shopping-bag"></i> Онлайн-маркетплейсы</h3>
+<div class="marketplaces">
+<a class="marketplace marketplace--kaspi" href="https://l.kaspi.kz/shop/D4rX4gx5MYDWq2R" rel="noopener" target="_blank">
+<span class="marketplace__name">Kaspi.kz</span>
+<span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
+</a>
+<a class="marketplace marketplace--wb" href="https://www.wildberries.ru/seller/250046194" rel="noopener" target="_blank">
+<span class="marketplace__name">Wildberries</span>
+<span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
+</a>
+<a class="marketplace marketplace--ozon" href="https://www.ozon.ru/seller/from-korea-3550299/" rel="noopener" target="_blank">
+<span class="marketplace__name">Ozon</span>
+<span class="marketplace__action">Перейти <i data-lucide="external-link"></i></span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ SOCIAL IMPACT & ACHIEVEMENTS ============ -->
+<section class="social-impact" id="impact">
+<div class="container">
+<div class="section-header">
+<p class="section-tag">Наши ценности в действии</p>
+<h2 class="section-title">Социальные проекты и достижения</h2>
+</div>
+</div>
+<div class="container">
+<div class="bento-grid" id="bento-grid">
+<!-- CARD 1 (Large - span 2, span 2) -->
+<div class="bento-item bento-item--large" data-modal="demo-modal">
+<img alt="Марафон" class="bento-item__img" data-src="assets/img/social-projects/marathon.webp" height="923" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1384"/>
+<div class="bento-item__overlay"></div>
+<div class="bento-item__content">
+<span class="bento-item__click-hint"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg> Подробнее</span>
+<h3 class="bento-item__title">Постоянный партнер Almaty Marathon и Astana Marathon</h3>
+</div>
+</div>
+<!-- CARD 2 (Wide - span 2, span 1) -->
+<div class="bento-item bento-item--wide" data-modal="modal-aekyung">
+<img alt="Награда" class="bento-item__img" data-src="assets/img/social-projects/best-partner1.webp" height="657" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1195"/>
+<div class="bento-item__overlay"></div>
+<div class="bento-item__content">
+<span class="bento-item__click-hint"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg> Подробнее</span>
+<h3 class="bento-item__title">Лучший дистрибьютор года от AEKYUNG Co.</h3>
+</div>
+</div>
+<!-- CARD 3 (Small - span 1, span 1) -->
+<div class="bento-item bento-item--small" data-modal="modal-akk" style="background-color: #fff;">
+<img alt="Ассоциация корейцев Казахстана" class="bento-item__img" data-src="assets/img/social-projects/kor1.webp" height="916" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" style="object-fit: contain; padding: 15%;" width="880"/>
+<div class="bento-item__overlay"></div>
+<div class="bento-item__content">
+<span class="bento-item__click-hint"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg> Подробнее</span>
+<h3 class="bento-item__title">Ассоциация корейцев Казахстана и благотворительность</h3>
+</div>
+</div>
+<!-- CARD 4 (Small - span 1, span 1) -->
+<div class="bento-item bento-item--small" data-modal="modal-kpop">
+<img alt="kpop-stars.kz" class="bento-item__img" data-src="assets/img/social-projects/kpop1.webp" height="1216" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1821"/>
+<div class="bento-item__overlay"></div>
+<div class="bento-item__content">
+<span class="bento-item__click-hint"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg> Подробнее</span>
+<h3 class="bento-item__title">Поддержка фестиваля kpop-stars.kz</h3>
+</div>
+</div>
+<!-- CARD 5 (Small - span 1, span 1) -->
+<div class="bento-item bento-item--small" data-modal="modal-industry" style="background-color: #fff;">
+<img alt="Достояние отрасли" class="bento-item__img" data-src="assets/img/social-projects/industry1.webp" height="198" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" style="object-fit: contain; padding: 10%;" width="255"/>
+<div class="bento-item__overlay"></div>
+<div class="bento-item__content">
+<span class="bento-item__click-hint"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg> Подробнее</span>
+<h3 class="bento-item__title">Награда "Достояние отрасли"</h3>
+</div>
+</div>
+<!-- CARD 6 (Wide - span 2, span 1) - CENTERED IN BOTTOM ROW -->
+<div class="bento-item bento-item--wide" data-modal="modal-stud">
+<img alt="Студенческая активность" class="bento-item__img" data-src="assets/img/social-projects/stud3.webp" height="1200" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1600"/>
+<div class="bento-item__overlay"></div>
+<div class="bento-item__content">
+<span class="bento-item__click-hint"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg> Подробнее</span>
+<h3 class="bento-item__title">Поддержка молодежи и студенческой активности</h3>
+</div>
+</div>
+<!-- CARD 7 (Small - span 1, span 1) -->
+<div class="bento-item bento-item--small" data-modal="modal-certif">
+<img alt="Сертификация" class="bento-item__img" data-src="assets/img/social-projects/certif.webp" height="859" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1197"/>
+<div class="bento-item__overlay"></div>
+<div class="bento-item__content">
+<span class="bento-item__click-hint"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg> Подробнее</span>
+<h3 class="bento-item__title">Сертификация и стандарты качества</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ PARTNER FORM ============ -->
+<section class="partner-form-section" id="client-form">
+<div class="container">
+<div class="partner-form__wrapper">
+<div class="partner-form__info">
+<p class="section-tag">Связаться с нами</p>
+<h2 class="section-title section-title--light">Сотрудничество с KOREANA</h2>
+<p class="partner-form__desc">Если вы дистрибьютор или поставщик и хотите сотрудничать с нами -
                         свяжитесь удобным для вас способом, и мы ответим в течение дня.</p>
-                    <ul class="partner-form__benefits">
-                        <li><i data-lucide="check"></i> Конкурентные закупочные цены</li>
-                        <li><i data-lucide="check"></i> Маркетинговая поддержка и POS-материалы</li>
-                        <li><i data-lucide="check"></i> Гибкая система скидок</li>
-                        <li><i data-lucide="check"></i> Бесплатная доставка по Казахстану</li>
-                        <li><i data-lucide="check"></i> Персональный менеджер</li>
-                    </ul>
-                </div>
-                <div class="partner-form">
-                    <h3
-                        style="font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--color-primary); margin-bottom: 24px; text-align: center;">
+<ul class="partner-form__benefits">
+<li><i data-lucide="check"></i> Конкурентные закупочные цены</li>
+<li><i data-lucide="check"></i> Маркетинговая поддержка и POS-материалы</li>
+<li><i data-lucide="check"></i> Гибкая система скидок</li>
+<li><i data-lucide="check"></i> Бесплатная доставка по Казахстану</li>
+<li><i data-lucide="check"></i> Персональный менеджер</li>
+</ul>
+</div>
+<div class="partner-form">
+<h3 style="font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--color-primary); margin-bottom: 24px; text-align: center;">
                         Выберите удобный способ связи:</h3>
-                    <div style="display: flex; flex-direction: column; gap: 16px;">
-                        <a href="https://wa.me/77080095910?text=Здравствуйте,%20хочу%20обсудить%20сотрудничество%20с%20KOREANA"
-                            target="_blank" rel="noopener" class="btn btn--lg btn--full"
-                            style="background: #25D366; color: #fff; border: 2px solid #25D366;">
-                            <i data-lucide="message-circle"></i> Написать в WhatsApp
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<a class="btn btn--lg btn--full" href="https://wa.me/77080095910?text=Здравствуйте,%20хочу%20обсудить%20сотрудничество%20с%20KOREANA" rel="noopener" style="background: #25D366; color: #fff; border: 2px solid #25D366;" target="_blank">
+<i data-lucide="message-circle"></i> Написать в WhatsApp
                         </a>
-                        <a href="tel:+77080095910" class="btn btn--lg btn--full"
-                            style="background: var(--color-bg-gray); color: var(--color-primary); border: 2px solid var(--color-border);">
-                            <i data-lucide="phone"></i> Позвонить: +7 708 009 59 10
+<a class="btn btn--lg btn--full" href="tel:+77080095910" style="background: var(--color-bg-gray); color: var(--color-primary); border: 2px solid var(--color-border);">
+<i data-lucide="phone"></i> Позвонить: +7 708 009 59 10
                         </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ VACANCIES ============ -->
-    <section class="vacancies" id="vacancies">
-
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Карьера</p>
-                <h2 class="section-title">Вакансии</h2>
-                <p class="section-desc">Присоединяйтесь к команде KOREANA</p>
-                <a href="https://hh.kz/employer/2746077?hhtmFrom=vacancy_search_list" target="_blank" rel="noopener"
-                    class="vacancies-hh-link">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ VACANCIES ============ -->
+<section class="vacancies" id="vacancies">
+<div class="container">
+<div class="section-header">
+<p class="section-tag">Карьера</p>
+<h2 class="section-title">Вакансии</h2>
+<p class="section-desc">Присоединяйтесь к команде KOREANA</p>
+<a class="vacancies-hh-link" href="https://hh.kz/employer/2746077?hhtmFrom=vacancy_search_list" rel="noopener" target="_blank">
                     Все вакансии на hh.kz <i data-lucide="external-link"></i>
-                </a>
-            </div>
-
-            <div class="vacancies__grid">
-                <div class="vacancy-card">
-                    <div class="vacancy-card__header">
-                        <h3 class="vacancy-card__title">Торговый представитель В+/ВС</h3>
-                        <span class="vacancy-card__location"><i data-lucide="map-pin"></i> Алматы</span>
-                    </div>
-                    <div class="vacancy-card__body">
-                        <div class="vacancy-card__section">
-                            <h4>Обязанности:</h4>
-                            <ul>
-                                <li>Презентация ассортимента и характеристик товара клиентам</li>
-                                <li>Работа с текущей клиентской базой и расширение АКБ</li>
-                                <li>Формирование заказов и мерчендайзинг</li>
-                                <li>Заключение договоров и контроль дебиторской задолженности</li>
-                            </ul>
-                        </div>
-                        <div class="vacancy-card__section">
-                            <h4>Условия:</h4>
-                            <ul>
-                                <li>Базовый оклад + бонусная часть</li>
-                                <li>Официальное трудоустройство</li>
-                                <li>Возможность карьерного роста</li>
-                                <li>График 5/2, с 9:00 до 18:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="vacancy-card__footer">
-                        <a href="https://wa.me/77772210008?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D1%82%D0%BA%D0%BB%D0%B8%D0%BA%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D1%8E%20%D0%A2%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C"
-                            target="_blank" rel="noopener" class="btn btn--primary btn--full">Откликнуться</a>
-                    </div>
-                </div>
-
-                <div class="vacancy-card">
-                    <div class="vacancy-card__header">
-                        <h3 class="vacancy-card__title">Комплектовщик-грузчик</h3>
-                        <span class="vacancy-card__location"><i data-lucide="map-pin"></i> Алматы</span>
-                    </div>
-                    <div class="vacancy-card__body">
-                        <div class="vacancy-card__section">
-                            <h4>Обязанности:</h4>
-                            <ul>
-                                <li>Сборка заявок по накладным</li>
-                                <li>Стикерование товара</li>
-                                <li>Погрузочно-разгрузочные работы</li>
-                                <li>Выполнение поручений заведующего склада</li>
-                            </ul>
-                        </div>
-                        <div class="vacancy-card__section">
-                            <h4>Условия:</h4>
-                            <ul>
-                                <li>Своевременная оплата труда</li>
-                                <li>Официальное трудоустройство</li>
-                                <li>Бесплатное горячее питание (обед)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="vacancy-card__footer">
-                        <a href="https://wa.me/77772210008?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D1%82%D0%BA%D0%BB%D0%B8%D0%BA%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D1%8E%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D0%B2%D1%89%D0%B8%D0%BA-%D0%B3%D1%80%D1%83%D0%B7%D1%87%D0%B8%D0%BA"
-                            target="_blank" rel="noopener" class="btn btn--primary btn--full">Откликнуться</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ MAP ============ -->
-    <section class="map-section" id="contacts">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">География</p>
-                <h2 class="section-title">Города присутствия</h2>
-            </div>
-        </div>
-        <div class="map-section__map">
-            <div id="koreana-map"></div>
-            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-            <script type="text/javascript">
+</a>
+</div>
+<div class="vacancies__grid">
+<div class="vacancy-card">
+<div class="vacancy-card__header">
+<h3 class="vacancy-card__title">Торговый представитель В+/ВС</h3>
+<span class="vacancy-card__location"><i data-lucide="map-pin"></i> Алматы</span>
+</div>
+<div class="vacancy-card__body">
+<div class="vacancy-card__section">
+<h4>Обязанности:</h4>
+<ul>
+<li>Презентация ассортимента и характеристик товара клиентам</li>
+<li>Работа с текущей клиентской базой и расширение АКБ</li>
+<li>Формирование заказов и мерчендайзинг</li>
+<li>Заключение договоров и контроль дебиторской задолженности</li>
+</ul>
+</div>
+<div class="vacancy-card__section">
+<h4>Условия:</h4>
+<ul>
+<li>Базовый оклад + бонусная часть</li>
+<li>Официальное трудоустройство</li>
+<li>Возможность карьерного роста</li>
+<li>График 5/2, с 9:00 до 18:00</li>
+</ul>
+</div>
+</div>
+<div class="vacancy-card__footer">
+<a class="btn btn--primary btn--full" href="https://wa.me/77772210008?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D1%82%D0%BA%D0%BB%D0%B8%D0%BA%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D1%8E%20%D0%A2%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C" rel="noopener" target="_blank">Откликнуться</a>
+</div>
+</div>
+<div class="vacancy-card">
+<div class="vacancy-card__header">
+<h3 class="vacancy-card__title">Комплектовщик-грузчик</h3>
+<span class="vacancy-card__location"><i data-lucide="map-pin"></i> Алматы</span>
+</div>
+<div class="vacancy-card__body">
+<div class="vacancy-card__section">
+<h4>Обязанности:</h4>
+<ul>
+<li>Сборка заявок по накладным</li>
+<li>Стикерование товара</li>
+<li>Погрузочно-разгрузочные работы</li>
+<li>Выполнение поручений заведующего склада</li>
+</ul>
+</div>
+<div class="vacancy-card__section">
+<h4>Условия:</h4>
+<ul>
+<li>Своевременная оплата труда</li>
+<li>Официальное трудоустройство</li>
+<li>Бесплатное горячее питание (обед)</li>
+</ul>
+</div>
+</div>
+<div class="vacancy-card__footer">
+<a class="btn btn--primary btn--full" href="https://wa.me/77772210008?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D1%82%D0%BA%D0%BB%D0%B8%D0%BA%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D1%8E%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D0%B2%D1%89%D0%B8%D0%BA-%D0%B3%D1%80%D1%83%D0%B7%D1%87%D0%B8%D0%BA" rel="noopener" target="_blank">Откликнуться</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ MAP ============ -->
+<section class="map-section" id="contacts">
+<div class="container">
+<div class="section-header">
+<p class="section-tag">География</p>
+<h2 class="section-title">Города присутствия</h2>
+</div>
+</div>
+<div class="map-section__map">
+<div id="koreana-map"></div>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
                 ymaps.ready(init);
                 function init() {
                     var isMobile = window.innerWidth <= 768;
@@ -1130,383 +933,299 @@
                     });
                 }
             </script>
-        </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__brand">
-                    <a href="#" class="logo logo--light">
-                        <img src="assets/img/logo.webp" alt="KOREANA" class="logo__img logo__img--light" width="208"
-                            height="129">
-                    </a>
-                    <p class="footer__about">Официальный дистрибьютор корейской косметики, гигиены и бытовой химии в
+</div>
+</section>
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+<div class="container">
+<div class="footer__grid">
+<div class="footer__brand">
+<a class="logo logo--light" href="#">
+<img alt="KOREANA" class="logo__img logo__img--light" height="129" src="assets/img/logo.webp" width="208"/>
+</a>
+<p class="footer__about">Официальный дистрибьютор корейской косметики, гигиены и бытовой химии в
                         Казахстане с 2015 года.</p>
-                    <div class="footer__socials">
-                        <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer__links">
-                    <h4 class="footer__heading">Навигация</h4>
-                    <a href="#about">О компании</a>
-                    <a href="#brands">Бренды</a>
-                    <a href="#partners">Партнёры</a>
-                    <a href="#vacancies">Вакансии</a>
-                    <a href="#contacts">Контакты</a>
-                </div>
-
-                <div class="footer__links">
-                    <h4 class="footer__heading">Бренды</h4>
-                    <a href="https://www.instagram.com/kerasys.official.kz/" target="_blank" rel="noopener">Kerasys <i
-                            data-lucide="instagram"
-                            style="width: 14px; height: 14px; margin-left: 4px; vertical-align: middle;"></i></a>
-                    <a href="https://www.instagram.com/2080.kz/" target="_blank" rel="noopener">2080 <i
-                            data-lucide="instagram"
-                            style="width: 14px; height: 14px; margin-left: 4px; vertical-align: middle;"></i></a>
-                    <a href="https://www.instagram.com/farmstay.official_global/" target="_blank"
-                        rel="noopener">FarmStay <i data-lucide="instagram"
-                            style="width: 14px; height: 14px; margin-left: 4px; vertical-align: middle;"></i></a>
-                    <a href="https://www.instagram.com/mkh1947" target="_blank" rel="noopener">Mukunghwa <i
-                            data-lucide="instagram"
-                            style="width: 14px; height: 14px; margin-left: 4px; vertical-align: middle;"></i></a>
-                </div>
-
-                <div class="footer__contact">
-                    <h4 class="footer__heading">Контакты</h4>
-                    <a href="mailto:info@koreanacos.kz" class="footer__contact-item">
-                        <i data-lucide="mail"></i>
-                        <span>info@koreanacos.kz</span>
-                    </a>
-                    <a href="https://yandex.kz/maps/?text=Казахстан,+Алматы,+проспект+Сейфуллина,+498" target="_blank"
-                        rel="noopener" class="footer__contact-item">
-                        <i data-lucide="map-pin"></i>
-                        <span>г. Алматы, пр. Сейфуллина 498, офис 413</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer__bottom">
-                <p>&copy; 2015&ndash;2026 KOREANA. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Floating Button Removed -->
-
-    <!-- ================================================== -->
-    <!-- MODAL POPUP HTML                                   -->
-    <!-- ================================================== -->
-    <div class="detail-modal" id="demo-modal">
-        <div class="detail-modal__content">
-            <button class="detail-modal__close" aria-label="Закрыть">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <div class="modal-gallery-container">
-                <!-- Horizontal scrolling gallery -->
-                <div class="modal-gallery" id="modal-slider">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/marathon.webp" alt="Marathon 1" width="1384" height="923">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/marathon1.webp" alt="Marathon 2" width="1200"
-                        height="1600">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/marathon2.webp" alt="Marathon 3" width="1319" height="879">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/marathon3.webp" alt="Marathon 4" width="982" height="654">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/marathon4.webp" alt="Marathon 5" width="807" height="538">
-                </div>
-
-                <div class="modal-gallery-overlay"></div>
-
-                <div class="modal-gallery-nav" id="modal-dots">
-                    <div class="modal-gallery-dot active"></div>
-                    <div class="modal-gallery-dot"></div>
-                    <div class="modal-gallery-dot"></div>
-                    <div class="modal-gallery-dot"></div>
-                    <div class="modal-gallery-dot"></div>
-                </div>
-            </div>
-
-            <!-- Scrollable body for very long text -->
-            <div class="modal-body">
-                <h2>Поддержка Almaty Marathon, Astana Marathon и многих других</h2>
-
-                <p><strong>Мы являемся постоянным спонсором и партнером крупнейших беговых событий страны - Almaty
+<div class="footer__socials">
+<a aria-label="Instagram" class="social-link" href="#"><i data-lucide="instagram"></i></a>
+<a aria-label="Facebook" class="social-link" href="#"><i data-lucide="facebook"></i></a>
+</div>
+</div>
+<div class="footer__links">
+<h4 class="footer__heading">Навигация</h4>
+<a href="#about">О компании</a>
+<a href="#brands">Бренды</a>
+<a href="#partners">Партнёры</a>
+<a href="#vacancies">Вакансии</a>
+<a href="#contacts">Контакты</a>
+</div>
+<div class="footer__links">
+<h4 class="footer__heading">Бренды</h4>
+<a href="https://www.instagram.com/kerasys.official.kz/" rel="noopener" target="_blank">Kerasys <i data-lucide="instagram" style="width: 14px; height: 14px; margin-left: 4px; vertical-align: middle;"></i></a>
+<a href="https://www.instagram.com/2080.kz/" rel="noopener" target="_blank">2080 <i data-lucide="instagram" style="width: 14px; height: 14px; margin-left: 4px; vertical-align: middle;"></i></a>
+<a href="https://www.instagram.com/farmstay.official_global/" rel="noopener" target="_blank">FarmStay <i data-lucide="instagram" style="width: 14px; height: 14px; margin-left: 4px; vertical-align: middle;"></i></a>
+<a href="https://www.instagram.com/mkh1947" rel="noopener" target="_blank">Mukunghwa <i data-lucide="instagram" style="width: 14px; height: 14px; margin-left: 4px; vertical-align: middle;"></i></a>
+</div>
+<div class="footer__contact">
+<h4 class="footer__heading">Контакты</h4>
+<a class="footer__contact-item" href="mailto:info@koreanacos.kz">
+<i data-lucide="mail"></i>
+<span>info@koreanacos.kz</span>
+</a>
+<a class="footer__contact-item" href="https://yandex.kz/maps/?text=Казахстан,+Алматы,+проспект+Сейфуллина,+498" rel="noopener" target="_blank">
+<i data-lucide="map-pin"></i>
+<span>г. Алматы, пр. Сейфуллина 498, офис 413</span>
+</a>
+</div>
+</div>
+<div class="footer__bottom">
+<p>© 2015–2026 KOREANA. Все права защищены.</p>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Button Removed -->
+<!-- ================================================== -->
+<!-- MODAL POPUP HTML                                   -->
+<!-- ================================================== -->
+<div class="detail-modal" id="demo-modal">
+<div class="detail-modal__content">
+<button aria-label="Закрыть" class="detail-modal__close">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<div class="modal-gallery-container">
+<!-- Horizontal scrolling gallery -->
+<div class="modal-gallery" id="modal-slider">
+<img alt="Marathon 1" data-src="assets/img/social-projects/marathon.webp" height="923" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1384"/>
+<img alt="Marathon 2" data-src="assets/img/social-projects/marathon1.webp" height="1600" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1200"/>
+<img alt="Marathon 3" data-src="assets/img/social-projects/marathon2.webp" height="879" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1319"/>
+<img alt="Marathon 4" data-src="assets/img/social-projects/marathon3.webp" height="654" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="982"/>
+<img alt="Marathon 5" data-src="assets/img/social-projects/marathon4.webp" height="538" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="807"/>
+</div>
+<div class="modal-gallery-overlay"></div>
+<div class="modal-gallery-nav" id="modal-dots">
+<div class="modal-gallery-dot active"></div>
+<div class="modal-gallery-dot"></div>
+<div class="modal-gallery-dot"></div>
+<div class="modal-gallery-dot"></div>
+<div class="modal-gallery-dot"></div>
+</div>
+</div>
+<!-- Scrollable body for very long text -->
+<div class="modal-body">
+<h2>Поддержка Almaty Marathon, Astana Marathon и многих других</h2>
+<p><strong>Мы являемся постоянным спонсором и партнером крупнейших беговых событий страны - Almaty
                         Marathon, Astana Marathon, Tau Jarys Marathon, Summer Relay Marathon и многих других.</strong>
-                </p>
-
-                <p>Поддерживая данные инициативы, мы вносим свой вклад в развитие массового спорта и продвижение
+</p>
+<p>Поддерживая данные инициативы, мы вносим свой вклад в развитие массового спорта и продвижение
                     здорового образа жизни среди казахстанцев. Ежегодно тысячи участников выходят на старт, и мы
                     гордимся тем, что можем быть частью этого масштабного движения.</p>
-
-                <p>Наши бренды помогают спортсменам и любителям поддерживать чистоту и свежесть, а также заботятся об их
+<p>Наши бренды помогают спортсменам и любителям поддерживать чистоту и свежесть, а также заботятся об их
                     комфорте после финиша. Наша команда KOREANA также ежегодно участвует в забегах, доказывая свою
                     приверженность активному образу жизни на собственном примере.</p>
-                <p>Спасибо всем участникам и организаторам за невероятную энергию и стремление к победе!</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL AEKYUNG -->
-    <div class="detail-modal" id="modal-aekyung">
-        <div class="detail-modal__content">
-            <button class="detail-modal__close" aria-label="Закрыть">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <div class="modal-gallery-container">
-                <div class="modal-gallery" id="modal-slider-aekyung">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/best-partner1.webp" alt="Partner 1" width="1195"
-                        height="657">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/best-partner2.webp" alt="Partner 2" width="1024"
-                        height="768">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/best-partner3.webp" alt="Partner 3" width="666"
-                        height="890">
-                </div>
-                <div class="modal-gallery-overlay"></div>
-                <div class="modal-gallery-nav" id="modal-dots-aekyung">
-                    <div class="modal-gallery-dot active"></div>
-                    <div class="modal-gallery-dot"></div>
-                    <div class="modal-gallery-dot"></div>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <h2>Лучший партнер компании AEKYUNG</h2>
-                <p><strong>ТОО "KOREANA" по результатам 2023 года признана лучшим партнером компании AEKYUNG
+<p>Спасибо всем участникам и организаторам за невероятную энергию и стремление к победе!</p>
+</div>
+</div>
+</div>
+<!-- MODAL AEKYUNG -->
+<div class="detail-modal" id="modal-aekyung">
+<div class="detail-modal__content">
+<button aria-label="Закрыть" class="detail-modal__close">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<div class="modal-gallery-container">
+<div class="modal-gallery" id="modal-slider-aekyung">
+<img alt="Partner 1" data-src="assets/img/social-projects/best-partner1.webp" height="657" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1195"/>
+<img alt="Partner 2" data-src="assets/img/social-projects/best-partner2.webp" height="768" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1024"/>
+<img alt="Partner 3" data-src="assets/img/social-projects/best-partner3.webp" height="890" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="666"/>
+</div>
+<div class="modal-gallery-overlay"></div>
+<div class="modal-gallery-nav" id="modal-dots-aekyung">
+<div class="modal-gallery-dot active"></div>
+<div class="modal-gallery-dot"></div>
+<div class="modal-gallery-dot"></div>
+</div>
+</div>
+<div class="modal-body">
+<h2>Лучший партнер компании AEKYUNG</h2>
+<p><strong>ТОО "KOREANA" по результатам 2023 года признана лучшим партнером компании AEKYUNG
                         Co.</strong></p>
-                <p>Мы гордимся тем, что многолетнее сотрудничество с крупнейшим южнокорейским производителем бытовой
+<p>Мы гордимся тем, что многолетнее сотрудничество с крупнейшим южнокорейским производителем бытовой
                     химии и косметики принесло столь высокую награду. Наша команда обеспечивает стабильные поставки,
                     широкую представленность на рынке и высокий уровень доверия среди потребителей.</p>
-                <p>Эта награда - результат слаженной работы всей нашей команды и доказательство того, что мы выбираем
+<p>Эта награда - результат слаженной работы всей нашей команды и доказательство того, что мы выбираем
                     только лучшее для наших клиентов!</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL AKK -->
-    <div class="detail-modal" id="modal-akk">
-        <div class="detail-modal__content">
-            <button class="detail-modal__close" aria-label="Закрыть">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <div class="modal-gallery-container">
-                <div class="modal-gallery" id="modal-slider-akk">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/kor1.webp" alt="AKK 1"
-                        style="object-fit: contain; padding: 5%; background-color: #fff;" width="880" height="916">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/kor2.webp" alt="AKK 2" width="984" height="624">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/kor3.webp" alt="AKK 3" width="736" height="680">
-                </div>
-                <div class="modal-gallery-overlay"></div>
-                <div class="modal-gallery-nav" id="modal-dots-akk">
-                    <div class="modal-gallery-dot active"></div>
-                    <div class="modal-gallery-dot"></div>
-                    <div class="modal-gallery-dot"></div>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <h2>Ассоциация корейцев Казахстана и благотворительность</h2>
-                <p><strong>ТОО "KOREANA" является постоянным участником социальных и благотворительных проектов,
+</div>
+</div>
+</div>
+<!-- MODAL AKK -->
+<div class="detail-modal" id="modal-akk">
+<div class="detail-modal__content">
+<button aria-label="Закрыть" class="detail-modal__close">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<div class="modal-gallery-container">
+<div class="modal-gallery" id="modal-slider-akk">
+<img alt="AKK 1" data-src="assets/img/social-projects/kor1.webp" height="916" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" style="object-fit: contain; padding: 5%; background-color: #fff;" width="880"/>
+<img alt="AKK 2" data-src="assets/img/social-projects/kor2.webp" height="624" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="984"/>
+<img alt="AKK 3" data-src="assets/img/social-projects/kor3.webp" height="680" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="736"/>
+</div>
+<div class="modal-gallery-overlay"></div>
+<div class="modal-gallery-nav" id="modal-dots-akk">
+<div class="modal-gallery-dot active"></div>
+<div class="modal-gallery-dot"></div>
+<div class="modal-gallery-dot"></div>
+</div>
+</div>
+<div class="modal-body">
+<h2>Ассоциация корейцев Казахстана и благотворительность</h2>
+<p><strong>ТОО "KOREANA" является постоянным участником социальных и благотворительных проектов,
                         поддерживая все инициативы Ассоциации корейцев Казахстана.</strong></p>
-                <p>Наша компания глубоко ценит исторические корни и активно участвует в жизни корейской диаспоры в
+<p>Наша компания глубоко ценит исторические корни и активно участвует в жизни корейской диаспоры в
                     Казахстане. Мы спонсируем культурные мероприятия, национальные праздники и образовательные
                     инициативы, направленные на сохранение традиций и языка.</p>
-                <p>Помимо культурных проектов, KOREANA регулярно оказывает благотворительную помощь нуждающимся, детским
+<p>Помимо культурных проектов, KOREANA регулярно оказывает благотворительную помощь нуждающимся, детским
                     домам и медицинским учреждениям. Мы убеждены, что бизнес должен быть социально ответственным и
                     приносить пользу обществу, в котором он развивается.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL KPOP -->
-    <div class="detail-modal" id="modal-kpop">
-        <div class="detail-modal__content">
-            <button class="detail-modal__close" aria-label="Закрыть">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <div class="modal-gallery-container">
-                <div class="modal-gallery" id="modal-slider-kpop">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/kpop1.webp" alt="KPOP 1" width="1821" height="1216">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/kpop2.webp" alt="KPOP 2" width="812" height="1216">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/kpop3.webp" alt="KPOP 3" width="1821" height="1216">
-                </div>
-                <div class="modal-gallery-overlay"></div>
-                <div class="modal-gallery-nav" id="modal-dots-kpop">
-                    <div class="modal-gallery-dot active"></div>
-                    <div class="modal-gallery-dot"></div>
-                    <div class="modal-gallery-dot"></div>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <h2>Поддержка фестиваля kpop-stars.kz</h2>
-                <p><strong>Наша компания KOREANA и бренд Kerasys выступают официальными партнерами одного из самых
+</div>
+</div>
+</div>
+<!-- MODAL KPOP -->
+<div class="detail-modal" id="modal-kpop">
+<div class="detail-modal__content">
+<button aria-label="Закрыть" class="detail-modal__close">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<div class="modal-gallery-container">
+<div class="modal-gallery" id="modal-slider-kpop">
+<img alt="KPOP 1" data-src="assets/img/social-projects/kpop1.webp" height="1216" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1821"/>
+<img alt="KPOP 2" data-src="assets/img/social-projects/kpop2.webp" height="1216" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="812"/>
+<img alt="KPOP 3" data-src="assets/img/social-projects/kpop3.webp" height="1216" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1821"/>
+</div>
+<div class="modal-gallery-overlay"></div>
+<div class="modal-gallery-nav" id="modal-dots-kpop">
+<div class="modal-gallery-dot active"></div>
+<div class="modal-gallery-dot"></div>
+<div class="modal-gallery-dot"></div>
+</div>
+</div>
+<div class="modal-body">
+<h2>Поддержка фестиваля kpop-stars.kz</h2>
+<p><strong>Наша компания KOREANA и бренд Kerasys выступают официальными партнерами одного из самых
                         масштабных K-POP мероприятий - фестиваля kpop-stars.kz.</strong></p>
-                <p>Ежегодно мы поддерживаем это яркое событие. За два дня фестиваль собирает огромное количество гостей,
+<p>Ежегодно мы поддерживаем это яркое событие. За два дня фестиваль собирает огромное количество гостей,
                     участников и поклонников корейской культуры. Атмосфера, организация и вовлеченность аудитории всегда
                     остаются на высочайшем уровне.</p>
-                <p>Для нас это не просто участие в мероприятии - это работа над узнаваемостью брендов, усиление
+<p>Для нас это не просто участие в мероприятии - это работа над узнаваемостью брендов, усиление
                     эмоциональной связи с молодой аудиторией и развитие имиджа корейских брендов в Казахстане.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL INDUSTRY -->
-    <div class="detail-modal" id="modal-industry">
-        <div class="detail-modal__content">
-            <button class="detail-modal__close" aria-label="Закрыть">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <div class="modal-gallery-container">
-                <div class="modal-gallery" id="modal-slider-industry">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/industry1.webp" alt="Industry 1"
-                        style="object-fit: contain; padding: 1%; background-color: #fff;" width="255" height="198">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/industry2.webp" alt="Industry 2"
-                        style="object-fit: contain; padding: 1%; background-color: #fff;" width="497" height="694">
-                </div>
-                <div class="modal-gallery-overlay"></div>
-                <div class="modal-gallery-nav" id="modal-dots-industry">
-                    <div class="modal-gallery-dot active"></div>
-                    <div class="modal-gallery-dot"></div>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <h2>Награда «Достояние отрасли»</h2>
-                <p><strong>ТОО "KOREANA" по результатам 2022 / 2023 / 2025 гг (ОКЭД 46.90.9) получила национальную
+</div>
+</div>
+</div>
+<!-- MODAL INDUSTRY -->
+<div class="detail-modal" id="modal-industry">
+<div class="detail-modal__content">
+<button aria-label="Закрыть" class="detail-modal__close">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<div class="modal-gallery-container">
+<div class="modal-gallery" id="modal-slider-industry">
+<img alt="Industry 1" data-src="assets/img/social-projects/industry1.webp" height="198" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" style="object-fit: contain; padding: 1%; background-color: #fff;" width="255"/>
+<img alt="Industry 2" data-src="assets/img/social-projects/industry2.webp" height="694" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" style="object-fit: contain; padding: 1%; background-color: #fff;" width="497"/>
+</div>
+<div class="modal-gallery-overlay"></div>
+<div class="modal-gallery-nav" id="modal-dots-industry">
+<div class="modal-gallery-dot active"></div>
+<div class="modal-gallery-dot"></div>
+</div>
+</div>
+<div class="modal-body">
+<h2>Награда «Достояние отрасли»</h2>
+<p><strong>ТОО "KOREANA" по результатам 2022 / 2023 / 2025 гг (ОКЭД 46.90.9) получила национальную
                         награду «Достояние отрасли».</strong></p>
-                <p>Этот статус присуждается компаниям, которые вносят значительный вклад в развитие экономики
+<p>Этот статус присуждается компаниям, которые вносят значительный вклад в развитие экономики
                     Казахстана, демонстрируют высокую надежность и устойчивый рост. Признание на национальном уровне
                     подтверждает наши лидирующие позиции в отрасли неспециализированной оптовой торговли.</p>
-                <p>Мы гордимся этой наградой, так как она отражает качество нашей работы, профессионализм команды и
+<p>Мы гордимся этой наградой, так как она отражает качество нашей работы, профессионализм команды и
                     доверие наших партнеров. Это достижение мотивирует нас продолжать развиваться, расширять ассортимент
                     и предоставлять лучший сервис на рынке Республики Казахстан.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL STUD -->
-    <div class="detail-modal" id="modal-stud">
-        <div class="detail-modal__content">
-            <button class="detail-modal__close" aria-label="Закрыть">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <div class="modal-gallery-container">
-                <div class="modal-gallery" id="modal-slider-stud">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/stud1.webp" alt="Студенты 1" width="862" height="580">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/stud2.webp" alt="Студенты 2" width="532" height="940">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/stud3.webp" alt="Студенты 3" width="1600" height="1200">
-                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                        data-src="assets/img/social-projects/stud4.webp" alt="Студенты 4" width="1322" height="830">
-                </div>
-                <div class="modal-gallery-overlay"></div>
-                <div class="modal-gallery-nav" id="modal-dots-stud">
-                    <div class="modal-gallery-dot active"></div>
-                    <div class="modal-gallery-dot"></div>
-                    <div class="modal-gallery-dot"></div>
-                    <div class="modal-gallery-dot"></div>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <h2>Поддержка студенческой активности и молодежи</h2>
-                <p><strong>ТОО "KOREANA" активно инвестирует в будущее, выступая регулярным партнером молодежных и
+</div>
+</div>
+</div>
+<!-- MODAL STUD -->
+<div class="detail-modal" id="modal-stud">
+<div class="detail-modal__content">
+<button aria-label="Закрыть" class="detail-modal__close">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<div class="modal-gallery-container">
+<div class="modal-gallery" id="modal-slider-stud">
+<img alt="Студенты 1" data-src="assets/img/social-projects/stud1.webp" height="580" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="862"/>
+<img alt="Студенты 2" data-src="assets/img/social-projects/stud2.webp" height="940" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="532"/>
+<img alt="Студенты 3" data-src="assets/img/social-projects/stud3.webp" height="1200" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1600"/>
+<img alt="Студенты 4" data-src="assets/img/social-projects/stud4.webp" height="830" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" width="1322"/>
+</div>
+<div class="modal-gallery-overlay"></div>
+<div class="modal-gallery-nav" id="modal-dots-stud">
+<div class="modal-gallery-dot active"></div>
+<div class="modal-gallery-dot"></div>
+<div class="modal-gallery-dot"></div>
+<div class="modal-gallery-dot"></div>
+</div>
+</div>
+<div class="modal-body">
+<h2>Поддержка студенческой активности и молодежи</h2>
+<p><strong>ТОО "KOREANA" активно инвестирует в будущее, выступая регулярным партнером молодежных и
                         студенческих мероприятий.</strong></p>
-                <p>Мы поддерживаем дни открытых дверей в ведущих университетах, спонсируем студенческие инициативы и
+<p>Мы поддерживаем дни открытых дверей в ведущих университетах, спонсируем студенческие инициативы и
                     фестивали. Для нас важно быть рядом с молодым поколением, помогать им реализовывать свой потенциал и
                     создавать возможности для развития и нетворкинга.</p>
-                <p>Наша компания видит в студентах и молодежи будущих лидеров, профессионалов и новаторов. Спонсируя
+<p>Наша компания видит в студентах и молодежи будущих лидеров, профессионалов и новаторов. Спонсируя
                     подобные мероприятия, мы не только повышаем узнаваемость наших брендов среди молодой аудитории, но и
                     делаем свой вклад в развитие образовательной и культурной среды Казахстана.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL CERTIF -->
-    <div class="detail-modal" id="modal-certif">
-        <div class="detail-modal__content">
-            <button class="detail-modal__close" aria-label="Закрыть">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <div class="modal-gallery-container"
-                style="display: flex; align-items: center; justify-content: center; background-color: #fff;">
-                <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E"
-                    data-src="assets/img/social-projects/certif.webp" alt="Сертификат"
-                    style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 20px;" width="1197"
-                    height="859">
-                <div class="modal-gallery-overlay"></div>
-            </div>
-
-            <div class="modal-body">
-                <h2>Сертификация и стандарты качества</h2>
-                <p><strong>Вся продукция, представленная компанией KOREANA, официально зарегистрирована и
+</div>
+</div>
+</div>
+<!-- MODAL CERTIF -->
+<div class="detail-modal" id="modal-certif">
+<div class="detail-modal__content">
+<button aria-label="Закрыть" class="detail-modal__close">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<div class="modal-gallery-container" style="display: flex; align-items: center; justify-content: center; background-color: #fff;">
+<img alt="Сертификат" data-src="assets/img/social-projects/certif.webp" height="859" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E" style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 20px;" width="1197"/>
+<div class="modal-gallery-overlay"></div>
+</div>
+<div class="modal-body">
+<h2>Сертификация и стандарты качества</h2>
+<p><strong>Вся продукция, представленная компанией KOREANA, официально зарегистрирована и
                         сертифицирована на территории Республики Казахстан.</strong></p>
-                <p>Мы работаем исключительно с производителями, соответствующими международным стандартам качества, что
+<p>Мы работаем исключительно с производителями, соответствующими международным стандартам качества, что
                     гарантирует безопасность, эффективность и стабильность продукции.</p>
-                <p>KOREANA является официальным и эксклюзивным представителем ряда корейских брендов в Казахстане, что
+<p>KOREANA является официальным и эксклюзивным представителем ряда корейских брендов в Казахстане, что
                     подтверждает подлинность продукции и прямые поставки от производителя. Мы строго следим за
                     соблюдением всех норм и требований на каждом этапе поставок.</p>
-            </div>
-        </div>
-    </div>
-
-
-
-    <script src="js/main.js" defer></script>
+</div>
+</div>
+</div>
+<script defer="" src="js/main.js"></script>
 </body>
-
 </html>

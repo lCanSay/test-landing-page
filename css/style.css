@@ -361,6 +361,11 @@ textarea {
     box-shadow: var(--shadow-sm);
 }
 
+/* Mobile lang-switch: hidden on desktop */
+.lang-switch--mobile {
+    display: none;
+}
+
 .header__cta {
     display: none;
 }
@@ -546,6 +551,7 @@ textarea {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     animation: bounce 2.5s ease-in-out infinite;
+    text-align: center;
 }
 
 .hero__scroll svg {
@@ -2679,6 +2685,39 @@ textarea {
         display: none;
     }
 
+    /* Mobile lang-switch inside nav panel */
+    .lang-switch--mobile {
+        display: flex;
+        gap: 6px;
+        background: var(--color-bg-gray);
+        border-radius: var(--radius-sm);
+        padding: 4px;
+        margin-top: auto;
+        align-self: stretch;
+        justify-content: center;
+    }
+
+    .lang-switch--mobile .lang-switch__btn {
+        color: var(--color-text-muted);
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: all var(--transition);
+        flex: 1;
+        text-align: center;
+    }
+
+    .lang-switch--mobile .lang-switch__btn.active {
+        background: var(--color-white);
+        color: var(--color-primary);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .lang-switch--mobile .lang-switch__btn:hover {
+        color: var(--color-primary);
+    }
+
     /* Hero */
     .hero__headline {
         font-size: clamp(48px, 14vw, 72px);
@@ -2904,6 +2943,10 @@ textarea {
         gap: 32px;
     }
 
+    .partner-form {
+        padding: 24px 20px;
+    }
+
     /* Marketplaces */
     .marketplaces {
         grid-template-columns: 1fr;
@@ -3048,6 +3091,39 @@ textarea {
     .clients-grid .partner-card img {
         max-height: 38px;
         max-width: 90%;
+    }
+
+    /* Compact vacancy cards */
+    .vacancy-card__header,
+    .vacancy-card__body,
+    .vacancy-card__footer {
+        padding: 16px;
+    }
+
+    .vacancy-card__section {
+        margin-bottom: 12px;
+    }
+
+    .vacancy-card__section h4 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .vacancy-card__section ul li {
+        font-size: 13px;
+        margin-bottom: 4px;
+        padding-left: 14px;
+    }
+
+    .vacancy-card__section ul li::before {
+        top: 6px;
+    }
+
+    /* Fit contact form buttons */
+    .partner-form .btn--lg {
+        padding: 12px 8px;
+        font-size: 13px;
+        gap: 6px;
     }
 }
 

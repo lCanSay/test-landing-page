@@ -217,7 +217,7 @@ function initParticles() {
     // Two-element structure is intentional:
     //   wrapper → JS sets translateY for scroll parallax
     //   inner   → CSS animation drives its own transform (drift/rotate)
-    // Shapes 13+ reuse anim 1–12 with different durations to avoid visual synchronisation.
+    // Shapes 13+ reuse anim 1-12 with different durations to avoid visual synchronisation.
     const shapes = [
         // ── Block 1: Avoid Hero (0-12%), start at 14% ────────────────────────
         { type: 'square', size: 160, top: '14%', left: '12%', speed: 0.08, anim: 1, dur: 32 },
@@ -506,9 +506,11 @@ document.head.appendChild(style);
 const brandData = {
     kerasys: {
         name: 'KERASYS',
-        category: currentLang === 'en' ? 'Hair Care' : 'Уход за волосами',
+        category: currentLang === 'en' ? 'Hair Care' : currentLang === 'kz' ? 'Шаш күтімі' : 'Уход за волосами',
         description: currentLang === 'en'
             ? 'KERASYS was created to make professional hair care affordable and convenient. Products are developed based on advanced Korean hair care technologies.'
+            : currentLang === 'kz'
+            ? 'KERASYS бренді кәсіби шаш күтімін қолжетімді әрі ыңғайлы ету үшін жасалған. Өнімдер шаш күтіміндегі озық корей технологиялары негізінде әзірленген.'
             : 'Бренд KERASYS создан для того, чтобы сделать профессиональный уход за волосами доступным и удобным. Продукция разработана на основе передовых корейских технологий ухода за волосами.',
         series: currentLang === 'en'
             ? [
@@ -516,6 +518,13 @@ const brandData = {
                 '<strong>PERFUME</strong> - perfumed series with unique scents for every look',
                 '<strong>ADVANCED</strong> - ampoule series with a special formula for comprehensive care',
                 '<strong>PRO ACTIVE MAN</strong> - men\'s line of shampoos'
+            ]
+            : currentLang === 'kz'
+            ? [
+                '<strong>HAIR CLINIC</strong> - зақымдалған шашты қарқынды қалпына келтіруге арналған құрамында 17 түрлі аминқышқылдары мен протеиндері бар клиникалық серия',
+                '<strong>PERFUME</strong> - әрбір образға арналған бірегей хош иістері бар парфюмерленген серия',
+                '<strong>ADVANCED</strong> - кешенді күтімге арналған арнайы формуласы бар ампулалық серия',
+                '<strong>PRO ACTIVE MAN</strong> - ерлерге арналған сусабындар желісі'
             ]
             : [
                 '<strong>HAIR CLINIC</strong> - клиническая серия с 17 видами аминокислот и протеинами для интенсивного восстановления повреждённых волос',
@@ -533,9 +542,11 @@ const brandData = {
     },
     '2080': {
         name: '2080',
-        category: currentLang === 'en' ? 'Oral Hygiene' : 'Гигиена полости рта',
+        category: currentLang === 'en' ? 'Oral Hygiene' : currentLang === 'kz' ? 'Ауыз гигиенасы' : 'Гигиена полости рта',
         description: currentLang === 'en'
             ? 'Leading Korean oral care brand. AEKYUNG experts have spent 25 years developing unique toothpaste formulas aimed at solving various oral care problems.'
+            : currentLang === 'kz'
+            ? 'Ауыз қуысы күтімі бойынша жетекші корей бренді. AEKYUNG компаниясының сарапшылары 25 жыл бойы ауыз қуысының түрлі мәселелерін шешуге бағытталған тіс пасталарының бірегей формулаларын әзірлеп келеді.'
             : 'Ведущий корейский бренд по уходу за полостью рта. Эксперты компании AEKYUNG на протяжении 25 лет разрабатывают уникальные формулы зубных паст, направленные на решение различных проблем полости рта.',
         series: currentLang === 'en'
             ? [
@@ -544,6 +555,14 @@ const brandData = {
                 '<strong>Efficiency:</strong> reduces the risk of tartar formation by 4 times',
                 '<strong>Protection:</strong> reduces tooth sensitivity by 96% in just 2 weeks',
                 '<strong>Whitening:</strong> safely whitens enamel by 88% in 8 weeks of regular use'
+            ]
+            : currentLang === 'kz'
+            ? [
+                '<strong>TOTAL</strong> - тіс пен қызылиекті күнделікті кешенді күтуге арналған базалық серия',
+                '<strong>PRO</strong> - тісжегі мен тіс тасының қарқынды алдын алуға арналған кәсіби серия',
+                '<strong>Тиімділігі:</strong> тіс тасының пайда болу қаупін 4 есе азайтады',
+                '<strong>Қорғаныс:</strong> небәрі 2 апта ішінде тіс сезімталдығын 96%-ға төмендетеді',
+                '<strong>Ағарту:</strong> тұрақты қолданғанда 8 апта ішінде эмальды 88%-ға қауіпсіз ағартады'
             ]
             : [
                 '<strong>TOTAL</strong> - базовая серия для ежедневного комплексного ухода за зубами и деснами',
@@ -560,15 +579,23 @@ const brandData = {
     },
     showermate: {
         name: 'SHOWERMATE',
-        category: currentLang === 'en' ? 'Body Care' : 'Уход за телом',
+        category: currentLang === 'en' ? 'Body Care' : currentLang === 'kz' ? 'Дене күтімі' : 'Уход за телом',
         description: currentLang === 'en'
             ? 'Premium SHOWERMATE shower gels are based on natural plant extracts. The core NATURAL series not only gently cleanses the skin but also provides deep hydration.'
+            : currentLang === 'kz'
+            ? 'SHOWERMATE премиалды душ гельдері өсімдік сығындылары негізінде жасалған. NATURAL базалық желісі теріні ұқыпты тазартып қана қоймай, күнделікті ылғалдандыру мен қоректендіруді қамтамасыз етеді.'
             : 'Премиальные гели для душа SHOWERMATE созданы на основе растительных экстрактов. Базовая линейка NATURAL не только бережно очищает кожу, но и обеспечивает ежедневное увлажнение и питание.',
         series: currentLang === 'en'
             ? [
                 '<strong>Natural Extracts:</strong> olive and green tea for intense nourishment',
                 '<strong>Gentle Care:</strong> perfect for daily skin hydration',
                 '<strong>Aromatherapy:</strong> leaves a delicate and long-lasting scent on the body'
+            ]
+            : currentLang === 'kz'
+            ? [
+                '<strong>Табиғи компоненттер:</strong> қарқынды қоректендіруге арналған зәйтүн мен көк шай сығындылары',
+                '<strong>Жұмсақ күтім:</strong> күнделікті тазарту үшін тамаша таңдау',
+                '<strong>Ароматерапия:</strong> теріде жеңіл және жағымды хош иіс қалдырады'
             ]
             : [
                 '<strong>Натуральные компоненты:</strong> экстракты оливы и зеленого чая для интенсивного питания',
@@ -583,9 +610,11 @@ const brandData = {
     },
     farmstay: {
         name: 'FARMSTAY',
-        category: currentLang === 'en' ? 'Cosmetics' : 'Косметика',
+        category: currentLang === 'en' ? 'Cosmetics' : currentLang === 'kz' ? 'Косметика' : 'Косметика',
         description: currentLang === 'en'
             ? 'A popular Korean cosmetics brand focusing on natural ingredients: snail mucin, collagen, hyaluronic acid, and aloe. It offers a complete step-by-step skincare system.'
+            : currentLang === 'kz'
+            ? 'Табиғи компоненттерге (ұлу муцині, коллаген, гиалурон қышқылы және алоэ) негізделген танымал корей косметикасы бренді. Тері күтімінің толыққанды кезеңдік жүйесін ұсынады.'
             : 'Популярный бренд корейской косметики, делающий ставку на природные компоненты: муцин улитки, коллаген, гиалуроновую кислоту и алоэ. Предлагает полноценную поэтапную систему ухода за кожей.',
         series: currentLang === 'en'
             ? [
@@ -593,6 +622,13 @@ const brandData = {
                 '<strong>Special care:</strong> hydrogel eye patches and restoring serums',
                 '<strong>Masks:</strong> a wide range of sheet and hydrogel masks for express care',
                 '<strong>Basic care:</strong> moisturizing toners, nourishing emulsions, and creams for all skin types'
+            ]
+            : currentLang === 'kz'
+            ? [
+                '<strong>Тазарту:</strong> жуынуға арналған нәзік көбіктер мен тиімді пилингтер',
+                '<strong>Арнайы күтім:</strong> көзге арналған гидрогельді патчтар мен қалпына келтіретін сарысулар',
+                '<strong>Маскалар:</strong> жедел күтімге арналған матадан жасалған және гидрогельді маскалардың кең ассортименті',
+                '<strong>Базалық күтім:</strong> барлық тері түрлеріне арналған ылғалдандыратын тонерлер, нәрлендіретін эмульсиялар мен кремдер'
             ]
             : [
                 '<strong>Очищение:</strong> нежные пенки для умывания и эффективные пилинги',
@@ -608,10 +644,12 @@ const brandData = {
     },
     secretday: {
         name: 'SECRETDAY',
-        category: currentLang === 'en' ? 'Feminine Hygiene' : 'Женская гигиена',
+        category: currentLang === 'en' ? 'Feminine Hygiene' : currentLang === 'kz' ? 'Әйелдер гигиенасы' : 'Женская гигиена',
         description: currentLang === 'en'
             ? 'SECRETDAY is the #1 brand for feminine hygiene products in Korea. All products undergo strict dermatological control (Dermatest certified) and guarantee absolute safety and comfort.'
-            : 'SECRETDAY - бренд №1 по производству средств женской гигиены в Корее. Вся продукция проходит строгий дерматологический контроль (сертификация Dermatest) и гарантирует абсолютную безопасность и комфорт.',
+            : currentLang === 'kz'
+            ? 'SECRETDAY - Кореядағы әйелдер гигиенасы құралдарын өндіру бойынша №1 бренд. Барлық өнімдер қатаң дерматологиялық бақылаудан (Dermatest сертификаты) өтеді және абсолютті қауіпсіздік пен жайлылыққа кепілдік береді.'
+            : 'SECRETDAY - бренд №1 по производству средств женской гигиены в Корее. Вся продукция проходит строгий дерматологический контроль (сертификация Dermatest) и гарантирует абсолютную безопасность и комфор.',
         series: currentLang === 'en'
             ? [
                 '<strong>LOVE Line</strong> - classic series with an incredibly soft surface',
@@ -619,6 +657,14 @@ const brandData = {
                 '<strong>Reliability:</strong> innovative absorbent layer for maximum confidence throughout the day',
                 '<strong>Safety:</strong> strict dermatological control (Dermatest), free of fragrances and dyes',
                 '<strong>Comfort:</strong> anatomical fit and breathable materials that prevent skin irritation'
+            ]
+            : currentLang === 'kz'
+            ? [
+                '<strong>LOVE желісі</strong> - беті керемет жұмсақ классикалық серия',
+                '<strong>COTTON желісі</strong> - 100% табиғи мақтадан жасалған гипоаллергенді төсемдер',
+                '<strong>Сенімділік:</strong> күні бойы барынша сенімділікке арналған инновациялық сіңіргіш қабат',
+                '<strong>Қауіпсіздік:</strong> қатаң дерматологиялық бақылау (Dermatest), хош иістендіргіштер мен бояуларсыз',
+                '<strong>Жайлылық:</strong> тітіркенуді тудырмайтын анатомиялық пішін және дем алатын материалдар'
             ]
             : [
                 '<strong>Линейка LOVE</strong> - классическая серия с невероятно мягкой поверхностью',
@@ -635,9 +681,11 @@ const brandData = {
     },
     perfect: {
         name: 'PERFECT',
-        category: currentLang === 'en' ? 'Household Chemicals' : 'Бытовая химия',
+        category: currentLang === 'en' ? 'Household Chemicals' : currentLang === 'kz' ? 'Тұрмыстық химия' : 'Бытовая химия',
         description: currentLang === 'en'
             ? 'Highly effective and safe household chemicals for flawless cleanliness. PERFECT powders feature economical consumption and no harmful phosphates, caring for your family\'s health and the environment.'
+            : currentLang === 'kz'
+            ? 'Мінсіз тазалыққа арналған жоғары тиімді және қауіпсіз тұрмыстық химия. PERFECT ұнтақтары үнемді жұмсалуымен және зиянды фосфаттардың болмауымен ерекшеленеді, отбасы денсаулығы мен қоршаған ортаға қамқорлық жасайды.'
             : 'Высокоэффективная и безопасная бытовая химия для безупречной чистоты. Порошки PERFECT отличаются экономичным расходом и отсутствием вредных фосфатов, заботясь о здоровье семьи и окружающей среде.',
         series: currentLang === 'en'
             ? [
@@ -645,6 +693,13 @@ const brandData = {
                 '<strong>Antibacterial effect:</strong> eliminates 99.9% of bacteria and dust mites from fabric fibers',
                 '<strong>Safety:</strong> hypoallergenic, completely phosphate-free formula, suitable for frequent washes',
                 '<strong>Color protection:</strong> preserves fabric brightness and prevents deformation'
+            ]
+            : currentLang === 'kz'
+            ? [
+                '<strong>Суперконцентрат:</strong> кір жууға небәрі 50 грамм құрал қажет - 1 кг өнім 3 кг кәдімгі ұнтақты алмастырады',
+                '<strong>Бактерияға қарсы әсері:</strong> мата талшықтарынан бактериялар мен шаң кенелерінің 99,9%-ын жояды',
+                '<strong>Қауіпсіздік:</strong> құрамында мүлдем фосфат жоқ гипоаллергенді формула, жиі жууға жарамды',
+                '<strong>Түсті қорғау:</strong> маталардың ашық түсін сақтайды және олардың пішінінің бұзылуына жол бермейді'
             ]
             : [
                 '<strong>Суперконцентрат:</strong> для стирки требуется всего 50 граммов средства - 1 кг заменяет до 3 кг обычного порошка',
@@ -660,9 +715,11 @@ const brandData = {
     },
     trio: {
         name: 'TRIO',
-        category: currentLang === 'en' ? 'Household Chemicals' : 'Бытовая химия',
+        category: currentLang === 'en' ? 'Household Chemicals' : currentLang === 'kz' ? 'Тұрмыстық химия' : 'Бытовая химия',
         description: currentLang === 'en'
             ? 'Eco-friendly and safe detergents for washing dishes, vegetables, and fruits. The TRIO formula easily handles hardened grease even in cold water while remaining absolutely safe for your hands.'
+            : currentLang === 'kz'
+            ? 'Ыдыс-аяқ, көкөніс пен жемістерді жууға арналған экологиялық таза және қауіпсіз құралдар. TRIO формуласы суық суда да қатқан майды оңай кетіре отырып, қол терісі үшін мүлдем қауіпсіз болып қала береді.'
             : 'Экологичные и безопасные средства для мытья посуды, овощей и фруктов. Формула TRIO легко справляется даже с застывшим жиром в холодной воде, оставаясь абсолютно безопасной для кожи рук.',
         series: currentLang === 'en'
             ? [
@@ -670,6 +727,13 @@ const brandData = {
                 '<strong>Disinfection:</strong> destroys 99.9% of harmful bacteria and fungi, eliminating any unpleasant odors',
                 '<strong>Hand care:</strong> contains moisturizing ingredients, does not cause dryness or skin irritation',
                 '<strong>Eco-friendly:</strong> easily and completely rinses off with water, leaving no chemical film'
+            ]
+            : currentLang === 'kz'
+            ? [
+                '<strong>Әмбебаптығы:</strong> ыдыс-аяқты, жемістерді, көкөністерді және балаларға арналған заттарды жууға өте қолайлы',
+                '<strong>Дезинфекция:</strong> кез-келген жағымсыз иістерді кетіріп, зиянды бактериялар мен саңырауқұлақтардың 99,9%-ын жояды',
+                '<strong>Қолға қамқорлық:</strong> құрамында ылғалдандыратын компоненттер бар, терінің құрғауы мен тітіркенуін тудырмайды',
+                '<strong>Экологиялылығы:</strong> химиялық қабықша қалдырмай, сумен оңай және толық шайылады'
             ]
             : [
                 '<strong>Универсальность:</strong> идеально подходит для мытья посуды, фруктов, овощей и детских принадлежностей',
@@ -685,9 +749,11 @@ const brandData = {
     },
     mukunghwa: {
         name: 'MUKUNGHWA',
-        category: currentLang === 'en' ? 'Household Chemicals' : 'Бытовая химия',
+        category: currentLang === 'en' ? 'Household Chemicals' : currentLang === 'kz' ? 'Тұрмыстық химия' : 'Бытовая химия',
         description: currentLang === 'en'
             ? 'MUKUNGHWA represents the traditions of Korean quality since 1947. The brand specializes in producing eco-friendly household chemicals and cosmetics created exclusively from natural plant extracts.'
+            : currentLang === 'kz'
+            ? 'MUKUNGHWA - 1947 жылдан бергі корей сапасының дәстүрі. Бренд тек табиғи өсімдік сығындылары негізінде жасалған экологиялық таза тұрмыстық химия мен косметика өндіруге маманданған.'
             : 'MUKUNGHWA - это традиции корейского качества с 1947 года. Бренд специализируется на производстве экологически чистой бытовой химии и косметики, созданной исключительно на базе натуральных растительных экстрактов.',
         series: currentLang === 'en'
             ? [
@@ -695,6 +761,13 @@ const brandData = {
                 '<strong>VIU</strong> - antibacterial super-concentrated fabric softeners with exquisite fragrances',
                 '<strong>Soap:</strong> a wide range of natural plant-based laundry and toilet soaps',
                 '<strong>Eco-friendly:</strong> all products are environmentally friendly and biodegradable'
+            ]
+            : currentLang === 'kz'
+            ? [
+                '<strong>O\'CLEAN</strong> - сабын ағашының табиғи жемістері негізіндегі қауіпсіз тазартқыш құралдар желісі',
+                '<strong>VIU</strong> - талғампаз хош иістері бар кірге арналған бактерияға қарсы суперконцентратты шайғыштар',
+                '<strong>Сабын:</strong> өсімдік негізіндегі табиғи шаруашылық және иіссу сабындарының кең ассортименті',
+                '<strong>Экологиялылығы:</strong> барлық өнімдер қоршаған орта үшін қауіпсіз және биологиялық ыдырайтын қасиетке ие'
             ]
             : [
                 '<strong>O\'CLEAN</strong> - линейка безопасных чистящих средств на основе натуральных плодов мыльного дерева',
@@ -752,7 +825,7 @@ function initBrandModals() {
             if (data.series && data.series.length) {
                 seriesHtml = `
                     <div class="v2-features">
-                        <p>${currentLang === 'en' ? 'Key products and series:' : 'Ключевые продукты и серии:'}</p>
+                        <p>${currentLang === 'en' ? 'Key products and series:' : currentLang === 'kz' ? 'Негізгі өнімдер мен сериялар:' : 'Ключевые продукты и серии:'}</p>
                         <ul class="bm-features">${data.series.map(s => `<li>${s}</li>`).join('')}</ul>
                     </div>
                 `;
