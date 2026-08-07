@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KOREANA — ссылки</title>
+<meta name="description" content="Официальный дистрибьютор корейских брендов в Казахстане с 2015 года.">
+<link href="assets/img/favicon.webp" rel="icon" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KOREANA">
+<meta property="og:url" content="https://koreana.info/links">
+<meta property="og:title" content="KOREANA — ссылки">
+<meta property="og:description" content="Официальный дистрибьютор корейских брендов в Казахстане с 2015 года.">
+<meta property="og:image" content="https://koreana.info/assets/img/hero-poster.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KOREANA — ссылки">
+<meta name="twitter:description" content="Официальный дистрибьютор корейских брендов в Казахстане с 2015 года.">
+<meta name="twitter:image" content="https://koreana.info/assets/img/hero-poster.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121212;
+    --ink-soft:#1B1B1B;
+    --line:#2A2A2A;
+    --paper:#FFFFFF;
+    --muted:#8A8A8A;
+    --red:#E31E24;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Manrope',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:48px 20px 40px;
+  }
+
+  .page{width:100%;max-width:460px}
+
+  /* ---------- Шапка ---------- */
+  .mark{
+    display:inline-flex;align-items:center;
+    margin-bottom:26px;
+  }
+  .mark__logo{
+    height:40px;width:auto;display:block;
+    filter:brightness(0) invert(1);
+  }
+
+  .lead{
+    font-size:16px;line-height:1.55;font-weight:500;
+    max-width:340px;
+  }
+  .lead b{font-weight:700}
+
+  .meta{
+    margin-top:14px;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;
+  }
+  .meta span{color:var(--red)}
+
+  /* ---------- Маршрут со ссылками ---------- */
+  .route{
+    margin-top:44px;
+    position:relative;
+    padding-left:26px;
+  }
+  /* вертикальная линия — «маршрут» поставки */
+  .route::before{
+    content:"";position:absolute;left:4px;top:12px;bottom:12px;
+    width:1px;background:var(--line);
+  }
+
+  .link{
+    position:relative;
+    display:flex;align-items:center;gap:14px;
+    padding:19px 18px;
+    margin-bottom:10px;
+    background:var(--ink-soft);
+    border:1px solid var(--line);
+    color:var(--paper);
+    text-decoration:none;
+    overflow:hidden;
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  /* засечка на маршруте напротив каждой ссылки */
+  .link::before{
+    content:"";position:absolute;left:-22px;top:50%;
+    width:9px;height:1px;background:var(--line);
+    transition:background .25s ease, width .25s ease;
+  }
+  /* красная заливка, уезжающая слева направо */
+  .link::after{
+    content:"";position:absolute;inset:0;
+    background:var(--red);
+    transform:scaleX(0);transform-origin:left;
+    transition:transform .35s cubic-bezier(.2,.7,.3,1);
+    z-index:0;
+  }
+  .link > *{position:relative;z-index:1}
+
+  .link:hover,.link:focus-visible{
+    border-color:var(--red);
+    transform:translateX(3px);
+    outline:none;
+  }
+  .link:hover::after,.link:focus-visible::after{transform:scaleX(1)}
+  .link:hover::before,.link:focus-visible::before{background:var(--red);width:16px}
+  .link:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+
+  .link__body{flex:1;min-width:0}
+  .link__label{
+    font-family:'Unbounded',sans-serif;
+    font-weight:600;font-size:15px;letter-spacing:-.01em;
+    line-height:1.25;
+  }
+  .link__note{
+    margin-top:5px;font-size:12.5px;color:var(--muted);
+    transition:color .25s ease;
+  }
+  .link:hover .link__note,.link:focus-visible .link__note{color:rgba(255,255,255,.85)}
+
+  .link__arrow{
+    flex:none;font-size:17px;line-height:1;color:var(--muted);
+    transition:color .25s ease, transform .25s ease;
+  }
+  .link:hover .link__arrow,.link:focus-visible .link__arrow{
+    color:var(--paper);transform:translateX(4px);
+  }
+
+  /* ---------- Заголовок группы ---------- */
+  .group{
+    margin:30px 0 14px;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;
+  }
+
+  /* ---------- Подвал ---------- */
+  .foot{
+    margin-top:40px;padding-top:22px;
+    border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:12px;
+    font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+  }
+
+  /* появление при загрузке */
+  .fade{opacity:0;transform:translateY(10px);animation:up .6s ease forwards}
+  @keyframes up{to{opacity:1;transform:none}}
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .fade{opacity:1;transform:none}
+  }
+
+  @media (max-width:380px){
+    .mark__logo{height:34px}
+    .link{padding:16px 14px}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="fade" style="animation-delay:.05s">
+    <div class="mark">
+      <img class="mark__logo" src="assets/img/logo.webp" alt="KOREANA" width="65" height="40">
+    </div>
+    <p class="lead">Официальный дистрибьютор <b>корейских брендов</b> в Казахстане.</p>
+    <p class="meta">С 2015 года <span>·</span> 16 городов</p>
+  </header>
+
+  <nav class="route">
+
+    <div class="group fade" style="animation-delay:.15s">Компания</div>
+
+    <!-- 1. Сайт -->
+    <a class="link fade" style="animation-delay:.2s" href="https://koreana.info" target="_blank" rel="noopener">
+      <div class="link__body">
+        <div class="link__label">Официальный сайт</div>
+        <div class="link__note">Каталог брендов и условия сотрудничества</div>
+      </div>
+      <span class="link__arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="link fade" style="animation-delay:.25s" href="https://hh.kz/employer/2746077" target="_blank" rel="noopener">
+      <div class="link__body">
+        <div class="link__label">Вакансии на hh.kz</div>
+        <div class="link__note">Открытые позиции в наших филиалах</div>
+      </div>
+      <span class="link__arrow" aria-hidden="true">→</span>
+    </a>
+
+    <div class="group fade" style="animation-delay:.3s">Наши партнёры</div>
+
+    <a class="link fade" style="animation-delay:.35s" href="https://www.instagram.com/kerasys.official.kz/" target="_blank" rel="noopener">
+      <div class="link__body">
+        <div class="link__label">Kerasys</div>
+        <div class="link__note">Профессиональный уход за волосами</div>
+      </div>
+      <span class="link__arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="link fade" style="animation-delay:.4s" href="https://www.instagram.com/2080.kz/" target="_blank" rel="noopener">
+      <div class="link__body">
+        <div class="link__label">2080</div>
+        <div class="link__note">Зубные пасты и щётки</div>
+      </div>
+      <span class="link__arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="link fade" style="animation-delay:.45s" href="https://www.instagram.com/farmstay.official_global/" target="_blank" rel="noopener">
+      <div class="link__body">
+        <div class="link__label">FarmStay</div>
+        <div class="link__note">Уходовая и декоративная косметика</div>
+      </div>
+      <span class="link__arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="link fade" style="animation-delay:.5s" href="https://www.instagram.com/mkh1947" target="_blank" rel="noopener">
+      <div class="link__body">
+        <div class="link__label">Mukunghwa</div>
+        <div class="link__note">Натуральная бытовая химия</div>
+      </div>
+      <span class="link__arrow" aria-hidden="true">→</span>
+    </a>
+
+  </nav>
+
+  <footer class="foot fade" style="animation-delay:.55s">
+    <span>Koreana</span>
+    <span>Алматы, Казахстан</span>
+  </footer>
+
+</main>
+</body>
+</html>
